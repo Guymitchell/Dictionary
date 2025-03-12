@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.BILL-HEADER</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.BILL-HEADER</h1>
+<h2>Description: Bill header records - the equivalent of BILLDOC for new bills created in 4.17</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>ACC-TRANS-NO</nobr></td><td><nobr>integer</nobr></td><td>Accounts Trans No - Accounts ledger transaction number when posted</td></tr>
+<tr><td><nobr>ANTI-DISBS-NET</nobr></td><td><nobr>decimal</nobr></td><td>Anti Disb Net Value - Net value of disbs included</td></tr>
+<tr><td><nobr>ANTI-DISBS-VAT</nobr></td><td><nobr>decimal</nobr></td><td>Anti Disb VAT Value</td></tr>
+<tr><td><nobr>BILL-ADDR</nobr></td><td><nobr>character(254)</nobr></td><td>Bill Address</td></tr>
+<tr><td><nobr>BILL-DATE</nobr></td><td><nobr>date</nobr></td><td>Bill Date</td></tr>
+<tr><td><nobr>BILL-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Bill ID - System Bill linking ID</td></tr>
+<tr><td><nobr>BILL-NO</nobr></td><td><nobr>character(254)</nobr></td><td>Bill No</td></tr>
+<tr><td><nobr>BILL-STATUS</nobr></td><td><nobr>integer</nobr></td><td>Bill Status - e.g. Saved, Review etc</td></tr>
+<tr><td><nobr>BILL-SUB-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Bill Sub Type - e.g. On Account Memo, Final etc</td></tr>
+<tr><td><nobr>BILL-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Bill Type - e.g. Private, LA Type etc</td></tr>
+<tr><td><nobr>BRANCH</nobr></td><td><nobr>character(254)</nobr></td><td>Branch</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Client Code</td></tr>
+<tr><td><nobr>COSTS-NET</nobr></td><td><nobr>decimal</nobr></td><td>Costs Net Value</td></tr>
+<tr><td><nobr>COSTS-ON-ACCOUNT</nobr></td><td><nobr>decimal</nobr></td><td>On Account</td></tr>
+<tr><td><nobr>COSTS-VAT</nobr></td><td><nobr>decimal</nobr></td><td>Costs VAT Value</td></tr>
+<tr><td><nobr>CURRENCY-ANTI-DISBS-NET</nobr></td><td><nobr>decimal</nobr></td><td>Currency Anticipated Time Net Value</td></tr>
+<tr><td><nobr>CURRENCY-ANTI-DISBS-VAT</nobr></td><td><nobr>decimal</nobr></td><td>Currency Anticipated Disb VAT Value</td></tr>
+<tr><td><nobr>CURRENCY-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Currency Code</td></tr>
+<tr><td><nobr>CURRENCY-COSTS-NET</nobr></td><td><nobr>decimal</nobr></td><td>Currency Costs Net Value</td></tr>
+<tr><td><nobr>CURRENCY-COSTS-VAT</nobr></td><td><nobr>decimal</nobr></td><td>Currency Costs VAT Value</td></tr>
+<tr><td><nobr>CURRENCY-DISBS-NET</nobr></td><td><nobr>decimal</nobr></td><td>Currency Disb Net Value</td></tr>
+<tr><td><nobr>CURRENCY-DISBS-VAT</nobr></td><td><nobr>decimal</nobr></td><td>Currency Disb VAT Value</td></tr>
+<tr><td><nobr>CURRENCY-RATE</nobr></td><td><nobr>decimal</nobr></td><td>Currency Rate</td></tr>
+<tr><td><nobr>CREDIT-CONTROL-EXCL</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Exclude From Credit Control</td></tr>
+<tr><td><nobr>DISBS-NET</nobr></td><td><nobr>decimal</nobr></td><td>Disb Net Value</td></tr>
+<tr><td><nobr>DISBS-VAT</nobr></td><td><nobr>decimal</nobr></td><td>Disb VAT Value</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter Code</td></tr>
+<tr><td><nobr>POSTING-NARRATIVE</nobr></td><td><nobr>character(370)</nobr></td><td>Posting Narrative</td></tr>
+<tr><td><nobr>PRINTED</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Printed flag</td></tr>
+<tr><td><nobr>SPLIT-BILL-NO</nobr></td><td><nobr>character(254)</nobr></td><td>Split Bill No - The other bill No. in a split Net / Vat scenario</td></tr>
+<tr><td><nobr>BILL-TRANS-NO</nobr></td><td><nobr>integer</nobr></td><td>Bill Trans No</td></tr>
+<tr><td><nobr>USER-ID</nobr></td><td><nobr>character(254)</nobr></td><td>User ID</td></tr>
+<tr><td><nobr>OVERRIDE-VAT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>VAT Rate VAT Code</td></tr>
+<tr><td><nobr>OVERRIDE-VAT-RATE</nobr></td><td><nobr>decimal</nobr></td><td>VAT Rate VAT Rate</td></tr>
+<tr><td><nobr>WIP1</nobr></td><td><nobr>decimal</nobr></td><td>WIP1</td></tr>
+<tr><td><nobr>WIP2</nobr></td><td><nobr>decimal</nobr></td><td>WIP2</td></tr>
+<tr><td><nobr>SPLIT-BILL-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Split Bill ID</td></tr>
+<tr><td><nobr>CLI-NAME</nobr></td><td><nobr>character(350)</nobr></td><td>Client Name</td></tr>
+<tr><td><nobr>PROCESSING-FLAG</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Processing</td></tr>
+<tr><td><nobr>USER-DESC</nobr></td><td><nobr>character(20000)</nobr></td><td>User Description</td></tr>
+<tr><td><nobr>ENTITY-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Entity Type</td></tr>
+<tr><td><nobr>ENTITY-REF</nobr></td><td><nobr>character(254)</nobr></td><td>Entity Reference</td></tr>
+<tr><td><nobr>FEE-ALLOCATION</nobr></td><td><nobr>character(254)</nobr></td><td>Fees Allocation</td></tr>
+<tr><td><nobr>FIXED-FEE-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Fixed Fee</td></tr>
+<tr><td><nobr>FIXED-FEE</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Fixed Fee</td></tr>
+<tr><td><nobr>ANTI-TIME-NET</nobr></td><td><nobr>decimal</nobr></td><td>Anti Time Net Value</td></tr>
+<tr><td><nobr>ANTI-TIME-VAT</nobr></td><td><nobr>decimal</nobr></td><td>Anti Time VAT Value</td></tr>
+<tr><td><nobr>CURRENCY-ANTI-TIME-NET</nobr></td><td><nobr>decimal</nobr></td><td>Currency Anticipated Time Net Value</td></tr>
+<tr><td><nobr>CURRENCY-ANTI-TIME-VAT</nobr></td><td><nobr>decimal</nobr></td><td>Currency Anticipated Time VAT Value</td></tr>
+<tr><td><nobr>WORK-CONCLUDED</nobr></td><td><nobr>date</nobr></td><td>Work Concluded</td></tr>
+<tr><td><nobr>VAT-BASIS-DATE</nobr></td><td><nobr>character(254)</nobr></td><td>VAT Basis</td></tr>
+<tr><td><nobr>COSTS-NARRATIVE</nobr></td><td><nobr>character(20000)</nobr></td><td>Costs Narrative</td></tr>
+<tr><td><nobr>BILL-TEMPLATE</nobr></td><td><nobr>character(254)</nobr></td><td>Bill Template</td></tr>
+<tr><td><nobr>FROM-BILL-ID</nobr></td><td><nobr>character(254)</nobr></td><td>From Bill ID</td></tr>
+<tr><td><nobr>TIME-POSTED</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Time Posted</td></tr>
+<tr><td><nobr>VAT-ONLY-BILL</nobr></td><td><nobr>logical (true/false)</nobr></td><td>VAT Bill</td></tr>
+<tr><td><nobr>TIME-UNDONE</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Time Undone</td></tr>
+<tr><td><nobr>CREDIT-NOTED</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Credited</td></tr>
+<tr><td><nobr>ACCOUNTS-UNDONE</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Accounts Undone</td></tr>
+<tr><td><nobr>DELETED</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Deleted</td></tr>
+<tr><td><nobr>PROCESSING-MEMO-PAYMENT</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Processing Payment</td></tr>
+<tr><td><nobr>RECOUPED</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Recouped</td></tr>
+<tr><td><nobr>DEST-MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Dest MT Code</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>BATCH</nobr></td><td><nobr>character(254)</nobr></td><td>Batch</td></tr>
+<tr><td><nobr>BILL-LAST-AMENDED-BY</nobr></td><td><nobr>character(254)</nobr></td><td>Last Amended By</td></tr>
+<tr><td><nobr>BILL-LAST-AMENDED-DATE</nobr></td><td><nobr>date</nobr></td><td>Last Amended Date</td></tr>
+<tr><td><nobr>BILL-LAST-AMENDED-TIME</nobr></td><td><nobr>integer</nobr></td><td>Last Amended Time</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>TP-BILL-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Third Party Bill Type</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MEMO-BILL-PAYMENT-DATE</nobr></td><td><nobr>date</nobr></td><td>Memo Bill Payment Date</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>POD-NET-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>POD Net Value</td></tr>
+<tr><td><nobr>POD-VAT-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>POD VAT Value</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC04</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC05</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC06</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC07</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC08</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC09</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC10</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MAX-STATUS</nobr></td><td><nobr>integer</nobr></td><td>Maximum Status</td></tr>
+<tr><td><nobr>NOT-FOR-PROFIT-COSTS</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Not-for-profit-costs flag</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT04</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG04</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR11</nobr></td><td><nobr>character(40)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE06</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>ACC-TRANS-NO</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+ACC-TRANS-NO
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>BATCH</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+BATCH
+<tr><td>BILL-DATE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+BILL-DATE
+<tr><td>BILL-ID</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+BILL-ID
+<tr><td>BILL-NO</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+BILL-NO
+<tr><td>BILL-STATUS</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+BILL-STATUS
+<tr><td>BILL-TRANS-NO</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+BILL-TRANS-NO
+<tr><td>BILL-TYPE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+BILL-TYPE
+ + 
+BILL-SUB-TYPE
+<tr><td>CL-CODE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+CL-CODE
+<tr><td>CLI-NAME</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+CLI-NAME
+<tr><td>CREDIT-NOTED</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+CREDIT-NOTED
+<tr><td>DELETED</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+DELETED
+<tr><td>ENTITY</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+ENTITY-TYPE
+ + 
+ENTITY-REF
+<tr><td>FROM-BILL-ID</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+FROM-BILL-ID
+<tr><td>MT-CODE</td><td><center>yes</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MT-CODE
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+<tr><td>TIME-POSTED</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+TIME-POSTED
+<tr><td>UNDONE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+TIME-UNDONE
+</Table>
+<br><br></body></html>

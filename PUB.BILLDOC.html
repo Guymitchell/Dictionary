@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.BILLDOC</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.BILLDOC</h1>
+<h2>Description: Stores information relating to data-loaded bills and bills raised in the system prior to upgrade to 4.17/5.17</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>BILL-NO</nobr></td><td><nobr>character(254)</nobr></td><td>Bill No</td></tr>
+<tr><td><nobr>BILL-DATE</nobr></td><td><nobr>date</nobr></td><td>Date of Bill</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter Code</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>USER-ID</nobr></td><td><nobr>character(254)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>BRANCH</nobr></td><td><nobr>character(254)</nobr></td><td>Copy of MATDB.IMPLEMENTATION ie Which implementation is this matter in (E.g DEBT,CONV ,DEBTDEMO etc). For our purposes branch is a more appropriate term.</td></tr>
+<tr><td><nobr>DISBB-SAVE</nobr></td><td><nobr>character(5886)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>DISBB-TOTAL</nobr></td><td><nobr>decimal</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>DISBB-VAT</nobr></td><td><nobr>decimal</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>WIPB-SAVE</nobr></td><td><nobr>character(27511)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>COSTS-TOTAL</nobr></td><td><nobr>decimal</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>COSTS-VAT</nobr></td><td><nobr>decimal</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>ALLOCATION</nobr></td><td><nobr>character(357)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>PRINT-FLAG</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Printed</td></tr>
+<tr><td><nobr>POST-FLAG</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Posted</td></tr>
+<tr><td><nobr>HOURS</nobr></td><td><nobr>integer</nobr></td><td>Time Spent</td></tr>
+<tr><td><nobr>NARRATIVE</nobr></td><td><nobr>character(20000)</nobr></td><td>Costs Narrative as entered by FE
+</td></tr>
+<tr><td><nobr>COSTS-ONACC</nobr></td><td><nobr>decimal</nobr></td><td>Costs on Account - entered by FE
+</td></tr>
+<tr><td><nobr>VAT_DETAILS</nobr></td><td><nobr>character(254)</nobr></td><td>VAT Dets</td></tr>
+<tr><td><nobr>PAID-BY</nobr></td><td><nobr>character(254)</nobr></td><td>Paid By</td></tr>
+<tr><td><nobr>MEMO_FLAG</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Legal Aid memo bill</td></tr>
+<tr><td><nobr>LA_CERTNO</nobr></td><td><nobr>character(254)</nobr></td><td>Legal Aid Certificate No / Ref No</td></tr>
+<tr><td><nobr>SOL_REFNO</nobr></td><td><nobr>character(254)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>CORE_COSTS</nobr></td><td><nobr>decimal</nobr></td><td>Core Costs / Standard Fee Claimed</td></tr>
+<tr><td><nobr>COSTS_DUE</nobr></td><td><nobr>decimal</nobr></td><td>Costs Due to another firm
+</td></tr>
+<tr><td><nobr>WIP1</nobr></td><td><nobr>decimal</nobr></td><td>WIP1 billed</td></tr>
+<tr><td><nobr>WIP2</nobr></td><td><nobr>decimal</nobr></td><td>WIP2 billed</td></tr>
+<tr><td><nobr>ANTI_DISB</nobr></td><td><nobr>decimal</nobr></td><td>Value of Anticipated Disbursements</td></tr>
+<tr><td><nobr>CLAIM_TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>eg "GF" if Green Form</td></tr>
+<tr><td><nobr>CLAIM_CAT</nobr></td><td><nobr>character(254)</nobr></td><td>eg category of Green Form claim</td></tr>
+<tr><td><nobr>LA_STATUS</nobr></td><td><nobr>character(254)</nobr></td><td>LA Status</td></tr>
+<tr><td><nobr>BILL_TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>eg Payment on Account application/Interim Bill/Final Bill</td></tr>
+<tr><td><nobr>CLINAME</nobr></td><td><nobr>character(254)</nobr></td><td>Client Name</td></tr>
+<tr><td><nobr>TIMETX</nobr></td><td><nobr>integer</nobr></td><td>Time Tx</td></tr>
+<tr><td><nobr>ACCSTX</nobr></td><td><nobr>integer</nobr></td><td>Accs Tx</td></tr>
+<tr><td><nobr>PAID_DATE</nobr></td><td><nobr>date</nobr></td><td>Date Paid</td></tr>
+<tr><td><nobr>PAID_AMT</nobr></td><td><nobr>decimal</nobr></td><td>Amount Paid</td></tr>
+<tr><td><nobr>PAID_ALLOC</nobr></td><td><nobr>character(254)</nobr></td><td>Holds temp value = payment amount allocated in memo bill payment routine before update processing</td></tr>
+<tr><td><nobr>PAID_COSTS</nobr></td><td><nobr>decimal</nobr></td><td>Costs + VAT actually paid by LAB this claim</td></tr>
+<tr><td><nobr>CURRENCY-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Currency Code</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>CURRENCY_RATE</nobr></td><td><nobr>decimal</nobr></td><td>Rate used to convert to Sterling</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>CURRENCY_COSTSTOT</nobr></td><td><nobr>decimal</nobr></td><td>Currency Costs</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>CURRENCY_COSTSVAT</nobr></td><td><nobr>decimal</nobr></td><td>Currency VAT on Costs</td></tr>
+<tr><td><nobr>COSTS-SAVED</nobr></td><td><nobr>character(254)</nobr></td><td>Costs Saved</td></tr>
+<tr><td><nobr>CURRENCY_DISBSTOT</nobr></td><td><nobr>decimal</nobr></td><td>Currency Disbs</td></tr>
+<tr><td><nobr>DISBS-SAVED</nobr></td><td><nobr>character(254)</nobr></td><td>Disbs Saved</td></tr>
+<tr><td><nobr>CURRENCY_DISBSVAT</nobr></td><td><nobr>decimal</nobr></td><td>Currency VAT on Disbs</td></tr>
+<tr><td><nobr>PROVISIONAL-BILLNO</nobr></td><td><nobr>character(254)</nobr></td><td>Provisional Bill</td></tr>
+<tr><td><nobr>ENDPOINTS</nobr></td><td><nobr>character(254)</nobr></td><td>Endpoints</td></tr>
+<tr><td><nobr>SPLIT-BILL-FLAG</nobr></td><td><nobr>character(254)</nobr></td><td>Split Bill Flag</td></tr>
+<tr><td><nobr>BILL-ADDR</nobr></td><td><nobr>character(254)</nobr></td><td>Bill Address</td></tr>
+<tr><td><nobr>SPLIT-VAT-BILL-DETAILS</nobr></td><td><nobr>character(254)</nobr></td><td>Split Bill VAT Details</td></tr>
+<tr><td><nobr>BILL-VALUES</nobr></td><td><nobr>character(254)</nobr></td><td>Bill Values</td></tr>
+<tr><td><nobr>DEBT-CNTRL-EXCLUDE</nobr></td><td><nobr>character(254)</nobr></td><td>Exclude</td></tr>
+<tr><td><nobr>INCL-MEMO-BILLS</nobr></td><td><nobr>character(254)</nobr></td><td>Memo Bill List</td></tr>
+<tr><td><nobr>FEE-ALLOC-BILL</nobr></td><td><nobr>character(254)</nobr></td><td>FE Alloc Bill</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>BILLNO-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+BILL-NO
+<tr><td>CERTX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+LA_CERTNO
+<tr><td>CLI1X</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+CLINAME
+<tr><td>CLI2X</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+CLINAME
+<tr><td>MEMO-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MEMO_FLAG
+<tr><td>MT-CODE-INDEX</td><td><center>yes</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MT-CODE
+ + 
+BILL-NO
+<tr><td>POSTED-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+POST-FLAG
+<tr><td>SOLREFX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SOL_REFNO
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+</Table>
+<br><br></body></html>

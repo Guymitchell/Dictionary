@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.ADDRESSES</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.ADDRESSES</h1>
+<h2>Description: Stores additional addresses for contacts, organisations and clients</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: parent record type - "CL" (client), "CO" (contact) or "OR" (organisation)</td></tr>
+<tr><td><nobr>REFERENCE</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: parent client code, contact number or organisation number, depending on value of TYPE</td></tr>
+<tr><td><nobr>ADD-ADDRESS-1</nobr></td><td><nobr>character(254)</nobr></td><td>Add/Amend Address Screen: Address line 1</td></tr>
+<tr><td><nobr>ADD-ADDRESS-2</nobr></td><td><nobr>character(254)</nobr></td><td>Add/Amend Address Screen: Address line 2</td></tr>
+<tr><td><nobr>ADD-ADDRESS-3</nobr></td><td><nobr>character(254)</nobr></td><td>Add/Amend Address Screen: Address line 3</td></tr>
+<tr><td><nobr>ADD-ADDRESS-4</nobr></td><td><nobr>character(254)</nobr></td><td>Add/Amend Address Screen: Address line 4</td></tr>
+<tr><td><nobr>ADD-PCODE</nobr></td><td><nobr>character(254)</nobr></td><td>Add/Amend Address Screen: Post code</td></tr>
+<tr><td><nobr>ADDR-TYPE</nobr></td><td><nobr>integer</nobr></td><td>Add/Amend Address Screen: corresponds to choice of radio button at top of screen</td></tr>
+<tr><td><nobr>SEQNO</nobr></td><td><nobr>integer</nobr></td><td>Derived: Internal unique record reference</td></tr>
+<tr><td><nobr>ADD-DESCRIPTION</nobr></td><td><nobr>character(254)</nobr></td><td>Add/Amend Address Screen: Address description</td></tr>
+<tr><td><nobr>BUSINESS-ADDR</nobr></td><td><nobr>character(254)</nobr></td><td>Business address flag: "Y" for yes, blank otherwise</td></tr>
+<tr><td><nobr>PREV-ADDR</nobr></td><td><nobr>character(254)</nobr></td><td>Previous address flag: "Y" for yes, blank otherwise</td></tr>
+<tr><td><nobr>ADD-ADDRESSEE</nobr></td><td><nobr>character(254)</nobr></td><td>Add/Amend Address Screen: Addressee</td></tr>
+<tr><td><nobr>DERIVED-ADDR</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: All address lines plus postcode</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>HOUSENAME</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>HOUSENO</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ADDRESS5</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>ADD-TYPEID-INX</td><td><center>yes</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+TYPE
+ + 
+REFERENCE
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>DERIVED-ADDR</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+DERIVED-ADDR
+<tr><td>SEQNO</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SEQNO
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+</Table>
+<br>
+<h2>Practice Manager Archive Enquiry/Details Screen</h2>
+<img src="addresspm.gif" alt="Address details screen" />
+<p>The ADDRESSES table corresponds to information added in the Add/Amend Address option of the CLIENT or INDIVIDUAL or ORGANISATION maintenance screens.</p>
+<p>The fields available for completion are the same whether called from  a CLIENT record or an INDIVIDUAL or ORGANISATION record.  However, certain address
+types, viz Billing and Statement Address can be added only to a CLIENT record.</p>
+<br><br>
+<h2>Field Notes</h2>
+<p><b>ADDR-TYPE</b> corresponds to the radio button choice address type: Alt Correspondence = 1, Billing = 2, Statement = 3 or Other = 4, DX = 5.  Only
+clients can have  addresses of TYPE 2 or 3.  For DX addresses the DX number is stored in ADD-ADDRESS-1 and DX exchange name is stored in ADD-ADDRESS-2.</p>
+<p><b>TYPE</b> corresponds to Client (CL),  individual Contact (CO) or Organisation (OR).  No other types of entity can have additional addresses.
+<p><b>SEQNO</b> is a unique sequential number generated by the software to uniquely identify an address and has linking or reporting purpose.
+<h2>Address Fields in CLIDB, CONTACTS and ORGANISATION tables</h2>
+<p>Not all addresses are kept in the ADDRESSES table.</p>
+<p><b>For a contact or organisation the first or only address is stored in either the CONTACTS or ORGANISATION tables itself.  Only second
+and subsequent addresses are kept in this ADDRESSES  table.</b></p>
+<p>For a client created from one or more individual contacts or organisations the address of the first or sole contact or organisation will be
+copied automatically into those address fields of the client’s CLIDB record that are prefixed with an “A”.  Likewise the address of a second
+contact or organisation will be copied into those address fields of the client’s CLIDB record that are prefixed with a “B”.
+<h2>Adding an Address to an existing Client created without an Address</h2>
+<p>For all Clients without a “primary” address ie an address that shows in the Address column of the General Search screen care should
+be taken when adding an address for the first time: if you add an address via the Add Address button on the Client Enquiry screen then the
+first such address will be kept in the CONTACTS or ORGANISATION table only, and second and subsequent addresses will be in
+ADDRESSES only.   To keep an address in CLIDB you must add the primary address via the Organisation
+Add/Amend or Contact Add/Amend screen as illustrated above.</p>
+<h2>Adding further Client Addresses beyond the first two</h2>
+New addresses added from the Client Enquiry screen will be kept in the ADDRESSES table
+<h2>Access to CLIDB.B-ADDRESS and CLIDB.B-POSTCODE fields</h2>
+The “B” address and postcode fields are used for the primary address of a contact/organisation that is added as the second party of the client. Updating the contact or
+organisation address will automatically update the CLIDB.B-ADDRESS and CLIDB.B-POSTCODE fields where the contact or organisation is the second party
+of the client.
+<br><h2>Suggested Linking</h2>
+<h3>All addresses for clients</h3>
+<p><a href="a.clidb.html" title="Client data">A.CLIDB</a>.CL-CODE -> PUB.ADDRESSES.REFERENCE WHERE PUB.ADDRESSES.TYPE = "CL" <b><i>Use left outer join</i></b></p>
+<p>We have suggested linking these tables with a left outer join to ensure that clients who do not have an additional address defined are still include in the query results.</p>
+<br><br></body></html>

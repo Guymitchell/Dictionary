@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.CLIDB</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.CLIDB</h1>
+<h2>Description: Holds client level data for all private and business clients.</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">No. Extents</td><td class="thead">Description</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Client Code</td></tr>
+<tr><td><nobr>TYPE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Client type, "P" = Private, "B" = Business</td></tr>
+<tr><td><nobr>A-NAME</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>First party: surname or organisation name</td></tr>
+<tr><td><nobr>A-FORENAME</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>First party forename</td></tr>
+<tr><td><nobr>A-TITLE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Details: Title of 1st party</td></tr>
+<tr><td><nobr>A-DOB</nobr></td><td><nobr>date</nobr></td><td></td><td>First party: date of birth</td></tr>
+<tr><td><nobr>A-ADDRESS1</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>First party address: line 1</td></tr>
+<tr><td><nobr>A-ADDRESS2</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>First party address: line 2</td></tr>
+<tr><td><nobr>A-ADDRESS3</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>First party address: town</td></tr>
+<tr><td><nobr>A-ADDRESS4</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>First party address: county</td></tr>
+<tr><td><nobr>A-POSTCODE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>First party address: post code</td></tr>
+<tr><td><nobr>B-NAME</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Second party: surname or organisation name</td></tr>
+<tr><td><nobr>B-FORENAME</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Second party forename</td></tr>
+<tr><td><nobr>B-TITLE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Details: Title of 2nd party</td></tr>
+<tr><td><nobr>B-DOB</nobr></td><td><nobr>date</nobr></td><td></td><td>Second party: date of birth</td></tr>
+<tr><td><nobr>B-ADDRESS1</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Second party address: line 1</td></tr>
+<tr><td><nobr>B-ADDRESS2</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Second party address: line 2</td></tr>
+<tr><td><nobr>B-ADDRESS3</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Second party address: town</td></tr>
+<tr><td><nobr>B-ADDRESS4</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Second party address: county</td></tr>
+<tr><td><nobr>B-POSTCODE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Second party address: post code</td></tr>
+<tr><td><nobr>TRADING-AS</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Details: Trading as (business clients)</td></tr>
+<tr><td><nobr>ADDRESSEE</nobr></td><td><nobr>character(473)</nobr></td><td></td><td>Details: Addressee</td></tr>
+<tr><td><nobr>CONTACT1</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CONTACT2</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>TELEPHONE1</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Details: Phone number (if primary)</td></tr>
+<tr><td><nobr>TELEPHONE2</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Details: Phone number (if secondary)</td></tr>
+<tr><td><nobr>FAX-NUMBER</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Details: Fax number (if Primary)</td></tr>
+<tr><td><nobr>FEE-EARNER</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Details: PR/FE (ie Liaison fee earner)</td></tr>
+<tr><td><nobr>INTRO-CODE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Notes: Source (of business)</td></tr>
+<tr><td><nobr>ACCOUNTS-REF</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>AREA-CODE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>DATE-OPENED</nobr></td><td><nobr>date</nobr></td><td></td><td>Notes: Date Registered</td></tr>
+<tr><td><nobr>FLAGS</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>NOTES</nobr></td><td><nobr>character(20000)</nobr></td><td><center>20</Center></td><td>Client notes</td></tr>
+<tr><td><nobr>DIVISON</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SALUTATION</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Details: Salutation</td></tr>
+<tr><td><nobr>LAST-MATTER-NO</nobr></td><td><nobr>integer</nobr></td><td></td><td>Derived: Number suffix of last matter added</td></tr>
+<tr><td><nobr>FAX2</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MAIL-ID1</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Details: Email address (if primary)</td></tr>
+<tr><td><nobr>MAIL-ID2</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Details: Email address (if secondary)</td></tr>
+<tr><td><nobr>SOUNDS-LIKE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Derived: Created by software</td></tr>
+<tr><td><nobr>BAND</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Details: Charge Bands</td></tr>
+<tr><td><nobr>NO-BILLS</nobr></td><td><nobr>integer</nobr></td><td></td><td>Derived: Count of accounts bills</td></tr>
+<tr><td><nobr>NO-OPENED</nobr></td><td><nobr>integer</nobr></td><td></td><td>Derived: Count of matters opened</td></tr>
+<tr><td><nobr>NO-CLOSED</nobr></td><td><nobr>integer</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>NO-CURR</nobr></td><td><nobr>integer</nobr></td><td></td><td>Derived: Count of current matters</td></tr>
+<tr><td><nobr>DATE-LASTPOST</nobr></td><td><nobr>date</nobr></td><td></td><td>Derived: Date of last time/ accounts posting</td></tr>
+<tr><td><nobr>DATE-LASTBILL</nobr></td><td><nobr>date</nobr></td><td></td><td>Derived: Date of last bill</td></tr>
+<tr><td><nobr>VAT-NO</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Notes: VAT No ( business clients only)</td></tr>
+<tr><td><nobr>EEC</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Notes: EEC</td></tr>
+<tr><td><nobr>DATES</nobr></td><td><nobr>date</nobr></td><td><center>5</Center></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>DATE-LAST-MAT-OPENED</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>DATE-LAST-MAT-CLOSED</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CLIENT-BILLING</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Client billing flag</td></tr>
+<tr><td><nobr>IB-WIPBAL</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Notes: Min WIP (for interim bills)</td></tr>
+<tr><td><nobr>IB-DISBBAL</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Disbursement balance for interim billing</td></tr>
+<tr><td><nobr>IB-BILLDISBS</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Notes: Bill disbs option for interim billing</td></tr>
+<tr><td><nobr>IB-ONEBILL</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>A-FULL-ADDRESS</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Derived: All address lines and postcode of 1st party joined together </td></tr>
+<tr><td><nobr>RISK-FLAG</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Notes: Risk (ie debtor on hold)</td></tr>
+<tr><td><nobr>CASE-BILL-MATTER</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Case Billing Matter</td></tr>
+<tr><td><nobr>UCN</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Legal Aid Unique Client Number</td></tr>
+<tr><td><nobr>FEE-BUDGET</nobr></td><td><nobr>integer</nobr></td><td></td><td>Notes: Budget</td></tr>
+<tr><td><nobr>PROSPECT-FLAG</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Notes: Prospect</td></tr>
+<tr><td><nobr>REVIEW-DAYS</nobr></td><td><nobr>integer</nobr></td><td></td><td>Review Period (Days)</td></tr>
+<tr><td><nobr>DISB-LIMIT</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Disbursement Limit</td></tr>
+<tr><td><nobr>TIME-LIMIT</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>BANK-OFFICE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>BANK-CLIENT</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>NI_NO</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Notes: Nat Ins Number (private clients only)</td></tr>
+<tr><td><nobr>EXTRA-NOTES</nobr></td><td><nobr>character(254)</nobr></td><td><center>10</Center></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>PROBATE</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CURR</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>TERMS</nobr></td><td><nobr>integer</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ALERT</nobr></td><td><nobr>integer</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>GENDER</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Details: Gender (private clients only)</td></tr>
+<tr><td><nobr>ORIGIN</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Details: Ethnic Origin (private clients)</td></tr>
+<tr><td><nobr>LA-REF</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>PREV-NAME</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Previous names</td></tr>
+<tr><td><nobr>CURRENCY-CODE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>FULL-DERIVED-NAME</nobr></td><td><nobr>character(474)</nobr></td><td></td><td>Derived: Full client name (constructed from all party names)</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td></td><td>Derived: Date of last modification</td></tr>
+<tr><td><nobr>YRPR-OPENED</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Derived: From Year and period in BRANCH table</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td></td><td>Derived: Time of last modification</td></tr>
+<tr><td><nobr>DEFAULT-ZONE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Derived: ID of user who last updated table</td></tr>
+<tr><td><nobr>ESTIMATE</nobr></td><td><nobr>integer</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>DATE-ESTIMATE</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EST-FACTOR</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ESTIMATES-LOG</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>A-HOUSENAME</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>A-HOUSENO</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>A-ADDRESS5</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Not yet used</td></tr>
+<tr><td><nobr>B-HOUSENAME</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>B-HOUSENO</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>B-ADDRESS5</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Second party address: country</td></tr>
+<tr><td><nobr>OK-TO-ACT</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Derived: Set if all parties of client have ID approved</td></tr>
+<tr><td><nobr>OK-TO-ACT-ORIG</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Derived: Set to either PM or Solcase</td></tr>
+<tr><td><nobr>APPLICATION</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CONVERTED-ID</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Holds a cross-reference to the source record if the client was created by a data conversion</td></tr>
+<tr><td><nobr>ANALY-STATUS</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Analysis Status</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR11</nobr></td><td><nobr>character(40)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>DATE-REDACTED</nobr></td><td><nobr>date</nobr></td><td></td><td>Date Redacted</td></tr>
+<tr><td><nobr>REDACTED-BY</nobr></td><td><nobr>character(16)</nobr></td><td></td><td>Redacted By</td></tr>
+<tr><td><nobr>NEVER-REDACT</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Never Redact</td></tr>
+<tr><td><nobr>ACCESS-GROUP-OVERRIDE</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Access Group Override</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>ALL-NAMES</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+FULL-DERIVED-NAME
+<tr><td>ANALY-STATUS</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+ANALY-STATUS
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>CLI-ADDRESS-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+A-FULL-ADDRESS
+<tr><td>CLI-FE-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+FEE-EARNER
+<tr><td>CLI-SOUND-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+SOUNDS-LIKE
+<tr><td>CLIENT-BNAME</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+B-NAME
+<tr><td>CLIENT-CODE</td><td><center>yes</td><td><Center>yes</Center></td><td><Center>
+no</Center></td><td>
+CL-CODE
+<tr><td>CLIENT-NAME</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+A-NAME
+<tr><td>CLIENT-NAME-FNAME</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+A-NAME
+ + 
+A-FORENAME
+<tr><td>CONTACT1</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+CONTACT1
+<tr><td>CONTACT2</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+CONTACT2
+<tr><td>CONVERTED-ID</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+CONVERTED-ID
+<tr><td>DATE-CREATED</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+DATE-OPENED
+<tr><td>DATE-REDACTED</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+DATE-REDACTED
+<tr><td>INTRO</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+INTRO-CODE
+<tr><td>NOTES</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+NOTES
+<tr><td>PREV-NAME</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+PREV-NAME
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-CHAR03</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR03
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+<tr><td>TRADING-AS</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+TRADING-AS
+<tr><td>YRPR-OPENED</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+YRPR-OPENED
+</Table>
+<br>
+<br>
+<h2>Location of Telephone Numbers and Email Addresses</h2>
+<p>Initially all of a client’s telephone numbers and email addresses are kept in the TELEPHONE table only – they are not present at all in CLIDB unless
+they are immediately designated as either Primary or Secondary while they are being created.</p>
+<p>A telephone number will be copied into the CLIDB.TELEPHONE1 field if and only if you designate it as the Client's Primary number. If you designate
+a number as the client's secondary number then that too will be copied into the CLIDB.TELEPHONE2 field. In both cases the numbers will remain
+in TELEPHONES as well with a TEL-TYPE field value of 1 (land-line number).</p>
+<p>Email addresses are handled in a similar way, i.e. at all times in TELEPHONES with a TEL-TYPE value of 4 but copied
+into CLIDB.MAIL-ID1 and CLIDB.MAIL-ID2 if and only if you designate them as the primary and secondary email addresses respectively.</p>
+<p>Fax numbers too are always held in TELEPHONES with a TEL-TYPE value of 2 and one only may be designated as the Primary fax number
+whereupon it will be added into the CLIDB.FAX-NUMBER field. Unlike telephone numbers and email addresses there is no facility in
+Practice Manager to designate a secondary fax number in CLIDB, though additional fax numbers can be created and stored in TELEPHONES without limit.</p>
+<p>All mobile numbers are held in TELEPHONES with a TEL-TYPE value of 3. CLIDB has no field expressly for mobile numbers.</p>
+<br>
+<h2>Location of Postal Addresses</h2>
+<p>A-ADDRESS1 to A-ADDRESS4, A-POSTCODE and A-FULL-ADDRESS are the address of the first or sole Contact or Organisation in the Client record. These
+fields are copied in automatically from their CONTACTS or ORGANISATION record when a Client is created.</p>
+<p>B-ADDRESS1 to B-ADDRESS4 and B-POSTCODE are the address of the second-named Contact or Organisation in a client of two or more parties and
+these are copied in from their CONTACTS or ORGANISATION record when the second party is added to the first.</p>
+<p>To protect the integrity of your database the special "role" created by Practice Manager between joint clients cannot be given the property which
+would enable address fields to be updated automatically. Thus you may amend the addresses of either of the first two parties but these will by default
+update only the address fields of their own CONTACTS or ORGANISATION records. However, on changing addresses you will be prompted with an Address
+Update window enabling you to copy the change to the related CLIDB record if you wish. Any number of additional addresses can be created and these will
+all be stored in the ADDRESSES table.</p>
+<p>For third and additional parties added to a client any address already in their CONTACTS or ORGANISATION record is never automatically added
+to the CLIDB address fields. However, if the first or second of a three-or-more-party client is removed from that client, the third party is
+automatically "shuffled up" to become the second party so their name and address will automatically overwrite the CLIDB B-NAME and B-ADDRESS
+fields. Note that this in no way destroys the second party’s name and address as these survive unscathed in their original CONTACTS or ORGANISATION record.</p>
+<br>
+<h2>Standard Report Grouping Choices</h2>
+<p>Though  client based reports are best produced  in alphabetical order,  they should never be grouped by name alone,  as none of the names or
+concatenations of names is necessarily unique in your client database.  From a glance at an SOS standard report you will see that instead they are
+typically grouped on a formula of  A-NAME plus the client code CL-CODE, with just a space between to make the report’s group tree index more readable.</p>
+<p>The A-NAME element of the grouping ensures approximate alphabetical order, while the CL-CODE element guarantees uniqueness of groupings
+even where the A-NAME itself is repeated across a variety of many different clients.    For more precise alphabetical order you can of course embellish
+the standard client name formula with the addition of  FORENAME and even B-NAME to the basic A-NAME element,  if it is important for your report’s presentation.</p>
+<br>
+<h2>Date Handling in User-Defined Fields</h2>
+<p>Because  NOTES fields are strings,  dates in them can give  reporting headaches if you want to report "older than" or "more recent than".    The > and < symbols
+are fine for making comparisons with numbers, but only work correctly with dates that are in YYYY/MM/DD format i.e. the reverse of normal UK usage.  Also,
+being strings,  there is no validation of what users may type in.</p>
+<p>If you do use these fields for important dates you should also consider writing  "utility" reports that can routinely check them to ensure that the
+data is valid eg that the YYYY is around 2000 and  MM isn’t more than 12 and DD isn’t more than 31.   If instead you do want user input to
+be validated then your firm should consider creating additional tabs instead (see table CLIEADDDATA).</p>
+<br />
+<h2>Suggested Linking</h2>
+<b>Simple link</b>
+<p>CLIDB is so fundamental to everyday and periodic reporting that it features in most of the standard Practice Manager reports.  Links
+like CLIDB.CL-CODE -> <a href="pub.matdb.html">MATDB</a>.CL-CODE to retrieve matter data with client names are universal report "building blocks" and will
+soon lodge in your memory. There are some more visual linking examples in the Introduction.
+<b>A typical link for a list of bills or disbursements showing matter details and the clients’ names:</b>
+<a href="pub.nomtrans.html">NOMTRANS</a>.CL-CODE -> <a href="pub.matdb.html">MATDB</a>.CL-CODE -> CLIDB.CL-CODE
+<p>Your report’s Record Selection Formula would for example include .."NOMTRANS.NL-CODE ="X08" to pick up just costs delivered or "NOMTRANS.NL-CODE in ["X05","X15"] to pick up unbilled disbursements.</p>
+<br />
+<b>Aliased links</b>
+<p>Aliased links let you report on two or more records from different parts of the table at the same time ie for each client record you can report on other
+clients having some other CLIDB field in common. This is achieved simply by adding the table CLIDB twice into the report.  When you add it the second time you
+are forced to give it a different name hence "secondCLIDB".   You can change the name of the original table (in these examples from CLIDB to firstCLIDB) from
+within the report by clicking on Database then Set Alias.  Alias names can be anything you like (they do not have to include the standard table name) and as short
+as a single letter, but for later recognition they should be kept meaningful.</p>
+<p>This first  example retrieves  details for one client and also details of other  clients the first client is related to:</p>
+<p>firstCLIDB.CL-CODE -> <a href="pub.clierelations.html">CLIERELATIONS</a>.CL-CODE</p>
+<p><a href="pub.clierelations.html">CLIERELATIONS</a>.REL-RECORD -> secondCLIDB.CL-CODE</p>
+<p>Your report’s Record Selection formula should also  include ..."CLIERELATIONS.REL-FILE ="CL"</p>
+<br /><br />
+<p>This second example gets a report showing the name of one client followed up by the names of other clients who have the same Address
+lines 1 and 2 as the first client.  This is one way of identifying clients who may have been added to your database twice or more in error.  The table
+join is on a non-indexed field so this is likely to be noticeably slow, particularly for a large firm:</p>
+<p>firstCLIDB.ADDRESS1 -> secondCLIDB.ADDRESS1</p>
+<p>Your report’s Record Selection Formula should also  include "… firstCLIDB.ADDRESS2 = secondCLIDB.ADDRESS2 …" </p>
+<br /><br />
+<p><b>LISTING MULTIPLE PARTIES TO A CLIENT</b></p>
+<p><b>Individual clients:</b></p>
+<p>CLIDB.CL-CODE -> CLIERELATIONS.CL-CODE</p>
+<p>CLIERELATIONS.REL-RECORD -> CONTACTS.REFERENCE-CHAR</p>
+<p>Your report’s Record Selection Formula must include two tests viz:</p>
+<p>CLIERELATIONS.REL-FILE = "CO" and CLIERELATIONS.ROL-CODE = "M*"</p>
+<p><b>Business clients:</b></p>
+<p>CLIDB.CL-CODE -> CLIERELATIONS.CL-CODE</p>
+<p>CLIERELATIONS.REL-RECORD -> ORGANISATION.REFERENCE-CHAR</p>
+Your report's Record Selection Formula must also  include  these two tests,  similar to those in the previous example viz:
+<p>CLIERELATIONS.REL-FILE = "OR" and CLIERELATIONS.ROL-CODE = "M*"</p>
+<ul>
+<li>In both these examples  REL-FILE is tested because REL-RECORD is not necessarily unique –  an individual  contact could have exactly the same REL-RECORD value as an entirely unconnected Organisation.</li>
+<li>ROL-CODE must be tested for the value "M*" as this special reserved code indicates a party to a client relationship, distinct from a  user-created non-client relationship,  when ROL-CODE would contain simply  the user’s chosen role code.</li>
+</ul>
+<p>Remember there is always at least one CONTACT or ORGANISATION record per client, even if the client comprises only one party, in which case the Contact or Organisation will of course be synonymous with the CLIDB.A-NAME  client.     Similarly, a two-party client will result in another CONTACT or ORGANISATION   record who will correspond to the CLIDB.B-NAME client.</p>
+<br /><br />
+<p><b>LISTING  ALL CLIENTS THAT INCLUDE A PARTICULAR CONTACT OR ORGANISATION</b></p>
+<p><b>Individual clients:</b></p>
+<p>CONTACTS.REFERENCE-CHAR -> CONTRELATIONS.CON-REFERENCE</p>
+<p>CONTRELATIONS.REL-RECORD -> CLIDB.CL-CODE</p>
+<p>Your report’s Record Selection Formula must include two tests viz:</p>
+<p>CONTRELATIONS.REL-FILE = "CL" and CONTRELATIONS.ROL-CODE = "C*"</p>
+<br />
+<p><b>Business clients:</b></p>
+<p>ORGANISATION.REFERENCE-CHAR  -> ORGARELATIONS.CON-REFERENCE</p>
+<p>ORGARELATIONS.REL-RECORD -> CLIDB.CL-CODE</p>
+<p>Your report’s Record Selection Formula must also  include these two tests,  similar to those in the previous example viz:</p>
+<p>ORGARELATIONS.REL-FILE = "CL" and ORGARELATIONS.ROL-CODE = "C*"</p>
+<ul>
+<li>REL-FILE is tested because REL-RECORD is not necessarily unique –  an all-number Client code could be identical to the internal numeric reference of an entirely unconnected Organisation or Contact.</li>
+<li>ROL-CODE must be tested for the value "C*" as this special reserved code indicates the related party is a client,  distinct from a  user-created non-client relationship,  when ROL-CODE would contain simply the user’s chosen role code.</li>
+</ul>
+<br><br></body></html>

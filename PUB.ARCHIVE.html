@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.ARCHIVE</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.ARCHIVE</h1>
+<h2>Description: Holds all archive data for manually created archives (deeds, wills etc.) and archived matters</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">No. Extents</td><td class="thead">Description</td></tr>
+<tr><td><nobr>TYPE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Archive Enquiry Details: Type</td></tr>
+<tr><td><nobr>REGISTER</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Archive Enquiry Details: Register</td></tr>
+<tr><td><nobr>REFERENCE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Archive Enquiry Details: Reference</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Derived: Client code</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Archive Enquiry Details: Matter</td></tr>
+<tr><td><nobr>BRANCH</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Derived: Branch (if former matter)</td></tr>
+<tr><td><nobr>MT-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Archive Enquiry Details: MT Type</td></tr>
+<tr><td><nobr>DESCRIPTION</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Archive Enquiry Details: Description</td></tr>
+<tr><td><nobr>FEE-EARNER</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Archive Enquiry Details: Fee earner</td></tr>
+<tr><td><nobr>DATE-OPENED</nobr></td><td><nobr>date</nobr></td><td></td><td>Archive Enquiry Details: Date opened</td></tr>
+<tr><td><nobr>DATE-CLOSED</nobr></td><td><nobr>date</nobr></td><td></td><td>Archive Enquiry Details: Date Closed</td></tr>
+<tr><td><nobr>DATE-DESTRUCTION</nobr></td><td><nobr>date</nobr></td><td></td><td>Archive Enquiry Details: Destruction Date</td></tr>
+<tr><td><nobr>NO-BILLS</nobr></td><td><nobr>integer</nobr></td><td></td><td>Archive Enquiry Details: Number of bills</td></tr>
+<tr><td><nobr>TOT-VALUE</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Archive Enquiry Details: Total time value</td></tr>
+<tr><td><nobr>TOT-BILLED</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Archive Enquiry Details: Total billed</td></tr>
+<tr><td><nobr>PROFIT1</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Archive Enquiry Details: Profit on cost</td></tr>
+<tr><td><nobr>PROFIT2</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Archive Enquiry Details: Profit on value</td></tr>
+<tr><td><nobr>LEGAL-AID</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Archive Enquiry Details: Legal aid</td></tr>
+<tr><td><nobr>BAND</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Archive Enquiry Details: Charge band (when live matter)</td></tr>
+<tr><td><nobr>NOTES</nobr></td><td><nobr>character(25630)</nobr></td><td></td><td>Archive Enquiry Notes: Notes</td></tr>
+<tr><td><nobr>UDF-TEXT</nobr></td><td><nobr>character(254)</nobr></td><td><center>5</Center></td><td>Derived from Archive Enquiry Notes: user-defined text field values</td></tr>
+<tr><td><nobr>UDF-VALUES</nobr></td><td><nobr>decimal</nobr></td><td><center>5</Center></td><td>Derived from Archive Enquiry Notes: user-defined numeric field values</td></tr>
+<tr><td><nobr>UDF-DATES</nobr></td><td><nobr>date</nobr></td><td><center>5</Center></td><td>Derived from Archive Enquiry Notes: user-defined date field values</td></tr>
+<tr><td><nobr>DATE-ARCHIVED</nobr></td><td><nobr>date</nobr></td><td></td><td>Archive Enquiry Details: Date Archived</td></tr>
+<tr><td><nobr>LOCATION</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Archive Enquiry Details: Location </td></tr>
+<tr><td><nobr>MATTER-LINK-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Link Type</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td></td><td>Derived: Date of last modification</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td></td><td>Derived: Time of last modification</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Derived: ID of user who last updated table</td></tr>
+<tr><td><nobr>ARCHIVE-ID</nobr></td><td><nobr>integer</nobr></td><td></td><td>Derived: Internal unique reference</td></tr>
+<tr><td><nobr>INTEREST-GROUP</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Interest Group</td></tr>
+<tr><td><nobr>PERMITTED-USERS</nobr></td><td><nobr>character(14511)</nobr></td><td></td><td>No longer used - this previously held the list of users granted access to each archive - superseded by data access groups</td></tr>
+<tr><td><nobr>INTRO-CODE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Not Yet Used</td></tr>
+<tr><td><nobr>CONTROLLED-TRUST</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Not Yet Used</td></tr>
+<tr><td><nobr>CUSTOM-MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Alt Matter Code</td></tr>
+<tr><td><nobr>APPLICATION</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Derived: The case application code of the original matter record</td></tr>
+<tr><td><nobr>CONVERTED-ID</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Holds unique ID of archive in originating system for converted data</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>DATE-REDACTED</nobr></td><td><nobr>date</nobr></td><td></td><td>Date Redacted</td></tr>
+<tr><td><nobr>REDACTED-BY</nobr></td><td><nobr>character(16)</nobr></td><td></td><td>Redacted By</td></tr>
+<tr><td><nobr>NEVER-REDACT</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Never Redact</td></tr>
+<tr><td><nobr>ACCESS-GROUP-OVERRIDE</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Access Group Override</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>CLIENT-INDEX</td><td><center>yes</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+CL-CODE
+<tr><td>CONVERTED-ID</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+CONVERTED-ID
+<tr><td>DATE-ARCHIVED</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+DATE-ARCHIVED
+<tr><td>DATE-REDACTED</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+DATE-REDACTED
+<tr><td>DESCR-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+DESCRIPTION
+<tr><td>FE-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+FEE-EARNER
+<tr><td>ID</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+ARCHIVE-ID
+<tr><td>INTRO</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+INTRO-CODE
+<tr><td>LA-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+LEGAL-AID
+<tr><td>LOCATION</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+LOCATION
+<tr><td>MT-CODE-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MT-CODE
+<tr><td>NOTES-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+NOTES
+<tr><td>REF</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+REFERENCE
+<tr><td>REGISTER-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+REGISTER
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+<tr><td>TYPE-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+TYPE
+<tr><td>UDF-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+UDF-TEXT
+</Table>
+<br>
+<h2>Practice Manager Archive Enquiry/Details Screen</h2>
+<img src="arpm.gif" alt="Archive details screen" />
+<br><br>
+<h2>Connect Archive Enquiry/Details Screen</h2>
+<img src="arconnect.gif" alt="Archive details screen" />
+<br><br>
+<h2>Field Notes</h2>
+<p>For archived client matters most of these fields are populated automatically when the matter is
+archived based on values stored in MATDB and MATTR records.</p>
+<p><b>TYPE</b> is always “FILE” for records created automatically as a by-product of the matter archiving procedure.</p>
+<p>The <b>NOTES</b>, <b>LOCATION</b> and any or all <b>UDF</b> fields can be added later to, or edited on,  all archive records
+whether they have been created automatically from matter records or added “manually” as non-matter archive types such as deeds or wills.</p>
+<br><h2>User Defined Fields</h2>
+<p>These must be created and labelled before they can be used.  Subject to access rights you may add any or all of the three
+groups of five available fields with the following Practice Manager menu structure viz:</p>
+<p><b>File -> Setup -> Preferences -> Archives</b></p>
+<p>The maximum number of fields is five of each type viz dates text and numbers whether integer or
+decimal.  Unused fields of one type can’t be carried over to another type, e.g. you can’t have six text fields, six number fields and three date fields.</p>
+<br><h2>Suggested Linking</h2>
+<h3>Linking client records to their archive records:</h3>
+<p><a href="pub.clidb.html" title="Client data">A.CLIDB</a>.CL-CODE -> A.ARCHIVE.CL-CODE</p>
+<h3>Reporting on archived matters for selected fee earners:</h3>
+<p><a href="pub.feetr.html">PUB.FEETR</a>.FEE-EARNER -> A.ARCHIVE.FEE-EARNER</p>
+<h3>Reporting on historic time postings for an archived matter:</h3>
+<p>A.ARCHIVE.MT-CODE -> <a href="PUB.trtrans.html">PUB.TRTRANS</a>.MT-CODE</p>
+<h3>Linking the various ARCHIVE-UDF label fields to provide column headers for a report showing user-defined field data:</h3>
+<p>A.ARCHIVE.TYPE -> <a href="pub.archive-udf.html">PUB.ARCHIVE-UDF</a>.TYPE</p>
+<br><br></body></html>

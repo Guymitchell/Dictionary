@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.BILL-RECIPIENT</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.BILL-RECIPIENT</h1>
+<h2>Description: List of recipients related to each bill.  Each bill will have 1 recipient for a normal private or legal aid bill, 2 recipients for a split Net/VAT bill, and multiple recipients for a client party bill</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>BILL-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Bill ID - System Bill linking ID</td></tr>
+<tr><td><nobr>BILL-NO</nobr></td><td><nobr>character(254)</nobr></td><td>Bill No - Bill Number</td></tr>
+<tr><td><nobr>ENTITY-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Entity Type</td></tr>
+<tr><td><nobr>ENTITY-REF</nobr></td><td><nobr>character(254)</nobr></td><td>Entity Reference</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter Code</td></tr>
+<tr><td><nobr>NET-PARTY</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Net Bill</td></tr>
+<tr><td><nobr>PROCESSING-FLAG</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Processing</td></tr>
+<tr><td><nobr>VAT-PARTY</nobr></td><td><nobr>logical (true/false)</nobr></td><td>VAT Bill</td></tr>
+<tr><td><nobr>CLIENT-PARTY</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Client Party</td></tr>
+<tr><td><nobr>CLIENT</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Client</td></tr>
+<tr><td><nobr>ADDR-SEQNO</nobr></td><td><nobr>integer</nobr></td><td>Addr Seqno</td></tr>
+<tr><td><nobr>ADDRESSEE</nobr></td><td><nobr>character(254)</nobr></td><td>Addressee</td></tr>
+<tr><td><nobr>ADDR1</nobr></td><td><nobr>character(254)</nobr></td><td>Recipient address - address line 1</td></tr>
+<tr><td><nobr>ADDR2</nobr></td><td><nobr>character(254)</nobr></td><td>Recipient address - address line 2</td></tr>
+<tr><td><nobr>ADDR3</nobr></td><td><nobr>character(254)</nobr></td><td>Recipient address - town</td></tr>
+<tr><td><nobr>ADDR4</nobr></td><td><nobr>character(254)</nobr></td><td>Recipient address - county</td></tr>
+<tr><td><nobr>ADDR5</nobr></td><td><nobr>character(254)</nobr></td><td>Recipient address - country</td></tr>
+<tr><td><nobr>HOUSE-NAME</nobr></td><td><nobr>character(254)</nobr></td><td>Recipient address - house Name</td></tr>
+<tr><td><nobr>HOUSE-NO</nobr></td><td><nobr>character(254)</nobr></td><td>Recipient address - house number</td></tr>
+<tr><td><nobr>POST-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Recipient address - post code</td></tr>
+<tr><td><nobr>ORG-NAME</nobr></td><td><nobr>character(348)</nobr></td><td>Organisation Name</td></tr>
+<tr><td><nobr>RECIPIENT-NO</nobr></td><td><nobr>integer</nobr></td><td>Recipient No</td></tr>
+<tr><td><nobr>POSTING-NARRATIVE</nobr></td><td><nobr>character(370)</nobr></td><td>Posting Narrative</td></tr>
+<tr><td><nobr>COSTS-NARRATIVE</nobr></td><td><nobr>character(20000)</nobr></td><td>Costs Narrative</td></tr>
+<tr><td><nobr>COSTS-ON-ACCOUNT</nobr></td><td><nobr>decimal</nobr></td><td>On Account</td></tr>
+<tr><td><nobr>BILL-TEMPLATE</nobr></td><td><nobr>character(254)</nobr></td><td>Bill Template</td></tr>
+<tr><td><nobr>CREDIT-CONTROL-EXCL</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Debtor Control Exclude</td></tr>
+<tr><td><nobr>MANUAL-BILL-NO</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Manual Bill No</td></tr>
+<tr><td><nobr>GENERATED-BILL-NO</nobr></td><td><nobr>character(254)</nobr></td><td>Generated Bill No</td></tr>
+<tr><td><nobr>UNDONE</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Undone flag</td></tr>
+<tr><td><nobr>CREDIT-NOTED</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Credited</td></tr>
+<tr><td><nobr>CLIENT-PARTY-PROPORTION</nobr></td><td><nobr>decimal</nobr></td><td>Proportion</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>PRINT</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Print flag</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC04</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC05</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC06</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC07</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC08</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC09</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC10</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>BILL-NO-GENERATED</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Bill-No Generated</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG04</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>BILL-ID</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+BILL-ID
+<tr><td>BILL-NO</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+BILL-NO
+<tr><td>CREDIT-NOTED</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+CREDIT-NOTED
+<tr><td>ENTITY</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+ENTITY-TYPE
+ + 
+ENTITY-REF
+<tr><td>MT-CODE</td><td><center>yes</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MT-CODE
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+<tr><td>UNDONE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+UNDONE
+</Table>
+<br><br></body></html>

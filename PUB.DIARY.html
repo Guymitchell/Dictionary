@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.DIARY</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.DIARY</h1>
+<h2>Description: PM user diary data</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>DATE</nobr></td><td><nobr>date</nobr></td><td>Individual days in range</td></tr>
+<tr><td><nobr>START-TIME</nobr></td><td><nobr>integer</nobr></td><td>Start Time</td></tr>
+<tr><td><nobr>END-TIME</nobr></td><td><nobr>integer</nobr></td><td>End time in mins</td></tr>
+<tr><td><nobr>NO-OF-DAYS</nobr></td><td><nobr>integer</nobr></td><td>Derived: Days left in the range</td></tr>
+<tr><td><nobr>USER-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Selected User ID</td></tr>
+<tr><td><nobr>DESCRIPTION-1</nobr></td><td><nobr>character(254)</nobr></td><td>Description</td></tr>
+<tr><td><nobr>DESCRIPTION-2</nobr></td><td><nobr>character(254)</nobr></td><td>SOS use only</td></tr>
+<tr><td><nobr>ALARM</nobr></td><td><nobr>integer</nobr></td><td>Action Category: Holiday, personal or non matter</td></tr>
+<tr><td><nobr>PRIORITY</nobr></td><td><nobr>integer</nobr></td><td>Priority</td></tr>
+<tr><td><nobr>PRIVATE</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Private</td></tr>
+<tr><td><nobr>CONFIRMED</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Tentative</td></tr>
+<tr><td><nobr>CATEGORY</nobr></td><td><nobr>character(254)</nobr></td><td>Action Category: Category</td></tr>
+<tr><td><nobr>REL-FILE</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: CO, OR, MA</td></tr>
+<tr><td><nobr>REL-RECCID</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: record ID</td></tr>
+<tr><td><nobr>NOTES</nobr></td><td><nobr>character(20000)</nobr></td><td>Notes</td></tr>
+<tr><td><nobr>ATTACHMENT</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: List of attendees</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>SEQNO</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>INITIATOR</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ORIGINAL</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>RANGE-START-DATE</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>RANGE-START-TIME</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>RANGE-END-DATE</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>RANGE-END-TIME</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>REMINDER-PERIOD</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ORIGINAL-ATTENDEES</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>REPEAT-FREQUENCY</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>REPEAT-TIMES</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>FULL-DAY</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Full day</td></tr>
+<tr><td><nobr>ENTERED</nobr></td><td><nobr>date</nobr></td><td>Derived: entry date</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>DATE-INX</td><td><center>yes</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+DATE
+<tr><td>SEQNO</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SEQNO
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+<tr><td>START-TIME-INX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+START-TIME
+<tr><td>USER-INX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+USER-ID
+</Table>
+<br>
+<h2>User Interface Notes</h2>
+<p>This table holds diary entries as entered in the Practice Manager diary entry screen:</p>
+<img src="diary.gif" title="PM diary entry screen" /><br />
+<br /><br />
+<h2>Linking And Application</h2>
+<p>Diary records associated with a matter:</p>
+<p>DIARY.REL-FILE = "MA"</br>
+<a href="pub.matdb.html">MATDB</a>.MT-CODE -> DIARY.REL-FILE</p>
+<br><br></body></html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.ACTIONS</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.ACTIONS</h1>
+<h2>Description: Holds all completed and uncompleted actions held against matters and archives</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>ACT-RECTYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Type of record e.g. MA = matter</td></tr>
+<tr><td><nobr>ACT-RECCID</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Matter Code</td></tr>
+<tr><td><nobr>ACD-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Internal Unique Reference</td></tr>
+<tr><td><nobr>ACT-STATUS</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ACT-DUE-DATE</nobr></td><td><nobr>date</nobr></td><td>Add/amend: Date due</td></tr>
+<tr><td><nobr>ACT-LAST-ACTIONED</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ACT-COMPLETED</nobr></td><td><nobr>date</nobr></td><td>Add/amend: Date Completed</td></tr>
+<tr><td><nobr>ACT-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Add/amend: User attached to action</td></tr>
+<tr><td><nobr>ACT-SUPERVISOR</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ACT-COMMENT</nobr></td><td><nobr>character(430)</nobr></td><td>Add/amend: Comment</td></tr>
+<tr><td><nobr>ATC-ACTUAL-TIME</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>PRO-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ACT-CATEGORY</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Set within Action Definition</td></tr>
+<tr><td><nobr>DIARY-LNK</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Diary Link</td></tr>
+<tr><td><nobr>APPLY-FLAGS</nobr></td><td><nobr>character(254)</nobr></td><td>Apply Flags</td></tr>
+<tr><td><nobr>USR-SEQNO</nobr></td><td><nobr>character(254)</nobr></td><td>User Seqno</td></tr>
+<tr><td><nobr>DOC-LINK</nobr></td><td><nobr>character(254)</nobr></td><td>Doc Link</td></tr>
+<tr><td><nobr>OUTLOOK-TASKID</nobr></td><td><nobr>character(342)</nobr></td><td>Derived: Unique identifier used to tie an action to an Outlook task record</td></tr>
+<tr><td><nobr>MAI-MAILSHOT-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: MailshotID </td></tr>
+<tr><td><nobr>TEAM-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Add/amend: user team code</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>DOCS-PATH</nobr></td><td><nobr>character(254)</nobr></td><td>Document Path</td></tr>
+<tr><td><nobr>ACT-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>DIARY-SEQNO</nobr></td><td><nobr>integer</nobr></td><td>Derived: Sequence Number</td></tr>
+<tr><td><nobr>ACTION-LINK</nobr></td><td><nobr>integer</nobr></td><td>Derived: Action Link</td></tr>
+<tr><td><nobr>ACT-DESCNAME</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>COMPLETION-SCRIPT</nobr></td><td><nobr>character(254)</nobr></td><td>The Completion script to be run when the action is completed in Connect</td></tr>
+<tr><td><nobr>HISTORY-SEQNO</nobr></td><td><nobr>integer</nobr></td><td>Document Seqno</td></tr>
+<tr><td><nobr>ESCALATION-DAYS</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ESCALATION-DATE</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>ACD-CODE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+ACD-CODE
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>COMPLETED</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+ACT-COMPLETED
+<tr><td>DUE-DATE-INX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+ACT-DUE-DATE
+<tr><td>MAIL-INX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MAI-MAILSHOT-ID
+<tr><td>PRO-INX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+PRO-CODE
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+<tr><td>TEAM-INX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+TEAM-CODE
+<tr><td>TYPE-ID-INX</td><td><center>yes</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+ACT-RECTYPE
+ + 
+ACT-RECCID
+<tr><td>USER-INX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+ACT-USER
+</Table>
+<br><br></body></html>

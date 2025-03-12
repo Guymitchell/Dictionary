@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.BRANCH</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.BRANCH</h1>
+<h2>Description: Holds branch maintenance data as defined in the Practice Manager </h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">No. Extents</td><td class="thead">Description</td></tr>
+<tr><td><nobr>CODE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Branch code</td></tr>
+<tr><td><nobr>NAME</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Branch Name</td></tr>
+<tr><td><nobr>THIS-YEAR</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Current Year</td></tr>
+<tr><td><nobr>CURR-PERIOD</nobr></td><td><nobr>integer</nobr></td><td></td><td>Current Period</td></tr>
+<tr><td><nobr>CASH-VAT</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Cash VAT flag</td></tr>
+<tr><td><nobr>CASH-ACCOUNTS</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Cash accounting flag</td></tr>
+<tr><td><nobr>PERIOD-END</nobr></td><td><nobr>date</nobr></td><td><center>13</Center></td><td>Period end dates</td></tr>
+<tr><td><nobr>BATCH-START</nobr></td><td><nobr>integer</nobr></td><td></td><td>Derived: NOMTRANS.TRANS-NO of first accounts posting in current batch</td></tr>
+<tr><td><nobr>COUNTRY</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Country (England/Scotland) as selected from drop down list in Practice Manager branch maintenance screen</td></tr>
+<tr><td><nobr>CODE-PREF</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Matter Prefix</td></tr>
+<tr><td><nobr>LA_REF</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Supplier No</td></tr>
+<tr><td><nobr>LA_ACC</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Legal aid A/C No</td></tr>
+<tr><td><nobr>DEFAULT-BANKS</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Default client bank code and default office bank code (delimited by comma)</td></tr>
+<tr><td><nobr>CONTRACTNO</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Contract No</td></tr>
+<tr><td><nobr>ADDRESS1</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Branch address - line 1</td></tr>
+<tr><td><nobr>ADDRESS2</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Branch address - line 2</td></tr>
+<tr><td><nobr>ADDRESS3</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Branch address - line 3</td></tr>
+<tr><td><nobr>ADDRESS4</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Branch address - line 4</td></tr>
+<tr><td><nobr>POSTCODE</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Branch address - post code</td></tr>
+<tr><td><nobr>TELNO</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>FAX</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EMAIL</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>HOUSENAME</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>HOUSENO</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ADDRESS5</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Branch address - line 5 (country)</td></tr>
+<tr><td><nobr>MEDIATION</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>PROTECTED</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Protected branch flag - set to "Y" for a protected branch</td></tr>
+<tr><td><nobr>CIVIL-SCHEDULE-NO</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Civil Legal Aid schedule number for this branch contract</td></tr>
+<tr><td><nobr>CRIMINAL-SCHEDULE-NO</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Criminal Legal Aid schedule number for this branch contract</td></tr>
+<tr><td><nobr>ALLOW-CLI-POST-DISB-GROUPS</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Allow Client Post Disb Grp</td></tr>
+<tr><td><nobr>SUPPRESS-CLIENT-OVERDRAW-MSGS</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Suppress Client Overdraw Msgs</td></tr>
+<tr><td><nobr>BRANCH-BILL-NO</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Branch Bill No</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Branch VAT registration number</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>BRANCH-INDEX</td><td><center>yes</td><td><Center>yes</Center></td><td><Center>
+no</Center></td><td>
+CODE
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+</Table>
+<br>
+<h2>Practice Manager Maintenance Screen</h2>
+<img src="brmaint.gif" alt="Branch maintenance screen" />
+<br><br>
+<p>BRANCH corresponds to the data entered in the BRANCH maintenance program but, behind the scenes,  it is also read in by the software every
+time a client matter is added to the system and every time a posting is made.&nbsp; Once entered at the very outset of using Practice Manager
+the information held is unlikely to be amended except at times of other major changes in the firm and it is therefore very much a “write once, read often” table.</p>
+<br><br>
+<h2>Field Notes</h2>
+<p><b>CODE</b> holds the branch code itself, though in all the many other tables that hold the branch code the field is called BRANCH.</p>
+<p><b>COUNTRY</b> governs the display or suppression of extra accounting data for Scottish branches.&nbsp; The Accounts Matter reports and the Accounts Batch listings
+from the standard Practice Manager report menus all contain an extra specialized Client Control summary if any one or more branches of a firm have Scotland
+in this field. For these purposes Scotland is uniquely different, so England should be the setting for <b>any</b> jurisdiction other than Scotland.</p>
+<p><b>LA-ACC</b> holds the original code that applied for all purposes. It corresponds to Legal Aid Ac/No on the Branch maintenance screen.</p>
+<p><b>CONTRACTNO</b> derives from LA-ACC and should now be used by the branch for its civil contract code.  It corresponds to Contract No on the Branch maintenance screen.</p>
+<p><b>LA-REF</b> also derives from LA-ACC and should now be used by the branch for its CDS (criminal) code.  It corresponds to Supplier No on the Branch maintenance screen.</p>
+<p><b>CIVIL-SCHEDULE-NO</b> holds the Civil Legal Aid schedule number for the branch.</p>
+<p><b>CRIMINAL-SCHEDULE-NO</b> holds the Criminal Legal Aid schedule number for the branch.</p>
+<p>Note that the branch telephone, fax, email and mobile numbers are not stored in BRANCH table but are stored in the <a href="pub.telephones.html">PUB.TELEPHONES</a> table
+with PUB.TELEPHONES.TYPE = "BR" and PUB.TELEPHONES.REFERENCE holding the branch code.</p>
+<br><br>
+<h2>Suggested Linking</h2>
+<p>For multi-branch firms BRANCH is the only table which contains the branch name for display on reports, so common links might be:</p>
+<h3>To list matters by branch:</h3>
+<p><a href="pub.matdb.html" title="Matter data">PUB.MATDB</a>.BRANCH -> PUB.BRANCH.CODE</p>
+<br>
+<h3>To list individual accounts postings by originating branch:</h3>
+<p><a href="pub.trtrans.html">PUB.TRTRANS</a>.BRANCH -> PUB.BRANCH.CODE</p>
+<br>
+<p>Where your report contains more than one table with a BRANCH field take care in deciding which table to link to BRANCH as the results may differ.</p>
+<p>BRANCH has also been used in some standard reports where reference is needed to period end dates in previous accounting years before the current one.</p>
+<br><br></body></html>
