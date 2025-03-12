@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.MAT-BILL-HIST-AGED</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.MAT-BILL-HIST-AGED</h1>
+<h2>Description: Returns bill and credit note data from the A.MAT-BILL-HIST view with outstanding values split across 14 different age columns</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Client code</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter code</td></tr>
+<tr><td><nobr>POST-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Posting type ("BC" for bill, "CN" for credit note)</td></tr>
+<tr><td><nobr>BILL-NO</nobr></td><td><nobr>character(254)</nobr></td><td>Bill number</td></tr>
+<tr><td><nobr>BILL-DATE</nobr></td><td><nobr>date</nobr></td><td>Bill date</td></tr>
+<tr><td><nobr>BILL-OUTST</nobr></td><td><nobr>decimal</nobr></td><td>Amount outstanding</td></tr>
+<tr><td><nobr>DAYS-OUTST</nobr></td><td><nobr>integer</nobr></td><td>Number of days since bill date</td></tr>
+<tr><td><nobr>MATTER-FE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter-level fee earner code</td></tr>
+<tr><td><nobr>CLIENT-FE</nobr></td><td><nobr>character(254)</nobr></td><td>Client fee earner code (managing partner)</td></tr>
+<tr><td><nobr>MATTER-SUPERVISOR</nobr></td><td><nobr>character(254)</nobr></td><td>Matter supervisor code</td></tr>
+<tr><td><nobr>Aged0-1months</nobr></td><td><nobr>decimal</nobr></td><td>Outstanding value of bill if bill is less than 1 month old (based on the difference between today and the bill date).  Otherwise zero.</td></tr>
+<tr><td><nobr>Aged1-2months</nobr></td><td><nobr>decimal</nobr></td><td>Outstanding value of bill if bill is between 1 and 2 months old (based on the difference between today and the bill datE).  Otherwise zero.</td></tr>
+<tr><td><nobr>Aged2-3months</nobr></td><td><nobr>decimal</nobr></td><td>As above for bills between 2 and 3 months old</td></tr>
+<tr><td><nobr>Aged3-4months</nobr></td><td><nobr>decimal</nobr></td><td>As above for bills between 3 and 4 months old</td></tr>
+<tr><td><nobr>Aged4-5months</nobr></td><td><nobr>decimal</nobr></td><td>As above for bills between 4 and 5 months old</td></tr>
+<tr><td><nobr>Aged5-6months</nobr></td><td><nobr>decimal</nobr></td><td>As above for bills between 5 and 6 months old</td></tr>
+<tr><td><nobr>Aged6-7months</nobr></td><td><nobr>decimal</nobr></td><td>As above for bills between 6 and 7 months old</td></tr>
+<tr><td><nobr>Aged7-8months</nobr></td><td><nobr>decimal</nobr></td><td>As above for bills between 7 and 8 months old</td></tr>
+<tr><td><nobr>Aged8-9months</nobr></td><td><nobr>decimal</nobr></td><td>As above for bills between 8 and 9 months old</td></tr>
+<tr><td><nobr>Aged9-10months</nobr></td><td><nobr>decimal</nobr></td><td>As above for bills between 9 and 10 months old</td></tr>
+<tr><td><nobr>Aged10-11months</nobr></td><td><nobr>decimal</nobr></td><td>As above for bills between 10 and 11 months old</td></tr>
+<tr><td><nobr>Aged11-12months</nobr></td><td><nobr>decimal</nobr></td><td>As above for bills between 11 and 12 months old</td></tr>
+<tr><td><nobr>Aged12-13Months</nobr></td><td><nobr>decimal</nobr></td><td>As above for bills between 12 and 13 months old</td></tr>
+<tr><td><nobr>Over13months</nobr></td><td><nobr>decimal</nobr></td><td>As above for bills over 13 months old</td></tr>
+</Table>
+<br><br></body></html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.TIME-BILLED-SUM-BY-BR-FE-DEP-YR</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.TIME-BILLED-SUM-BY-BR-FE-DEP-YR</h1>
+<h2>Description: Returns a summary of billed time value, fees billed and time written off by branch, matter fee earner, department and year, with individual period values and YTD values in separate columns for every period in the year</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>BRANCH</nobr></td><td><nobr>character(254)</nobr></td><td>Branch code, derived from TRTRANS.MT-CODE</td></tr>
+<tr><td><nobr>MATTER-FE-DEPT</nobr></td><td><nobr>character(254)</nobr></td><td>Department code of matter fee earner (derived from MATDB.FEE-EARNER -> FEETR.DEPARTMENT)</td></tr>
+<tr><td><nobr>MATTER-FE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter fee earner code (derived from MATDB.FEE-EARNER)</td></tr>
+<tr><td><nobr>YEAR</nobr></td><td><nobr>character(254)</nobr></td><td>Financial year, derived from TRTRANS.YEAR</td></tr>
+<tr><td><nobr>TIME-VALUE-PER1</nobr></td><td><nobr>decimal</nobr></td><td>Value of billed time posted in period 1</td></tr>
+<tr><td><nobr>TIME-VALUE-PER2</nobr></td><td><nobr>decimal</nobr></td><td>Value of billed time posted in period 2</td></tr>
+<tr><td><nobr>TIME-VALUE-PER3</nobr></td><td><nobr>decimal</nobr></td><td>Value of billed time posted in period 3</td></tr>
+<tr><td><nobr>TIME-VALUE-PER4</nobr></td><td><nobr>decimal</nobr></td><td>Value of billed time posted in period 4</td></tr>
+<tr><td><nobr>TIME-VALUE-PER5</nobr></td><td><nobr>decimal</nobr></td><td>Value of billed time posted in period 5</td></tr>
+<tr><td><nobr>TIME-VALUE-PER6</nobr></td><td><nobr>decimal</nobr></td><td>Value of billed time posted in period 6</td></tr>
+<tr><td><nobr>TIME-VALUE-PER7</nobr></td><td><nobr>decimal</nobr></td><td>Value of billed time posted in period 7</td></tr>
+<tr><td><nobr>TIME-VALUE-PER8</nobr></td><td><nobr>decimal</nobr></td><td>Value of billed time posted in period 8</td></tr>
+<tr><td><nobr>TIME-VALUE-PER9</nobr></td><td><nobr>decimal</nobr></td><td>Value of billed time posted in period 9</td></tr>
+<tr><td><nobr>TIME-VALUE-PER10</nobr></td><td><nobr>decimal</nobr></td><td>Value of billed time posted in period 10</td></tr>
+<tr><td><nobr>TIME-VALUE-PER11</nobr></td><td><nobr>decimal</nobr></td><td>Value of billed time posted in period 11</td></tr>
+<tr><td><nobr>TIME-VALUE-PER12</nobr></td><td><nobr>decimal</nobr></td><td>Value of billed time posted in period 12</td></tr>
+<tr><td><nobr>TIME-VALUE-PER13</nobr></td><td><nobr>decimal</nobr></td><td>Value of billed time posted in period 13</td></tr>
+<tr><td><nobr>TIME-VALUE-YTD1</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of billed time posted at period 1</td></tr>
+<tr><td><nobr>TIME-VALUE-YTD2</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of billed time posted up to period 2</td></tr>
+<tr><td><nobr>TIME-VALUE-YTD3</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of billed time posted up to period 3</td></tr>
+<tr><td><nobr>TIME-VALUE-YTD4</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of billed time posted up to period 4</td></tr>
+<tr><td><nobr>TIME-VALUE-YTD5</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of billed time posted up to period 5</td></tr>
+<tr><td><nobr>TIME-VALUE-YTD6</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of billed time posted up to period 6</td></tr>
+<tr><td><nobr>TIME-VALUE-YTD7</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of billed time posted up to period 7</td></tr>
+<tr><td><nobr>TIME-VALUE-YTD8</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of billed time posted up to period 8</td></tr>
+<tr><td><nobr>TIME-VALUE-YTD9</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of billed time posted up to period 9</td></tr>
+<tr><td><nobr>TIME-VALUE-YTD10</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of billed time posted up to period 10</td></tr>
+<tr><td><nobr>TIME-VALUE-YTD11</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of billed time posted up to period 11</td></tr>
+<tr><td><nobr>TIME-VALUE-YTD12</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of billed time posted up to period 12</td></tr>
+<tr><td><nobr>TIME-VALUE-YTD13</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of billed time posted up to period 13</td></tr>
+<tr><td><nobr>FEES-BILLED-PER1</nobr></td><td><nobr>decimal</nobr></td><td>Actual fees billed to client in period 1</td></tr>
+<tr><td><nobr>FEES-BILLED-PER2</nobr></td><td><nobr>decimal</nobr></td><td>Actual fees billed to client in period 2</td></tr>
+<tr><td><nobr>FEES-BILLED-PER3</nobr></td><td><nobr>decimal</nobr></td><td>Actual fees billed to client in period 3</td></tr>
+<tr><td><nobr>FEES-BILLED-PER4</nobr></td><td><nobr>decimal</nobr></td><td>Actual fees billed to client in period 4</td></tr>
+<tr><td><nobr>FEES-BILLED-PER5</nobr></td><td><nobr>decimal</nobr></td><td>Actual fees billed to client in period 5</td></tr>
+<tr><td><nobr>FEES-BILLED-PER6</nobr></td><td><nobr>decimal</nobr></td><td>Actual fees billed to client in period 6</td></tr>
+<tr><td><nobr>FEES-BILLED-PER7</nobr></td><td><nobr>decimal</nobr></td><td>Actual fees billed to client in period 7</td></tr>
+<tr><td><nobr>FEES-BILLED-PER8</nobr></td><td><nobr>decimal</nobr></td><td>Actual fees billed to client in period 8</td></tr>
+<tr><td><nobr>FEES-BILLED-PER9</nobr></td><td><nobr>decimal</nobr></td><td>Actual fees billed to client in period 9</td></tr>
+<tr><td><nobr>FEES-BILLED-PER10</nobr></td><td><nobr>decimal</nobr></td><td>Actual fees billed to client in period 10</td></tr>
+<tr><td><nobr>FEES-BILLED-PER11</nobr></td><td><nobr>decimal</nobr></td><td>Actual fees billed to client in period 11</td></tr>
+<tr><td><nobr>FEES-BILLED-PER12</nobr></td><td><nobr>decimal</nobr></td><td>Actual fees billed to client in period 12</td></tr>
+<tr><td><nobr>FEES-BILLED-PER13</nobr></td><td><nobr>decimal</nobr></td><td>Actual fees billed to client in period 13</td></tr>
+<tr><td><nobr>FEES-BILLED-YTD1</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative fees billed to client up to period 1</td></tr>
+<tr><td><nobr>FEES-BILLED-YTD2</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative fees billed to client up to period 2</td></tr>
+<tr><td><nobr>FEES-BILLED-YTD3</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative fees billed to client up to period 3</td></tr>
+<tr><td><nobr>FEES-BILLED-YTD4</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative fees billed to client up to period 4</td></tr>
+<tr><td><nobr>FEES-BILLED-YTD5</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative fees billed to client up to period 5</td></tr>
+<tr><td><nobr>FEES-BILLED-YTD6</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative fees billed to client up to period 6</td></tr>
+<tr><td><nobr>FEES-BILLED-YTD7</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative fees billed to client up to period 7</td></tr>
+<tr><td><nobr>FEES-BILLED-YTD8</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative fees billed to client up to period 8</td></tr>
+<tr><td><nobr>FEES-BILLED-YTD9</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative fees billed to client up to period 9</td></tr>
+<tr><td><nobr>FEES-BILLED-YTD10</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative fees billed to client up to period 10</td></tr>
+<tr><td><nobr>FEES-BILLED-YTD11</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative fees billed to client up to period 11</td></tr>
+<tr><td><nobr>FEES-BILLED-YTD12</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative fees billed to client up to period 12</td></tr>
+<tr><td><nobr>FEES-BILLED-YTD13</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative fees billed to client up to period 13</td></tr>
+<tr><td><nobr>WRITE-OFF-PER1</nobr></td><td><nobr>decimal</nobr></td><td>Value of time written off in period 1</td></tr>
+<tr><td><nobr>WRITE-OFF-PER2</nobr></td><td><nobr>decimal</nobr></td><td>Value of time written off in period 2</td></tr>
+<tr><td><nobr>WRITE-OFF-PER3</nobr></td><td><nobr>decimal</nobr></td><td>Value of time written off in period 3</td></tr>
+<tr><td><nobr>WRITE-OFF-PER4</nobr></td><td><nobr>decimal</nobr></td><td>Value of time written off in period 4</td></tr>
+<tr><td><nobr>WRITE-OFF-PER5</nobr></td><td><nobr>decimal</nobr></td><td>Value of time written off in period 5</td></tr>
+<tr><td><nobr>WRITE-OFF-PER6</nobr></td><td><nobr>decimal</nobr></td><td>Value of time written off in period 6</td></tr>
+<tr><td><nobr>WRITE-OFF-PER7</nobr></td><td><nobr>decimal</nobr></td><td>Value of time written off in period 7</td></tr>
+<tr><td><nobr>WRITE-OFF-PER8</nobr></td><td><nobr>decimal</nobr></td><td>Value of time written off in period 8</td></tr>
+<tr><td><nobr>WRITE-OFF-PER9</nobr></td><td><nobr>decimal</nobr></td><td>Value of time written off in period 9</td></tr>
+<tr><td><nobr>WRITE-OFF-PER10</nobr></td><td><nobr>decimal</nobr></td><td>Value of time written off in period 10</td></tr>
+<tr><td><nobr>WRITE-OFF-PER11</nobr></td><td><nobr>decimal</nobr></td><td>Value of time written off in period 11</td></tr>
+<tr><td><nobr>WRITE-OFF-PER12</nobr></td><td><nobr>decimal</nobr></td><td>Value of time written off in period 12</td></tr>
+<tr><td><nobr>WRITE-OFF-PER13</nobr></td><td><nobr>decimal</nobr></td><td>Value of time written off in period 13</td></tr>
+<tr><td><nobr>WRITE-OFF-YTD1</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of time written off up to period 1</td></tr>
+<tr><td><nobr>WRITE-OFF-YTD2</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of time written off up to period 2</td></tr>
+<tr><td><nobr>WRITE-OFF-YTD3</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of time written off up to period 3</td></tr>
+<tr><td><nobr>WRITE-OFF-YTD4</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of time written off up to period 4</td></tr>
+<tr><td><nobr>WRITE-OFF-YTD5</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of time written off up to period 5</td></tr>
+<tr><td><nobr>WRITE-OFF-YTD6</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of time written off up to period 6</td></tr>
+<tr><td><nobr>WRITE-OFF-YTD7</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of time written off up to period 7</td></tr>
+<tr><td><nobr>WRITE-OFF-YTD8</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of time written off up to period 8</td></tr>
+<tr><td><nobr>WRITE-OFF-YTD9</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of time written off up to period 9</td></tr>
+<tr><td><nobr>WRITE-OFF-YTD10</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of time written off up to period 10</td></tr>
+<tr><td><nobr>WRITE-OFF-YTD11</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of time written off up to period 11</td></tr>
+<tr><td><nobr>WRITE-OFF-YTD12</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of time written off up to period 12</td></tr>
+<tr><td><nobr>WRITE-OFF-YTD13</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of time written off up to period 13</td></tr>
+</Table>
+<br><br></body></html>

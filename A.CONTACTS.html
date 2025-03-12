@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.CONTACTS</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.CONTACTS</h1>
+<h2>Description: Provides contacts data with expert witness and web access information split into separate columns</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>ENTITYTYPE</nobr></td><td><nobr>fixchar</nobr></td><td>Returns the fixed string "CO" for every row - provided for easier joining between CONTACTS and other tables requiring an entity type in the join, e.g. <a href="pub.addresses.html">PUB.ADDRESSES</a> and <a href="pub.telephones.html">PUB.TELEPHONES</a></td></tr>
+<tr><td><nobr>ADDRESS5</nobr></td><td><nobr>character(254)</nobr></td><td>Address: Country</td></tr>
+<tr><td><nobr>APPLICATION</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>BUSINESS-ADDR</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CAT1-DATE</nobr></td><td><nobr>date</nobr></td><td>Identification: Category 1 panel – Date</td></tr>
+<tr><td><nobr>CAT1-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Identification: Category 1 panel – ID</td></tr>
+<tr><td><nobr>CAT1-ID-NOTES</nobr></td><td><nobr>character(553)</nobr></td><td>Identification: Category 1 panel – Notes</td></tr>
+<tr><td><nobr>CAT1-LOCATION</nobr></td><td><nobr>character(254)</nobr></td><td>Identification: Category 1 panel – Original location</td></tr>
+<tr><td><nobr>CAT1-REF</nobr></td><td><nobr>character(336)</nobr></td><td>Identification: Category 1 panel – Reference</td></tr>
+<tr><td><nobr>CAT1-SCANNED</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Identification: Category 1 panel – ID Scanned</td></tr>
+<tr><td><nobr>CAT1-USERID</nobr></td><td><nobr>character(4305)</nobr></td><td>Identification: Category 1 panel – User ID</td></tr>
+<tr><td><nobr>CAT2-DATE</nobr></td><td><nobr>date</nobr></td><td>Identification: Category 2 panel – Date</td></tr>
+<tr><td><nobr>CAT2-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Identification: Category 2 panel – ID</td></tr>
+<tr><td><nobr>CAT2-ID-NOTES</nobr></td><td><nobr>character(446)</nobr></td><td>Identification: Category 2 panel – Notes</td></tr>
+<tr><td><nobr>CAT2-LOCATION</nobr></td><td><nobr>character(254)</nobr></td><td>Identification: Category 2 panel – Original location</td></tr>
+<tr><td><nobr>CAT2-REF</nobr></td><td><nobr>character(254)</nobr></td><td>Identification: Category 2 panel – Reference</td></tr>
+<tr><td><nobr>CAT2-SCANNED</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Identification: Category 2 panel – ID Scanned</td></tr>
+<tr><td><nobr>CAT2-USERID</nobr></td><td><nobr>character(254)</nobr></td><td>Identification: Category 2 panel – User ID</td></tr>
+<tr><td><nobr>CLIENT-FLAG</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Set to “Client” if contact is a client</td></tr>
+<tr><td><nobr>CON-ADDRESS-1</nobr></td><td><nobr>character(254)</nobr></td><td>Address: Line 1</td></tr>
+<tr><td><nobr>CON-ADDRESS-2</nobr></td><td><nobr>character(254)</nobr></td><td>Address: Line 2</td></tr>
+<tr><td><nobr>CON-ADDRESS-3</nobr></td><td><nobr>character(254)</nobr></td><td>Address: Town</td></tr>
+<tr><td><nobr>CON-ADDRESS-4</nobr></td><td><nobr>character(254)</nobr></td><td>Address: County</td></tr>
+<tr><td><nobr>CON-CREATED-DATE</nobr></td><td><nobr>date</nobr></td><td>Date Created</td></tr>
+<tr><td><nobr>CON-DERIVED-ADDRESS</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: All CON-ADDRESS-n fields concatenated</td></tr>
+<tr><td><nobr>CON-DERIVED-NAME</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Title + Forename + Surname</td></tr>
+<tr><td><nobr>CON-DETAILS-COMPLETE</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Details Complete flag</td></tr>
+<tr><td><nobr>CON-DOB</nobr></td><td><nobr>date</nobr></td><td>Date of birth</td></tr>
+<tr><td><nobr>CON-FORENAME</nobr></td><td><nobr>character(254)</nobr></td><td>Forename(s)</td></tr>
+<tr><td><nobr>CON-GENDER</nobr></td><td><nobr>character(254)</nobr></td><td>Gender, "M" = Male, "F" = Female.  This is a mandatory field. </td></tr>
+<tr><td><nobr>CON-INTRODUCTION</nobr></td><td><nobr>character(254)</nobr></td><td>Introduction code</td></tr>
+<tr><td><nobr>CON-MARITAL</nobr></td><td><nobr>character(254)</nobr></td><td>Marital status code, valid values are:  "SI" (single), "MA" (married), "CO" (cohabiting), "SE" (separated), "DI" (divorced), "CI" (civil partnership), "WI" (widowed/widower), "UN" (unknown)</td></tr>
+<tr><td><nobr>CON-MARKET-EXCLUDE</nobr></td><td><nobr>character(254)</nobr></td><td>Market exclude flag ("Y"=Exclude, "N"=Include, "U"=Unapproved)</td></tr>
+<tr><td><nobr>CON-MARKETING-SCORE</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CON-NOTES</nobr></td><td><nobr>character(20000)</nobr></td><td>Contact notes</td></tr>
+<tr><td><nobr>CON-OCCUPATION</nobr></td><td><nobr>character(254)</nobr></td><td>Occupation code</td></tr>
+<tr><td><nobr>CON-ORGANISATION-NAME</nobr></td><td><nobr>character(254)</nobr></td><td>Organisation name</td></tr>
+<tr><td><nobr>CON-PARTNER</nobr></td><td><nobr>character(254)</nobr></td><td>Liaison (fee earner) code</td></tr>
+<tr><td><nobr>CON-POST-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Address: post code</td></tr>
+<tr><td><nobr>CON-REFERENCE</nobr></td><td><nobr>integer</nobr></td><td>Unique identifier for contact</td></tr>
+<tr><td><nobr>CON-SALUTATION</nobr></td><td><nobr>character(254)</nobr></td><td>Formal salutation</td></tr>
+<tr><td><nobr>CON-SC-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Generated by SOLCASE</td></tr>
+<tr><td><nobr>CON-SECTOR</nobr></td><td><nobr>character(254)</nobr></td><td>Summary: Code behind sector selected</td></tr>
+<tr><td><nobr>CON-SURNAME</nobr></td><td><nobr>character(254)</nobr></td><td>Summary: Surname</td></tr>
+<tr><td><nobr>CON-SYNC</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: C, N or blank</td></tr>
+<tr><td><nobr>CON-TITLE</nobr></td><td><nobr>character(254)</nobr></td><td>Contact title (Mr, Mrs etc.)</td></tr>
+<tr><td><nobr>CON-VIP</nobr></td><td><nobr>character(254)</nobr></td><td>Summary: H M or N</td></tr>
+<tr><td><nobr>CONSENT-GIVEN</nobr></td><td><nobr>date</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>CONSENT-NOTES</nobr></td><td><nobr>character(510)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>CONVERTED-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>DECEASED</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Deceased flag</td></tr>
+<tr><td><nobr>DEFAULT-ZONE</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>DISABILITY</nobr></td><td><nobr>character(254)</nobr></td><td>Disability code</td></tr>
+<tr><td><nobr>DOD</nobr></td><td><nobr>character(254)</nobr></td><td>Date of death</td></tr>
+<tr><td><nobr>EXPERT-WITNESS-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Expert witness type</td></tr>
+<tr><td><nobr>EXPERT-WITNESS-STATUS</nobr></td><td><nobr>character(254)</nobr></td><td>Witness status "A" (Approved), "P" (Pending" or "N" (Unapproved)</td></tr>
+<tr><td><nobr>HOUSENAME</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>HOUSENO</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>IMPORT-DATETIME</nobr></td><td><nobr>character(254)</nobr></td><td>Date imported (from Contact Import utility)</td></tr>
+<tr><td><nobr>INFORMAL</nobr></td><td><nobr>character(254)</nobr></td><td>Informal salutation</td></tr>
+<tr><td><nobr>JOB</nobr></td><td><nobr>character(254)</nobr></td><td>Job title</td></tr>
+<tr><td><nobr>ML-NOTES</nobr></td><td><nobr>character(254)</nobr></td><td>Identification: Notes</td></tr>
+<tr><td><nobr>MLRO</nobr></td><td><nobr>character(254)</nobr></td><td>Identification: MLRO</td></tr>
+<tr><td><nobr>MLRO-ACTION</nobr></td><td><nobr>character(254)</nobr></td><td>Identification: MLRO Action</td></tr>
+<tr><td><nobr>MLRO-DATE-REFERRAL</nobr></td><td><nobr>date</nobr></td><td>Identification: Date in Referral to MLRO panel</td></tr>
+<tr><td><nobr>MLRO-REFERRAL</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Identification: Set if Referred to MLRO ticked</td></tr>
+<tr><td><nobr>MLRO-REFERRAL-USERID</nobr></td><td><nobr>character(254)</nobr></td><td>Identification: User ID of Referred By</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>NCIS-CLEARED</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Identification: Set if "Cleared by SOCA" ticked</td></tr>
+<tr><td><nobr>NCIS-CLEARED-DATE</nobr></td><td><nobr>date</nobr></td><td>Identification: Date in "Referral to SOCA" panel</td></tr>
+<tr><td><nobr>NCIS-COMMENT</nobr></td><td><nobr>character(254)</nobr></td><td>Identification: Comment in "Referral to SOCA" panel</td></tr>
+<tr><td><nobr>NCIS-DATE-REFERRAL</nobr></td><td><nobr>date</nobr></td><td>Identification: Date next to NCIS-REFERRAL</td></tr>
+<tr><td><nobr>NCIS-REFERRAL</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Identification: Set if "Referred to SOCA" ticked</td></tr>
+<tr><td><nobr>NI-NO</nobr></td><td><nobr>character(254)</nobr></td><td>National insurance number (can be set through web services but not Practice Manager)</td></tr>
+<tr><td><nobr>OK-TO-ACT</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Identification: Set if Able to Act ticked</td></tr>
+<tr><td><nobr>ORIGIN</nobr></td><td><nobr>integer</nobr></td><td>Ethnic origin code</td></tr>
+<tr><td><nobr>PAYEE</nobr></td><td><nobr>character(254)</nobr></td><td>Payee name</td></tr>
+<tr><td><nobr>PREV-NAME</nobr></td><td><nobr>character(254)</nobr></td><td>Previous name </td></tr>
+<tr><td><nobr>REASON</nobr></td><td><nobr>character(254)</nobr></td><td>Identification: Reason in Referral to MLRO panel</td></tr>
+<tr><td><nobr>REFERENCE-CHAR</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: CON-REFERENCE field in string format</td></tr>
+<tr><td><nobr>WEB-ACCESS</nobr></td><td><nobr>character(254)</nobr></td><td>Indicates whether this contact has access to Connect OnLine</td></tr>
+<tr><td><nobr>WEB-ACCESS-RIGHTS</nobr></td><td><nobr>character(254)</nobr></td><td>The access rights available to this contact when logged into Connect OnLine</td></tr>
+<tr><td><nobr>WEB-ADDR</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>WEB-LOGIN</nobr></td><td><nobr>character(254)</nobr></td><td>The contacts user id for logging into Connect OnLine</td></tr>
+<tr><td><nobr>WEB-PASSWORD</nobr></td><td><nobr>character(254)</nobr></td><td>The contacts password (encrypted) for logging into Connect OnLine</td></tr>
+</Table>
+<br>
+<h2>Practice Manager Contact Details Screen</h2>
+<img src="pmcontenq.gif" alt="Contact details screen" />
+<br><br>
+<h2>Connect Contact Details Screen</h2>
+<img src="connectcontenq.gif" alt="Connect contact details screen" />
+<br><br>
+<p>This table corresponds almost entirely to the  fields available for input in the Individual  Create and Amend programs accessed from the General Search screen.</p>
+<br><br>
+<h2>Field Notes</h2>
+<p><b>REFERENCE-CHAR</b> holds the same numbers as <b>REFERENCE</b> but held as a character value instead of a numeric value.  This allows you to
+link <b>CONTACTS</b> to other tables such as <a href="PUB.MATTRELATIONS.html">MATTRELATIONS</a> where the matching code is held as a string, as Crystal
+will not always report reliably if a string to number link is attempted.</p>
+<br><br>
+<h2>Suggested Linking</h2>
+<p>The <B>CONTACTS</b> table links to many other tables, for example:</p>
+<h3>To list additional telephone numbers for a contact:</h3>
+<p><a href="pub.telephones.html" title="Telephones data">PUB.TELEPHONES</a>.REFERENCE -> PUB.CONTACTS.REFERENCE-CHAR (where PUB.TELEPHONES.TYPE = "CO")</p>
+<br>
+<h3>To list contacts who are parties of clients:</h3>
+<p>A.CONTACTS.CON-REFERENCE -> <a href="pub.contrelations.html">PUB.CONTRELATIONS</a>.CON-REFERENCE</p>
+<p>A.CONTRELATIONS.REL-RECORD -> <a href="pub.clidb.html">PUB.CLIDB</a>.CL-CODE</p>
+<p>Where PUB.CONTRELATIONS.ROL-CODE = "C* and PUB.CONTRELATIONS.REL-FILE = "CL"</p>
+<br>
+<br><br></body></html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.MATTER_TOTALS</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.MATTER_TOTALS</h1>
+<h2>Description: Provides a simplified view of basic matter details including accounts and time totals by combining PUB.MATDB, PUB.MATAC and PUB.MATTR</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter code</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Client code</td></tr>
+<tr><td><nobr>DESCRIPTION</nobr></td><td><nobr>character(254)</nobr></td><td>Matter description, taken from MATDB.DESCRIPTION</td></tr>
+<tr><td><nobr>CLIENT-FULL-NAME</nobr></td><td><nobr>character(474)</nobr></td><td>Client full derived name, taken from CLIDB.FULL-DERIVED-NAME</td></tr>
+<tr><td><nobr>FEE-EARNER</nobr></td><td><nobr>character(254)</nobr></td><td>Matter fee earner code, taken from MATDB.FEE-EARNER</td></tr>
+<tr><td><nobr>FE-NAME</nobr></td><td><nobr>character(254)</nobr></td><td>Matter fee earner name, taken from FEETR.NAME</td></tr>
+<tr><td><nobr>BRANCH</nobr></td><td><nobr>character(254)</nobr></td><td>Matter branch code, taken from MATDB.BRANCH</td></tr>
+<tr><td><nobr>DATE-OPENED</nobr></td><td><nobr>date</nobr></td><td>Matter open date, taken from MATDB.DATE-OPENED</td></tr>
+<tr><td><nobr>DATE-CLOSED</nobr></td><td><nobr>date</nobr></td><td>Matter close date, taken from MATDB.DATE-CLOSED</td></tr>
+<tr><td><nobr>REFERENCE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter reference, taken from MATDB.REFERENCE</td></tr>
+<tr><td><nobr>ARCHIVED-FLAG</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Matter archived flag (yes/no), taken from MATDB.ARCHIVED-FLAG</td></tr>
+<tr><td><nobr>ESTIMATE</nobr></td><td><nobr>integer</nobr></td><td>Matter estimate, taken from MATDB.ESTIMATE</td></tr>
+<tr><td><nobr>FIXED-FEE</nobr></td><td><nobr>decimal</nobr></td><td>Matter fixed fee value, taken from MATDB.FIXED-FEE</td></tr>
+<tr><td><nobr>BAL-UC</nobr></td><td><nobr>decimal</nobr></td><td>Matter unallocated credit balance, taken from MATAC.BAL-UC</td></tr>
+<tr><td><nobr>BAL-UPB</nobr></td><td><nobr>decimal</nobr></td><td>Matter unpaid bills balance, taken from MATAC.BAL-UPB</td></tr>
+<tr><td><nobr>BAL-UBD</nobr></td><td><nobr>decimal</nobr></td><td>Matter unbilled disbursements balance, taken from MATAC.BAL-UBD</td></tr>
+<tr><td><nobr>BAL-CLI</nobr></td><td><nobr>decimal</nobr></td><td>Matter client account balance, taken from MATAC.BAL-CLI</td></tr>
+<tr><td><nobr>BAL-DEP</nobr></td><td><nobr>decimal</nobr></td><td>Matter deposit account balance, taken from MATAC.BAL-DEP</td></tr>
+<tr><td><nobr>TOT-DISBS</nobr></td><td><nobr>decimal</nobr></td><td>Matter total disbursements value, taken from MATAC.TOT-DISBS</td></tr>
+<tr><td><nobr>AC-TOT-BILLED</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>DATE-LAST-AC-POST</nobr></td><td><nobr>date</nobr></td><td>Date of last matter accounts posting, taken from MATAC.DATE-LAST-POST</td></tr>
+<tr><td><nobr>WRITE-OFF-DISBS</nobr></td><td><nobr>decimal</nobr></td><td>Value of written off disbursements, derived from view A.WD_TOTAL_BY_MATTER</td></tr>
+<tr><td><nobr>WIP1</nobr></td><td><nobr>decimal</nobr></td><td>Unbilled time costs, taken from MATTR.WIP1</td></tr>
+<tr><td><nobr>WIP2</nobr></td><td><nobr>decimal</nobr></td><td>Unbilled time value, taken from MATTR.WIP2</td></tr>
+<tr><td><nobr>TOT-TIME</nobr></td><td><nobr>integer</nobr></td><td>Total time recorded in minutes, taken from MATTR.TOT-TIME</td></tr>
+<tr><td><nobr>TOT-COST</nobr></td><td><nobr>decimal</nobr></td><td>Total time recorded cost, taken from MATTR.TOT-COST</td></tr>
+<tr><td><nobr>TOT-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Total time recorded value, taken from MATTR.TOT-VALUE</td></tr>
+<tr><td><nobr>TR-TOT-BILLED</nobr></td><td><nobr>decimal</nobr></td><td>Total value of time billed, taken from MATTR.TOT-BILLED</td></tr>
+<tr><td><nobr>DATE-LAST-TR-POST</nobr></td><td><nobr>date</nobr></td><td>Date of last time posting, taken from MATTR.DATE-LASTPOST</td></tr>
+<tr><td><nobr>DATE-LAST-TR-BILL</nobr></td><td><nobr>date</nobr></td><td>[Awaiting description]</td></tr>
+</Table>
+<br><br></body></html>

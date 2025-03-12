@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.CLIENTANALYSIS</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.CLIENTANALYSIS</h1>
+<h2>Description: Provides a client-level summary of time recording and billing information grouped by client code and financial year</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Client code</td></tr>
+<tr><td><nobr>FULL-DERIVED-NAME</nobr></td><td><nobr>character(474)</nobr></td><td>Client full derived name taken from main client table (PUB.CLIDB)</td></tr>
+<tr><td><nobr>YEAR</nobr></td><td><nobr>character(254)</nobr></td><td>Year of analysis</td></tr>
+<tr><td><nobr>TIME-BILLED</nobr></td><td><nobr>decimal</nobr></td><td>Value of time billed (fees billed), equivalent to the X08 nominal balance</td></tr>
+<tr><td><nobr>TIME-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Value of time recorded</td></tr>
+<tr><td><nobr>TIME-MINS</nobr></td><td><nobr>decimal</nobr></td><td>Number of minutes of time posted</td></tr>
+<tr><td><nobr>TIME-WOFF</nobr></td><td><nobr>decimal</nobr></td><td>Value of time written off</td></tr>
+<tr><td><nobr>NO-BILLS</nobr></td><td><nobr>integer</nobr></td><td>Number of bills raised</td></tr>
+</Table>
+<br><br></body></html>

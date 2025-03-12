@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.WIP-DETAIL-SPLIT</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.WIP-DETAIL-SPLIT</h1>
+<h2>Description: Returns WIP time posting transactions, with WIP values split across 14 separate aging columns</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Client code</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter code</td></tr>
+<tr><td><nobr>MATDB-SUPERVISOR</nobr></td><td><nobr>character(254)</nobr></td><td>Matter supervisor code, derived from MATDB.SUPERVISOR</td></tr>
+<tr><td><nobr>MATDB-FEE-EARNER</nobr></td><td><nobr>character(254)</nobr></td><td>Matter fee earner, derived from MATDB.FEE-EARNER</td></tr>
+<tr><td><nobr>TRTRANS-FEE-EARNER</nobr></td><td><nobr>character(254)</nobr></td><td>Time posting fee earner, derived from TRTRANS.FEE-EARNER</td></tr>
+<tr><td><nobr>ACT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Time posting activity code, derived from TRTRANS.ACT-CODE</td></tr>
+<tr><td><nobr>MT-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter type, derived from TRTRANS.MT-TYPE</td></tr>
+<tr><td><nobr>POST-DATE</nobr></td><td><nobr>date</nobr></td><td>Time posting date, derived from TRTRANS.POST-DATE</td></tr>
+<tr><td><nobr>ACTUAL-WIP-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>The actual WIP value of the time posting (OUTST-VALUE plus ON-ACCOUNT-TIME)</td></tr>
+<tr><td><nobr>Wip0-1Months</nobr></td><td><nobr>decimal</nobr></td><td>The WIP value of the posting if it is less than 1 month old (calculated by comparing today's date with the date of the time posting), otherwise zero</td></tr>
+<tr><td><nobr>Wip1-2Months</nobr></td><td><nobr>decimal</nobr></td><td>The WIP value of the posting if it is between 1 and 2 months old, otherwise zero</td></tr>
+<tr><td><nobr>Wip2-3Months</nobr></td><td><nobr>decimal</nobr></td><td>The WIP value of the posting if it is between 2 and 3 months old, otherwise zero</td></tr>
+<tr><td><nobr>Wip3-4Months</nobr></td><td><nobr>decimal</nobr></td><td>The WIP value of the posting if it is between 3 and 4 months old, otherwise zero</td></tr>
+<tr><td><nobr>Wip4-5Months</nobr></td><td><nobr>decimal</nobr></td><td>The WIP value of the posting if it is between 4 and 5 months old, otherwise zero</td></tr>
+<tr><td><nobr>Wip5-6Months</nobr></td><td><nobr>decimal</nobr></td><td>The WIP value of the posting if it is between 5 and 6 months old, otherwise zero</td></tr>
+<tr><td><nobr>Wip6-7Months</nobr></td><td><nobr>decimal</nobr></td><td>The WIP value of the posting if it is between 6 and 7 months old, otherwise zero</td></tr>
+<tr><td><nobr>Wip7-8Months</nobr></td><td><nobr>decimal</nobr></td><td>The WIP value of the posting if it is between 7 and 8 months old, otherwise zero</td></tr>
+<tr><td><nobr>Wip8-9Months</nobr></td><td><nobr>decimal</nobr></td><td>The WIP value of the posting if it is between 8 and 9 months old, otherwise zero</td></tr>
+<tr><td><nobr>Wip9-10Months</nobr></td><td><nobr>decimal</nobr></td><td>The WIP value of the posting if it is between 9 and 10 months old, otherwise zero</td></tr>
+<tr><td><nobr>Wip10-11Months</nobr></td><td><nobr>decimal</nobr></td><td>The WIP value of the posting if it is between 10 and 11 months old, otherwise zero</td></tr>
+<tr><td><nobr>Wip11-12Months</nobr></td><td><nobr>decimal</nobr></td><td>The WIP value of the posting if it is between 11 and 12 months old, otherwise zero</td></tr>
+<tr><td><nobr>Wip12-13Months</nobr></td><td><nobr>decimal</nobr></td><td>The WIP value of the posting if it is between 12 and 13 months old, otherwise zero</td></tr>
+<tr><td><nobr>WipOver13Months</nobr></td><td><nobr>decimal</nobr></td><td>The WIP value of the posting if it is over 13 months old, otherwise zero</td></tr>
+</Table>
+<br><br></body></html>

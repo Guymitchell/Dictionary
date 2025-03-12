@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.ARCHIVE</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.ARCHIVE</h1>
+<h2>Description: Provides easy access to archive data with multi-extent fields UDF-DATES, UDF-TEXT and UDF-VALUES accessible as separate columns</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Archive Enquiry Details: Type</td></tr>
+<tr><td><nobr>REGISTER</nobr></td><td><nobr>character(254)</nobr></td><td>Archive Enquiry Details: Register</td></tr>
+<tr><td><nobr>REFERENCE</nobr></td><td><nobr>character(254)</nobr></td><td>Archive Enquiry Details: Reference</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Client code</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Archive Enquiry Details: Matter</td></tr>
+<tr><td><nobr>BRANCH</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Branch (if former matter)</td></tr>
+<tr><td><nobr>MT-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Archive Enquiry Details: MT Type</td></tr>
+<tr><td><nobr>DESCRIPTION</nobr></td><td><nobr>character(254)</nobr></td><td>Archive Enquiry Details: Description</td></tr>
+<tr><td><nobr>FEE-EARNER</nobr></td><td><nobr>character(254)</nobr></td><td>Archive Enquiry Details: Fee earner</td></tr>
+<tr><td><nobr>DATE-OPENED</nobr></td><td><nobr>date</nobr></td><td>Archive Enquiry Details: Date opened</td></tr>
+<tr><td><nobr>DATE-CLOSED</nobr></td><td><nobr>date</nobr></td><td>Archive Enquiry Details: Date Closed</td></tr>
+<tr><td><nobr>DATE-DESTRUCTION</nobr></td><td><nobr>date</nobr></td><td>Archive Enquiry Details: Destruction Date</td></tr>
+<tr><td><nobr>NO-BILLS</nobr></td><td><nobr>integer</nobr></td><td>Archive Enquiry Details: Number of bills</td></tr>
+<tr><td><nobr>TOT-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Archive Enquiry Details: Total time value</td></tr>
+<tr><td><nobr>TOT-BILLED</nobr></td><td><nobr>decimal</nobr></td><td>Archive Enquiry Details: Total billed</td></tr>
+<tr><td><nobr>PROFIT1</nobr></td><td><nobr>decimal</nobr></td><td>Archive Enquiry Details: Profit on cost</td></tr>
+<tr><td><nobr>PROFIT2</nobr></td><td><nobr>decimal</nobr></td><td>Archive Enquiry Details: Profit on value</td></tr>
+<tr><td><nobr>LEGAL-AID</nobr></td><td><nobr>character(254)</nobr></td><td>Archive Enquiry Details: Legal aid</td></tr>
+<tr><td><nobr>BAND</nobr></td><td><nobr>character(254)</nobr></td><td>Archive Enquiry Details: Charge band (when live matter)</td></tr>
+<tr><td><nobr>NOTES</nobr></td><td><nobr>character(25630)</nobr></td><td>Archive Enquiry Notes: Notes</td></tr>
+<tr><td><nobr>UDF-TEXT@1</nobr></td><td><nobr>character(254)</nobr></td><td>Derived from Archive Enquiry Notes: First user-defined text field value</td></tr>
+<tr><td><nobr>UDF-TEXT@2</nobr></td><td><nobr>character(254)</nobr></td><td>Derived from Archive Enquiry Notes: Second user-defined text field value</td></tr>
+<tr><td><nobr>UDF-TEXT@3</nobr></td><td><nobr>character(254)</nobr></td><td>Derived from Archive Enquiry Notes: Third user-defined text field value</td></tr>
+<tr><td><nobr>UDF-TEXT@4</nobr></td><td><nobr>character(254)</nobr></td><td>Derived from Archive Enquiry Notes: Fourth user-defined text field value</td></tr>
+<tr><td><nobr>UDF-TEXT@5</nobr></td><td><nobr>character(254)</nobr></td><td>Derived from Archive Enquiry Notes: Fifth user-defined text field value</td></tr>
+<tr><td><nobr>UDF-VALUES@1</nobr></td><td><nobr>decimal</nobr></td><td>Derived from Archive Enquiry Notes: First user-defined numeric field value</td></tr>
+<tr><td><nobr>UDF-VALUES@2</nobr></td><td><nobr>decimal</nobr></td><td>Derived from Archive Enquiry Notes: Second user-defined numeric field value</td></tr>
+<tr><td><nobr>UDF-VALUES@3</nobr></td><td><nobr>decimal</nobr></td><td>Derived from Archive Enquiry Notes: Third user-defined numeric field value</td></tr>
+<tr><td><nobr>UDF-VALUES@4</nobr></td><td><nobr>decimal</nobr></td><td>Derived from Archive Enquiry Notes: Fourth user-defined numeric field value</td></tr>
+<tr><td><nobr>UDF-VALUES@5</nobr></td><td><nobr>decimal</nobr></td><td>Derived from Archive Enquiry Notes: Fifth user-defined numeric field value</td></tr>
+<tr><td><nobr>UDF-DATES@1</nobr></td><td><nobr>date</nobr></td><td>Derived from Archive Enquiry Notes: First user-defined date field value</td></tr>
+<tr><td><nobr>UDF-DATES@2</nobr></td><td><nobr>date</nobr></td><td>Derived from Archive Enquiry Notes: Second user-defined date field value</td></tr>
+<tr><td><nobr>UDF-DATES@3</nobr></td><td><nobr>date</nobr></td><td>Derived from Archive Enquiry Notes: Third user-defined date field value</td></tr>
+<tr><td><nobr>UDF-DATES@4</nobr></td><td><nobr>date</nobr></td><td>Derived from Archive Enquiry Notes: Fourth user-defined date field value</td></tr>
+<tr><td><nobr>UDF-DATES@5</nobr></td><td><nobr>date</nobr></td><td>Derived from Archive Enquiry Notes: Fifth user-defined date field value</td></tr>
+<tr><td><nobr>DATE-ARCHIVED</nobr></td><td><nobr>date</nobr></td><td>Archive Enquiry Details: Date Archived</td></tr>
+<tr><td><nobr>LOCATION</nobr></td><td><nobr>character(254)</nobr></td><td>Archive Enquiry Details: Location </td></tr>
+<tr><td><nobr>MATTER-LINK-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Date of last modification</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Time of last modification</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: ID of user who last updated table</td></tr>
+<tr><td><nobr>ARCHIVE-ID</nobr></td><td><nobr>integer</nobr></td><td>Derived: Internal unique reference</td></tr>
+<tr><td><nobr>INTEREST-GROUP</nobr></td><td><nobr>character(254)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>PERMITTED-USERS</nobr></td><td><nobr>fixchar</nobr></td><td>(deprecated - do not use)</td></tr>
+<tr><td><nobr>INTRO-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CONTROLLED-TRUST</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CUSTOM-MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>APPLICATION</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: The case application code of the original matter record</td></tr>
+<tr><td><nobr>CONVERTED-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Cross-reference back to record(s) in source system for bulk-loaded data</td></tr>
+</Table>
+<br><br></body></html>

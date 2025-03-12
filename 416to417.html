@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+    <head>
+        <title>SOS Database Data Dictionary Vx.17: Changes since V4.16</title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <link href="datadic.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Data Dictionary Changes Between V4.16 and Vx.17</h1>
+        <h2>Tables Removed From Vx.17</h2>
+        <p>The following V4.16 database tables have been removed in Vx.17:</p>
+        <ul>
+            <li>CLIEADDDATA (Custom data for clients - all custom data for all entity types has been stored in ADDDATA since PM V4.16 0608 Patch 8, August 2009)</li>
+            <li>CONTADDDATA (Custom data for contacts - now in ADDDATA as above)</li>
+            <li>MATTADDDATA (Custom data for matters/archives - now in ADDDATA as above)</li>
+            <li>ORGAADDDATA (Custom data for organisations - now in ADDDATA as above)</li>
+            <li>CLIEADDGROUPS (Links between clients and custom tab groups - now stored in CUSTOM-LINK)</li>
+            <li>CONTADDGROUPS (Links between contacts and custom tab groups - now stored in CUSTOM-LINK)</li>
+            <li>MATTADDGROUPS (Links between matters and custom tab groups - now stored in CUSTOM-LINK)</li>
+            <li>ORGAADDGROUPS (Links between organisations and custom tab groups - now stored in CUSTOM-LINK)</li>
+            <li>GENERALACTIONS (table never used)</li>
+            <li>PAPSETTINGS (table never used)</li>
+            <li>PARAMS (table never used)</li>
+        </ul>
+        <br />
+        <h2>Tables Renamed Between V4.16 And Vx.17</h2>
+        <p>The following V4.16 database tables have been renamed in Vx.17:</p>
+        <table>
+            <tr><td class="thead">V4.16 Table Name</td><td class="thead">Vx.17 Table Name</td><td class="thead">Usage</td></tr>
+            <tr><td>SOURCES</td><td><a href="pub.custom-link.html">CUSTOM-LINK</a></td><td>Holds the links specific clients, matters, branches etc. and their custom tab groups</td></tr>
+            <tr><td>PROMOTIONS</td><td><a href="pub.market-activity.html">MARKET-ACTIVITY</a></td><td>Holds marketing activity definitions</td></tr>
+            <tr><td>RBREPORT</td><td><a href="pub.usrcustomaccess.html">USRCUSTOMACCESS</a></td><td>Stores user access settings to protected custom tabs</td></tr>
+        </table>
+        <br />
+        <h2>New Tables Added In Vx.17 - Billing</h2>
+        <p>The following database tables have been added specifically for the new billing system:</p>
+        <ul>
+            <li><a href="pub.BILL-ADDITIONAL.html">BILL-ADDITIONAL</a> - Additional data for new-style bills, especially Legal Aid CDS7 details</li>
+            <li><a href="pub.BILL-ANTITIME.html">BILL-ANTITIME</a> - Anticipated time included in new-style bills</li>
+            <li><a href="pub.BILL-BATCH.html">BILL-BATCH</a> - Used to link a number of bills together as part of a single run e.g. interim or client billing process</li>
+            <li><a href="pub.BILL-BATCH-OPTIONS.html">BILL-BATCH-OPTIONS</a> - Used in conjunction with BILL-BATCH to preselect options used for e.g. client billing process</li>
+            <li><a href="pub.BILL-COSTALLOC.html">BILL-COSTALLOC</a> - Fee earner cost allocations in new-style bills</li>
+            <li><a href="pub.BILL-DATA-SAVED.html">BILL-DATA-SAVED</a> - Holds the categories of data have been saved during the processing of a new-style bill (costs, disbursements, anticipated time etc.)</li>
+            <li><a href="pub.BILL-DISB.html">BILL-DISB</a> - Details of disbursements included in new-style bills</li>
+            <li><a href="pub.BILL-FIXED-FEE.html">BILL-FIXED-FEE</a> - A copy of the fees record(s) that were selected at the point of creating a Legal Aid Civil/Criminal fixed fee bill</li>
+            <li><a href="pub.BILL-HEADER.html">BILL-HEADER</a> - Bill header records, effectively the equivalent of BILLDOC for new-style bills created in Vx.17</li>
+            <li><a href="pub.BILL-LA.html">BILL-LA</a> - Additional Legal Aid details for new-style bills</li>
+            <li><a href="pub.BILL-MEMO-LINK.html">BILL-MEMO-LINK</a> - Links between a new-style memo bill and the previous new-style memo bills that the new bill includes</li>
+            <li><a href="pub.BILL-MEMO-PAYMENT.html">BILL-MEMO-PAYMENT</a> - Payments made against new-syle memo bills</li>
+            <li><a href="pub.BILL-MEMO-RECOUPMENT.html">BILL-MEMO-RECOUPMENT</a> - List of previous memo payments being recouped in current bill</li>
+            <li><a href="pub.BILL-RECIPIENT.html">BILL-RECIPIENT</a> - List of recipients for either split net/VAT bills or multi-party bills</li>
+            <li><a href="pub.BILL-TIME.html">BILL-TIME</a> - Details of time included in new-style bills</li>
+        </ul>
+        <br />
+        <br />
+        <h2>New Tables Added In Vx.17 - Reserved tables for maintenance data</h2>
+        <p>The following database tables have been added to hold specific types of maintenance data in future releases but are currently not used:</p>
+        <ul>
+			<li><a href="pub.ACTIONCAT.html">ACTIONCAT</a> - Reserved for future use</li>
+            <li><a href="pub.ARCHLOCATION.html">ARCHLOCATION</a> - Reserved for future use</li>
+            <li><a href="pub.BANK-ACCOUNT.html">BANK-ACCOUNT</a> - Reserved for future use</li>
+            <li><a href="pub.CSB-SCHEME.html">CSB-SCHEME</a> - Reserved for future use</li>
+            <li><a href="pub.CSB-SCHEME-STAGE.html">CSB-SCHEME-STAGE</a> - Reserved for future use</li>
+            <li><a href="pub.CSB-STAGE.html">CSB-STAGE</a> - Reserved for future use</li>
+            <li><a href="pub.DATA-SEARCH.html">DATA-SEARCH</a> - Reserved for future use</li>
+            <li><a href="pub.DATA-SPARE01.html">DATA-SPARE01</a> - Reserved for future use</li>
+            <li><a href="pub.DATA-SPARE02.html">DATA-SPARE02</a> - Reserved for future use</li>
+            <li><a href="pub.DATA-SPARE03.html">DATA-SPARE03</a> - Reserved for future use</li>
+            <li><a href="pub.DATA-SPARE04.html">DATA-SPARE04</a> - Reserved for future use</li>
+            <li><a href="pub.DATA-SPARE05.html">DATA-SPARE05</a> - Reserved for future use</li>
+            <li><a href="pub.DATA-SPARE06.html">DATA-SPARE06</a> - Reserved for future use</li>
+            <li><a href="pub.DATA-SPARE07.html">DATA-SPARE07</a> - Reserved for future use</li>
+            <li><a href="pub.DATA-SPARE08.html">DATA-SPARE08</a> - Reserved for future use</li>
+            <li><a href="pub.DATA-SPARE09.html">DATA-SPARE09</a> - Reserved for future use</li>
+            <li><a href="pub.DATA-SPARE10.html">DATA-SPARE10</a> - Reserved for future use</li>
+            <li><a href="pub.DISABILITY.html">DISABILITY</a> - Reserved for future use</li>
+            <li><a href="pub.DISB-GROUP.html">DISB-GROUP</a> - Reserved for future use</li>
+            <li><a href="pub.FE-ATTEND-LOC.html">FE-ATTEND-LOC</a> - Reserved for future use</li>
+            <li><a href="pub.ID-CAT.html">ID-CAT</a> - Reserved for future use</li>
+            <li><a href="pub.INTEREST-GROUP.html">INTEREST-GROUP</a> - Reserved for future use</li>
+            <li><a href="pub.LA-AIT-HEARING.html">LA-AIT-HEARING</a> - Reserved for future use</li>
+            <li><a href="pub.LA-APPLIES-MATRIX.html">LA-APPLIES-MATRIX</a> - Reserved for future use</li>
+            <li><a href="pub.LA-CASE-STAGE.html">LA-CASE-STAGE</a> - Reserved for future use</li>
+            <li><a href="pub.LA-COURT.html">LA-COURT</a> - Reserved for future use</li>
+            <li><a href="pub.LA-CRIMINAL-CF.html">LA-CRIMINAL-CF</a> - Reserved for future use</li>
+            <li><a href="pub.LA-CTRL-WORK-FEE.html">LA-CTRL-WORK-FEE</a> - Reserved for future use</li>
+            <li><a href="pub.LA-DETENTION-CTR.html">LA-DETENTION-CTR</a> - Reserved for future use</li>
+            <li><a href="pub.LA-END-POINT-STAGE.html">LA-END-POINT-STAGE</a> - Reserved for future use</li>
+            <li><a href="pub.LA-IMMI-CLR.html">LA-IMMI-CLR</a> - Reserved for future use</li>
+            <li><a href="pub.LA-MATTER-UFN.html">LA-MATTER-UFN</a> - Reserved for future use</li>
+            <li><a href="pub.LA-MTG-ATTEND.html">LA-MTG-ATTEND</a> - Reserved for future use</li>
+            <li><a href="pub.LA-OUTCOME.html">LA-OUTCOME</a> - Reserved for future use</li>
+            <li><a href="pub.LA-POLICE-STN.html">LA-POLICE-STN</a> - Reserved for future use</li>
+            <li><a href="pub.LA-PRIS-FEE-SCHEME.html">LA-PRIS-FEE-SCHEME</a> - Reserved for future use</li>
+            <li><a href="pub.LA-PRISON.html">LA-PRISON</a> - Reserved for future use</li>
+            <li><a href="pub.LA-PS-SCHEME.html">LA-PS-SCHEME</a> - Reserved for future use</li>
+            <li><a href="pub.LA-SPOCC-CLAIM.html">LA-SPOCC-CLAIM</a> - Reserved for future use</li>
+            <li><a href="pub.MAINT-SPARE01.html">MAINT-SPARE01</a> - Reserved for future use</li>
+            <li><a href="pub.MAINT-SPARE02.html">MAINT-SPARE02</a> - Reserved for future use</li>
+            <li><a href="pub.MAINT-SPARE03.html">MAINT-SPARE03</a> - Reserved for future use</li>
+            <li><a href="pub.MAINT-SPARE04.html">MAINT-SPARE04</a> - Reserved for future use</li>
+            <li><a href="pub.MAINT-SPARE05.html">MAINT-SPARE05</a> - Reserved for future use</li>
+            <li><a href="pub.MAINT-SPARE06.html">MAINT-SPARE06</a> - Reserved for future use</li>
+            <li><a href="pub.MAINT-SPARE07.html">MAINT-SPARE07</a> - Reserved for future use</li>
+            <li><a href="pub.MAINT-SPARE08.html">MAINT-SPARE08</a> - Reserved for future use</li>
+            <li><a href="pub.MAINT-SPARE09.html">MAINT-SPARE09</a> - Reserved for future use</li>
+            <li><a href="pub.MAINT-SPARE10.html">MAINT-SPARE10</a> - Reserved for future use</li>
+            <li><a href="pub.OFFENCE.html">OFFENCE</a> - Reserved for future use</li>
+            <li><a href="pub.TE-SECTION.html">TE-SECTION</a> - Reserved for future use</li>
+            <li><a href="pub.VAT-MATRIX.html">VAT-MATRIX</a> - Reserved for future use</li>
+            <li><a href="pub.WITNESS-TYPE.html">WITNESS-TYPE</a> - Reserved for future use</li>
+        </ul>
+        <br />
+        <h2>Field-Level Changes Between V4.16 and Vx.17</h2>
+        <p>All tables have been extended with new sets of spare fields for various specific data types (character, date, decimal, integer, boolean).  This
+        section highlights the more important changes in field names within existing tables.</p>
+        <table>
+        <tr><td class  = "thead">Table Name</td><td class  = "thead">V4.16 Field Name</td><td class  = "thead">Vx.17 Field Name</td><td class  = "thead">Notes</td></tr>
+        <tr><td><a href="pub.ACTIONDEF.html">ACTIONDEF</a></td><td>SPARE2</td><td>CLIENT-INFORM-FLAG</td><td>Client Inform Yes/No option</td></tr>
+		<tr><td><a href="pub.ACTIONS.html">ACTIONS</a></td><td>SPARE1</td><td>DOCS-PATH</td><td>Document path</td></tr>
+		<tr><td><a href="pub.ACTIONS.html">ACTIONS</a></td><td>SPARE2</td><td>APPLY-FLAGS</td><td></td></tr>
+		<tr><td><a href="pub.ACTIONS.html">ACTIONS</a></td><td>SPARE3</td><td>USR-SEQNO</td><td>User sequence number</td></tr>
+		<tr><td><a href="pub.ACTIONS.html">ACTIONS</a></td><td>SPARE4</td><td>DOC-LINK</td><td>Document link</td></tr>
+		<tr><td><a href="pub.ACTIONS.html">ACTIONS</a></td><td>SPARE5</td><td>OUTLOOK-TASKID</td><td>Unique link back to originating Outlook task</td></tr>
+		<tr><td><a href="pub.ACTIONS.html">ACTIONS</a></td><td>SPARE6</td><td>COMPLETION-SCRIPT</td><td>Filename of Connect script to run when action is marked as completed</td></tr>
+		<tr><td><a href="pub.ADDDATA.html">ADDDATA</a></td><td>FAC-TAB-NUMBER</td><td>EXTENT</td><td>Always 1 for "flat" (single entry) custom tabs, 1 or higher for multi-line custom tabs</td></tr>
+		<tr><td><a href="pub.ADDRESSES.html">ADDRESSES</a></td><td>SPARE1</td><td>BUSINESS-ADDR</td><td>Business address flag (yes/no)</td></tr>
+		<tr><td><a href="pub.ADDRESSES.html">ADDRESSES</a></td><td>SPARE2</td><td>PREV-ADDR</td><td>Previous address flag (yes/no)</td></tr>
+		<tr><td><a href="pub.ARCHIVE.html">ARCHIVE</a></td><td>MATTER-LNK</td><td>MATTER-LINK-TYPE</td><td>Matter link type</td></tr>
+		<tr><td><a href="pub.ARCHIVE.html">ARCHIVE</a></td><td>SPARE1</td><td>CUSTOM-MT-CODE</td><td></td></tr>
+		<tr><td><a href="pub.ARCHIVE.html">ARCHIVE</a></td><td>SPARE2</td><td>INTRO-CODE-OLD</td><td>Old introduction code</td></tr>
+		<tr><td><a href="pub.ARCHIVE.html">ARCHIVE</a></td><td>SPARE3</td><td>INTEREST-GROUP</td><td>Interest group code</td></tr>
+		<tr><td><a href="pub.ARCHIVE.html">ARCHIVE</a></td><td>SPARE4</td><td>PERMITTED-USERS</td><td>List of users allowed to access the archive</td></tr>
+		<tr><td><a href="pub.AUDIT.html">AUDIT</a></td><td>FIELDS-NAMES</td><td>FIELD-NAMES</td><td></td></tr>
+		<tr><td><a href="pub.BANKHOLS.html">BANKHOLS</a></td><td>SPARE1</td><td>DESCRIP</td><td>Description of bank holiday</td></tr>
+		<tr><td><a href="pub.BILLDOC.html">BILLDOC</a></td><td>CODES</td><td>BILL-ADDR</td><td>Billing address</td></tr>
+		<tr><td><a href="pub.BILLDOC.html">BILLDOC</a></td><td>SPARE1</td><td>COSTS-SAVED</td><td></td></tr>
+		<tr><td><a href="pub.BILLDOC.html">BILLDOC</a></td><td>SPARE2</td><td>DISBS-SAVED</td><td></td></tr>
+		<tr><td><a href="pub.BILLDOC.html">BILLDOC</a></td><td>SPARE3</td><td>PROVISIONAL-BILLNO</td><td>Provisional bill number</td></tr>
+		<tr><td><a href="pub.BILLDOC.html">BILLDOC</a></td><td>SPARE4</td><td>SPLIT-BILL-FLAG</td><td>Split Net/Vat bill flag</td></tr>
+		<tr><td><a href="pub.BILLDOC.html">BILLDOC</a></td><td>SPARE5</td><td>SPLIT-VAT-BILL-DETAILS</td><td></td></tr>
+		<tr><td><a href="pub.BILLDOC.html">BILLDOC</a></td><td>SPARE6</td><td>BILL-VALUES</td><td></td></tr>
+		<tr><td><a href="pub.BILLDOC.html">BILLDOC</a></td><td>SPARE7</td><td>INCL-MEMO-BILLS</td><td></td></tr>
+		<tr><td><a href="pub.BILLDOC.html">BILLDOC</a></td><td>SPARE8</td><td>FEE-ALLOC-BILL</td><td></td></tr>
+		<tr><td><a href="pub.BILL-LINES.html">BILL-LINES</a></td><td>SPARE1</td><td>DATA1</td><td></td></tr>
+		<tr><td><a href="pub.BILL-LINES.html">BILL-LINES</a></td><td>SPARE2</td><td>DATA2</td><td></td></tr>
+		<tr><td><a href="pub.BILL-LINES.html">BILL-LINES</a></td><td>SPARE3</td><td>DATA3</td><td></td></tr>
+		<tr><td><a href="pub.BILL-LINES.html">BILL-LINES</a></td><td>SPARE4</td><td>SPLIT-BILL-FLAG</td><td></td></tr>
+		<tr><td><a href="pub.BRANCH.html">BRANCH</a></td><td>SPARE1</td><td>MEDIATION</td><td>Mediation flag (not implemented)</td></tr>
+		<tr><td><a href="pub.BRANCH.html">BRANCH</a></td><td>SPARE2</td><td>PROTECTED</td><td>Protected branch flag </td></tr>
+		<tr><td><a href="pub.BRANCH.html">BRANCH</a></td><td>SPARE5</td><td>CIVIL-SCHEDULE-NO</td><td>Civil Legal Aid schedule number</td></tr>
+		<tr><td><a href="pub.BRANCH.html">BRANCH</a></td><td>SPARE6</td><td>CRIMINAL-SCHEDULE-NO</td><td>Criminal legal aid schedule number</td></tr>
+		<tr><td><a href="pub.CHEQUES.html">CHEQUES</a></td><td>SPARE1</td><td>TEMPLATE-DETAILS</td><td></td></tr>
+		<tr><td><a href="pub.CLIDB.html">CLIDB</a></td><td>INTERIM-BILLS</td><td>CLIENT-BILLING</td><td>Client-level billing is available for this client yes/no</td></tr>
+		<tr><td><a href="pub.CLIDB.html">CLIDB</a></td><td>SPARE1</td><td>CASE-BILL-MATTER</td><td></td></tr>
+		<tr><td><a href="pub.CLIDB.html">CLIDB</a></td><td>SPARE2</td><td>UCN</td><td>Unique client number (for legal aid reporting)</td></tr>
+		<tr><td><a href="pub.CLIERELATIONS.html">CLIERELATIONS</a></td><td>SPARE1</td><td>REL-REF</td><td>Relationship reference</td></tr>
+		<tr><td><a href="pub.CLIERELATIONS.html">CLIERELATIONS</a></td><td>SPARE2</td><td>WEB-ACCESS-RIGHTS</td><td></td></tr>
+		<tr><td><a href="pub.CLIERELATIONS.html">CLIERELATIONS</a></td><td>SPARE3</td><td>REL-SEQNO</td><td>Relationship sequence number</td></tr>
+		<tr><td><a href="pub.CONTACTS.html">CONTACTS</a></td><td>SPARE2</td><td>DOD</td><td>Date of death</td></tr>
+		<tr><td><a href="pub.CONTACTS.html">CONTACTS</a></td><td>SPARE3</td><td>CAT1-ID-NOTES</td><td>Notes for ID category 1</td></tr>
+		<tr><td><a href="pub.CONTACTS.html">CONTACTS</a></td><td>SPARE4</td><td>CAT2-ID-NOTES</td><td>Notes for ID category 2</td></tr>
+		<tr><td><a href="pub.CONTACTS.html">CONTACTS</a></td><td>SPARE5</td><td>WEB-ACCESS-SETTINGS</td><td></td></tr>
+		<tr><td><a href="pub.CONTACTS.html">CONTACTS</a></td><td>SPARE6</td><td>BUSINESS-ADDR</td><td></td></tr>
+		<tr><td><a href="pub.CONTRELATIONS.html">CONTRELATIONS</a></td><td>SPARE1</td><td>REL-REF</td><td>Relationship reference</td></tr>
+		<tr><td><a href="pub.CONTRELATIONS.html">CONTRELATIONS</a></td><td>SPARE2</td><td>WEB-ACCESS-RIGHTS</td><td></td></tr>
+		<tr><td><a href="pub.CONTRELATIONS.html">CONTRELATIONS</a></td><td>SPARE3</td><td>REL-SEQNO</td><td>Relationship sequence number</td></tr>
+		<tr><td><a href="pub.CUSTOM-LINK.html">CUSTOM-LINK</a></td><td>CODE</td><td>ENTITY</td><td>Entity type and reference</td></tr>
+		<tr><td><a href="pub.CUSTOM-LINK.html">CUSTOM-LINK</a></td><td>NAME</td><td>TAB-GROUP-CODE</td><td>Tab group</td></tr>
+		<tr><td><a href="pub.DEPARTMENT.html">DEPARTMENT</a></td><td>SPARE1</td><td>DOCS-DEPT</td><td>Document department only yes/no</td></tr>
+		<tr><td><a href="pub.DEPARTMENT.html">DEPARTMENT</a></td><td>SPARE2</td><td>CURR</td><td>Current flag yes/no</td></tr>
+		<tr><td><a href="pub.DOCUMENT-DEFINITION.html">DOCUMENT-DEFINITION</a></td><td>SPARE1</td><td>CONNECT-SCRIPT</td><td></td></tr>
+		<tr><td><a href="pub.FACTDEFS.html">FACTDEFS</a></td><td>FAC-FACT-POSITION-ON-TAB</td><td>FIELD-TAB-SEQUENCE</td><td>Custom field tab sequence number</td></tr>
+		<tr><td><a href="pub.FACTDEFS.html">FACTDEFS</a></td><td>SPARE1</td><td>GEOMETRY</td><td>Custom field screen position and size</td></tr>
+		<tr><td><a href="pub.FACTDEFS.html">FACTDEFS</a></td><td>SPARE2</td><td>SEARCHABLE</td><td>Custom field searchable flag</td></tr>
+		<tr><td><a href="pub.FEETR.html">FEETR</a></td><td>SPARE1</td><td>USER-ID</td><td>Primary user id related to this fee earner</td></tr>
+		<tr><td><a href="pub.FELOG.html">FELOG</a></td><td>SPARE1</td><td>ITEM-STATUS</td><td>"A" for items shown in the active time logger stack, blank for completed items</td></tr>
+		<tr><td><a href="pub.FELOG.html">FELOG</a></td><td>SPARE10</td><td>CSB-STAGE</td><td>Case Stage Budgeting - stage code</td></tr>
+		<tr><td><a href="pub.FELOG.html">FELOG</a></td><td>SPARE5</td><td>BRANCH</td><td>Branch code (for non-chargeable suspended time)</td></tr>
+		<tr><td><a href="pub.FELOG.html">FELOG</a></td><td>SPARE6</td><td>LA-STATUS</td><td>Legal aid status</td></tr>
+		<tr><td><a href="pub.FELOG.html">FELOG</a></td><td>SPARE7</td><td>LAST-STARTED</td><td>Date that the timer was last started for this suspended time entry</td></tr>
+		<tr><td><a href="pub.FELOG.html">FELOG</a></td><td>SPARE8</td><td>LA-CODES</td><td></td></tr>
+		<tr><td><a href="pub.FELOG.html">FELOG</a></td><td>SPARE9</td><td>USER-ID</td><td>The "owning" user of this suspended time entry</td></tr>
+		<tr><td><a href="pub.FOLDER.html">FOLDER</a></td><td>SPARE1</td><td>ACCESS</td><td></td></tr>
+		<tr><td><a href="pub.HISTORY.html">HISTORY</a></td><td>SPARE1</td><td>EXTENSION</td><td>File extent of the document, including the full stop</td></tr>
+		<tr><td><a href="pub.HISTORY.html">HISTORY</a></td><td>SPARE2</td><td>CLIENT-FILE-NAME</td><td></td></tr>
+		<tr><td><a href="pub.HISTORY.html">HISTORY</a></td><td>SPARE3</td><td>CHECKSUM</td><td>Unique file-content check sum value (not currently used)</td></tr>
+		<tr><td><a href="pub.HISTORY.html">HISTORY</a></td><td>SPARE4</td><td>ATTACHMENTS</td><td>List of attachment filenames for attached emails</td></tr>
+		<tr><td><a href="pub.HISTORY.html">HISTORY</a></td><td>SPARE5</td><td>ORIG-CREATION-DATE</td><td>Original creation date</td></tr>
+		<tr><td><a href="pub.HISTORY.html">HISTORY</a></td><td>SPARE6</td><td>DOC-ARCHIVED</td><td></td></tr>
+		<tr><td><a href="pub.INTEREST.html">INTEREST</a></td><td>SPARE1</td><td>BANK</td><td></td></tr>
+		<tr><td><a href="pub.INT-LOG.html">INT-LOG</a></td><td>SPARE3</td><td>BREAKDOWN</td><td></td></tr>
+		<tr><td><a href="pub.INT-LOG.html">INT-LOG</a></td><td>SPARE4</td><td>INT-DATE</td><td></td></tr>
+		<tr><td><a href="pub.INT-LOG.html">INT-LOG</a></td><td>SPARE5</td><td>INTEREST-GROUP</td><td></td></tr>
+		<tr><td><a href="pub.INT-LOG.html">INT-LOG</a></td><td>SPARE6</td><td>CALC-DETAILS</td><td></td></tr>
+		<tr><td><a href="pub.INTMETHODS.html">INTMETHODS</a></td><td>SPARE1</td><td>INT-CURR</td><td>Current yes/no</td></tr>
+		<tr><td><a href="pub.LACAT.html">LACAT</a></td><td>SPARE10</td><td>MEDIATION-FLAG</td><td></td></tr>
+		<tr><td><a href="pub.LACAT.html">LACAT</a></td><td>SPARE3</td><td>CMSF-FLAG</td><td></td></tr>
+		<tr><td><a href="pub.LACAT.html">LACAT</a></td><td>SPARE4</td><td>UPLOAD-CAT-CODE</td><td></td></tr>
+		<tr><td><a href="pub.LARATES.html">LARATES</a></td><td>SPARE3</td><td>DATE-TYPE</td><td></td></tr>
+		<tr><td><a href="pub.LASTATUS.html">LASTATUS</a></td><td>SPARE3</td><td>WORK-TYPE</td><td>Legal aid work type</td></tr>
+		<tr><td><a href="pub.LASTATUS.html">LASTATUS</a></td><td>SPARE4</td><td>CAT-CODE</td><td>Legal aid category code</td></tr>
+		<tr><td><a href="pub.MARKET-ACTIVITY.html">MARKET-ACTIVITY</a></td><td>PRO-CODE</td><td>CODE</td><td></td></tr>
+		<tr><td><a href="pub.MARKET-ACTIVITY.html">MARKET-ACTIVITY</a></td><td>PRO-DATE</td><td>DATE</td><td></td></tr>
+		<tr><td><a href="pub.MARKET-ACTIVITY.html">MARKET-ACTIVITY</a></td><td>PRO-DESCRIPTION</td><td>DESCRIP</td><td></td></tr>
+		<tr><td><a href="pub.MARKET-ACTIVITY.html">MARKET-ACTIVITY</a></td><td>PRO-NOTES</td><td>NOTES</td><td></td></tr>
+		<tr><td><a href="pub.MARKET-ACTIVITY.html">MARKET-ACTIVITY</a></td><td>PRO-TYPE</td><td>TYPE</td><td></td></tr>
+		<tr><td><a href="pub.MATAC.html">MATAC</a></td><td>SPARE3</td><td>CLEARED-RECEIPTS</td><td></td></tr>
+		<tr><td><a href="pub.MATDB.html">MATDB</a></td><td>LINK-MT-CODE</td><td>MATTER-LINK-TYPE</td><td></td></tr>
+		<tr><td><a href="pub.MATDB.html">MATDB</a></td><td>SPARE1</td><td>APPLICATION</td><td>Case application code attached to matter</td></tr>
+		<tr><td><a href="pub.MATDB.html">MATDB</a></td><td>SPARE2</td><td>INTEREST-GROUP</td><td>Interest group</td></tr>
+		<tr><td><a href="pub.MATDB.html">MATDB</a></td><td>SPARE4</td><td>DESTRUCTION-DATE</td><td>Descruction date</td></tr>
+		<tr><td><a href="pub.MATDB.html">MATDB</a></td><td>SPARE5</td><td>PERMITTED-USERS</td><td>List of users who have access to this matter</td></tr>
+		<tr><td><a href="pub.MATDB.html">MATDB</a></td><td>SPARE6</td><td>CSB-SCHEME</td><td>Case Stage Budgeting - CSB scheme code attached to matter</td></tr>
+		<tr><td><a href="pub.MATDB.html">MATDB</a></td><td>SPARE7</td><td>MKT-ACTIVITY</td><td>Marketing activity code</td></tr>
+		<tr><td><a href="pub.MATDB.html">MATDB</a></td><td>SPARE8</td><td>INIT-CASETYPE</td><td>Initial case type (used on linked systems for linked case creation)</td></tr>
+		<tr><td><a href="pub.MATNOTE.html">MATNOTE</a></td><td>SPARE1</td><td>SEQNO</td><td>Matter note sequence number</td></tr>
+		<tr><td><a href="pub.MATTR.html">MATTR</a></td><td>INTERIM-BILLS</td><td>CLIENT-BILLS</td><td>Client bills flag</td></tr>
+		<tr><td><a href="pub.MATTR.html">MATTR</a></td><td>SPARE10</td><td>SCHEDULE-NO</td><td>Legal aid schedule number</td></tr>
+		<tr><td><a href="pub.MATTR.html">MATTR</a></td><td>SPARE2</td><td>APPLIES-FROM</td><td>Legal aid "Applies From" date</td></tr>
+		<tr><td><a href="pub.MATTR.html">MATTR</a></td><td>SPARE5</td><td>COURT-PS-ID</td>Legal aid court/police station code<td></td></tr>
+		<tr><td><a href="pub.MATTR.html">MATTR</a></td><td>SPARE6</td><td>EST-NOTE</td><td>Estimate note</td></tr>
+		<tr><td><a href="pub.MATTR.html">MATTR</a></td><td>SPARE7</td><td>PROCUREMENT-AREA</td><td>Legal aid procurement area</td></tr>
+		<tr><td><a href="pub.MATTR.html">MATTR</a></td><td>SPARE8</td><td>ACCESS-POINTS</td><td>Legal aid access point</td></tr>
+		<tr><td><a href="pub.MATTR.html">MATTR</a></td><td>SPARE9</td><td>DSCC-MAAT-PLAN</td><td>Legal aid DSCC/MAAT number</td></tr>
+		<tr><td><a href="pub.MATTRELATIONS.html">MATTRELATIONS</a></td><td>SPARE1</td><td>REL-REF</td><td>Relationship reference</td></tr>
+		<tr><td><a href="pub.MATTRELATIONS.html">MATTRELATIONS</a></td><td>SPARE2</td><td>WEB-ACCESS-RIGHTS</td><td></td></tr>
+		<tr><td><a href="pub.MATTRELATIONS.html">MATTRELATIONS</a></td><td>SPARE3</td><td>REL-SEQNO</td><td>Relationship sequence number</td></tr>
+		<tr><td><a href="pub.MATTYPE.html">MATTYPE</a></td><td>SPARE1</td><td>DEPARTMENT-OLD-FIELD</td><td></td></tr>
+		<tr><td><a href="pub.MATTYPE.html">MATTYPE</a></td><td>SPARE2</td><td>CONDITIONAL</td><td></td></tr>
+		<tr><td><a href="pub.MATTYPE.html">MATTYPE</a></td><td>SPARE3</td><td>FIXED-FEE</td><td></td></tr>
+		<tr><td><a href="pub.MATTYPE.html">MATTYPE</a></td><td>SPARE4</td><td>OK-TO-ACT-EXCLUDE</td><td>Exclude matter type from normal "Ok to act" checks (yes/no)</td></tr>
+		<tr><td><a href="pub.MATTYPE.html">MATTYPE</a></td><td>SPARE5</td><td>EST-FACTOR</td><td></td></tr>
+		<tr><td><a href="pub.NOMCODES.html">NOMCODES</a></td><td>SPARE3</td><td>CHART-OF-ACCOUNT</td><td></td></tr>
+		<tr><td><a href="pub.NOMCODES.html">NOMCODES</a></td><td>SPARE4</td><td>PETTY-CASH-FLAG</td><td>Petty cashflag</td></tr>
+		<tr><td><a href="pub.NOMTRANS.html">NOMTRANS</a></td><td>SPARE1</td><td>CSB-STAGE</td><td>Case Stage Budgeting - stage code</td></tr>
+		<tr><td><a href="pub.NOMTRANS.html">NOMTRANS</a></td><td>SPARE2</td><td>MKT-ACTIVITY</td><td></td></tr>
+		<tr><td><a href="pub.NOMTRANS.html">NOMTRANS</a></td><td>SPARE3</td><td>INTERNAL-REF</td><td></td></tr>
+		<tr><td><a href="pub.NOMTRANS.html">NOMTRANS</a></td><td>SPARE4</td><td>MEMO_ONACC</td><td></td></tr>
+		<tr><td><a href="pub.OCCUPATIONS.html">OCCUPATIONS</a></td><td>SPARE1</td><td>IMPORT-DATETIME</td><td></td></tr>
+		<tr><td><a href="pub.ORGANISATION.html">ORGANISATION</a></td><td>SPARE1</td><td>PAYEE</td><td>Payee name</td></tr>
+		<tr><td><a href="pub.ORGANISATION.html">ORGANISATION</a></td><td>SPARE2</td><td>COMPANY-NO</td><td></td></tr>
+		<tr><td><a href="pub.ORGANISATION.html">ORGANISATION</a></td><td>SPARE3</td><td>CAT1-ID-NOTES</td><td></td></tr>
+		<tr><td><a href="pub.ORGANISATION.html">ORGANISATION</a></td><td>SPARE4</td><td>CAT2-ID-NOTES</td><td></td></tr>
+		<tr><td><a href="pub.ORGARELATIONS.html">ORGARELATIONS</a></td><td>SPARE1</td><td>REL-REF</td><td>Relationship reference</td></tr>
+		<tr><td><a href="pub.ORGARELATIONS.html">ORGARELATIONS</a></td><td>SPARE2</td><td>WEB-ACCESS-RIGHTS</td><td></td></tr>
+		<tr><td><a href="pub.ORGARELATIONS.html">ORGARELATIONS</a></td><td>SPARE3</td><td>REL-SEQNO</td><td>Relationship sequence number</td></tr>
+		<tr><td><a href="pub.PREFERENCES.html">PREFERENCES</a></td><td>SPARE1</td><td>CONNECT-USERS</td><td></td></tr>
+		<tr><td><a href="pub.REPORT-Q.html">REPORT-Q</a></td><td>SPARE1</td><td>WEEK-DAY</td><td></td></tr>
+		<tr><td><a href="pub.REPORT-Q.html">REPORT-Q</a></td><td>SPARE2</td><td>SAVE-FORMAT</td><td></td></tr>
+		<tr><td><a href="pub.ROLES.html">ROLES</a></td><td>SPARE1</td><td>BILLING-CONTACT-ROLE</td><td>Billing contact role (yes/no)</td></tr>
+		<tr><td><a href="pub.SOFTLOCK.html">SOFTLOCK</a></td><td>SPARE1</td><td>DESCRIP</td><td></td></tr>
+		<tr><td><a href="pub.SOFTLOCK.html">SOFTLOCK</a></td><td>SPARE2</td><td>PROG-NAME</td><td></td></tr>
+		<tr><td><a href="pub.SOFTLOCK.html">SOFTLOCK</a></td><td>SPARE3</td><td>LOCK-STATUS</td><td></td></tr>
+		<tr><td><a href="pub.SOFTLOCK.html">SOFTLOCK</a></td><td>SPARE4</td><td>POST-TYPE</td><td></td></tr>
+		<tr><td><a href="pub.SOLLEDGER.html">SOLLEDGER</a></td><td>SPARE2</td><td>PAY-FLAG</td><td></td></tr>
+		<tr><td><a href="pub.SOLLEDGER.html">SOLLEDGER</a></td><td>SPARE3</td><td>SUPPRESS-DISPLAY</td><td></td></tr>
+		<tr><td><a href="pub.SPANTYPE.html">SPANTYPE</a></td><td>SPARE2</td><td>APPLIES-FROM</td><td></td></tr>
+		<tr><td><a href="pub.SPANTYPE.html">SPANTYPE</a></td><td>SPARE4</td><td>BILL-EXCL</td><td></td></tr>
+		<tr><td><a href="pub.SUPPLIER.html">SUPPLIER</a></td><td>SPARE1</td><td>ON-HOLD</td><td>Supplier on-hold flag</td></tr>
+		<tr><td><a href="pub.SUPP-PAYMENTS.html">SUPP-PAYMENTS</a></td><td>SPARE1</td><td>PAY-YEAR</td><td>Year when payment paid</td></tr>
+		<tr><td><a href="pub.TABDATASET.html">TABDATASET</a></td><td>SPARE1</td><td>VALID-ENTITIES</td><td></td></tr>
+		<tr><td><a href="pub.TABDEFS.html">TABDEFS</a></td><td>SPARE1</td><td>ARRAY-TAB</td><td>Is custom tab a flat tab or an array tab</td></tr>
+		<tr><td><a href="pub.TABDEFS.html">TABDEFS</a></td><td>SPARE2</td><td>SOS-PROTECTED</td><td>SOS protected tab yes/no</td></tr>
+		<tr><td><a href="pub.TABDEFS.html">TABDEFS</a></td><td>SPARE3</td><td>PM-HIDDEN</td><td></td></tr>
+		<tr><td><a href="pub.TABDEFS.html">TABDEFS</a></td><td>SPARE4</td><td>USER-PROTECTION</td><td></td></tr>
+		<tr><td><a href="pub.TABGROUPS.html">TABGROUPS</a></td><td>SPARE1</td><td>VALID-ENTITIES</td><td>Valid entities list for this tab group</td></tr>
+		<tr><td><a href="pub.TABGROUPS.html">TABGROUPS</a></td><td>SPARE2</td><td>SET-CODE</td><td></td></tr>
+		<tr><td><a href="pub.TPTRANS.html">TPTRANS</a></td><td>SPARE1</td><td>UNDO-DETAILS</td><td></td></tr>
+		<tr><td><a href="pub.TPTRANS.html">TPTRANS</a></td><td>SPARE2</td><td>ADDR</td><td></td></tr>
+		<tr><td><a href="pub.TPTRANS.html">TPTRANS</a></td><td>SPARE5</td><td>TEMPLATE-DETAILS</td><td></td></tr>
+		<tr><td><a href="pub.TPTRANS.html">TPTRANS</a></td><td>SPARE6</td><td>NL-CODE</td><td>Nominal code</td></tr>
+		<tr><td><a href="pub.TPTRANS.html">TPTRANS</a></td><td>SPARE7</td><td>EXPORTED-FLAG</td><td>Posting slip exported flag yes/no (for electronic payments)</td></tr>
+		<tr><td><a href="pub.TPTRANS.html">TPTRANS</a></td><td>SPARE8</td><td>CSB-STAGE</td><td>Case Stage Budgeting - stage code</td></tr>
+		<tr><td><a href="pub.TPTRANS.html">TPTRANS</a></td><td>SPARE9</td><td>MKT-ACTIVITY</td><td>Marketing activity code</td></tr>
+		<tr><td><a href="pub.TRTRANS.html">TRTRANS</a></td><td>MT-STAGE</td><td>LA-STATUS</td><td>Legal aid status code</td></tr>
+		<tr><td><a href="pub.TRTRANS.html">TRTRANS</a></td><td>SPARE2</td><td>CSB-STAGE</td><td>Case Stage Budgeting - stage code</td></tr>
+		<tr><td><a href="pub.TRTRANS.html">TRTRANS</a></td><td>SPARE3</td><td>PS-CODE</td><td>Legal aid police station code</td></tr>
+		<tr><td><a href="pub.TRTRANS.html">TRTRANS</a></td><td>SPARE4</td><td>ANTI-TIME-BILL-NO</td><td>Anticipated time bill number</td></tr>
+		<tr><td><a href="pub.UNDERTAKING.html">UNDERTAKING</a></td><td>SPARE2</td><td>ORIG-FEE-EARNER</td><td>Original fee earner</td></tr>
+		<tr><td><a href="pub.USERS.html">USERS</a></td><td>SPARE1</td><td>CALLING-APP</td><td></td></tr>
+		<tr><td><a href="pub.USERS.html">USERS</a></td><td>SPARE3</td><td>TIME-STAMP-LIST</td><td>Static data time-stamp list for this session (comma delimited list of static data type names)</td></tr>
+		<tr><td><a href="pub.USERS.html">USERS</a></td><td>SPARE4</td><td>TIME-STAMPS</td><td>Static data time-stamp version numbers this session (comma delimited list of version numbers)</td></tr>
+		<tr><td><a href="pub.USERS.html">USERS</a></td><td>SPARE5</td><td>CONTACT-REF</td><td></td></tr>
+		<tr><td><a href="pub.USERS.html">USERS</a></td><td>SPARE6</td><td>PASSWORD</td><td>Encrypted password</td></tr>
+		<tr><td><a href="pub.USR.html">USR</a></td><td>SPARE1</td><td>LAST-SEC-SET</td><td>Last security set assigned</td></tr>
+		<tr><td><a href="pub.USR.html">USR</a></td><td>SPARE2</td><td>CURR</td><td>Current yes/No flag (not currently implemented)</td></tr>
+		<tr><td><a href="pub.USRCUSTOMACCESS.html">USRCUSTOMACCESS</a></td><td>RB-DISPLAY-ERRORS</td><td>VIEW-OK</td><td>View access allowed yes/no</td></tr>
+		<tr><td><a href="pub.USRCUSTOMACCESS.html">USRCUSTOMACCESS</a></td><td>RB-DISPLAY-STATUS</td><td>AMEND-OK</td><td>Edit access allowed yes/no</td></tr>
+		<tr><td><a href="pub.USRCUSTOMACCESS.html">USRCUSTOMACCESS</a></td><td>RB-STATUS</td><td>USER-ID</td><td>User ID</td></tr>
+		<tr><td><a href="pub.USRCUSTOMACCESS.html">USRCUSTOMACCESS</a></td><td>RB-TAG</td><td>TAB-CODE</td><td>Custom tab code</td></tr>
+        </table>
+    </body>
+</html>

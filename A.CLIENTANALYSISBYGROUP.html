@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.CLIENTANALYSISBYGROUP</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.CLIENTANALYSISBYGROUP</h1>
+<h2>Description: Provides a summary of time recording and billing information, summarised by client group (for clients allocated to groups) or individual clients</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>CLIENT-OR-GROUP</nobr></td><td><nobr>fixchar</nobr></td><td>A hard-coded value of either &quot;CLIENT&quot; or &quot;GROUP&quot; indicating whether the values in each row are for a single client or a consolidation of multiple clients in one particular client group</td></tr>
+<tr><td><nobr>CLIENT-OR-GROUP-CODE</nobr></td><td><nobr>character(255)</nobr></td><td>The client code For a client-level summary row, or the client group code for a group-level summary row</td></tr>
+<tr><td><nobr>CLIENT-OR-GROUP-NAME</nobr></td><td><nobr>character(475)</nobr></td><td>The client name for a client-level summary row, or the client group name for a group-level summary row</td></tr>
+<tr><td><nobr>YEAR</nobr></td><td><nobr>character(254)</nobr></td><td>Year of analysis</td></tr>
+<tr><td><nobr>TIME-BILLED</nobr></td><td><nobr>decimal</nobr></td><td>Total value of time billed in the year (fees billed), equivalent to the X08 nominal balance</td></tr>
+<tr><td><nobr>TIME-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Total value of time recorded in the year</td></tr>
+<tr><td><nobr>TIME-MINS</nobr></td><td><nobr>decimal</nobr></td><td>Total number of minutes of time posted in the year</td></tr>
+<tr><td><nobr>TIME-WOFF</nobr></td><td><nobr>decimal</nobr></td><td>Total value of time written off in the year</td></tr>
+<tr><td><nobr>NO-BILLS</nobr></td><td><nobr>decimal</nobr></td><td>Total number of bills raised in the year</td></tr>
+</Table>
+<br><br></body></html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.ADSUPPPAYMENTS</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.ADSUPPPAYMENTS</h1>
+<h2>Description: Provides anticipated disbursement supplier payment information in summary form, one entry for each AD posting regardless of how many supplier payments have been made against it </h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter code</td></tr>
+<tr><td><nobr>POST-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Posting type, AD / ADV / ADVU (derived from NOMTRANS.POST-TYPE)</td></tr>
+<tr><td><nobr>TRANS-NO</nobr></td><td><nobr>integer</nobr></td><td>Transaction number (derived from NOMTRANS.TRANS-NO, links to and SOLLEDGER.ACC-SEQ)</td></tr>
+<tr><td><nobr>ENTRY-NO</nobr></td><td><nobr>integer</nobr></td><td>Transaction entry number (derived from NOMTRANS.ENTRY-NO, links to SOLLEDGER.ENTRY-NO)</td></tr>
+<tr><td><nobr>REFERENCE</nobr></td><td><nobr>character(254)</nobr></td><td>Posting reference (derived from NOMTRANS.REFERENCE)</td></tr>
+<tr><td><nobr>NARRATIVE</nobr></td><td><nobr>character(20000)</nobr></td><td>Posting narrative</td></tr>
+<tr><td><nobr>NET-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Net value (derived from NOMTRANS.NET-VALUE)</td></tr>
+<tr><td><nobr>VAT-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>VAT value (derived from NOMTRANS.VAT-VALUE)</td></tr>
+<tr><td><nobr>GROSS-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Gross value (derived from NOMTRANS.GROSS-VALUE)</td></tr>
+<tr><td><nobr>OUTST-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Outstanding value (derived from NOMTRANS.OUTST-VALUE)</td></tr>
+<tr><td><nobr>POST-DATE</nobr></td><td><nobr>date</nobr></td><td>Posting date (derived from NOMTRANS.POST-DATE)</td></tr>
+<tr><td><nobr>SUPP-PAID-TOTAL</nobr></td><td><nobr>decimal</nobr></td><td>Total (gross) value of supplier payments made (calculated from related entries in SUPP-PAYMENTS table)</td></tr>
+<tr><td><nobr>LAST-PAYMENT-DATE</nobr></td><td><nobr>date</nobr></td><td>Date of most recent supplier payment (calculated from related entries in SUPP-PAYMENTS table)</td></tr>
+<tr><td><nobr>VAT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>VAT code of the anticipated disbursement posting (derived from NOMTRANS.VAT-CODE)</td></tr>
+<tr><td><nobr>BILL-TRANSNO</nobr></td><td><nobr>integer</nobr></td><td>The transaction number of the (final) bill that caused the posting to become fully billed (derived from NOMTRANS.BILL-TRANSNO)</td></tr>
+</Table>
+<br><br></body></html>

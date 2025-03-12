@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.COSTSPAIDDATA</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.COSTSPAIDDATA</h1>
+<h2>Description: Returns transaction level data for costs billed, costs payments, credit notes and other reversals (e.g. unallocations), which can be used as a basis for building &quot;costs paid &quot; reporting queries.</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter Code</td></tr>
+<tr><td><nobr>BILL-TRANS-NO</nobr></td><td><nobr>integer</nobr></td><td>Bill transaction number</td></tr>
+<tr><td><nobr>BILL-ENTRY-NO</nobr></td><td><nobr>integer</nobr></td><td>Bill entry number</td></tr>
+<tr><td><nobr>BILL-DATE</nobr></td><td><nobr>date</nobr></td><td>Bill date </td></tr>
+<tr><td><nobr>BILL-REF</nobr></td><td><nobr>character(254)</nobr></td><td>Bill number/reference</td></tr>
+<tr><td><nobr>BILL-YEAR</nobr></td><td><nobr>character(254)</nobr></td><td>Accounting year in which bill was posted</td></tr>
+<tr><td><nobr>BILL-PERIOD</nobr></td><td><nobr>integer</nobr></td><td>Accounting period in which bill was posted</td></tr>
+<tr><td><nobr>COSTS-BILLED</nobr></td><td><nobr>decimal</nobr></td><td>Costs billed (net value excluding VAT)</td></tr>
+<tr><td><nobr>COSTS-BILLED-GROSS</nobr></td><td><nobr>decimal</nobr></td><td>Costs billed (gross value including VAT)</td></tr>
+<tr><td><nobr>BILL-FE</nobr></td><td><nobr>character(254)</nobr></td><td>Fee earner code for costs billed within the bill</td></tr>
+<tr><td><nobr>BILL-BRANCH</nobr></td><td><nobr>character(254)</nobr></td><td>Bill branch</td></tr>
+<tr><td><nobr>CREDIT-NOTES</nobr></td><td><nobr>decimal</nobr></td><td>Credit notes against costs (net value excluding VAT)</td></tr>
+<tr><td><nobr>PAYMENTS</nobr></td><td><nobr>decimal</nobr></td><td>Payments against costs (net value excluding VAT)</td></tr>
+<tr><td><nobr>REVERSALS</nobr></td><td><nobr>decimal</nobr></td><td>Reversals/unallocations against costs (net value excluding VAT)</td></tr>
+<tr><td><nobr>PAY-DATE</nobr></td><td><nobr>date</nobr></td><td>Payment date</td></tr>
+<tr><td><nobr>PAY-YEAR-PERIOD</nobr></td><td><nobr>integer</nobr></td><td>Payment year/period combined in YYYYPP format</td></tr>
+<tr><td><nobr>PAYMENT-TXNO</nobr></td><td><nobr>integer</nobr></td><td>Payment transaction number</td></tr>
+<tr><td><nobr>CREDIT-NOTES-GROSS</nobr></td><td><nobr>decimal</nobr></td><td>Credit notes against costs (gross value including VAT)</td></tr>
+<tr><td><nobr>PAYMENTS-GROSS</nobr></td><td><nobr>decimal</nobr></td><td>Payments against costs (gross value including VAT)</td></tr>
+<tr><td><nobr>REVERSALS-GROSS</nobr></td><td><nobr>decimal</nobr></td><td>Other costs paid reversals/deallocations (gross value including VAT)</td></tr>
+</Table>
+<br>
+<h2>Building &quot;Costs Paid&quot; direct database queries</h2>
+<p>The database view A.COSTSPAIDDATA can be used as the underlying data source from which it is possible to build a query to return costs paid information
+for a specific time frame, either year/period based or date range based.</p>
+<p>An example query to calculate costs paid figures on a date-range basis from this database view is below, where the place holders {?fromdate} and {?todate} need to be replaced by the required start and end dates:</p>
+<br /><hr />
+<pre>
+select
+	m."cl-code" "Client",
+	case when c."cl-code" is null then '*** CLIENT NOT FOUND ***' ELSE c."full-derived-name" end "Client Name",
+	cp."mt-code" "Matter",
+	m.description "Matter Description",
+	cp."Bill-Date" "Bill Date",
+	cp."Bill-Ref" "Bill Ref",
+	cp."bill-fe" "FE",
+	cp."bill-year" "Bill Yr",
+	cp."bill-period" "Bill Per",
+	cp."bill-trans-no" "Bill Trans",
+	cp."bill-entry-no" "Bill Entry",
+	cp."costs-billed" "Costs Billed",
+	cp.pay "Payments",
+	case when CN = 0 and REV + PAY = 0 then 0 else (case when CN <> 0 AND ((cn + pay + rev + pre > "costs-billed" and "costs-billed" > 0) or (cn + pay + rev + pre < "costs-billed" and "costs-billed" < 0)) then "costs-billed" - cn - pay - rev - pre else 0 end) end "Credit Note Reversals",
+	cp.rev "Other Reversals",
+	case when CN = 0 and REV + PAY = 0 then 0 else (case when CN <> 0 AND ((cn + pay + rev + pre > "costs-billed" and "costs-billed" > 0) or (cn + pay + rev + pre < "costs-billed" and "costs-billed" <0)) then "costs-billed" - cn - pre else pay + rev end) end "Costs Paid"
+from pub.matdb m
+left outer join pub.clidb c
+on c."cl-code" = m."cl-code"
+inner join
+	(select "mt-code", "bill-trans-no", "bill-entry-no", "bill-date", "bill-ref", "costs-billed", "bill-fe", "bill-year", "bill-period",
+	sum(case when "pay-date" < {?fromdate} then reversals + payments + "credit-notes" else 0 end) PRE,
+	sum(case when "pay-date" < {?fromdate} then 0 else "credit-notes" end) CN,
+	sum(case when "pay-date" < {?fromdate} then 0 else reversals end) REV,
+	sum(case when "pay-date" < {?fromdate} then 0 else payments end) PAY
+	from a.costspaiddata
+	where "pay-date" <= {?todate}
+	{?otherconditions}
+	group by "mt-code", "bill-trans-no", "bill-entry-no", "bill-date", "bill-ref", "costs-billed", "bill-fe", "bill-year", "bill-period"
+	having pay <> 0 or rev <> 0 or (cn <> 0 and cn + pre + pay + rev > "costs-billed" )) cp
+on cp."mt-code" = m."mt-code"
+</pre>
+<hr />
+<p>Running the query above with from/to date place holders replaced with required dates will generate a dataset which can be shown in Connect in a grouped grid, as shown below:<br>
+<img src="costspaidbydate.gif" alt="Example costs paid query by date" />
+<br /><br />
+<p>Similarly, the query below will return costs paid data for a specific year/period range, where the place holders {?fromyearperiod} and {?toyearperiod} need to be replaced with the required year/period range values in the format YYYYPP:</p>
+<hr /><pre>
+select
+	m."cl-code" "Client",
+	case when c."cl-code" is null then '*** CLIENT NOT FOUND ***' ELSE c."full-derived-name" end "Client Name",
+	cp."mt-code" "Matter",
+	m.description "Matter Description",
+	cp."Bill-Date" "Bill Date",
+	cp."Bill-Ref" "Bill Ref",
+	cp."bill-fe" "FE",
+	cp."bill-year" "Bill Yr",
+	cp."bill-period" "Bill Per",
+	cp."bill-trans-no" "Bill Trans",
+	cp."bill-entry-no" "Bill Entry",
+	cp."costs-billed" "Costs Billed",
+	cp.pay "Payments",
+	case when CN = 0 and REV + PAY = 0 then 0 else (case when CN <> 0 AND ((cn + pay + rev + pre > "costs-billed" and "costs-billed" > 0) or (cn + pay + rev + pre < "costs-billed" and "costs-billed" < 0)) then "costs-billed" - cn - pay - rev - pre else 0 end) end "Credit Note Reversals",
+	cp.rev "Other Reversals",
+	case when CN = 0 and REV + PAY = 0 then 0 else (case when CN <> 0 AND ((cn + pay + rev + pre > "costs-billed" and "costs-billed" > 0) or (cn + pay + rev + pre < "costs-billed" and "costs-billed" <0)) then "costs-billed" - cn - pre else pay + rev end) end "Costs Paid"
+from pub.matdb m
+left outer join pub.clidb c
+on c."cl-code" = m."cl-code"
+inner join
+	(select "mt-code", "bill-trans-no", "bill-entry-no", "bill-date", "bill-ref", "costs-billed", "bill-fe", "bill-year", "bill-period",
+	sum(case when "pay-year-period" < {?fromyearperiod} then reversals + payments + "credit-notes" else 0 end) PRE,
+	sum(case when "pay-year-period" < {?fromyearperiod} then 0 else "credit-notes" end) CN,
+	sum(case when "pay-year-period" < {?fromyearperiod} then 0 else reversals end) REV,
+	sum(case when "pay-year-period" < {?fromyearperiod} then 0 else payments end) PAY
+	from a.costspaiddata
+	where "pay-year-period" <= {?toyearperiod}
+	{?otherconditions}
+	group by "mt-code", "bill-trans-no", "bill-entry-no", "bill-date", "bill-ref", "costs-billed", "bill-fe", "bill-year", "bill-period"
+	having pay <> 0 or rev <> 0 or (cn <> 0 and ((cn + pay + rev + pre > "costs-billed" and "costs-billed" > 0) or (cn + pay + rev + pre < "costs-billed" and "costs-billed" < 0)))) cp
+on cp."mt-code" = m."mt-code"
+</pre>
+<hr />
+<br><br></body></html>

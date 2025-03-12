@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.ENTITYAUDIT</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.ENTITYAUDIT</h1>
+<h2>Description: Provides simple access to the entity change audit log information when the entity "create amend log" options are switched on</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>EntityType</nobr></td><td><nobr>character(15868)</nobr></td><td>Entity type updated - "CO" for contact, "OR" for organisation, "CL" for client, "MA" for matter</td></tr>
+<tr><td><nobr>NewEntityRef</nobr></td><td><nobr>character(15868)</nobr></td><td>New entity reference - contact ID, organisation ID, client code or matter code</td></tr>
+<tr><td><nobr>OldEntityRef</nobr></td><td><nobr>character(15868)</nobr></td><td>Original entity reference - contact ID, organisation ID, client code or matter code</td></tr>
+<tr><td><nobr>UserId</nobr></td><td><nobr>character(15868)</nobr></td><td>The user ID who made the update</td></tr>
+<tr><td><nobr>AuditDateTime</nobr></td><td><nobr>datetime</nobr></td><td>The date and time of the change</td></tr>
+<tr><td><nobr>Action</nobr></td><td><nobr>fixchar</nobr></td><td>The type of action captured by the audit log - either 'Created', 'Updated' or 'Deleted'</td></tr>
+</Table>
+<br>
+<p>* Exactly one of these three flags will always be set to TRUE.</p>
+<br><br></body></html>

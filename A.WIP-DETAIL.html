@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.WIP-DETAIL</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.WIP-DETAIL</h1>
+<h2>Description: Full transaction level detail of unbilled time, including "on account" memo billed items.  Undone time and time on closed matters is excluded.</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Client code</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter code</td></tr>
+<tr><td><nobr>MATDB-SUPERVISOR</nobr></td><td><nobr>character(254)</nobr></td><td>Matter supervisor code, derived from MATDB.SUPERVISOR</td></tr>
+<tr><td><nobr>MATDB-FEE-EARNER</nobr></td><td><nobr>character(254)</nobr></td><td>Matter fee earner, derived from MATDB.FEE-EARNER</td></tr>
+<tr><td><nobr>TRTRANS-FEE-EARNER</nobr></td><td><nobr>character(254)</nobr></td><td>Time posting fee earner, derived from TRTRANS.FEE-EARNER</td></tr>
+<tr><td><nobr>ACT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Time posting activity code, derived from TRTRANS.ACT-CODE</td></tr>
+<tr><td><nobr>MT-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter type, derived from TRTRANS.MT-TYPE</td></tr>
+<tr><td><nobr>UNITS</nobr></td><td><nobr>integer</nobr></td><td>Time posting number of units, derived from TRTRANS.UNITS</td></tr>
+<tr><td><nobr>TRANS-NO</nobr></td><td><nobr>integer</nobr></td><td>Time posting transaction number, derived from TRTRANS.TRANS-NO</td></tr>
+<tr><td><nobr>POST-DATE</nobr></td><td><nobr>date</nobr></td><td>Time posting date, derived from TRTRANS.POST-DATE</td></tr>
+<tr><td><nobr>COST</nobr></td><td><nobr>decimal</nobr></td><td>Time posting cost, derived from TRTRANS.COST</td></tr>
+<tr><td><nobr>CHARGE-RATE</nobr></td><td><nobr>decimal</nobr></td><td>Time posting charge rate, derived from TRTRANS.CHARGE-RATE</td></tr>
+<tr><td><nobr>ORIG-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Time posting original charge value, derived from TRTRANS.ORIG-VALUE</td></tr>
+<tr><td><nobr>CURR-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Time posting current charge value, derived from TRTRANS.CURR-VALUE</td></tr>
+<tr><td><nobr>OUTST-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Time posting outstanding WIP value, derived from TRTRANS.OUTST-VALUE.  This will be zero for time which has been billed in an "on account" legal aid memo bill.</td></tr>
+<tr><td><nobr>ON-ACCOUNT-TIME</nobr></td><td><nobr>decimal</nobr></td><td>The WIP value of the time posting which has been on-account memo billed for legal aid, derived from data provided from the view A.MEMO-ON-ACCOUNT-TIME</td></tr>
+<tr><td><nobr>ACTUAL-WIP-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>The actual WIP value of the time posting (OUTST-VALUE plus ON-ACCOUNT-TIME)</td></tr>
+<tr><td><nobr>AGE-DAYS</nobr></td><td><nobr>integer</nobr></td><td>The age of the time posting in days, derived from today's date and TRTRANS.POST-DATE</td></tr>
+</Table>
+<br><br></body></html>

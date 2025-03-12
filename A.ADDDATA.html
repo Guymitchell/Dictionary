@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.ADDDATA</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.ADDDATA</h1>
+<h2>Description: Provides easy access to all custom data field values with the 32 custom field values accessible as separate columns</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>The type of entity to which this row of additional data is related.&nbsp; This field is used in combination with REFERENCE to uniquely identify the record that this data relates to.<br>Valid values are:<br>"MA" - matter*<br>"CL" - client<br>"CO" - contact<br>"OR" - organisation<br>"BR" - branch<br>"USR" - User<br>"DEPT" - department<br>"FE" - fee earner<br>"MT" - matter type<br>"FIRM" - firm level<br>*Note that additional data can also be stored against manual archives, but in this case TYPE is "MA" and REFERENCE contains a valid "archive only" matter code beginning with "_AR".</td></tr>
+<tr><td><nobr>REFERENCE</nobr></td><td><nobr>character(254)</nobr></td><td>Entity reference to which this custom data belongs (matter code, client code, user id etc.)</td></tr>
+<tr><td><nobr>TAB-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Custom tab code</td></tr>
+<tr><td><nobr>EXTENT</nobr></td><td><nobr>integer</nobr></td><td>Custom tab-array entry number</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>DATA@1</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 1</td></tr>
+<tr><td><nobr>DATA@2</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 2</td></tr>
+<tr><td><nobr>DATA@3</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 3</td></tr>
+<tr><td><nobr>DATA@4</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 4</td></tr>
+<tr><td><nobr>DATA@5</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 5</td></tr>
+<tr><td><nobr>DATA@6</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 6</td></tr>
+<tr><td><nobr>DATA@7</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 7</td></tr>
+<tr><td><nobr>DATA@8</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 8</td></tr>
+<tr><td><nobr>DATA@9</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 9</td></tr>
+<tr><td><nobr>DATA@10</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 10</td></tr>
+<tr><td><nobr>DATA@11</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 11</td></tr>
+<tr><td><nobr>DATA@12</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 12</td></tr>
+<tr><td><nobr>DATA@13</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 13</td></tr>
+<tr><td><nobr>DATA@14</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 14</td></tr>
+<tr><td><nobr>DATA@15</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 15</td></tr>
+<tr><td><nobr>DATA@16</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 16</td></tr>
+<tr><td><nobr>DATA@17</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 17</td></tr>
+<tr><td><nobr>DATA@18</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 18</td></tr>
+<tr><td><nobr>DATA@19</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 19</td></tr>
+<tr><td><nobr>DATA@20</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 20</td></tr>
+<tr><td><nobr>DATA@21</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 21</td></tr>
+<tr><td><nobr>DATA@22</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 22</td></tr>
+<tr><td><nobr>DATA@23</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 23</td></tr>
+<tr><td><nobr>DATA@24</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 24</td></tr>
+<tr><td><nobr>DATA@25</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 25</td></tr>
+<tr><td><nobr>DATA@26</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 26</td></tr>
+<tr><td><nobr>DATA@27</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 27</td></tr>
+<tr><td><nobr>DATA@28</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 28</td></tr>
+<tr><td><nobr>DATA@29</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 29</td></tr>
+<tr><td><nobr>DATA@30</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 30</td></tr>
+<tr><td><nobr>DATA@31</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 31</td></tr>
+<tr><td><nobr>DATA@32</nobr></td><td><nobr>character(18860)</nobr></td><td>Value of custom tab field 32</td></tr>
+</Table>
+<br>
+<h2>User Interface Notes</h2>
+<p>ADDDATA contains all custom data values for all entities.  Custom tab definitions are assigned to custom tab groups, and these
+tab groups are defined as being applicable to certain types of entities in PM custom tab maintenance screen.  Custom tab groups can
+then be assigned by the user to particular matters, clients, contacts etc.</p>
+<img src="tabgrpmaint.gif" alt="PM Custom Tab Group Maintenance" /><br />
+<br /><br />
+<h2>Field Notes</h2>
+<p>All data values are stored as strings even though data entry is "masked" in accordance with the  field definition you choose when
+setting the field up, e.g. as dates or numbers.  Note that data can therefore only be retrieved and manipulated from the database as strings when
+accessing A.ADDDATA or PUB.ADDDATA directly.  However by running the utility <b>MaintainCustomViews.r</b> additional database views can be created
+to access the data for specific custom tabs with fields defined as date values returned as date values when using an ODBC query.  The utility creates these
+new views in your Progress database: the name of each view is "CUSTOM." followed by the custom tab code (e.g. "CUSTOM.MYTAB1").</p>
+<br /><br />
+<h2>Linking And Application</h2>
+<p>In all the examples below an additional selection on ADDDATA.TAB-CODE can be applied to select the data belonging to a specific custom tab.</p>
+<b>Retrieving custom data linked to a branch:</b>
+<p>"BR" -> ADDDATA.TYPE<br />
+<a href="pub.branch.html" title="Branch table">BRANCH</a>.CODE -> ADDDATA.REFERENCE</p>
+<b>Retrieving custom data linked to a user:</b>
+<p>"USR"  -> ADDDATA.TYPE<br />
+<a href="pub.usr.html" title="Users table">USR</a>.USER-ID -> ADDDATA.REFERENCE</p>
+<b>Retrieving custom data linked to a department:</b>
+<p>"DEPT" -> ADDDATA.TYPE<br />
+<a href="pub.department.html" title="Departments table">DEPARTMENT</a>.DEPARTMENT-CODE -> ADDDATA.REFERENCE</p>
+<b>Retrieving custom data linked to a fee earner:</b>
+<p>"FE" -> ADDDATA.TYPE<br />
+<a href="pub.feetr.html" title="Fee earners table">FEETR</a>.FEE-EARNER -> ADDDATA.REFERENCE</p>
+<b>Retrieving custom data linked to a matter:</b>
+<p>"MA" -> ADDDATA.TYPE<br />
+<a href="pub.matdb.html" title="Matter details table">MATDB</a>.MT-CODE -> ADDDATA.REFERENCE</p>
+<b>Retrieving custom data linked to a client:</b>
+<p>"CL" -> ADDDATA.TYPE<br />
+<a href="pub.clidb.html" title="Client details table">CLIDB</a>.CL-CODE -> ADDDATA.REFERENCE</p>
+<b>Retrieving custom data linked to a contact:</b>
+<p>"CO" -> ADDDATA.TYPE<br />
+<a href="pub.contacts.html" title="Contact details table">CONTACTS</a>.REFERENCE-CHAR -> ADDDATA.REFERENCE</p>
+<b>Retrieving custom data linked to an organisation:</b>
+<p>"OR" -> ADDDATA.TYPE<br />
+<a href="pub.organisation.html" title="Organisation details table">ORGANISATION</a>.REFERENCE-CHAR -> ADDDATA.REFERENCE</p>
+<b>Retrieving custom data linked to an matter type:</b>
+<p>"MT" -> ADDDATA.TYPE<br />
+<a href="pub.mattype.html" title="Matter type definitions table">MATTYPE</a>.MT-TYPE -> ADDDATA.REFERENCE</p>
+<br><br></body></html>

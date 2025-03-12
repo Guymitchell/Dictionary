@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.FEANALYSIS-BY-PERIOD</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.FEANALYSIS-BY-PERIOD</h1>
+<h2>Description: Returns time and accounts summary analysis information, with each period being in a separate row</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Nominal code for accounts analysis, or "TIME" for summarised time analysis, or activity code for activity-level time analysis, or a "PM<i>n</i>" analysis code.<br>Please refer to the data dictionary entry for the TRANALYSIS table for details of time analysis codes.</td></tr>
+<tr><td><nobr>TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>The specific analysis type for fee earner time analysis. Blank for nominal analysis entries.<br>Please refer to the data dictionary entry for the TRANALYSIS table for details of time analysis codes.</td></tr>
+<tr><td><nobr>BRANCH</nobr></td><td><nobr>character(254)</nobr></td><td>Branch code</td></tr>
+<tr><td><nobr>MT-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter type code</td></tr>
+<tr><td><nobr>FEE-EARNER</nobr></td><td><nobr>character(254)</nobr></td><td>Fee earner code</td></tr>
+<tr><td><nobr>YEAR</nobr></td><td><nobr>character(254)</nobr></td><td>Year number</td></tr>
+<tr><td><nobr>DESCRIPTION</nobr></td><td><nobr>character(254)</nobr></td><td>Analysis summary description</td></tr>
+<tr><td><nobr>PERIOD</nobr></td><td><nobr>integer</nobr></td><td>Period number (1-13)</td></tr>
+<tr><td><nobr>PERIOD-OPENING</nobr></td><td><nobr>decimal</nobr></td><td>Opening balance for period</td></tr>
+<tr><td><nobr>PERIOD-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Actual period movement</td></tr>
+<tr><td><nobr>PERIOD-YTD</nobr></td><td><nobr>decimal</nobr></td><td>Closing balance for period</td></tr>
+<tr><td><nobr>PERIOD-BUDGET-OPENING</nobr></td><td><nobr>decimal</nobr></td><td>Opening budget for period</td></tr>
+<tr><td><nobr>PERIOD-BUDGET-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Budget for period</td></tr>
+<tr><td><nobr>PERIOD-BUDGET-YTD</nobr></td><td><nobr>decimal</nobr></td><td>Closing budget for period</td></tr>
+</Table>
+<br><br></body></html>

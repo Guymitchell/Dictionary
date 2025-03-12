@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.JOBQUEUE</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.JOBQUEUE</h1>
+<h2>Description: Provides a simplified view of the "queued jobs" tables (PUB.QUEUE-REQUEST and PUB.QUEUE-DATA), showing all of the background process jobs that are in the queue, including completed jobs, queued jobs and failed jobs.  The job queue is used for EFT remittance generation and will be used for other areas in future.</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>QueueEntryId</nobr></td><td><nobr>integer</nobr></td><td>Unique job number.</td></tr>
+<tr><td><nobr>QueueItemTypeId</nobr></td><td><nobr>character(254)</nobr></td><td>Value indicating the type of job for each entry.  Each type of background job has a different queue item type identification code</td></tr>
+<tr><td><nobr>QueueItemType</nobr></td><td><nobr>fixchar</nobr></td><td>Short user-friendly description of the type of job.</td></tr>
+<tr><td><nobr>ScheduledDateTime</nobr></td><td><nobr>datetime</nobr></td><td>Date & time the job entry was created on the job queue.</td></tr>
+<tr><td><nobr>Completed</nobr></td><td><nobr>logical (true/false)</nobr></td><td>TRUE if the job has been processed, FALSE if the job is queued waiting for processing.</td></tr>
+<tr><td><nobr>CompletedDateTime</nobr></td><td><nobr>datetime</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>Success</nobr></td><td><nobr>logical (true/false)</nobr></td><td>TRUE if the job was completed successfully with no errors, FALSE if the job was run but failed.</td></tr>
+<tr><td><nobr>ResultMessage</nobr></td><td><nobr>character(254)</nobr></td><td>The message returned on completion of the job.  If the job failed this will contain any error messages.</td></tr>
+<tr><td><nobr>DataSeqId</nobr></td><td><nobr>integer</nobr></td><td>Each queue entry has one or more "chunks" of data associated with it.  This field tracks the data sequence number for each queue entry, i.e. this will be 1 for the first set of data associated with each job, 2 of there is more associated data than can fit into 1 data chunk, etc.</td></tr>
+<tr><td><nobr>DataFragment</nobr></td><td><nobr>character(31000)</nobr></td><td>The chunk of data associated with the queue entry and DataSeqId</td></tr>
+</Table>
+<br><br></body></html>

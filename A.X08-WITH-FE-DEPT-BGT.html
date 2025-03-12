@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.X08-WITH-FE-DEPT-BGT</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.X08-WITH-FE-DEPT-BGT</h1>
+<h2>Description: Returns fees billed information, including opening/closing balances, period movements, YTD accumulated totals and budgets.  The information is mainly derived from table PUB.NOMACCS where nominal code is "X08".</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>BRANCH</nobr></td><td><nobr>character(254)</nobr></td><td>Branch code</td></tr>
+<tr><td><nobr>FEE-EARNER</nobr></td><td><nobr>character(254)</nobr></td><td>Fee earner code</td></tr>
+<tr><td><nobr>FE-NAME</nobr></td><td><nobr>character(254)</nobr></td><td>Fee earner name</td></tr>
+<tr><td><nobr>FE-CURR</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Fee earner current (yes/no) flag</td></tr>
+<tr><td><nobr>FE-DEPARTMENT</nobr></td><td><nobr>character(254)</nobr></td><td>Fee earner department code</td></tr>
+<tr><td><nobr>YEAR</nobr></td><td><nobr>character(254)</nobr></td><td>Financial year</td></tr>
+<tr><td><nobr>OPENING-BAL</nobr></td><td><nobr>decimal</nobr></td><td>Opening balance for actual fees billed for the given branch, year and fee earner.  As fees billed (X08) is a profit & loss account, this would normally be zero.</td></tr>
+<tr><td><nobr>PERIOD1</nobr></td><td><nobr>decimal</nobr></td><td>Period 1 movement for actual fees billed value</td></tr>
+<tr><td><nobr>PERIOD2</nobr></td><td><nobr>decimal</nobr></td><td>Period 2 movement for actual fees billed value</td></tr>
+<tr><td><nobr>PERIOD3</nobr></td><td><nobr>decimal</nobr></td><td>Period 3 movement for actual fees billed value</td></tr>
+<tr><td><nobr>PERIOD4</nobr></td><td><nobr>decimal</nobr></td><td>Period 4 movement for actual fees billed value</td></tr>
+<tr><td><nobr>PERIOD5</nobr></td><td><nobr>decimal</nobr></td><td>Period 5 movement for actual fees billed value</td></tr>
+<tr><td><nobr>PERIOD6</nobr></td><td><nobr>decimal</nobr></td><td>Period 6 movement for actual fees billed value</td></tr>
+<tr><td><nobr>PERIOD7</nobr></td><td><nobr>decimal</nobr></td><td>Period 7 movement for actual fees billed value</td></tr>
+<tr><td><nobr>PERIOD8</nobr></td><td><nobr>decimal</nobr></td><td>Period 8 movement for actual fees billed value</td></tr>
+<tr><td><nobr>PERIOD9</nobr></td><td><nobr>decimal</nobr></td><td>Period 9 movement for actual fees billed value</td></tr>
+<tr><td><nobr>PERIOD10</nobr></td><td><nobr>decimal</nobr></td><td>Period 10 movement for actual fees billed value</td></tr>
+<tr><td><nobr>PERIOD11</nobr></td><td><nobr>decimal</nobr></td><td>Period 11 movement for actual fees billed value</td></tr>
+<tr><td><nobr>PERIOD12</nobr></td><td><nobr>decimal</nobr></td><td>Period 12 movement for actual fees billed value</td></tr>
+<tr><td><nobr>PERIOD13</nobr></td><td><nobr>decimal</nobr></td><td>Period 13 movement for actual fees billed value</td></tr>
+<tr><td><nobr>CLOSING-BAL</nobr></td><td><nobr>decimal</nobr></td><td>Closing balance for actual fees billed for the given branch, year and fee earner (opening balance plus period balances 1-13)</td></tr>
+<tr><td><nobr>YTD1</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of actual fees billed, up to and including period 1</td></tr>
+<tr><td><nobr>YTD2</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of actual fees billed, up to and including period 2</td></tr>
+<tr><td><nobr>YTD3</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of actual fees billed, up to and including period 3</td></tr>
+<tr><td><nobr>YTD4</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of actual fees billed, up to and including period 4</td></tr>
+<tr><td><nobr>YTD5</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of actual fees billed, up to and including period 5</td></tr>
+<tr><td><nobr>YTD6</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of actual fees billed, up to and including period 6</td></tr>
+<tr><td><nobr>YTD7</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of actual fees billed, up to and including period 7</td></tr>
+<tr><td><nobr>YTD8</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of actual fees billed, up to and including period 8</td></tr>
+<tr><td><nobr>YTD9</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of actual fees billed, up to and including period 9</td></tr>
+<tr><td><nobr>YTD10</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of actual fees billed, up to and including period 10</td></tr>
+<tr><td><nobr>YTD11</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of actual fees billed, up to and including period 11</td></tr>
+<tr><td><nobr>YTD12</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of actual fees billed, up to and including period 12</td></tr>
+<tr><td><nobr>YTD13</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative value of actual fees billed, up to and including period 13</td></tr>
+<tr><td><nobr>OPENING-BUDG</nobr></td><td><nobr>decimal</nobr></td><td>Opening budget value for fees billed for the given branch, year and fee earner</td></tr>
+<tr><td><nobr>BUDGET1</nobr></td><td><nobr>decimal</nobr></td><td>Period 1 fees billed budget</td></tr>
+<tr><td><nobr>BUDGET2</nobr></td><td><nobr>decimal</nobr></td><td>Period 2 fees billed budget</td></tr>
+<tr><td><nobr>BUDGET3</nobr></td><td><nobr>decimal</nobr></td><td>Period 3 fees billed budget</td></tr>
+<tr><td><nobr>BUDGET4</nobr></td><td><nobr>decimal</nobr></td><td>Period 4 fees billed budget</td></tr>
+<tr><td><nobr>BUDGET5</nobr></td><td><nobr>decimal</nobr></td><td>Period 5 fees billed budget</td></tr>
+<tr><td><nobr>BUDGET6</nobr></td><td><nobr>decimal</nobr></td><td>Period 6 fees billed budget</td></tr>
+<tr><td><nobr>BUDGET7</nobr></td><td><nobr>decimal</nobr></td><td>Period 7 fees billed budget</td></tr>
+<tr><td><nobr>BUDGET8</nobr></td><td><nobr>decimal</nobr></td><td>Period 8 fees billed budget</td></tr>
+<tr><td><nobr>BUDGET9</nobr></td><td><nobr>decimal</nobr></td><td>Period 9 fees billed budget</td></tr>
+<tr><td><nobr>BUDGET10</nobr></td><td><nobr>decimal</nobr></td><td>Period 10 fees billed budget</td></tr>
+<tr><td><nobr>BUDGET11</nobr></td><td><nobr>decimal</nobr></td><td>Period 11 fees billed budget</td></tr>
+<tr><td><nobr>BUDGET12</nobr></td><td><nobr>decimal</nobr></td><td>Period 12 fees billed budget</td></tr>
+<tr><td><nobr>BUDGET13</nobr></td><td><nobr>decimal</nobr></td><td>Period 13 fees billed budget</td></tr>
+<tr><td><nobr>CLOSING-BUDG</nobr></td><td><nobr>decimal</nobr></td><td>Closing budget for fees billed (opening budget plus period budget balances 1-13)</td></tr>
+<tr><td><nobr>BUDGET-YTD1</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative budget for fees billed, up to and including period 1</td></tr>
+<tr><td><nobr>BUDGET-YTD2</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative budget for fees billed, up to and including period 2</td></tr>
+<tr><td><nobr>BUDGET-YTD3</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative budget for fees billed, up to and including period 3</td></tr>
+<tr><td><nobr>BUDGET-YTD4</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative budget for fees billed, up to and including period 4</td></tr>
+<tr><td><nobr>BUDGET-YTD5</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative budget for fees billed, up to and including period 5</td></tr>
+<tr><td><nobr>BUDGET-YTD6</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative budget for fees billed, up to and including period 6</td></tr>
+<tr><td><nobr>BUDGET-YTD7</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative budget for fees billed, up to and including period 7</td></tr>
+<tr><td><nobr>BUDGET-YTD8</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative budget for fees billed, up to and including period 8</td></tr>
+<tr><td><nobr>BUDGET-YTD9</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative budget for fees billed, up to and including period 9</td></tr>
+<tr><td><nobr>BUDGET-YTD10</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative budget for fees billed, up to and including period 10</td></tr>
+<tr><td><nobr>BUDGET-YTD11</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative budget for fees billed, up to and including period 11</td></tr>
+<tr><td><nobr>BUDGET-YTD12</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative budget for fees billed, up to and including period 12</td></tr>
+<tr><td><nobr>BUDGET-YTD13</nobr></td><td><nobr>decimal</nobr></td><td>Cumulative budget for fees billed, up to and including period 13</td></tr>
+</Table>
+<br><br></body></html>

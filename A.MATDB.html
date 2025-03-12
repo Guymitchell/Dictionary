@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.MATDB</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.MATDB</h1>
+<h2>Description: Provides all matter detail information with matter notes and user-defined field values split into separate columns</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>ENTITYTYPE</nobr></td><td><nobr>fixchar</nobr></td><td>Returns the fixed string "MA" for every row - provided for easier joining between MATDB and other tables requiring an entity type, e.g. <a href="pub.adddata.html">PUB.ADDDATA</a></td></tr>
+<tr><td><nobr>BRANCH</nobr></td><td><nobr>character(254)</nobr></td><td>Matter branch code (Details tab)</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Client matter code</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Client code</td></tr>
+<tr><td><nobr>MT-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter type code</td></tr>
+<tr><td><nobr>DESCRIPTION</nobr></td><td><nobr>character(254)</nobr></td><td>Matter description</td></tr>
+<tr><td><nobr>FEE-EARNER</nobr></td><td><nobr>character(254)</nobr></td><td>Fee earner code</td></tr>
+<tr><td><nobr>DATE-OPENED</nobr></td><td><nobr>date</nobr></td><td>Date opened </td></tr>
+<tr><td><nobr>MATTER-LINK-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>TIME-OPENED</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ST-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Set by Solcase activity</td></tr>
+<tr><td><nobr>STATUS-DATE</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SUPERVISOR</nobr></td><td><nobr>character(254)</nobr></td><td>Supervising fee earner code</td></tr>
+<tr><td><nobr>ESTIMATE</nobr></td><td><nobr>integer</nobr></td><td>Current estimate (Estimate tab)</td></tr>
+<tr><td><nobr>DATE-ESTIMATE</nobr></td><td><nobr>date</nobr></td><td>Estimate date (Estimate tab)</td></tr>
+<tr><td><nobr>DATE-REVIEW1</nobr></td><td><nobr>date</nobr></td><td>Review date 1</td></tr>
+<tr><td><nobr>DATE-REVIEW2</nobr></td><td><nobr>date</nobr></td><td>Review date 2</td></tr>
+<tr><td><nobr>REFERENCE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter reference (Details tab)</td></tr>
+<tr><td><nobr>NOTES@1</nobr></td><td><nobr>character(25643)</nobr></td><td>Matter notes (notes tab)</td></tr>
+<tr><td><nobr>NOTES@2</nobr></td><td><nobr>character(25643)</nobr></td><td>User defined field value 1 (Notes tab)</td></tr>
+<tr><td><nobr>NOTES@3</nobr></td><td><nobr>character(25643)</nobr></td><td>User defined field value 2 (Notes tab)</td></tr>
+<tr><td><nobr>NOTES@4</nobr></td><td><nobr>character(25643)</nobr></td><td>User defined field value 3 (Notes tab)</td></tr>
+<tr><td><nobr>NOTES@5</nobr></td><td><nobr>character(25643)</nobr></td><td>User defined field value 4 (Notes tab)</td></tr>
+<tr><td><nobr>NOTES@6</nobr></td><td><nobr>character(25643)</nobr></td><td>User defined field value 5 (Notes tab)</td></tr>
+<tr><td><nobr>REMINDERS</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reminders option (Details tab)</td></tr>
+<tr><td><nobr>DATE-CLOSED</nobr></td><td><nobr>date</nobr></td><td>Matter closed date (Details tab)</td></tr>
+<tr><td><nobr>RETENTION</nobr></td><td><nobr>integer</nobr></td><td>Retention period specified in the "Retain days" option when closing matter</td></tr>
+<tr><td><nobr>HOLD-FLAG</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Set to TRUE for archived matters where the matter was marked as "Hold" in Close/Reopen Matters screen</td></tr>
+<tr><td><nobr>NO-BILLS</nobr></td><td><nobr>integer</nobr></td><td>Number of bills posted</td></tr>
+<tr><td><nobr>BILLD-ANTI-FLAG</nobr></td><td><nobr>character(254)</nobr></td><td>Law Society of Northern Ireland use only - holds information regarding billed anticipated disbursements</td></tr>
+<tr><td><nobr>EST-FACTOR</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>REGISTER</nobr></td><td><nobr>character(254)</nobr></td><td>Archive register number (set if matter is archived and then re-instated)</td></tr>
+<tr><td><nobr>ARCHIVED-FLAG</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Archived status - True if archived, False if not</td></tr>
+<tr><td><nobr>INT-SCAN</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Interest scan enabled (Notes tab)</td></tr>
+<tr><td><nobr>POST_LOCK</nobr></td><td><nobr>character(254)</nobr></td><td>Temporary value (user-id of user making updates)</td></tr>
+<tr><td><nobr>EXTRA-NOTES@1</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@2</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@3</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@4</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@5</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@6</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@7</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@8</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@9</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@10</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@11</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@12</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@13</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@14</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@15</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@16</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@17</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@18</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@19</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@20</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@21</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@22</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@23</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EXTRA-NOTES@24</nobr></td><td><nobr>character(20000)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>UDF-DATES@1</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>UDF-DATES@2</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>UDF-DATES@3</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>UDF-DATES@4</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>UDF-DATES@5</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>UDF-DATES@6</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>UDF-DATES@7</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>UDF-DATES@8</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>UDF-DATES@9</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>UDF-DATES@10</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CURRENCY-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>PROBATE</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>OTHER-PARTY</nobr></td><td><nobr>character(933)</nobr></td><td>Other party name (Details tab)</td></tr>
+<tr><td><nobr>LOCATION</nobr></td><td><nobr>character(254)</nobr></td><td>Location specified when closing matter</td></tr>
+<tr><td><nobr>PHASE</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>DEFAULT-ZONE</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>YRPR-OPENED</nobr></td><td><nobr>character(254)</nobr></td><td>Year opened (from BRANCH record)</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>RISK-LEVEL</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>RISK-DATE</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>RISK-REASON</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>PARTNER</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>INTRO-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Introduction / source of business code (Notes tab)</td></tr>
+<tr><td><nobr>MAT-GRP</nobr></td><td><nobr>character(254)</nobr></td><td>Matter group (set by Solcase)</td></tr>
+<tr><td><nobr>ARCHIVE-ID</nobr></td><td><nobr>integer</nobr></td><td>Unique sequential reference generated by software</td></tr>
+<tr><td><nobr>INTEREST-GROUP</nobr></td><td><nobr>character(254)</nobr></td><td>Interest group (Notes tab)</td></tr>
+<tr><td><nobr>DESTRUCTION-DATE</nobr></td><td><nobr>character(254)</nobr></td><td>Archive destruction date for matters that have been archived and then reinstated</td></tr>
+<tr><td><nobr>PERMITTED-USERS</nobr></td><td><nobr>fixchar</nobr></td><td>(deprecated - do not use)</td></tr>
+<tr><td><nobr>CSB-SCHEME</nobr></td><td><nobr>character(254)</nobr></td><td>Case Stage Budgeting scheme code (Details tab)</td></tr>
+<tr><td><nobr>MKT-ACTIVITY</nobr></td><td><nobr>character(254)</nobr></td><td>Marketing activity code</td></tr>
+<tr><td><nobr>INIT-CASETYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CONTROLLED-TRUST</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ESTIMATE-DISBS</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>APPLICATION</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CONVERTED-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Unique ID or matter code of original matter in source system if matter was imported by data conversion</td></tr>
+<tr><td><nobr>ANALY-STATUS</nobr></td><td><nobr>character(254)</nobr></td><td>[Awaiting description]</td></tr>
+</Table>
+<br>
+<br>
+<h2>Practice Manager Interface</h2>
+<br>
+<img src=pmmatdetail.gif alt="PM matter details" />
+<br><br>
+<h2>Connect Interface</h2>
+<br>
+<img src=connectmatdetails.gif alt="Connect matter details" />
+<br>
+<p>Most data corresponds to the fields as labelled above in the Matter Create/Amend screens. A very few fields are updated as by-products of posting
+such as NO-BILLS and POST-LOCK and of course these are not directly accessible or editable. As you will see by examination of the MATTR section
+there is no longer any particular consistency or “specialism” between these two tables so neighbouring items on one of the Matter Enquiry tabs may well each be in different tables.</p>
+<p><b>For each matter you add in Practice Manager there will be created immediately one each of MATDB, MATTR and MATAC records. The system does not
+wait until any posting activity actually takes place.</b></p>
+<br>
+<h2>Field Notes</h2>
+<p>NOTES@1 contains everything you add to the Notes memo box in the Notes tab irrespective of their length.</p>
+<p>NOTES@2 to NOTES@6 are used for the five user defined matter fields you may have created. These are the fields which if present will show in the lower portion of the
+Notes tab. These should not be confused with the contents of any additional bespoke fields you create in additional tabs for the matter record, which will instead be found in the MATADDDATA table.</p>
+<p>POST_LOCK simply holds the user-id of someone in the course of making an accounts posting and so “locks” the matter ie stops someone else trying to make a posting at the same time.</p>
+<p>If ARCHIVED-FLAG is true then DATE-CLOSED should always have a date in it as a matter can’ be archived until it has been closed, but remember that the converse is not necessarily
+true ie a matter may have a DATE-CLOSED value but ARCHIVED-FLAG is false.</p>
+<p>LINK-MT-CODE should always be empty for normal ie user-created postable matters whether the matter is live, closed or archived. It will only have
+something in it viz the matter code itself to signal that the MATDB record is a “dummy” matter record that has been generated by Practice Manager as a by-product of
+creating a non-matter archive record. This feature was not introduced until patch 004 of version 2_14_0102/3_14_0102 of Practice Manager software.</p>
+<br>
+<h2>Linking And Application</h2>
+<p><b>Simple Links</b></p>
+<p>MATDB is likely to feature in most reports, almost invariably in the company of CLIDB,  along with either or both of MATTR and MATAC.   The following accesses the
+basic ingredients for any report on clients, matters and balances:</p>
+<p><b>&nbsp;CLIDB.CL-CODE -> MATDB.CL-CODE<br>
+&nbsp;MATDB.MT-CODE -> MATAC.MT-CODE -> MATTR.MT-CODE</b></p>
+<br><p>This variant allows you to pull the matter fee earner name in as well:</p>
+<p><b>&nbsp;CLIDB.CL-CODE -> MATDB.CL-CODE<br>
+&nbsp;MATDB.MT-CODE -> MATAC.MT-CODE -> MATTR.MT-CODE<br>
+&nbsp;MATDB.FEE-EARNER -> FEETR.FEE-EARNER</b></p>
+<br>
+<p><b>Aliased Links</b></p>
+<p>Adding the FEETR table  twice using alias names,  you can group and subtotal the report by both the main fee earner and the matter supervisor:</p>
+<p><b><br>&nbsp;CLIDB.CL-CODE -> MATDB.CL-CODE<br>
+&nbsp;MATDB.MT-CODE -> MATAC.MT-CODE -> MATTR.MT-CODE<br>
+&nbsp;MATDB.FEE-EARNER -> matterFEETR.FEE-EARNER<br>
+&nbsp;MATDB.SUPERVISOR -> supervisorFEETR.FEE-EARNER<br></b></p>
+<br><br></body></html>

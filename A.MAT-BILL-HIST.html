@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.MAT-BILL-HIST</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.MAT-BILL-HIST</h1>
+<h2>Description: Returns a list of bill information for all bills including outstanding values broken down by client, matter, nominal (costs/disbursements), and fee earner</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Client code</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter code</td></tr>
+<tr><td><nobr>POST-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Posting type ("BC" for bill, "CN" for credit note)</td></tr>
+<tr><td><nobr>BILL-NO</nobr></td><td><nobr>character(254)</nobr></td><td>Bill number</td></tr>
+<tr><td><nobr>BILL-DATE</nobr></td><td><nobr>date</nobr></td><td>Bill date</td></tr>
+<tr><td><nobr>FEE-EARNER</nobr></td><td><nobr>character(254)</nobr></td><td>Bill-level fee earner code </td></tr>
+<tr><td><nobr>NL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Nominal code</td></tr>
+<tr><td><nobr>TRANS-NO</nobr></td><td><nobr>integer</nobr></td><td>Accounts transaction number (i.e. NOMTRANS.TRANS-NO)</td></tr>
+<tr><td><nobr>ENTRY-NO</nobr></td><td><nobr>integer</nobr></td><td>Accounts transasction entry number (i.e. NOMTRANS.ENTRY-NO)</td></tr>
+<tr><td><nobr>NET-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Net value</td></tr>
+<tr><td><nobr>VAT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>VAT code</td></tr>
+<tr><td><nobr>VAT-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>VAT value </td></tr>
+<tr><td><nobr>OUTST-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Amount outstanding</td></tr>
+<tr><td><nobr>DAYS-OUTST</nobr></td><td><nobr>integer</nobr></td><td>Number of days since bill date</td></tr>
+<tr><td><nobr>POST-YEAR</nobr></td><td><nobr>character(254)</nobr></td><td>Financial year of posting (from NOMTRANS.POST-YEAR)</td></tr>
+<tr><td><nobr>PERIOD</nobr></td><td><nobr>integer</nobr></td><td>Financial period of posting (from NOMTRANS.PERIOD)</td></tr>
+<tr><td><nobr>BILLED-PAID-FLAG</nobr></td><td><nobr>character(254)</nobr></td><td>Indicator showing whether the bill has been paid, part paid or credit noted</td></tr>
+<tr><td><nobr>MATTER-FE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter-level fee earner code</td></tr>
+<tr><td><nobr>MATTER-SUPERVISOR</nobr></td><td><nobr>character(254)</nobr></td><td>Matter supervisor code</td></tr>
+<tr><td><nobr>CLIENT-FE</nobr></td><td><nobr>character(254)</nobr></td><td>Client fee earner code (managing partner)</td></tr>
+</Table>
+<br>
+<h2>Field Notes</h2>
+<p>This view returns a selection of NOMTRANS records and columns designed to provide a list of all bills and credit notes broken down by bill components
+(costs, costs VAT, disbursements and disbursements VAT), including any outstanding values.  The view includes a column for the number of days between today and the bill date
+to enable aged-debt information to be extracted from this view.</p>
+<p>The POST-TYPE will only ever be "BC" for bill to client, or "CN" for credit notes.</p>
+<p>The NET-VALUE and VAT-VALUE fields will always be negative for bills and positive for credit notes, whereas the OUTST-VALUE field will
+be positive for bills and negative for credit notes.</p>
+<p>Note that if a bill has been forward-dated then DAYS-OUTST will be a negative figure.</p>
+<br><br></body></html>

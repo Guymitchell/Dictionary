@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.NOMACCS-SUM-BY-DEPT</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.NOMACCS-SUM-BY-DEPT</h1>
+<h2>Description: Nominal balance summary information, summarised by department and financial year, with branch-level values consolidated</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>NOMINAL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Nominal analysis code (as defined in PUB.NOMCODES table)</td></tr>
+<tr><td><nobr>NOMINAL-DESC</nobr></td><td><nobr>character(254)</nobr></td><td>Nominal code description (as defined in PUB.NOMCODES table)</td></tr>
+<tr><td><nobr>NOMINAL-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Nominal account type (as defined in PUB.NOMCODES.BAL-PL)</td></tr>
+<tr><td><nobr>NOMINAL-CURR</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Nominal account current yes/no flag (as defined in PUB.NOMCODES.CURR)</td></tr>
+<tr><td><nobr>DEPARTMENT</nobr></td><td><nobr>character(255)</nobr></td><td>Derived department code, which will be either:<br>- blank where nominal balances exist with no cost centre or fee earner level analysis<br>- level 1 cost centre code where balances exist at this level<br>- derived department code from fee earner department, where nominal balances exist at fee earner level</td></tr>
+<tr><td><nobr>YEAR</nobr></td><td><nobr>character(254)</nobr></td><td>Financial year</td></tr>
+<tr><td><nobr>OPENING-BAL</nobr></td><td><nobr>decimal</nobr></td><td>Opening balance value for the year (zero for P&amp;L nominal accounts)</td></tr>
+<tr><td><nobr>PERIOD1</nobr></td><td><nobr>decimal</nobr></td><td>Total of postings made (i.e. movement) in period 1</td></tr>
+<tr><td><nobr>PERIOD2</nobr></td><td><nobr>decimal</nobr></td><td>Total of postings made (i.e. movement) in period 2</td></tr>
+<tr><td><nobr>PERIOD3</nobr></td><td><nobr>decimal</nobr></td><td>Total of postings made (i.e. movement) in period 3</td></tr>
+<tr><td><nobr>PERIOD4</nobr></td><td><nobr>decimal</nobr></td><td>Total of postings made (i.e. movement) in period 4</td></tr>
+<tr><td><nobr>PERIOD5</nobr></td><td><nobr>decimal</nobr></td><td>Total of postings made (i.e. movement) in period 5</td></tr>
+<tr><td><nobr>PERIOD6</nobr></td><td><nobr>decimal</nobr></td><td>Total of postings made (i.e. movement) in period 6</td></tr>
+<tr><td><nobr>PERIOD7</nobr></td><td><nobr>decimal</nobr></td><td>Total of postings made (i.e. movement) in period 7</td></tr>
+<tr><td><nobr>PERIOD8</nobr></td><td><nobr>decimal</nobr></td><td>Total of postings made (i.e. movement) in period 8</td></tr>
+<tr><td><nobr>PERIOD9</nobr></td><td><nobr>decimal</nobr></td><td>Total of postings made (i.e. movement) in period 9</td></tr>
+<tr><td><nobr>PERIOD10</nobr></td><td><nobr>decimal</nobr></td><td>Total of postings made (i.e. movement) in period 10</td></tr>
+<tr><td><nobr>PERIOD11</nobr></td><td><nobr>decimal</nobr></td><td>Total of postings made (i.e. movement) in period 11</td></tr>
+<tr><td><nobr>PERIOD12</nobr></td><td><nobr>decimal</nobr></td><td>Total of postings made (i.e. movement) in period 12</td></tr>
+<tr><td><nobr>PERIOD13</nobr></td><td><nobr>decimal</nobr></td><td>Total of postings made (i.e. movement) in period 13</td></tr>
+<tr><td><nobr>CLOSING-BAL</nobr></td><td><nobr>decimal</nobr></td><td>Closing balance for the year</td></tr>
+<tr><td><nobr>YTD1</nobr></td><td><nobr>decimal</nobr></td><td>Year-to-date value at end of period 1 (opening balance plus period 1 movement)</td></tr>
+<tr><td><nobr>YTD2</nobr></td><td><nobr>decimal</nobr></td><td>Year-to-date value at end of period 2 (YTD1 plus period 2 movement)</td></tr>
+<tr><td><nobr>YTD3</nobr></td><td><nobr>decimal</nobr></td><td>Year-to-date value at end of period 3 (YTD2 plus period 3 movement)</td></tr>
+<tr><td><nobr>YTD4</nobr></td><td><nobr>decimal</nobr></td><td>Year-to-date value at end of period 4 (YTD3 plus period 4 movement)</td></tr>
+<tr><td><nobr>YTD5</nobr></td><td><nobr>decimal</nobr></td><td>Year-to-date value at end of period 5 (YTD4 plus period 5 movement)</td></tr>
+<tr><td><nobr>YTD6</nobr></td><td><nobr>decimal</nobr></td><td>Year-to-date value at end of period 6 (YTD5 plus period 6 movement)</td></tr>
+<tr><td><nobr>YTD7</nobr></td><td><nobr>decimal</nobr></td><td>Year-to-date value at end of period 7 (YTD6 plus period 7 movement)</td></tr>
+<tr><td><nobr>YTD8</nobr></td><td><nobr>decimal</nobr></td><td>Year-to-date value at end of period 8 (YTD7 plus period 8 movement)</td></tr>
+<tr><td><nobr>YTD9</nobr></td><td><nobr>decimal</nobr></td><td>Year-to-date value at end of period 9 (YTD8 plus period 9 movement)</td></tr>
+<tr><td><nobr>YTD10</nobr></td><td><nobr>decimal</nobr></td><td>Year-to-date value at end of period 10 (YTD9 plus period 10 movement)</td></tr>
+<tr><td><nobr>YTD11</nobr></td><td><nobr>decimal</nobr></td><td>Year-to-date value at end of period 11 (YTD10 plus period 11 movement)</td></tr>
+<tr><td><nobr>YTD12</nobr></td><td><nobr>decimal</nobr></td><td>Year-to-date value at end of period 12 (YTD11 plus period 12 movement)</td></tr>
+<tr><td><nobr>YTD13</nobr></td><td><nobr>decimal</nobr></td><td>Year-to-date value at end of period 13 (YTD12 plus period 13 movement)</td></tr>
+</Table>
+<br><br></body></html>

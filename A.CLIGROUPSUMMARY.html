@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.CLIGROUPSUMMARY</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.CLIGROUPSUMMARY</h1>
+<h2>Description: Provides a summary of client group allocation information, with a maximum of one row per client.  Clients allocated in mutiple groups are shown as having a client group of &quot;(Multiple)&quot.  Clients not in any group are not included.</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Client code</td></tr>
+<tr><td><nobr>FULL-DERIVED-NAME</nobr></td><td><nobr>character(474)</nobr></td><td>Client name (taken from PUB.CLIDB.FULL-DERIVED-NAME)</td></tr>
+<tr><td><nobr>NUMGROUPS</nobr></td><td><nobr>int64</nobr></td><td>Number of client groups to which the client belongs, which is always 1 or more as clients not in any group are excluded</td></tr>
+<tr><td><nobr>GROUPCODE</nobr></td><td><nobr>character(29)</nobr></td><td>Either the group code to which the client is attached, or a dummy code of the form &quot;(<i>x</i> groups)&quot; if the client is in multiple groups</td></tr>
+<tr><td><nobr>GROUPNAME</nobr></td><td><nobr>fixchar</nobr></td><td>Either the group name of the single client group definition to which the client is attached, or &quot;(Multiple)&quot; if the client is in multiple groups</td></tr>
+<tr><td><nobr>GROUPDESCRIPTION</nobr></td><td><nobr>fixchar</nobr></td><td>Either the group description of the single client group definition to which the client is attached, or &quot;(Multiple groups)&quot; if the client is in multiple groups</td></tr>
+</Table>
+<br><br></body></html>

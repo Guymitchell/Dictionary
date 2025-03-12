@@ -1,0 +1,15 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.CLIGROUPALL</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.CLIGROUPALL</h1>
+<h2>Description: Returns one row for every client indicating the number of client groups the client relates to, and either the client code / client name for ungrouped clients or client group code / group description for grouped clients.  This view is designed to be used in combination with other views to provide client group summary results for grouped clients combined with client level results for ungrouped clients.  This view is guaranteed to only ever return one row per client so will not duplicate or inflate figures when joined to other tables where clients are in multiple groups.</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Client code</td></tr>
+<tr><td><nobr>NUMGROUPS</nobr></td><td><nobr>int64</nobr></td><td>Number of client groups that the client belongs to</td></tr>
+<tr><td><nobr>GROUP-OR-CLI-CODE</nobr></td><td><nobr>character(255)</nobr></td><td>If the client is not in any group, this column will return the client code.  If the client is in exactly one group, this column will return the client group code.   If the client is in more than one group this column returns "(x groups)".</td></tr>
+<tr><td><nobr>GROUP-OR-CLI-NAME</nobr></td><td><nobr>character(475)</nobr></td><td>If the client is not in any group, this column will return the client full derived name (PUB.CLIDB.FULL-DERIVED-NAME).  If the client is in exactly one group, this column will return the client group description (PUB.GROUPS.DESCRIPTION).  If the client is in more than one group this column returns the text "(Multiple groups)".</td></tr>
+</Table>
+<br><br></body></html>

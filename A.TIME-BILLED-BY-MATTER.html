@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.TIME-BILLED-BY-MATTER</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.TIME-BILLED-BY-MATTER</h1>
+<h2>Description: Returns a summary of billed time value, fees billed value and time written off value by matter, year, period and fee earner</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter code, derived from TRTRANS.MT-CODE</td></tr>
+<tr><td><nobr>YEAR</nobr></td><td><nobr>character(254)</nobr></td><td>Financial year, derived from TRTRANS.YEAR</td></tr>
+<tr><td><nobr>PERIOD</nobr></td><td><nobr>integer</nobr></td><td>Financial period, derived from TRTRANS.PERIOD</td></tr>
+<tr><td><nobr>POSTING-FE</nobr></td><td><nobr>character(254)</nobr></td><td>Posting fee earner, derived from TRTRANS.FEE-EARNER</td></tr>
+<tr><td><nobr>TIME-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Original value of time that has been billed</td></tr>
+<tr><td><nobr>FEES-BILLED</nobr></td><td><nobr>decimal</nobr></td><td>The actual value of fees billed to the client</td></tr>
+<tr><td><nobr>WRITE-OFF</nobr></td><td><nobr>decimal</nobr></td><td>Value of time written off</td></tr>
+</Table>
+<br><br></body></html>

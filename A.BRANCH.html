@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: A.BRANCH</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>View Name:A.BRANCH</h1>
+<h2>Description: Provides easy access to branch maintenance data with period end dates split into separate columns</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Branch code</td></tr>
+<tr><td><nobr>NAME</nobr></td><td><nobr>character(254)</nobr></td><td>Branch Name</td></tr>
+<tr><td><nobr>THIS-YEAR</nobr></td><td><nobr>character(254)</nobr></td><td>Current Year</td></tr>
+<tr><td><nobr>CURR-PERIOD</nobr></td><td><nobr>integer</nobr></td><td>Current Period</td></tr>
+<tr><td><nobr>CASH-VAT</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Cash VAT flag</td></tr>
+<tr><td><nobr>CASH-ACCOUNTS</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Cash accounting flag</td></tr>
+<tr><td><nobr>PERIOD-END@1</nobr></td><td><nobr>date</nobr></td><td>Period end date 1</td></tr>
+<tr><td><nobr>PERIOD-END@2</nobr></td><td><nobr>date</nobr></td><td>Period end date 2</td></tr>
+<tr><td><nobr>PERIOD-END@3</nobr></td><td><nobr>date</nobr></td><td>Period end date 3</td></tr>
+<tr><td><nobr>PERIOD-END@4</nobr></td><td><nobr>date</nobr></td><td>Period end date 4</td></tr>
+<tr><td><nobr>PERIOD-END@5</nobr></td><td><nobr>date</nobr></td><td>Period end date 5</td></tr>
+<tr><td><nobr>PERIOD-END@6</nobr></td><td><nobr>date</nobr></td><td>Period end date 6</td></tr>
+<tr><td><nobr>PERIOD-END@7</nobr></td><td><nobr>date</nobr></td><td>Period end date 7</td></tr>
+<tr><td><nobr>PERIOD-END@8</nobr></td><td><nobr>date</nobr></td><td>Period end date 8</td></tr>
+<tr><td><nobr>PERIOD-END@9</nobr></td><td><nobr>date</nobr></td><td>Period end date 9</td></tr>
+<tr><td><nobr>PERIOD-END@10</nobr></td><td><nobr>date</nobr></td><td>Period end date 10</td></tr>
+<tr><td><nobr>PERIOD-END@11</nobr></td><td><nobr>date</nobr></td><td>Period end date 11</td></tr>
+<tr><td><nobr>PERIOD-END@12</nobr></td><td><nobr>date</nobr></td><td>Period end date 12</td></tr>
+<tr><td><nobr>PERIOD-END@13</nobr></td><td><nobr>date</nobr></td><td>Period end date 13</td></tr>
+<tr><td><nobr>BATCH-START</nobr></td><td><nobr>integer</nobr></td><td>Derived: NOMTRANS.TRANS-NO of first accounts posting in current batch</td></tr>
+<tr><td><nobr>COUNTRY</nobr></td><td><nobr>character(254)</nobr></td><td>Country (England/Scotland) as selected from drop down list in Practice Manager branch maintenance screen</td></tr>
+<tr><td><nobr>CODE-PREF</nobr></td><td><nobr>character(254)</nobr></td><td>Matter Prefix</td></tr>
+<tr><td><nobr>LA_REF</nobr></td><td><nobr>character(254)</nobr></td><td>Supplier No</td></tr>
+<tr><td><nobr>LA_ACC</nobr></td><td><nobr>character(254)</nobr></td><td>Legal aid A/C No</td></tr>
+<tr><td><nobr>DEFAULT-BANKS</nobr></td><td><nobr>character(254)</nobr></td><td>Default client bank code and default office bank code (delimited by comma)</td></tr>
+<tr><td><nobr>CONTRACTNO</nobr></td><td><nobr>character(254)</nobr></td><td>Contract No</td></tr>
+<tr><td><nobr>ADDRESS1</nobr></td><td><nobr>character(254)</nobr></td><td>Branch address - line 1</td></tr>
+<tr><td><nobr>ADDRESS2</nobr></td><td><nobr>character(254)</nobr></td><td>Branch address - line 2</td></tr>
+<tr><td><nobr>ADDRESS3</nobr></td><td><nobr>character(254)</nobr></td><td>Branch address - line 3</td></tr>
+<tr><td><nobr>ADDRESS4</nobr></td><td><nobr>character(254)</nobr></td><td>Branch address - line 4</td></tr>
+<tr><td><nobr>POSTCODE</nobr></td><td><nobr>character(254)</nobr></td><td>Branch address - post code</td></tr>
+<tr><td><nobr>TELNO</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>FAX</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>EMAIL</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>HOUSENAME</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>HOUSENO</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ADDRESS5</nobr></td><td><nobr>character(254)</nobr></td><td>Branch address - line 5 (country)</td></tr>
+<tr><td><nobr>MEDIATION</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>PROTECTED</nobr></td><td><nobr>character(254)</nobr></td><td>Protected branch flag - set to "Y" for a protected branch</td></tr>
+<tr><td><nobr>CIVIL-SCHEDULE-NO</nobr></td><td><nobr>character(254)</nobr></td><td>Civil Legal Aid schedule number for this branch contract</td></tr>
+<tr><td><nobr>CRIMINAL-SCHEDULE-NO</nobr></td><td><nobr>character(254)</nobr></td><td>Criminal Legal Aid schedule number for this branch contract</td></tr>
+<tr><td><nobr>ALLOW-CLI-POST-DISB-GROUPS</nobr></td><td><nobr>character(254)</nobr></td><td>Allow disbursement group allocation to client account postings (yes/no)</td></tr>
+<tr><td><nobr>SUPPRESS-CLIENT-OVERDRAW-MSGS</nobr></td><td><nobr>character(254)</nobr></td><td>Suppress display of "client account overdraw" messages (yes/no)</td></tr>
+<tr><td><nobr>BRANCH-BILL-NO</nobr></td><td><nobr>character(254)</nobr></td><td>Next bill number for this branch when branch-level bill numbering is enabled</td></tr>
+<tr><td><nobr>VAT-REG-NO</nobr></td><td><nobr>character(254)</nobr></td><td>[Awaiting description]</td></tr>
+</Table>
+<br><br></body></html>
