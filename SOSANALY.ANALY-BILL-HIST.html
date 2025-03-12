@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: SOSANALY.ANALY-BILL-HIST</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:SOSANALY.ANALY-BILL-HIST</h1>
+<h2>Description: If installed, this view will retrieve data from the SOS data warehouse, returning bill life-cycle history including payment values and oustanding values for all bills for previous years and periods</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>BILL-DATE</nobr></td><td><nobr>date</nobr></td><td>Bill date</td></tr>
+<tr><td><nobr>BILL-NO</nobr></td><td><nobr>character(32)</nobr></td><td>Bill number</td></tr>
+<tr><td><nobr>BRANCH</nobr></td><td><nobr>character(6)</nobr></td><td>Branch code</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(30)</nobr></td><td>Client code (of matter of bill)</td></tr>
+<tr><td><nobr>GROSS-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Total original bill gross value (i.e. including VAT)</td></tr>
+<tr><td><nobr>LATEST-PAYMENT-DATE</nobr></td><td><nobr>date</nobr></td><td>Latest payment date the period/year defined in OUTST-PERIOD / OUTST-YEAR</td></tr>
+<tr><td><nobr>LEAD-FE-DEPT</nobr></td><td><nobr>character(8)</nobr></td><td>Matter fee earner department code</td></tr>
+<tr><td><nobr>LEAD-FEE-EARNER</nobr></td><td><nobr>character(8)</nobr></td><td>Matter fee earner code</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(40)</nobr></td><td>Matter code</td></tr>
+<tr><td><nobr>MT-DEPT</nobr></td><td><nobr>character(8)</nobr></td><td>Matter type department code</td></tr>
+<tr><td><nobr>MT-TYPE</nobr></td><td><nobr>character(8)</nobr></td><td>Matter type code</td></tr>
+<tr><td><nobr>OUTST-PERIOD</nobr></td><td><nobr>integer</nobr></td><td>Financial period in which bill was still outstanding</td></tr>
+<tr><td><nobr>OUTST-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Outstanding value of the bill at the end of the year and period defined in OUTST-PERIOD / OUTST-YEAR</td></tr>
+<tr><td><nobr>OUTST-YEAR</nobr></td><td><nobr>character(8)</nobr></td><td>Financial year in which bill was still outstanding</td></tr>
+<tr><td><nobr>PAID-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Amount paid for this bill in this period and year (OUTST-PERIOD / OUTST-YEAR)</td></tr>
+<tr><td><nobr>POST-PERIOD</nobr></td><td><nobr>integer</nobr></td><td>Financial period in which bill originally posted</td></tr>
+<tr><td><nobr>POST-YEAR</nobr></td><td><nobr>character(8)</nobr></td><td>Financial year in which bill originally posted</td></tr>
+<tr><td><nobr>SUPERVISOR</nobr></td><td><nobr>character(8)</nobr></td><td>Matter supervisor code</td></tr>
+<tr><td><nobr>TRANS-NO</nobr></td><td><nobr>integer</nobr></td><td>Bill transaction number (effectively NOMTRANS.TRANS-NO in main SOS database)</td></tr>
+</Table>
+<br>
+<p><b>NOTE</b> that all data in the SOS warehouse is built periodically into the warehouse from the main SOS database, and as such the warehouse contains a snapshot of live data at the point the warehouse build was last run.
+ The warehouse does not show changes real-time as they posted into the main live SOS database.</p>
+<br />
+<br><br></body></html>

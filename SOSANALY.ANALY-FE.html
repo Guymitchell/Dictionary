@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: SOSANALY.ANALY-FE</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:SOSANALY.ANALY-FE</h1>
+<h2>Description: If installed, this view will retrieve data from the SOS data warehouse, returning stub fee earner records derived from the table PUB.FEETR</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>DEPARTMENT</nobr></td><td><nobr>character(80)</nobr></td><td>Fee earner department code</td></tr>
+<tr><td><nobr>FEE-EARNER</nobr></td><td><nobr>character(8)</nobr></td><td>Fee earner code</td></tr>
+<tr><td><nobr>NAME</nobr></td><td><nobr>character(80)</nobr></td><td>Fee earner name</td></tr>
+<tr><td><nobr>CHARGE-RATE</nobr></td><td><nobr>decimal</nobr></td><td>Fee earner's current default charge rate</td></tr>
+</Table>
+<br>
+<p><b>NOTE</b> that all data in the SOS warehouse is built periodically into the warehouse from the main SOS database, and as such the warehouse contains a snapshot of live data at the point the warehouse build was last run.
+ The warehouse does not show changes real-time as they posted into the main live SOS database.</p>
+<br />
+<br><br></body></html>

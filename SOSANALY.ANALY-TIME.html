@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: SOSANALY.ANALY-TIME</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:SOSANALY.ANALY-TIME</h1>
+<h2>Description: If installed, this view will retrieve data from the SOS data warehouse, returning time posting summary information for all years and periods captured in the warehouse</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">No. Extents</td><td class="thead">Description</td></tr>
+<tr><td><nobr>ACT-CODE</nobr></td><td><nobr>character(8)</nobr></td><td></td><td>Activity code, taken from TRTRANS.ACT-CODE</td></tr>
+<tr><td><nobr>AGED-WIP-VALUE</nobr></td><td><nobr>decimal</nobr></td><td><center>5</Center></td><td>Value of WIP spread across 5 different aging bands: up to 1 period old, between 1 and 2 periods old, between 2 and 3 periods old, period 3 and 4 periods old, and over 4 periods old</td></tr>
+<tr><td><nobr>BILLED-COST-VALUE</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Total cost of time billed within this time analysis group</td></tr>
+<tr><td><nobr>BILLED-VALUE</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Total value of time billed within this time analysis group</td></tr>
+<tr><td><nobr>BRANCH</nobr></td><td><nobr>character(6)</nobr></td><td></td><td>Branch code</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(30)</nobr></td><td></td><td>Client code, taken from MATDB.CL-CODE for the time posting matter </td></tr>
+<tr><td><nobr>FEE-EARNER</nobr></td><td><nobr>character(8)</nobr></td><td></td><td>Time posting fee earner code, taken from TRTRANS.FEE-EARNER</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(60)</nobr></td><td></td><td>Matter code, taken from TRTRANS.MT-CODE</td></tr>
+<tr><td><nobr>MT-TYPE</nobr></td><td><nobr>character(8)</nobr></td><td></td><td>Matter type of time posting, taken from TRTRANS.MT-TYPE</td></tr>
+<tr><td><nobr>PERIOD</nobr></td><td><nobr>integer</nobr></td><td></td><td>Accounting period for time analysis, based on TRTRANS.PERIOD</td></tr>
+<tr><td><nobr>POSTED-COST-VALUE</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Total cost of time posted within this time analysis group</td></tr>
+<tr><td><nobr>POSTED-VALUE</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Total value of time posted within this time analysis group</td></tr>
+<tr><td><nobr>SUPERVISOR</nobr></td><td><nobr>character(8)</nobr></td><td></td><td>Matter supervisor code, taken from MATDB.SUPERVISOR</td></tr>
+<tr><td><nobr>WIP-COST-VALUE</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Total cost of unbilled time within this time analysis group</td></tr>
+<tr><td><nobr>WIP-VALUE</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Total value of unbilled time within this time analysis group</td></tr>
+<tr><td><nobr>WO-COST-VALUE</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Total cost of time written off within this time analysis group</td></tr>
+<tr><td><nobr>WO-VALUE</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Total value of time written off within this time analysis group</td></tr>
+<tr><td><nobr>YEAR</nobr></td><td><nobr>character(8)</nobr></td><td></td><td>Accounting year for time analysis, based on TRTRANS.PERIOD</td></tr>
+<tr><td><nobr>POSTED-MINS</nobr></td><td><nobr>integer</nobr></td><td></td><td>Total number of minutes of time posted in this time analysis group</td></tr>
+<tr><td><nobr>BILLED-MINS</nobr></td><td><nobr>integer</nobr></td><td></td><td>Total number of minutes of time billed in this time analysis group</td></tr>
+<tr><td><nobr>WO-MINS</nobr></td><td><nobr>integer</nobr></td><td></td><td>Total number of minutes of time written off in this time analysis group</td></tr>
+<tr><td><nobr>WIP-MINS</nobr></td><td><nobr>int64</nobr></td><td></td><td>Current position unbilled time minutses for this time analysis group</td></tr>
+</Table>
+<br>
+<p><b>NOTE</b> that all data in the SOS warehouse is built periodically into the warehouse from the main SOS database, and as such the warehouse contains a snapshot of live data at the point the warehouse build was last run.
+ The warehouse does not show changes real-time as they posted into the main live SOS database.</p>
+<br />
+<br><br></body></html>

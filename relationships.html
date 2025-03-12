@@ -1,0 +1,178 @@
+<html><head>
+<title>General Information on Relationships</title>
+<link href="datadic.css" rel="stylesheet" type="Text/css" />
+<meta http-equiv="cache-control" content="no-cache" />
+</head>
+<body lang="EN-GB">
+<h1>Querying Relationships Data</h1>
+<p>There are 4 special tables that describe and index the wide variety of relationships that can be drawn, or are
+automatically created, amongst all the Clients, Individual Contacts, Organisations and Matters on your system.</p>
+<p>They are created automatically by the software whenever:</p>
+<ul>
+<li>you create a relationship between any pair of Individual Contacts, Organisations, Client or Matters</li>
+<li>you add two or more Individual Contacts or Organisations to form a multi-party Client</li>
+<li>you create a single party client</li>
+</ul>
+<br />
+<p>These 4 special tables are called:</p>
+<ul>
+<li>CONTRELATIONS</li>
+<li>CLIERELATIONS</li>
+<li>MATTRELATIONS</li>
+<li>ORGARELATIONS</li>
+</ul>
+<br />
+<p>All four tables have the same number of fields holding the same kinds of information viz:</p>
+<ul>
+<li>The code of the &quot;relating&quot; contact, client or matter e.g. client code or contact reference number</li>
+<li>The type of the related entity, e.g. "CL" for client, "MA" for matter</li>
+<li>The code of the related entity, e.g. client code or matter code</li>
+<li>A code describing in what capacity the related party is connected to the relating party (called the "role code")</li>
+</ul>
+<br />
+
+<h2>Derivation of the Contact or Organisation reference number</h2>
+
+<p>Each time you create a new Individual Contact or Organisation the software gives it a permanent and unique
+reference which is simply a number that started at 1 and increases in steps of 1. Neither the number nor the method of incrementing the sequence can be
+accessed or altered by you.</p>
+
+<p>A Contact's or Organisation's reference number is always visible in the header of an Organisation or Contact
+enquiry but you do not need to memorize or note it (except on a temporary basis if you want a report for one particular Contact or Organisation).</p>
+
+<p>This treatment is in contrast to your Client and Matter codes which may well be tailored to your particular
+house style and where you have some freedom to set or edit them yourself when creating new clients and their matters.</p>
+
+<p>Remember that the unique reference is stored in two places in the main underlying Contact or Organisation record: 
+once in numeric format in the field called REFERENCE and a second time as a string in the field called REFERENCE-CHAR.  (This provides greater
+flexibility in looking up contact–related information in other data tables. For technical reasons the linking fields in the look up tables 
+must in some cases be numeric themselves, and in other cases strings, and links can only be forged between fields of the same data type).</p>
+<br />
+<h2>How many RELATIONS table records there will be on the system</h2>
+
+<p>Each and every record in any of the four RELATIONS tables &quot;belongs to&quot; an
+underlying main record, identified by the value of its first field, and found
+in either CLIDB, CONTACTS, MATDB or ORGANISATION.   Many RELATIONS records
+could all belong to the same underlying main record. For example,  you could
+relate one single contact to a large and potentially  unlimited number of
+clients to represent someone who introduces new work.  This would produce one
+CONTRELATIONS record and one CLIERELATIONS record for each client that the
+contact introduces</p>
+
+<p>Creating a Matter for a client <b>does not</b> create a MATTRELATIONS record. 
+MATTRELATIONS records are only produced as a consequence of creating a
+relationship between a Contact or Organisation and a Matter, from either the
+Matter or Contact or Organisation Relationships tab</p>
+
+<p>Individual Contact or Organisation records <b>do not have</b> corresponding CONTRELATIONS
+or ORGARELATIONS records <b>until</b> you create a relationship involving them,
+or create a single-party or multi-party client with them</p>
+
+<p>Remember that when you create a single-party client the software automatically creates a
+relationship between the client and its pre-existing CONTACTS or ORGANISATION
+record. So, for every client on your system there will be <b>one</b>
+CLIERELATION record <b>plus one</b> CONTRELATION or ORGARELATION record <b>for
+each party to the client record including the first</b></p>
+
+
+<p>Records in any of the RELATIONS tables will disappear from your system <b>immediately</b>
+if you run the <b>Remove a Party or Organisation</b> option from a multi-party
+client set/up screen, or if you choose the <b>Delete this Relationship</b>
+routine from the Relationships tab of a Client or Contact/Organisation record
+(Removing a party or deleting a relationship does not in any way delete or
+affect the underlying CONTACTS or ORGANISATION record)</p>
+
+<p>There is no limit to the number of different relationships that one entity might have
+on your system.  Please also note that it is now possible to relate exactly the same two entities together with different roles,
+so for example if Contact A is related to Contact B with a role code of "Husband" it is also possible to relate Contact A to
+Contact B with a role code of "Executor".  This facility was first released in PM V4.16 0810 Patch 0 and Connect V2.8.1 (released August 2010).</p>
+<br />
+<h2>The Reciprocal Principle</h2>
+
+<p>Each relation between parties has two perspectives, according to which party you are considering so <b>each and
+every relationship will be represented by two separate records</b> to be found somewhere amongst these 4 relationship tables.</p>
+
+<p>For example, suppose your system has a client record for John Smith (and his client code is SM0356), and a contact
+record for his wife Ann Smith (Contact reference 14257), and you create a
+&quot;database&quot; relationship between the two. You have already created in ROLES
+maintenance the code WI (Wife) and the code HU (Husband). The system will
+create two records, one in CLIERELATIONS and the other in CONTRELATIONS like
+this:</p>
+<br />
+<p><b>CLIERELATIONS record for Mr John Smith</b></p>
+<p></p><table>
+<tr><td>CL-CODE</td><td>"SM0356"</td></tr>
+<tr><td>REL-FILE</td><td>"CO"</td></tr>
+<tr><td>REL-RECORD</td><td>"14257"</td></tr>
+<tr><td>ROL-CODE</td><td>"WI" (Wife)</td></tr>
+</table></p>
+<br />
+<p><b>CONTRELATIONS record for Mrs Ann Smith</b></p>
+<p><table>
+<tr><td>CON-REFERENCE</td><td>14257</td></tr>
+<tr><td>REL-FILE</td><td>"CL"</td></tr>
+<tr><td>REL-RECORD</td><td>"SM0356"</td></tr>
+<tr><td>ROL-CODE</td><td>"HU" (Husband)</td></tr>
+</table></p>
+<br />
+<p><b>Special values for Role Codes in CLIERELATIONS CONTRELATIONS and ORGARELATIONS</b></p>
+<p>As an exception to the above, ROL-CODE does not take these user-selectable &quot;natural&quot; role codes when the
+relationship between entities is that of individual contacts or organisations
+constituting a &quot;joint client&quot; or, at its simplest, one sole individual contact
+or organisation who is also a client.</p>
+
+<p><b>For multi-party clients there will be:</b></p>
+
+<ul>
+<li>for each CONTRELATION/ORGARELATION (one for each party): ROL-CODE has the value
+&quot;C*&quot; to signal that the related party referenced by REL-RECORD is a CLIENT to
+whom the CONTACT/ORGANISATION has been added as a joint party</li>
+<li>for each
+CLIERELATION (one for each party): ROL-CODE has the value &quot;M*&quot;  to signal
+that the related party referenced by REL-RECORD is in a multi-party client
+relationship to the client whose code is in CL-CODE</li>
+</ul>
+
+<p><b>For a solo client there will be:</b></p>
+<ul>
+<li>a single CONTRELATIONS or ORGARELATIONS record pointing to the CLIDB record: ROL-CODE is "C*"</li>
+<li>a single CLIERELATIONS record pointing to its underlying CONTACTS or ORGANISATION: ROL-CODE is "M*"</li>
+</ul>
+
+<p>In all other cases of relationships you have created that involve clients, or contacts or organisations, ROL-CODE
+contains a &quot;natural&quot; relationship code that you have selected.</p>
+
+<p>Note that <b>MATTRELATIONS is never affected</b> in any way by these exceptions, nor as a consequence of
+relationships made by CLIENTS or CONTACTS or ORGANISATIONS, so its ROL-CODE
+field always contains a &quot;natural&quot; role code that you have selected.</p>
+<br />
+<h2>COMMON FIELD NOTES</h2>
+
+<p>All fields apart from the first in each of the four tables can conveniently be described together. In
+CONTRELATIONS or ORGARELATIONS the first field will be the unique
+software-generated reference number already described.  In CLIERELATIONS it
+will be a Client code, and in MATTRELATIONS a full Client Matter code.</p>
+
+<p><b>REL-FILE</b> is a two-letter abbreviation of the table containing the detail of the related party viz one from:</p>
+<ul>
+<li>"CL" - where the link is to a client</li>
+<li>"CO" - where the link is to another contact</li>
+<li>"MA" -where the link is to a matter (or an archive)</li>
+<li>"OR" - where the link is to an organisation</li>
+</ul>
+
+<p><b>REL-RECORD</b> is the identifier of the related party and its style will depend on the REL-FILE value viz:</p>
+<ul>
+<li>If REL-FILE is "CL" then REL-RECORD will be a client code</li>
+<li>If REL-FILE is "CO" or "OR" then REL-RECORD will be a number (contact or organisation reference)</li>
+<li>If REL-FILE is "MA" then REL-RECORD will be a full client matter code </li>
+</ul>
+
+<p><b>ROL-CODE</b> describes in code form how the related party is related to
+the contact. These codes and their description are set up by you in the<b>
+ROLES</b> <b>maintenance </b>program, subject to the Special Values exceptions already noted.</p>
+<br />
+<br />
+
+</body>
+</html>

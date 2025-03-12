@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: SOSANALY.ANALY-LOCKUP</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:SOSANALY.ANALY-LOCKUP</h1>
+<h2>Description: If installed, this view will retrieve data from the SOS data warehouse, returning bills delivered, debtors, time recorded, WIP value, debtor lock up days and WIP lock up days at various summary levels</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>BILL-LOCKUP-DAYS</nobr></td><td><nobr>decimal</nobr></td><td>Bill (debtor) lock up days for this summary level / time span</td></tr>
+<tr><td><nobr>BILL-LOCKUP-EST</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Set to YES if the debtor lock up days calculation on this record is an estimate</td></tr>
+<tr><td><nobr>BILL-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Total value (gross) of bills delivered for this summary level / time span</td></tr>
+<tr><td><nobr>EXCLUDE-FROM-CALCULATION</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Usually set to NO, indicating that this summary record will be cleared and rebuilt on each subsequent warehouse built.  This field can be set to YES by data-load utilities specifically designed to load summary data from 3rd party data sources for the purposes of migration to SOS.  If this field is set to YES it will not be cleared and rebuilt by the warehouse build process.</td></tr>
+<tr><td><nobr>OUTST-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Outstanding bills value (gross) for this summary level / time span</td></tr>
+<tr><td><nobr>PERIOD-LEVEL</nobr></td><td><nobr>character(2)</nobr></td><td>Single character, indicating the time-span that the lock up record applies to: "Y" for whole year, "Q" for quarter, "P" for period.<br>Note that quarterly lock up summary data is only available for systems running 12 financial periods</td></tr>
+<tr><td><nobr>PERIOD-QTR</nobr></td><td><nobr>integer</nobr></td><td>A number indicating the specific quarter number or period number:<br>- when PERIOD-LEVEL = "Y" (year) this field is always set to 1<br>- when PERIOD-LEVEL = "Q" (quarter) this field contains the quarter number (1-4)<br>- when PERIOD-LEVEL = "P" (period) this field contains the period number (1-13)</td></tr>
+<tr><td><nobr>SUMMARY-CODE</nobr></td><td><nobr>character(16)</nobr></td><td>Used in conjunction with SUMMARY-LEVEL to indicate the specific summary level that the lock up record relates to.   Depending on SUMMARY-LEVEL this field will either be:<br>(blank) when SUMMARY-LEVEL = "FIRM"<br>Branch code when SUMMARY-LEVEL = "BRANCH"<br>Department code when SUMMARY-LEVEL = "FEDEPT"/"MTDEPT"/"SUPERDEPT"<br>Fee earner code when SUMMARY-LEVEL is "FE"<br>Matter type code when SUMMARY-LEVEL is "MT"<br>Supervisor (fee earner) code when SUMMARY-LEVEL = "SUPER"</td></tr>
+<tr><td><nobr>SUMMARY-LEVEL</nobr></td><td><nobr>character(18)</nobr></td><td>Set to one of eight fixed values indicating the summary level that the lock up record applies to:<br>"FIRM" for overall firm level<br>"BRANCH" for branch level<br>"FEDEPT" for fee earner department level<br>"MTDEPT" for matter type department level<br>"SUPERDEPT" for matter supervisor department level<br>"FE" for fee earner level<br>"“MT" for matter type level<br>"SUPER" for matter supervisor level</td></tr>
+<tr><td><nobr>TIME-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Total value of time posted for this summary level / time span</td></tr>
+<tr><td><nobr>WIP-LOCKUP-DAYS</nobr></td><td><nobr>decimal</nobr></td><td>WIP lock up days for this summary level / time span</td></tr>
+<tr><td><nobr>WIP-LOCKUP-EST</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Set to YES if this WIP lock up days calculation on this record is an estimate</td></tr>
+<tr><td><nobr>WIP-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>WIP value for this summary level / time span</td></tr>
+<tr><td><nobr>YEAR</nobr></td><td><nobr>character(8)</nobr></td><td>Financial year of summary record</td></tr>
+<tr><td><nobr>FEES-BILLED</nobr></td><td><nobr>decimal</nobr></td><td>Total value of fees billed for this summary level / time span </td></tr>
+<tr><td><nobr>BILLED-TIME-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Original value of time that was billed for this summary level / time span</td></tr>
+<tr><td><nobr>BILLED-TIME-DEFAULT-RATE</nobr></td><td><nobr>decimal</nobr></td><td>The original value of time that was billed for this summary level / time span, based on current fee earner default charge rate and excluding any charge band revaluation</td></tr>
+<tr><td><nobr>BILL-REALISE</nobr></td><td><nobr>decimal</nobr></td><td>The ratio of fees billed value to the original value of time included in bills, i.e. FEES-BILLED v BILLED-TIME-VALUE.  This value will be [null] when BILLED-TIME-VALUE is zero.</td></tr>
+<tr><td><nobr>RACK-REALISE</nobr></td><td><nobr>decimal</nobr></td><td>The ratio of fees billed value to the value of time included in bills based on current default fee earner charge rate, i.e. FEES-BILLED v BILLED-TIME-DEFAULT-RATE.  This value will be [null] when BILLED-TIME-DEFAULT-RATE is zero.</td></tr>
+</Table>
+<br>
+<p><b>NOTE</b> that all data in the SOS warehouse is built periodically into the warehouse from the main SOS database, and as such the warehouse contains a snapshot of live data at the point the warehouse build was last run.
+ The warehouse does not show changes real-time as they posted into the main live SOS database.</p>
+<br />
+<br><br></body></html>

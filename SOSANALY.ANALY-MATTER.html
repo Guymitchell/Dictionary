@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: SOSANALY.ANALY-MATTER</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:SOSANALY.ANALY-MATTER</h1>
+<h2>Description: If installed, this view will retrieve data from the SOS data warehouse, returning stub matter records derived from the table PUB.MATDB</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(30)</nobr></td><td>Client code (taken from PUB.MATDB.CL-CODE)</td></tr>
+<tr><td><nobr>DESCRIP</nobr></td><td><nobr>character(80)</nobr></td><td>Matter description (taken from PUB.MATDB.DESCRIPTION)</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(60)</nobr></td><td>Matter code (taken from PUB.MATDB.MT-CODE)</td></tr>
+</Table>
+<br>
+<p><b>NOTE</b> that all data in the SOS warehouse is built periodically into the warehouse from the main SOS database, and as such the warehouse contains a snapshot of live data at the point the warehouse build was last run.
+ The warehouse does not show changes real-time as they posted into the main live SOS database.</p>
+<br />
+<br><br></body></html>

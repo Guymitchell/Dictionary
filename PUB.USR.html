@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.USR</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.USR</h1>
+<h2>Description: Contains the list of database users including their names, telephone numbers, email addresses and access rights</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>USER-ID</nobr></td><td><nobr>character(254)</nobr></td><td>User ID</td></tr>
+<tr><td><nobr>NAME</nobr></td><td><nobr>character(254)</nobr></td><td>Name</td></tr>
+<tr><td><nobr>FEE-EARNER</nobr></td><td><nobr>character(254)</nobr></td><td>Fee Earner</td></tr>
+<tr><td><nobr>REF</nobr></td><td><nobr>character(254)</nobr></td><td>Reference</td></tr>
+<tr><td><nobr>EASY-VIEW</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Only display one frame at a time rather than layering</td></tr>
+<tr><td><nobr>MT-TYPES</nobr></td><td><nobr>character(254)</nobr></td><td>Leave blank to allow user access all matter types</td></tr>
+<tr><td><nobr>LAST-DOC</nobr></td><td><nobr>character(254)</nobr></td><td>Last document used by this user</td></tr>
+<tr><td><nobr>LAST-MATTERS</nobr></td><td><nobr>character(713)</nobr></td><td>Comma seperated list of last 5 matters used by this user.</td></tr>
+<tr><td><nobr>DEFAULT-PRINTER</nobr></td><td><nobr>integer</nobr></td><td>Default Printer</td></tr>
+<tr><td><nobr>APP-START</nobr></td><td><nobr>integer</nobr></td><td>Time at which appointments start on appointments screen
+(mins from midnight).</td></tr>
+<tr><td><nobr>APP-END</nobr></td><td><nobr>integer</nobr></td><td>Time at which appointments end on appointments screen
+(mins from midnight).</td></tr>
+<tr><td><nobr>APP-UNITS</nobr></td><td><nobr>integer</nobr></td><td>Length of time between appointments on appointments screen.</td></tr>
+<tr><td><nobr>DEPARTMENT</nobr></td><td><nobr>character(254)</nobr></td><td>Department</td></tr>
+<tr><td><nobr>EXT</nobr></td><td><nobr>character(254)</nobr></td><td>Ext</td></tr>
+<tr><td><nobr>ACCESS-RIGHTS</nobr></td><td><nobr>character(1175)</nobr></td><td>Item-list of access rights for user.</td></tr>
+<tr><td><nobr>ACCESS-CLIENTS</nobr></td><td><nobr>character(254)</nobr></td><td>Clients user can access.</td></tr>
+<tr><td><nobr>PASSWORD</nobr></td><td><nobr>character(254)</nobr></td><td>Password</td></tr>
+<tr><td><nobr>PREFS1</nobr></td><td><nobr>character(254)</nobr></td><td>List of preference settings</td></tr>
+<tr><td><nobr>PREFS2</nobr></td><td><nobr>character(254)</nobr></td><td>List of preference settings</td></tr>
+<tr><td><nobr>BRANCH</nobr></td><td><nobr>character(254)</nobr></td><td>Default Branch</td></tr>
+<tr><td><nobr>LAST-ACTS</nobr></td><td><nobr>character(254)</nobr></td><td>Activities</td></tr>
+<tr><td><nobr>CURR</nobr></td><td><nobr>character(254)</nobr></td><td>From 5.18.21 and 6.18.21, this field will either contain the text NO if login has been disallowed for this user, any other value (including empty string) indicates login allowed.  Future work is planned to fully implement this field as a non-current indicator, causing the user definition to be omitted from selection lists.</td></tr>
+<tr><td><nobr>PROBATE</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Set to indicate link to Probate package</td></tr>
+<tr><td><nobr>E-MAIL1</nobr></td><td><nobr>character(254)</nobr></td><td>e-mail 1</td></tr>
+<tr><td><nobr>E-MAIL2</nobr></td><td><nobr>character(254)</nobr></td><td>e-mail 2</td></tr>
+<tr><td><nobr>REP-LEVELS</nobr></td><td><nobr>character(254)</nobr></td><td>Provision for reporting level security
+</td></tr>
+<tr><td><nobr>FE-USER</nobr></td><td><nobr>logical (true/false)</nobr></td><td>User Is A FE</td></tr>
+<tr><td><nobr>PREF-NAMES</nobr></td><td><nobr>character(254)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>PREF-TYPES</nobr></td><td><nobr>character(254)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>PREF-VALUES</nobr></td><td><nobr>character(254)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>OA-ID</nobr></td><td><nobr>character(254)</nobr></td><td>User-Id within Office Automation Package</td></tr>
+<tr><td><nobr>HOME-DIR</nobr></td><td><nobr>character(254)</nobr></td><td>Home Dir</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>LAST-SEC-SET</nobr></td><td><nobr>character(254)</nobr></td><td>Last Security Set</td></tr>
+<tr><td><nobr>CUSTOMIZATION-TIMESTAMP</nobr></td><td><nobr>decimal</nobr></td><td>Cust Timestamp</td></tr>
+<tr><td><nobr>SSO-USER-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Single sign-on domain login ID associated with the short user id stored in USER-ID (e.g. if USER-ID="fb" this field might be "abcsolicitors\f.bloggs")</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>REPORT-ONLY-USER</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Report Only User</td></tr>
+<tr><td><nobr>HAS-USER-ROLES</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Has User Role</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR11</nobr></td><td><nobr>character(40)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG04</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG05</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>OA-ID-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+OA-ID
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-CHAR03</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR03
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+<tr><td>SSO-USER-ID</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SSO-USER-ID
+<tr><td>USER-ID-INDEX</td><td><center>yes</td><td><Center>yes</Center></td><td><Center>
+no</Center></td><td>
+USER-ID
+</Table>
+<br><br></body></html>

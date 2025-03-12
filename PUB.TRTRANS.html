@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.TRTRANS</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.TRTRANS</h1>
+<h2>Description: Holds details of all time transactions and time posting notes for unbilled, billed and billed time fees values</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>TRANS-NO</nobr></td><td><nobr>integer</nobr></td><td>Derived: Unique sequential number set by software</td></tr>
+<tr><td><nobr>TRANS-TYPE</nobr></td><td><nobr>integer</nobr></td><td>Derived: Set by software (1=Unbilled time, 2=Billed time, 7=Fees billed)</td></tr>
+<tr><td><nobr>ALT-FE</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Derived: Set if FEE-EARNER is not MATDB.FEE-EARNER</td></tr>
+<tr><td><nobr>UNDONE</nobr></td><td><nobr>logical (true/false)</nobr></td><td>View/Edit Time Transaction: Undone</td></tr>
+<tr><td><nobr>POST-DATE</nobr></td><td><nobr>date</nobr></td><td>Time Posting : Post Date (ie date of activity)</td></tr>
+<tr><td><nobr>PERIOD</nobr></td><td><nobr>integer</nobr></td><td>Time Posting: System Period</td></tr>
+<tr><td><nobr>YEAR</nobr></td><td><nobr>character(254)</nobr></td><td>Time Posting: Accounting Year</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Time Posting: Matter Code (blank for non-chargeable time)</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Derived from Matter Code</td></tr>
+<tr><td><nobr>FEE-EARNER</nobr></td><td><nobr>character(254)</nobr></td><td>Time Posting: Fee Earner</td></tr>
+<tr><td><nobr>ACT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Time Posting: Activity Code</td></tr>
+<tr><td><nobr>UNITS</nobr></td><td><nobr>integer</nobr></td><td>Time Posting: Units</td></tr>
+<tr><td><nobr>TIME-SPENT</nobr></td><td><nobr>integer</nobr></td><td>Time Posting/Derived: Time spent (minutes)</td></tr>
+<tr><td><nobr>START-TIME</nobr></td><td><nobr>integer</nobr></td><td>Time Posting: Start time</td></tr>
+<tr><td><nobr>COST</nobr></td><td><nobr>decimal</nobr></td><td>Derived: Cost of time spent</td></tr>
+<tr><td><nobr>CURR-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Derived: Value of entry after amendment</td></tr>
+<tr><td><nobr>ORIG-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Derived: Original Value of entry when first posted</td></tr>
+<tr><td><nobr>CHARGE-RATE</nobr></td><td><nobr>decimal</nobr></td><td>Time Posting: Derived from FEETR.CHARGE-RATE</td></tr>
+<tr><td><nobr>BILL-NO</nobr></td><td><nobr>character(254)</nobr></td><td>Time Bill Posting: Assign Bill Number</td></tr>
+<tr><td><nobr>BILL-FLAG</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Matter code in bill which billed this posting </td></tr>
+<tr><td><nobr>BRANCH</nobr></td><td><nobr>character(254)</nobr></td><td>Time Posting: Branch</td></tr>
+<tr><td><nobr>NOTES</nobr></td><td><nobr>character(20000)</nobr></td><td>Time Posting: Attendance Notes</td></tr>
+<tr><td><nobr>POSTED-BY</nobr></td><td><nobr>character(254)</nobr></td><td>Time Posting: ID of user who posted this entry</td></tr>
+<tr><td><nobr>POSTED-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: System date when this entry was posted </td></tr>
+<tr><td><nobr>AMENDED-BY</nobr></td><td><nobr>character(437)</nobr></td><td>View/Edit Time Transaction: Amended By</td></tr>
+<tr><td><nobr>AMENDED-DATE</nobr></td><td><nobr>character(254)</nobr></td><td>View/Edit Time Transaction: Amended Date</td></tr>
+<tr><td><nobr>FINISH-TIME</nobr></td><td><nobr>integer</nobr></td><td>Time Posting: Finish time</td></tr>
+<tr><td><nobr>NO-ITEMS</nobr></td><td><nobr>integer</nobr></td><td>Time Posting: Items</td></tr>
+<tr><td><nobr>BILLTX</nobr></td><td><nobr>integer</nobr></td><td>Derived: TRTRANS.TRANS-NO of billing record</td></tr>
+<tr><td><nobr>LA-STATUS</nobr></td><td><nobr>character(254)</nobr></td><td>Legal aid status code (of this time posting)</td></tr>
+<tr><td><nobr>LOCATION</nobr></td><td><nobr>character(254)</nobr></td><td>Time Posting: Location</td></tr>
+<tr><td><nobr>MT-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: From matter fee earner</td></tr>
+<tr><td><nobr>CRIMCODES</nobr></td><td><nobr>character(254)</nobr></td><td>Time Posting: Used for form CDS7 production only</td></tr>
+<tr><td><nobr>CURRENCY-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>TR-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Solcase-generated disbursement type</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>CURRENCY_RATE</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>BILLED-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Date this entry billed by later TRTRANS record</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>CURRENCY_NET</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>BILLED-YRPR</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Year and Period this entry billed </td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>MAT-GRP</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Group on Matter Notes tab</td></tr>
+<tr><td><nobr>TASK-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Solcase-generated activity code</td></tr>
+<tr><td><nobr>PS-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Police station code</td></tr>
+<tr><td><nobr>ANTI-TIME-BILL-NO</nobr></td><td><nobr>character(254)</nobr></td><td>Anti Time Bill</td></tr>
+<tr><td><nobr>DATE-TIME-START</nobr></td><td><nobr>datetime</nobr></td><td>Derived: Date Time Start</td></tr>
+<tr><td><nobr>DATE-TIME-FINISH</nobr></td><td><nobr>datetime</nobr></td><td>Derived: Date Time Finish</td></tr>
+<tr><td><nobr>CSB-STAGE</nobr></td><td><nobr>character(254)</nobr></td><td>CSB Stage</td></tr>
+<tr><td><nobr>OUTST-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Outstanding (unbilled) amount of this time posting</td></tr>
+<tr><td><nobr>BILL-SELECTED-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Amount of this time posting that has been selected for billing</td></tr>
+<tr><td><nobr>COST-BILLED</nobr></td><td><nobr>decimal</nobr></td><td>Cost</td></tr>
+<tr><td><nobr>BILL-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Unique system-generated bill ID that includes this time posting</td></tr>
+<tr><td><nobr>FEE-ALLOC-BILL</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Fee Allocation</td></tr>
+<tr><td><nobr>ANALY-STATUS</nobr></td><td><nobr>character(254)</nobr></td><td>Analysis Status</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>UNDO-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Undo User ID</td></tr>
+<tr><td><nobr>UNDO-YEAR</nobr></td><td><nobr>character(254)</nobr></td><td>Undo Year</td></tr>
+<tr><td><nobr>UDF1</nobr></td><td><nobr>character(254)</nobr></td><td>UDF 1</td></tr>
+<tr><td><nobr>UDF2</nobr></td><td><nobr>character(254)</nobr></td><td>UDF 2</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CONVERTED-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Converted ID</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>UNDO-DATE</nobr></td><td><nobr>date</nobr></td><td>Undo Date</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>UNDO-PERIOD</nobr></td><td><nobr>integer</nobr></td><td>Undo Period</td></tr>
+<tr><td><nobr>CREDIT-NOTED</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Credit-Noted</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR11</nobr></td><td><nobr>character(40)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR12</nobr></td><td><nobr>character(40)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR13</nobr></td><td><nobr>character(40)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR14</nobr></td><td><nobr>character(40)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR15</nobr></td><td><nobr>character(40)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR16</nobr></td><td><nobr>character(40)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE06</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT04</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG04</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>ANALY-STATUS</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+ANALY-STATUS
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>BILL-NO</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+BILL-NO
+<tr><td>BILLED-DATE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+BILLED-DATE
+<tr><td>BILLED-YRPR</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+BILLED-YRPR
+<tr><td>BRANCH-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+BRANCH
+<tr><td>CLIENT-CODE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+CL-CODE
+<tr><td>DATE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+POST-DATE
+<tr><td>FEE-EARNER</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+FEE-EARNER
+<tr><td>MT-CODE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MT-CODE
+<tr><td>POSTED-DATE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+POSTED-DATE
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-CHAR07</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR07
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+<tr><td>TRANS-NO</td><td><center>yes</td><td><Center>yes</Center></td><td><Center>
+no</Center></td><td>
+TRANS-NO
+<tr><td>TYPE-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+TRANS-TYPE
+<tr><td>YEAR-PERIOD</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+YEAR
+ + 
+PERIOD
+</Table>
+<br>
+<h2>Practice Manager & Connect Interfaces</h2>
+<p>This table is updated by time posting and time billing processes, and contains individual time posting details of all unbilled time, billed time and fees billed.</p>
+<p>Time is initially created in an "unbilled" state (TRTRANS.TYPE = 1) by the PM or Connect time posting screens:</p>
+<br />
+<img src="pmtimepost.gif" title="PM time posting" /><br />
+<br />
+<img src="connecttimepost.gif" title="Connect time posting" /><br />
+<br />
+<h2>Field Notes</h2>
+<p><b>TRANS-TYPE</b> can be either 1 for unbilled, 2 for billed or 7 for the time bill entry itself (value of fees billed by fee earner).  Note that there will a separate 
+type 7 entry for each combination of fee earner and VAT code contributing to the bill, so that any one bill will be represented by as many TRTRANS records as you have 
+fee earners and VAT codes in that bill.</p>
+<br />
+<p><b>ORIG-VALUE</b> in relation to TRANS-TYPE 1 or 2 records is the original value when posted irrespective of any subsequent changes.</p>
+<p><b>CURR-VALUE</b> in relation to TRANS-TYPE 1 or 2 records is the value now after any amendments have been made 
+directly via the View/Edit Time Transaction screen.</p>
+<p><b>OUTST-VALUE</b> is the value of time (compared to CURR-VALUE) which has not yet been billed, as it is possible in V4.17 to part-bill a single time posting</p>
+<p><b>ORIG-VALUE</b> in TRANS-TYPE 7 records is the CURR-VALUE of the TRANS-TYPE 1 record that is being billed.</p>
+<p><b>CURR-VALUE</b> in TRANS-TYPE 7 records is the chosen value of the fee to be billed.</p>
+<p><b>BILLED-DATE</b> and BILLED-YRPR let you establish the unbilled WIP on your books at a historic point in time without having to 
+look up the period, year and date of your time billing records.   (You can still look up billing transactions using the BILLTX field, but because 
+of the sheer size of TRTRANS this is likely to be very slow and all but impractical as well as unnecessary).</p>
+<br />
+<h2>Linking And Application</h2>
+<br />
+<p>TRTRANS would usually be linked in a report to CLIDB,  MATDB and MATTR to provide details of time recording and time 
+billing activity grouped and/or subtotalled by Client and Matter.   As both the MT-CODE and CL-CODE fields of TRTRANS are 
+indexed, either can be used for linking according to the depth of summary needed.</p>
+<br><br></body></html>

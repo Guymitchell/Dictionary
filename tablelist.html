@@ -1,0 +1,302 @@
+<html><head>
+<Title>Data Dictionary Table List</Title>
+<link href="datadic.css" rel="stylesheet" Type="Text/css">
+<meta http-equiv="cache-control" content="no-cache" />
+</head>
+<body>
+<img src="logosm.png" alt="SOS Logo" /><h1>Data Dictionary</h1><h1>Version 4.18</h1>
+<h2>Overview</h2>
+<a Target="MainBody" href="general.html">General Information</a><br>
+<a Target="MainBody" href="416to417.html">Changes From V4.16 to Vx.17</a><br>
+<a Target="MainBody" href="x17tox18.html">Changes From Vx.17 to Vx.18</a><br>
+<a Target="MainBody" href="relationships.html">Querying Relationships Data</a><br>
+<a Target="MainBody" href="multiextents.html">Multi-Extent (Array) Fields</a><br>
+<h2>Views in main database</h2>
+<a Target="MainBody" href="A.ADDDATA.html" Title="Provides easy access to all custom data field values with the 32 custom field values accessible as separate columns">A.ADDDATA</a><br>
+<a Target="MainBody" href="A.ADSUPPPAYMENTS.html" Title="Provides anticipated disbursement supplier payment information in summary form, one entry for each AD posting regardless of how many supplier payments have been made against it ">A.ADSUPPPAYMENTS</a><br>
+<a Target="MainBody" href="A.AGED-WIP.html" Title="Consolidates the value of WIP into aging periods broken down by client and matter code">A.AGED-WIP</a><br>
+<a Target="MainBody" href="A.ARCHIVE.html" Title="Provides easy access to archive data with multi-extent fields UDF-DATES, UDF-TEXT and UDF-VALUES accessible as separate columns">A.ARCHIVE</a><br>
+<a Target="MainBody" href="A.ARCHIVE-UDF.html" Title="Provides easy access to the definitions of user defined fields for archive records">A.ARCHIVE-UDF</a><br>
+<a Target="MainBody" href="A.BILL-LINES-OUTST.html" Title="Provides information regarding outstanding bill elements">A.BILL-LINES-OUTST</a><br>
+<a Target="MainBody" href="A.BRANCH.html" Title="Provides easy access to branch maintenance data with period end dates split into separate columns">A.BRANCH</a><br>
+<a Target="MainBody" href="A.CLI-CUST-DATA.html" Title="Provides easy access to all client-level custom data, with custom field values split into separate columns">A.CLI-CUST-DATA</a><br>
+<a Target="MainBody" href="A.CLIDB.html" Title="Provides easy access to client information, with user-defined notes fields split into separate columns">A.CLIDB</a><br>
+<a Target="MainBody" href="A.CLIENT-PARTIES.html" Title="Returns a list of client names as addresses taken from a combination of client, contact and organisation data">A.CLIENT-PARTIES</a><br>
+<a Target="MainBody" href="A.CLIENTANALYSIS.html" Title="Provides a client-level summary of time recording and billing information grouped by client code and financial year">A.CLIENTANALYSIS</a><br>
+<a Target="MainBody" href="A.CLIENTANALYSISBYGROUP.html" Title="Provides a summary of time recording and billing information, summarised by client group (for clients allocated to groups) or individual clients">A.CLIENTANALYSISBYGROUP</a><br>
+<a Target="MainBody" href="A.CLIGROUPALL.html" Title="Returns one row for every client indicating the number of client groups the client relates to, and either the client code / client name for ungrouped clients or client group code / group description for grouped clients.  This view is designed to be used in combination with other views to provide client group summary results for grouped clients combined with client level results for ungrouped clients.  This view is guaranteed to only ever return one row per client so will not duplicate or inflate figures when joined to other tables where clients are in multiple groups.">A.CLIGROUPALL</a><br>
+<a Target="MainBody" href="A.CLIGROUPCOUNT.html" Title="Summarises the number of clients allocated into each client group.  Clients not any group are not included.">A.CLIGROUPCOUNT</a><br>
+<a Target="MainBody" href="A.CLIGROUPSUMMARY.html" Title="Provides a summary of client group allocation information, with a maximum of one row per client.  Clients allocated in mutiple groups are shown as having a client group of &quot;(Multiple)&quot.  Clients not in any group are not included.">A.CLIGROUPSUMMARY</a><br>
+<a Target="MainBody" href="A.CON-CUST-DATA.html" Title="Provides easy access to all contact-level custom data, with custom field values split into separate columns">A.CON-CUST-DATA</a><br>
+<a Target="MainBody" href="A.CONTACTS.html" Title="Provides contacts data with expert witness and web access information split into separate columns">A.CONTACTS</a><br>
+<a Target="MainBody" href="A.COSTSPAIDDATA.html" Title="Returns transaction level data for costs billed, costs payments, credit notes and other reversals (e.g. unallocations), which can be used as a basis for building &quot;costs paid &quot; reporting queries.">A.COSTSPAIDDATA</a><br>
+<a Target="MainBody" href="A.ENTITYAUDIT.html" Title="Provides simple access to the entity change audit log information when the entity "create amend log" options are switched on">A.ENTITYAUDIT</a><br>
+<a Target="MainBody" href="A.FEANALYSIS.html" Title="Provides easy access to fee earner analysis information (from TRANALYSIS and NOMACCS tables) with actual and budget figures for each period split into separate columns">A.FEANALYSIS</a><br>
+<a Target="MainBody" href="A.FEANALYSIS-BY-PERIOD.html" Title="Returns time and accounts summary analysis information, with each period being in a separate row">A.FEANALYSIS-BY-PERIOD</a><br>
+<a Target="MainBody" href="A.FEANALYSIS-YTD.html" Title="Returns time and accounts summary analysis information (with budgets), with each row containing details for all periods in the year">A.FEANALYSIS-YTD</a><br>
+<a Target="MainBody" href="A.INTEREST.html" Title="Provides easy access to defined interest tables with qualifying days and values split into separate columns">A.INTEREST</a><br>
+<a Target="MainBody" href="A.JOBQUEUE.html" Title="Provides a simplified view of the "queued jobs" tables (PUB.QUEUE-REQUEST and PUB.QUEUE-DATA), showing all of the background process jobs that are in the queue, including completed jobs, queued jobs and failed jobs.  The job queue is used for EFT remittance generation and will be used for other areas in future.">A.JOBQUEUE</a><br>
+<a Target="MainBody" href="A.JOURNALS.html" Title="Provides easy access to nominal prepayments, apportionments and recurring entry definitions, with period yes/no flags split into separate columns">A.JOURNALS</a><br>
+<a Target="MainBody" href="A.LA-APPLIES-MATRIX.html" Title="Reserved for future use">A.LA-APPLIES-MATRIX</a><br>
+<a Target="MainBody" href="A.LA-SPOCC-CLAIM.html" Title="Reserved for future use">A.LA-SPOCC-CLAIM</a><br>
+<a Target="MainBody" href="A.LIVECLIENTS.html" Title="Returns a list of codes, names and addresses for all clients with live matters ">A.LIVECLIENTS</a><br>
+<a Target="MainBody" href="A.MAT-BILL-HIST.html" Title="Returns a list of bill information for all bills including outstanding values broken down by client, matter, nominal (costs/disbursements), and fee earner">A.MAT-BILL-HIST</a><br>
+<a Target="MainBody" href="A.MAT-BILL-HIST-AGED.html" Title="Returns bill and credit note data from the A.MAT-BILL-HIST view with outstanding values split across 14 different age columns">A.MAT-BILL-HIST-AGED</a><br>
+<a Target="MainBody" href="A.MAT-BILL-HIST-SUMMARY.html" Title="Provides a summary view of matter bill history with one line per bill">A.MAT-BILL-HIST-SUMMARY</a><br>
+<a Target="MainBody" href="A.MAT-CUST-DATA.html" Title="Provides easy access to all matter-level custom data, with custom field values split into separate columns">A.MAT-CUST-DATA</a><br>
+<a Target="MainBody" href="A.MAT-RELS-ALL.html" Title="Provides a combined summary view of matter relationships to contacts, organizations, clients and other matters">A.MAT-RELS-ALL</a><br>
+<a Target="MainBody" href="A.MAT-RELS-CONTACTS.html" Title="Provides a combined summary view of matter relationships to contacts and organizations">A.MAT-RELS-CONTACTS</a><br>
+<a Target="MainBody" href="A.MATANALYSIS.html" Title="Provides matter balance summary information with time, office, client and deposit figures split into separate columns by period">A.MATANALYSIS</a><br>
+<a Target="MainBody" href="A.MATDB.html" Title="Provides all matter detail information with matter notes and user-defined field values split into separate columns">A.MATDB</a><br>
+<a Target="MainBody" href="A.MATTER_TOTALS.html" Title="Provides a simplified view of basic matter details including accounts and time totals by combining PUB.MATDB, PUB.MATAC and PUB.MATTR">A.MATTER_TOTALS</a><br>
+<a Target="MainBody" href="A.MEMO-ON-ACCOUNT-TIME.html" Title="Contains a list of time transactions numbers and the value of "on-account" memo billed time associated with them">A.MEMO-ON-ACCOUNT-TIME</a><br>
+<a Target="MainBody" href="A.NOMACCS.html" Title="Provides easy access to nominal balance summary information with actual and budget values for each period split into separate columns">A.NOMACCS</a><br>
+<a Target="MainBody" href="A.NOMACCS-SUM-BY-BRANCH-DEPT.html" Title="Nominal balance summary information, summarised by branch, department and financial year">A.NOMACCS-SUM-BY-BRANCH-DEPT</a><br>
+<a Target="MainBody" href="A.NOMACCS-SUM-BY-BRANCH-DEPT-BGT.html" Title="Nominal balance summary information, summarised by branch, department and financial year, including budgets">A.NOMACCS-SUM-BY-BRANCH-DEPT-BGT</a><br>
+<a Target="MainBody" href="A.NOMACCS-SUM-BY-DEPT.html" Title="Nominal balance summary information, summarised by department and financial year, with branch-level values consolidated">A.NOMACCS-SUM-BY-DEPT</a><br>
+<a Target="MainBody" href="A.NOMACCS-SUM-BY-DEPT-BGT.html" Title="Nominal balance summary information, summarised by department and financial year, with branch-level values consolidated, including budgets">A.NOMACCS-SUM-BY-DEPT-BGT</a><br>
+<a Target="MainBody" href="A.NOMACCS-WITH-DEPT.html" Title="Nominal balance information from the PUB.NOMACCS table, with an additional department code derived either by cost centre or by fee earner department">A.NOMACCS-WITH-DEPT</a><br>
+<a Target="MainBody" href="A.NOMACCS-WITH-DEPT-BGT.html" Title="Nominal balance information from the PUB.NOMACCS table, with an additional department code derived either by cost centre or by fee earner department, including budgets">A.NOMACCS-WITH-DEPT-BGT</a><br>
+<a Target="MainBody" href="A.NOMCODEHY.html" Title="[Awaiting Description]">A.NOMCODEHY</a><br>
+<a Target="MainBody" href="A.NOMTRANS.html" Title="[Awaiting Description]">A.NOMTRANS</a><br>
+<a Target="MainBody" href="A.ORG-CUST-DATA.html" Title="Provides easy access to all organisation-level custom data, with custom field values split into separate columns">A.ORG-CUST-DATA</a><br>
+<a Target="MainBody" href="A.ORGANISATION.html" Title="Provides a view of organisation data, including a fixed "entittype" column which can be used to join to other tables">A.ORGANISATION</a><br>
+<a Target="MainBody" href="A.PL-CHART.html" Title="Profit & Loss chart information, with multi-extent fields split out into separate columns">A.PL-CHART</a><br>
+<a Target="MainBody" href="A.PREFERENCES.html" Title="Returns the system settings record from table PUB.PREFERENCES with all array-type fields separated into columns for easier access">A.PREFERENCES</a><br>
+<a Target="MainBody" href="A.TIME-BILLED-BY-MATTER.html" Title="Returns a summary of billed time value, fees billed value and time written off value by matter, year, period and fee earner">A.TIME-BILLED-BY-MATTER</a><br>
+<a Target="MainBody" href="A.TIME-BILLED-SUM-BY-BR-FE-DEP-YR.html" Title="Returns a summary of billed time value, fees billed and time written off by branch, matter fee earner, department and year, with individual period values and YTD values in separate columns for every period in the year">A.TIME-BILLED-SUM-BY-BR-FE-DEP-YR</a><br>
+<a Target="MainBody" href="A.TIME-BILLED-SUM-BY-MATTER-YR-FE.html" Title="Returns a summary of billed time value, fees billed and time written off by matter code, year and posting fee earner, with individual period values and YTD values in separate columns for every period in each year">A.TIME-BILLED-SUM-BY-MATTER-YR-FE</a><br>
+<a Target="MainBody" href="A.TRANALYSIS.html" Title="Provides easy access to time recording summary analysis information, with actual and budget figures for each period split into separate columns.">A.TRANALYSIS</a><br>
+<a Target="MainBody" href="A.UNDERTAKING.html" Title="Provides a view of the undertakings table, with the correct user-friendly names for the two new fields "GIVEN-TO" and "UNDERTAKING-VALUE"">A.UNDERTAKING</a><br>
+<a Target="MainBody" href="A.USERITEM.html" Title="Provides easy access to user-specific session related information such as lists of last accessed matter codes.  Not recommended for user reporting purposes.">A.USERITEM</a><br>
+<a Target="MainBody" href="A.WD_TOTAL_BY_MATTER.html" Title="Returns a total value of disbursement write-offs by matter code">A.WD_TOTAL_BY_MATTER</a><br>
+<a Target="MainBody" href="A.WIP-DETAIL.html" Title="Full transaction level detail of unbilled time, including "on account" memo billed items.  Undone time and time on closed matters is excluded.">A.WIP-DETAIL</a><br>
+<a Target="MainBody" href="A.WIP-DETAIL-SPLIT.html" Title="Returns WIP time posting transactions, with WIP values split across 14 separate aging columns">A.WIP-DETAIL-SPLIT</a><br>
+<a Target="MainBody" href="A.X08-WITH-FE-DEPT-BGT.html" Title="Returns fees billed information, including opening/closing balances, period movements, YTD accumulated totals and budgets.  The information is mainly derived from table PUB.NOMACCS where nominal code is "X08".">A.X08-WITH-FE-DEPT-BGT</a><br>
+<br><h2>Tables in main database</h2>
+<a Target="MainBody" href="PUB.ACTIONCAT.html" Title="Action category definitions">PUB.ACTIONCAT</a><br>
+<a Target="MainBody" href="PUB.ACTIONDEF.html" Title="Holds the defined Action Definitions used within the PM and Connect actions system">PUB.ACTIONDEF</a><br>
+<a Target="MainBody" href="PUB.ACTIONS.html" Title="Holds all completed and uncompleted actions held against matters and archives">PUB.ACTIONS</a><br>
+<a Target="MainBody" href="PUB.ACTIONTYPES.html" Title="Reserved for future use">PUB.ACTIONTYPES</a><br>
+<a Target="MainBody" href="PUB.ACTIVATION.html" Title="Holds the list of available licence key names and the applied licence key values">PUB.ACTIVATION</a><br>
+<a Target="MainBody" href="PUB.ACTIVITY.html" Title="Holds the list of defined activity codes for time recording">PUB.ACTIVITY</a><br>
+<a Target="MainBody" href="PUB.ADDDATA.html" Title="Stores all additional (custom) data for all entity types">PUB.ADDDATA</a><br>
+<a Target="MainBody" href="PUB.ADDRESS-TYPES.html" Title="[Awaiting Description]">PUB.ADDRESS-TYPES</a><br>
+<a Target="MainBody" href="PUB.ADDRESSES.html" Title="Stores additional addresses for contacts, organisations and clients">PUB.ADDRESSES</a><br>
+<a Target="MainBody" href="PUB.APPLICATIONS.html" Title="Reserved for future use">PUB.APPLICATIONS</a><br>
+<a Target="MainBody" href="PUB.ARCHIVE.html" Title="Holds all archive data for manually created archives (deeds, wills etc.) and archived matters">PUB.ARCHIVE</a><br>
+<a Target="MainBody" href="PUB.ARCHIVE-UDF.html" Title="Holds the definitions of user defined fields for archive records">PUB.ARCHIVE-UDF</a><br>
+<a Target="MainBody" href="PUB.ARCHLOCATION.html" Title="Archive locations maintenance data">PUB.ARCHLOCATION</a><br>
+<a Target="MainBody" href="PUB.ARCHNOTE.html" Title="Reserved for future use">PUB.ARCHNOTE</a><br>
+<a Target="MainBody" href="PUB.ASSETS.html" Title="Reserved for future use">PUB.ASSETS</a><br>
+<a Target="MainBody" href="PUB.AUDIT.html" Title="Reserved for future use">PUB.AUDIT</a><br>
+<a Target="MainBody" href="PUB.BANK-ACCOUNT.html" Title="Reserved for future use">PUB.BANK-ACCOUNT</a><br>
+<a Target="MainBody" href="PUB.BANKHOLS.html" Title="Holds the list of bank holidays as defined in Practice Manager ">PUB.BANKHOLS</a><br>
+<a Target="MainBody" href="PUB.BILL-ADDITIONAL.html" Title="Additional data especially Legal Aid CDS7 details">PUB.BILL-ADDITIONAL</a><br>
+<a Target="MainBody" href="PUB.BILL-ANTITIME.html" Title="Anticipated time information for each bill">PUB.BILL-ANTITIME</a><br>
+<a Target="MainBody" href="PUB.BILL-BATCH.html" Title="Used to link a number of bills together as part of a single run e.g. interim or client billing process">PUB.BILL-BATCH</a><br>
+<a Target="MainBody" href="PUB.BILL-BATCH-OPTIONS.html" Title="Used in conjunction with BILL-BATCH to preselect options used for e.g. client billing process">PUB.BILL-BATCH-OPTIONS</a><br>
+<a Target="MainBody" href="PUB.BILL-COSTALLOC.html" Title="Fee earner cost allocations for each bill">PUB.BILL-COSTALLOC</a><br>
+<a Target="MainBody" href="PUB.BILL-DATA-SAVED.html" Title="List of categories saved during processing of a bill e.g. Costs / Disbs / FE Allocations">PUB.BILL-DATA-SAVED</a><br>
+<a Target="MainBody" href="PUB.BILL-DISB.html" Title="Stores information about disbursements included in each bill">PUB.BILL-DISB</a><br>
+<a Target="MainBody" href="PUB.BILL-FIXED-FEE.html" Title="A copy of the fees record(s) that were selected at the point of creating an LA Civil / Criminal Fixed Fee Bill">PUB.BILL-FIXED-FEE</a><br>
+<a Target="MainBody" href="PUB.BILL-HEADER.html" Title="Bill header records - the equivalent of BILLDOC for new bills created in 4.17">PUB.BILL-HEADER</a><br>
+<a Target="MainBody" href="PUB.BILL-LA.html" Title="Additional legal aid data for a legal aid bill">PUB.BILL-LA</a><br>
+<a Target="MainBody" href="PUB.BILL-LINES.html" Title="Used in old and new style time billing as a temporary table for bill production">PUB.BILL-LINES</a><br>
+<a Target="MainBody" href="PUB.BILL-MEMO-LINK.html" Title="Previous memo bills included in a memo bill">PUB.BILL-MEMO-LINK</a><br>
+<a Target="MainBody" href="PUB.BILL-MEMO-PAYMENT.html" Title="Payments made against memo bills">PUB.BILL-MEMO-PAYMENT</a><br>
+<a Target="MainBody" href="PUB.BILL-MEMO-RECOUPMENT.html" Title="List of previous memo payments being recouped in current bill">PUB.BILL-MEMO-RECOUPMENT</a><br>
+<a Target="MainBody" href="PUB.BILL-PREPAID-DISB.html" Title="Holds the details of pre-paid disbursements allocated into bills">PUB.BILL-PREPAID-DISB</a><br>
+<a Target="MainBody" href="PUB.BILL-RECIPIENT.html" Title="List of recipients related to each bill.  Each bill will have 1 recipient for a normal private or legal aid bill, 2 recipients for a split Net/VAT bill, and multiple recipients for a client party bill">PUB.BILL-RECIPIENT</a><br>
+<a Target="MainBody" href="PUB.BILL-TIME.html" Title="Stores information about time included in each bill">PUB.BILL-TIME</a><br>
+<a Target="MainBody" href="PUB.BILLDOC.html" Title="Stores information relating to data-loaded bills and bills raised in the system prior to upgrade to 4.17/5.17">PUB.BILLDOC</a><br>
+<a Target="MainBody" href="PUB.BILLS.html" Title="Individual bills summary information (derived from NOMTRANS)">PUB.BILLS</a><br>
+<a Target="MainBody" href="PUB.BRANCH.html" Title="Holds branch maintenance data as defined in the Practice Manager ">PUB.BRANCH</a><br>
+<a Target="MainBody" href="PUB.CHARGEBANDS.html" Title="Charge band maintenance information">PUB.CHARGEBANDS</a><br>
+<a Target="MainBody" href="PUB.CHEQUES.html" Title="Holds the data relating to cheque payments raised in the system">PUB.CHEQUES</a><br>
+<a Target="MainBody" href="PUB.CLIDB.html" Title="Holds client level data for all private and business clients.">PUB.CLIDB</a><br>
+<a Target="MainBody" href="PUB.CLIERELATIONS.html" Title="Stores relationships from clients to other entities (contacts, organisations, matters or other clients)">PUB.CLIERELATIONS</a><br>
+<a Target="MainBody" href="PUB.CLIGROUPS.html" Title="Holds the links between client groups and specific clients">PUB.CLIGROUPS</a><br>
+<a Target="MainBody" href="PUB.CLINOTE.html" Title="Reserved for future use">PUB.CLINOTE</a><br>
+<a Target="MainBody" href="PUB.COMPANY-STRUCTURE.html" Title="Reserved for future use - specifically for future reporting features">PUB.COMPANY-STRUCTURE</a><br>
+<a Target="MainBody" href="PUB.COMPANY-STRUCTURE-LEVEL.html" Title="Reserved for future use - specifically for future reporting features">PUB.COMPANY-STRUCTURE-LEVEL</a><br>
+<a Target="MainBody" href="PUB.CONNOTES.html" Title="Reserved for future use">PUB.CONNOTES</a><br>
+<a Target="MainBody" href="PUB.CONTACTS.html" Title="Stores personal details for individuals (non-business) contacts, both for client parties and non-client associated individuals">PUB.CONTACTS</a><br>
+<a Target="MainBody" href="PUB.CONTFUNC.html" Title="Stores the links between contacts and functional classes">PUB.CONTFUNC</a><br>
+<a Target="MainBody" href="PUB.CONTRELATIONS.html" Title="Stores relationships from contacts to other entities (clients, organisations, matters or other contacts)">PUB.CONTRELATIONS</a><br>
+<a Target="MainBody" href="PUB.CONVHISTAC.html" Title="Holds the read-only historical accounts posting information for converted matter data">PUB.CONVHISTAC</a><br>
+<a Target="MainBody" href="PUB.CONVHISTTR.html" Title="Holds the read-only historical time posting information for converted matter data">PUB.CONVHISTTR</a><br>
+<a Target="MainBody" href="PUB.CREDIT-ANTITIME.html" Title="Details of anticipated time that has been credit noted">PUB.CREDIT-ANTITIME</a><br>
+<a Target="MainBody" href="PUB.CREDIT-COSTALLOC.html" Title="Details of credited fee earner costs billed">PUB.CREDIT-COSTALLOC</a><br>
+<a Target="MainBody" href="PUB.CREDIT-DISB.html" Title="Details of credit noted disbursements">PUB.CREDIT-DISB</a><br>
+<a Target="MainBody" href="PUB.CREDIT-HEADER.html" Title="Credit note header records, one row per credit note (partial or full)">PUB.CREDIT-HEADER</a><br>
+<a Target="MainBody" href="PUB.CREDIT-OLD-STYLE-ELEMENT.html" Title="Holds the details of old-style bill data that has been credit noted">PUB.CREDIT-OLD-STYLE-ELEMENT</a><br>
+<a Target="MainBody" href="PUB.CREDIT-TIME.html" Title="Details of actual time postings that have been credit noted and set back to unbilled status">PUB.CREDIT-TIME</a><br>
+<a Target="MainBody" href="PUB.CRIM-CAT.html" Title="Legal aid criminal categories definitions and their associated higher/lower limits and fees">PUB.CRIM-CAT</a><br>
+<a Target="MainBody" href="PUB.CSB-SCHEME.html" Title="Holds the list of Case Stage Budgeting schemes as set up in Practice Manager CSB scheme maintenance ">PUB.CSB-SCHEME</a><br>
+<a Target="MainBody" href="PUB.CSB-STAGE.html" Title="Holds the list of Case Stage Budgeting scheme stages as set up in Practice Manager CSB stage maintenance ">PUB.CSB-STAGE</a><br>
+<a Target="MainBody" href="PUB.CSB-STAGE-TO-SCHEME.html" Title="Holds the links between Case Stage Budgeting schemes and stages">PUB.CSB-STAGE-TO-SCHEME</a><br>
+<a Target="MainBody" href="PUB.CURRENCY.html" Title="Reserved for future use">PUB.CURRENCY</a><br>
+<a Target="MainBody" href="PUB.CURRENCYGAINLOSS.html" Title="Reserved for future use">PUB.CURRENCYGAINLOSS</a><br>
+<a Target="MainBody" href="PUB.CURRENCYHIST.html" Title="Reserved for future use">PUB.CURRENCYHIST</a><br>
+<a Target="MainBody" href="PUB.CUSTOM-LINK.html" Title="Used to store the links between an entity and its attached custom tab groups">PUB.CUSTOM-LINK</a><br>
+<a Target="MainBody" href="PUB.CUSTOMIZATION.html" Title="Stores individual SOS CONNECT settings and customization data for specific users (including FIRM and SOS level settings)">PUB.CUSTOMIZATION</a><br>
+<a Target="MainBody" href="PUB.CUSTOMIZATION-SELS.html" Title="Stores the list of available SOS CONNECT customization categories">PUB.CUSTOMIZATION-SELS</a><br>
+<a Target="MainBody" href="PUB.DATA-ACCESS-GROUPS.html" Title="Holds data access group definitions">PUB.DATA-ACCESS-GROUPS</a><br>
+<a Target="MainBody" href="PUB.DATA-SEARCH.html" Title="Reserved for future use">PUB.DATA-SEARCH</a><br>
+<a Target="MainBody" href="PUB.DATA-SPARE05.html" Title="Not currently used - reserved for future use">PUB.DATA-SPARE05</a><br>
+<a Target="MainBody" href="PUB.DATA-SPARE06.html" Title="Not currently used - reserved for future use">PUB.DATA-SPARE06</a><br>
+<a Target="MainBody" href="PUB.DATA-SPARE07.html" Title="Not currently used - reserved for future use">PUB.DATA-SPARE07</a><br>
+<a Target="MainBody" href="PUB.DATA-SPARE08.html" Title="Not currently used - reserved for future use">PUB.DATA-SPARE08</a><br>
+<a Target="MainBody" href="PUB.DATA-SPARE09.html" Title="Not currently used - reserved for future use">PUB.DATA-SPARE09</a><br>
+<a Target="MainBody" href="PUB.DATA-SPARE10.html" Title="Not currently used - reserved for future use">PUB.DATA-SPARE10</a><br>
+<a Target="MainBody" href="PUB.DATA-SPARE11.html" Title="Not currently used - reserved for future use">PUB.DATA-SPARE11</a><br>
+<a Target="MainBody" href="PUB.DATA-SPARE12.html" Title="Not currently used - reserved for future use">PUB.DATA-SPARE12</a><br>
+<a Target="MainBody" href="PUB.DATA-SPARE13.html" Title="Not currently used - reserved for future use">PUB.DATA-SPARE13</a><br>
+<a Target="MainBody" href="PUB.DATA-SPARE14.html" Title="Not currently used - reserved for future use">PUB.DATA-SPARE14</a><br>
+<a Target="MainBody" href="PUB.DBSCHED.html" Title="Used by Practice Manager Equitrac ">PUB.DBSCHED</a><br>
+<a Target="MainBody" href="PUB.DEPARTMENT.html" Title="Holds the list of departments as set up in Practice Manager department maintenance screen">PUB.DEPARTMENT</a><br>
+<a Target="MainBody" href="PUB.DEPTDOCDEF.html" Title="Reserved for future use">PUB.DEPTDOCDEF</a><br>
+<a Target="MainBody" href="PUB.DEXTRACT.html" Title="Holds KPI balance information - not designed for user reporting">PUB.DEXTRACT</a><br>
+<a Target="MainBody" href="PUB.DIARY.html" Title="PM user diary data">PUB.DIARY</a><br>
+<a Target="MainBody" href="PUB.DISABILITY.html" Title="Reserved for future use">PUB.DISABILITY</a><br>
+<a Target="MainBody" href="PUB.DISB-GROUP.html" Title="Stores defined disbursement group maintenance data">PUB.DISB-GROUP</a><br>
+<a Target="MainBody" href="PUB.DOCUMENT-DEFINITION.html" Title="Stores document definitions maintenance data">PUB.DOCUMENT-DEFINITION</a><br>
+<a Target="MainBody" href="PUB.EFT-AUDIT.html" Title="Holds the EFT payment data export audit log">PUB.EFT-AUDIT</a><br>
+<a Target="MainBody" href="PUB.ENDCODES.html" Title="Reserved for future use">PUB.ENDCODES</a><br>
+<a Target="MainBody" href="PUB.ENTITY-ACCESS-GROUPS.html" Title="Stores the allocation of data access groups to individual entities (users,matters,clients etc.).  Each row in this table represents a single link between one data access group definition and one entity (e.g. one user or one matter).">PUB.ENTITY-ACCESS-GROUPS</a><br>
+<a Target="MainBody" href="PUB.FACTDEFS.html" Title="Holds custom tab field definitions as set up in Practice Manager custom tab maintenance screens">PUB.FACTDEFS</a><br>
+<a Target="MainBody" href="PUB.FE-ATTEND-LOC.html" Title="Reserved for future use">PUB.FE-ATTEND-LOC</a><br>
+<a Target="MainBody" href="PUB.FEBANDS.html" Title="Fee earner charge band maintenance data - the specific rates / uplifts for a specific fee earner and charge band">PUB.FEBANDS</a><br>
+<a Target="MainBody" href="PUB.FEETR.html" Title="Holds the list of fee earners as set up in Practice Manager fee earner maintenance screen">PUB.FEETR</a><br>
+<a Target="MainBody" href="PUB.FELOG.html" Title="Stores fee earner suspended time postings used by Practice Manager and Connect time logger">PUB.FELOG</a><br>
+<a Target="MainBody" href="PUB.FOLDER.html" Title="Reserved for future use">PUB.FOLDER</a><br>
+<a Target="MainBody" href="PUB.FOREIGNKEY.html" Title="Reserved for future use">PUB.FOREIGNKEY</a><br>
+<a Target="MainBody" href="PUB.FUNCTIONS.html" Title="Stores contact function classes definitions">PUB.FUNCTIONS</a><br>
+<a Target="MainBody" href="PUB.GROUPS.html" Title="Client groups mainteance definitions">PUB.GROUPS</a><br>
+<a Target="MainBody" href="PUB.HISTORY.html" Title="Stores documents information">PUB.HISTORY</a><br>
+<a Target="MainBody" href="PUB.ID-CAT.html" Title="Reserved for future use">PUB.ID-CAT</a><br>
+<a Target="MainBody" href="PUB.INT-LOG.html" Title="">PUB.INT-LOG</a><br>
+<a Target="MainBody" href="PUB.INTEREST.html" Title="Interest table definitions">PUB.INTEREST</a><br>
+<a Target="MainBody" href="PUB.INTEREST-GROUP.html" Title="">PUB.INTEREST-GROUP</a><br>
+<a Target="MainBody" href="PUB.INTMETHODS.html" Title="Introduction Methods (Sources Of Business)">PUB.INTMETHODS</a><br>
+<a Target="MainBody" href="PUB.JOURNALS.html" Title="Holds the list of defined nominal prepayments, apportionments and recurring entry postings as set up in Practice Manager ">PUB.JOURNALS</a><br>
+<a Target="MainBody" href="PUB.LA-ACCOUNTS.html" Title="Reserved for future use - specifically to hold LAA account numbers and associations with specific branch definitions">PUB.LA-ACCOUNTS</a><br>
+<a Target="MainBody" href="PUB.LA-AIT-HEARING.html" Title="Reserved for future use">PUB.LA-AIT-HEARING</a><br>
+<a Target="MainBody" href="PUB.LA-APPLIES-MATRIX.html" Title="Reserved for future use">PUB.LA-APPLIES-MATRIX</a><br>
+<a Target="MainBody" href="PUB.LA-CASE-STAGE.html" Title="Reserved for future use">PUB.LA-CASE-STAGE</a><br>
+<a Target="MainBody" href="PUB.LA-COURT.html" Title="Reserved for future use">PUB.LA-COURT</a><br>
+<a Target="MainBody" href="PUB.LA-CRIMINAL-CF.html" Title="Reserved for future use">PUB.LA-CRIMINAL-CF</a><br>
+<a Target="MainBody" href="PUB.LA-CTRL-WORK-FEE.html" Title="Reserved for future use">PUB.LA-CTRL-WORK-FEE</a><br>
+<a Target="MainBody" href="PUB.LA-DETENTION-CTR.html" Title="Reserved for future use">PUB.LA-DETENTION-CTR</a><br>
+<a Target="MainBody" href="PUB.LA-END-POINT-STAGE.html" Title="Reserved for future use">PUB.LA-END-POINT-STAGE</a><br>
+<a Target="MainBody" href="PUB.LA-IMMI-CLR.html" Title="Reserved for future use">PUB.LA-IMMI-CLR</a><br>
+<a Target="MainBody" href="PUB.LA-MATTER-UFN.html" Title="Reserved for future use">PUB.LA-MATTER-UFN</a><br>
+<a Target="MainBody" href="PUB.LA-MTG-ATTEND.html" Title="Reserved for future use">PUB.LA-MTG-ATTEND</a><br>
+<a Target="MainBody" href="PUB.LA-OUTCOME.html" Title="Reserved for future use">PUB.LA-OUTCOME</a><br>
+<a Target="MainBody" href="PUB.LA-POLICE-STN.html" Title="Reserved for future use">PUB.LA-POLICE-STN</a><br>
+<a Target="MainBody" href="PUB.LA-PRIS-FEE-SCHEME.html" Title="Reserved for future use">PUB.LA-PRIS-FEE-SCHEME</a><br>
+<a Target="MainBody" href="PUB.LA-PRISON.html" Title="Reserved for future use">PUB.LA-PRISON</a><br>
+<a Target="MainBody" href="PUB.LA-PS-SCHEME.html" Title="Reserved for future use">PUB.LA-PS-SCHEME</a><br>
+<a Target="MainBody" href="PUB.LA-SPOCC-CLAIM.html" Title="Reserved for future use">PUB.LA-SPOCC-CLAIM</a><br>
+<a Target="MainBody" href="PUB.LACAT.html" Title="Legal Aid Categories for Controlled Matter work">PUB.LACAT</a><br>
+<a Target="MainBody" href="PUB.LARATES.html" Title="Legal Aid rates">PUB.LARATES</a><br>
+<a Target="MainBody" href="PUB.LASTATUS.html" Title="Stores legal aid statuses as defined in the Practice Manager legal aid status maintenance screen">PUB.LASTATUS</a><br>
+<a Target="MainBody" href="PUB.LOGHISTORY.html" Title="List of failed login attempts.  Not recommended for user reporting.">PUB.LOGHISTORY</a><br>
+<a Target="MainBody" href="PUB.MAILCATEGORIES.html" Title="Marketing Manager - Mail categories definitions">PUB.MAILCATEGORIES</a><br>
+<a Target="MainBody" href="PUB.MAILINTDATA.html" Title="Stores the specific marketing interests, mailing categories and marketing fee earners associated with a particular organisation or individual">PUB.MAILINTDATA</a><br>
+<a Target="MainBody" href="PUB.MAILSHOT.html" Title="">PUB.MAILSHOT</a><br>
+<a Target="MainBody" href="PUB.MAINT-SPARE03.html" Title="Not currently used - reserved for future use">PUB.MAINT-SPARE03</a><br>
+<a Target="MainBody" href="PUB.MAINT-SPARE04.html" Title="Not currently used - reserved for future use">PUB.MAINT-SPARE04</a><br>
+<a Target="MainBody" href="PUB.MAINT-SPARE05.html" Title="Not currently used - reserved for future use">PUB.MAINT-SPARE05</a><br>
+<a Target="MainBody" href="PUB.MAINT-SPARE06.html" Title="Not currently used - reserved for future use">PUB.MAINT-SPARE06</a><br>
+<a Target="MainBody" href="PUB.MAINT-SPARE07.html" Title="Not currently used - reserved for future use">PUB.MAINT-SPARE07</a><br>
+<a Target="MainBody" href="PUB.MAINT-SPARE08.html" Title="Not currently used - reserved for future use">PUB.MAINT-SPARE08</a><br>
+<a Target="MainBody" href="PUB.MAINT-SPARE09.html" Title="Not currently used - reserved for future use">PUB.MAINT-SPARE09</a><br>
+<a Target="MainBody" href="PUB.MAINT-SPARE10.html" Title="Not currently used - reserved for future use">PUB.MAINT-SPARE10</a><br>
+<a Target="MainBody" href="PUB.MAINT-SPARE11.html" Title="Not currently used - reserved for future use">PUB.MAINT-SPARE11</a><br>
+<a Target="MainBody" href="PUB.MAINT-SPARE12.html" Title="Not currently used - reserved for future use">PUB.MAINT-SPARE12</a><br>
+<a Target="MainBody" href="PUB.MARKET-ACTIVITY.html" Title="Marketing Manager - Marketing activities definitions">PUB.MARKET-ACTIVITY</a><br>
+<a Target="MainBody" href="PUB.MARKET-PRO-MAIL.html" Title="">PUB.MARKET-PRO-MAIL</a><br>
+<a Target="MainBody" href="PUB.MARKETINTERESTS.html" Title="Marketing Manager - Marketing interests definitions">PUB.MARKETINTERESTS</a><br>
+<a Target="MainBody" href="PUB.MARKETPROFILES.html" Title="Marketing Manager - Marketing profiles definitions">PUB.MARKETPROFILES</a><br>
+<a Target="MainBody" href="PUB.MATAC.html" Title="Holds financial balance summary information for each matter">PUB.MATAC</a><br>
+<a Target="MainBody" href="PUB.MATANALYSIS.html" Title="Provides matter balance summary information for time, office, client and deposit totals">PUB.MATANALYSIS</a><br>
+<a Target="MainBody" href="PUB.MATDB.html" Title="Holds matter detail information (this does not include matter time and accounts balances - see PUB.MATTR and PUB.MATAC)">PUB.MATDB</a><br>
+<a Target="MainBody" href="PUB.MATNOTE.html" Title="Keeps notes made in the history panel of the matter notes tab">PUB.MATNOTE</a><br>
+<a Target="MainBody" href="PUB.MATTR.html" Title="Holds time posting and legal aid summary information for each matter">PUB.MATTR</a><br>
+<a Target="MainBody" href="PUB.MATTRELATIONS.html" Title="Stores relationships from matters to other entities (contacts, clients, organisations or other matters)">PUB.MATTRELATIONS</a><br>
+<a Target="MainBody" href="PUB.MATTYPE.html" Title="Holds matter type definitions as set up in Practice Manager matter types maintenance screen">PUB.MATTYPE</a><br>
+<a Target="MainBody" href="PUB.MSG.html" Title="Reserved for future use">PUB.MSG</a><br>
+<a Target="MainBody" href="PUB.NARRATIVES.html" Title="Stores standard narrative definitions as set up in Practice Manager narratives maintenance screen">PUB.NARRATIVES</a><br>
+<a Target="MainBody" href="PUB.NOMACCS.html" Title="Stores financial summary balance information for each nominal code, year and period">PUB.NOMACCS</a><br>
+<a Target="MainBody" href="PUB.NOMCODES.html" Title="Stores the defined nominal account codes as set up in Practice Manager nominal codes maintenance screen">PUB.NOMCODES</a><br>
+<a Target="MainBody" href="PUB.NOMTRANS.html" Title="Holds all accounts postings transaction details">PUB.NOMTRANS</a><br>
+<a Target="MainBody" href="PUB.NOTES.html" Title="Reserved for future use">PUB.NOTES</a><br>
+<a Target="MainBody" href="PUB.OAINTEGRATION.html" Title="Reserved for future use">PUB.OAINTEGRATION</a><br>
+<a Target="MainBody" href="PUB.OCCUPATIONS.html" Title="Stores the list of defined occupation types as defined in Practice Manager occupations maintenance screen">PUB.OCCUPATIONS</a><br>
+<a Target="MainBody" href="PUB.OFFENCE.html" Title="Holds the list of defined offence codes">PUB.OFFENCE</a><br>
+<a Target="MainBody" href="PUB.ORGAFUNC.html" Title="Stores the links between organisations and their assigned marketing functions">PUB.ORGAFUNC</a><br>
+<a Target="MainBody" href="PUB.ORGANISATION.html" Title="Holds organisation information">PUB.ORGANISATION</a><br>
+<a Target="MainBody" href="PUB.ORGANOTES.html" Title="Reserved for future use">PUB.ORGANOTES</a><br>
+<a Target="MainBody" href="PUB.ORGARELATIONS.html" Title="Stores relationships from organisations to other entities (contacts, clients, matters or other organisations)">PUB.ORGARELATIONS</a><br>
+<a Target="MainBody" href="PUB.ORGATYPE.html" Title="Holds the defined list of organisation types as set up in Practice Manager organisation types maintenance screen">PUB.ORGATYPE</a><br>
+<a Target="MainBody" href="PUB.PAYMENTS.html" Title="Cross-references "payable" nominal transactions and the transactions that "paid" or "settled" them">PUB.PAYMENTS</a><br>
+<a Target="MainBody" href="PUB.PL-CHART.html" Title="Profit & Loss chart of accounts definitions">PUB.PL-CHART</a><br>
+<a Target="MainBody" href="PUB.PREFERENCES.html" Title="Stores system settings (only contains one record)">PUB.PREFERENCES</a><br>
+<a Target="MainBody" href="PUB.PURCHASES.html" Title="Stores purchase ledger transactions">PUB.PURCHASES</a><br>
+<a Target="MainBody" href="PUB.QUEUE-DATA.html" Title="Holds the data associated with queued processing requests, potentially multiple rows per QUEUE-REQUEST depending on the amount of data associated with the request">PUB.QUEUE-DATA</a><br>
+<a Target="MainBody" href="PUB.QUEUE-REQUEST.html" Title="Holds the list of queued processing requests, one row per request.  Each entry in this table will have one or more related entries in the QUEUE-DATA table">PUB.QUEUE-REQUEST</a><br>
+<a Target="MainBody" href="PUB.QUEUE-TYPE.html" Title="Holds the definition of the different types of queue requests that can be processed">PUB.QUEUE-TYPE</a><br>
+<a Target="MainBody" href="PUB.RELATIONSHIP.html" Title="Reserved for future use">PUB.RELATIONSHIP</a><br>
+<a Target="MainBody" href="PUB.REPORT-Q.html" Title="Holds spooled reports information">PUB.REPORT-Q</a><br>
+<a Target="MainBody" href="PUB.REPORT-SELS.html" Title="Saved report selections">PUB.REPORT-SELS</a><br>
+<a Target="MainBody" href="PUB.ROLES.html" Title="Role code definitions and set up in Practice Manager roles maintenance screen">PUB.ROLES</a><br>
+<a Target="MainBody" href="PUB.SCHEACTI.html" Title="">PUB.SCHEACTI</a><br>
+<a Target="MainBody" href="PUB.SCHEDULE.html" Title="">PUB.SCHEDULE</a><br>
+<a Target="MainBody" href="PUB.SECTORS.html" Title="Holds the list of defined business sector codes">PUB.SECTORS</a><br>
+<a Target="MainBody" href="PUB.SESSIONVARS.html" Title="Holds user session specific information (not for reporting use)">PUB.SESSIONVARS</a><br>
+<a Target="MainBody" href="PUB.SOFTLOCK.html" Title="Holds the list of currently locked records (not for reporting use)">PUB.SOFTLOCK</a><br>
+<a Target="MainBody" href="PUB.SOLLEDGER.html" Title="Transaction-level anticipated disbursements information">PUB.SOLLEDGER</a><br>
+<a Target="MainBody" href="PUB.SPANTYPE.html" Title="Holds Legal Aid Span codes maintenance definitions">PUB.SPANTYPE</a><br>
+<a Target="MainBody" href="PUB.SUPP-PAYMENTS.html" Title="Stores transaction-level information regarding payments made to suppliers">PUB.SUPP-PAYMENTS</a><br>
+<a Target="MainBody" href="PUB.SUPPLIER.html" Title="Stores supplier information as set up in Practice Manager supplier maintenance screen">PUB.SUPPLIER</a><br>
+<a Target="MainBody" href="PUB.TABDATASET.html" Title="Stores Custom Tab Group Sets maintenance information">PUB.TABDATASET</a><br>
+<a Target="MainBody" href="PUB.TABDEFS.html" Title="Custom tab definitions">PUB.TABDEFS</a><br>
+<a Target="MainBody" href="PUB.TABGROUPS.html" Title="Custom tab group definitions">PUB.TABGROUPS</a><br>
+<a Target="MainBody" href="PUB.TE-SECTION.html" Title="Reserved for future use">PUB.TE-SECTION</a><br>
+<a Target="MainBody" href="PUB.TEAM.html" Title="Holds the list of defined user teams">PUB.TEAM</a><br>
+<a Target="MainBody" href="PUB.TEAMUSRS.html" Title="Holds the list of users for each user team">PUB.TEAMUSRS</a><br>
+<a Target="MainBody" href="PUB.TELEPHONES.html" Title="Holds additional telephone for clients, contacts and organisations">PUB.TELEPHONES</a><br>
+<a Target="MainBody" href="PUB.TEMPRELS.html" Title="Reserved for future use">PUB.TEMPRELS</a><br>
+<a Target="MainBody" href="PUB.TPTRANS.html" Title="Stores posting slip data">PUB.TPTRANS</a><br>
+<a Target="MainBody" href="PUB.TRANALYSIS.html" Title="Keeps period-by-period actual and budget/target balances for time-related analysis codes">PUB.TRANALYSIS</a><br>
+<a Target="MainBody" href="PUB.TRTRANS.html" Title="Holds details of all time transactions and time posting notes for unbilled, billed and billed time fees values">PUB.TRTRANS</a><br>
+<a Target="MainBody" href="PUB.TYPEREC.html" Title="Contains various lists of system-related settings">PUB.TYPEREC</a><br>
+<a Target="MainBody" href="PUB.UNDERTAKING.html" Title="Stores fee earner / matter undertakings">PUB.UNDERTAKING</a><br>
+<a Target="MainBody" href="PUB.USER-ROLE.html" Title="The allocation of "special user roles" to individual users">PUB.USER-ROLE</a><br>
+<a Target="MainBody" href="PUB.USERITEM.html" Title="Holds user-specific additional information such as lists of last accessed matter codes etc.">PUB.USERITEM</a><br>
+<a Target="MainBody" href="PUB.USERS.html" Title="Holds the list of currently logged-in user sessions">PUB.USERS</a><br>
+<a Target="MainBody" href="PUB.USR.html" Title="Contains the list of database users including their names, telephone numbers, email addresses and access rights">PUB.USR</a><br>
+<a Target="MainBody" href="PUB.USRCUSTOMACCESS.html" Title="Holds list of users who have access to custom tabs for protected custom tabs">PUB.USRCUSTOMACCESS</a><br>
+<a Target="MainBody" href="PUB.VAT-MATRIX.html" Title="Reserved for future use">PUB.VAT-MATRIX</a><br>
+<a Target="MainBody" href="PUB.VATRATE.html" Title="Holds VAT code and rate definitions">PUB.VATRATE</a><br>
+<a Target="MainBody" href="PUB.WITNESS-TYPE.html" Title="Reserved for future use">PUB.WITNESS-TYPE</a><br>
+<br><h2>Views into Data Warehouse<br>(where installed)</h2>
+<a Target="MainBody" href="SOSANALY.ANALY-BILL.html" Title="If installed, this view will retrieve data from the SOS data warehouse, returning bill summary history for all bills, one row per bill">SOSANALY.ANALY-BILL</a><br>
+<a Target="MainBody" href="SOSANALY.ANALY-BILL-HIST.html" Title="If installed, this view will retrieve data from the SOS data warehouse, returning bill life-cycle history including payment values and oustanding values for all bills for previous years and periods">SOSANALY.ANALY-BILL-HIST</a><br>
+<a Target="MainBody" href="SOSANALY.ANALY-BRANCH.html" Title="If installed, this view will retrieve data from the SOS data warehouse, returning stub branch records derived from the PUB.BRANCH table">SOSANALY.ANALY-BRANCH</a><br>
+<a Target="MainBody" href="SOSANALY.ANALY-CALENDAR.html" Title="If installed, this view will retrieve data from the SOS data warehouse, returning historical financial accounting calendar information derived from the current financial calendar.  Each year, quarter and period entry in this calendar appears as a separate row.">SOSANALY.ANALY-CALENDAR</a><br>
+<a Target="MainBody" href="SOSANALY.ANALY-CLIENT.html" Title="If installed, this view will retrieve data from the SOS data warehouse, returning stub client records derived from the table PUB.CLIDB">SOSANALY.ANALY-CLIENT</a><br>
+<a Target="MainBody" href="SOSANALY.ANALY-CLIENT-GROUP.html" Title="If installed, this view will retrieve data from the SOS data warehouse, returning stub client group records derived from the table PUB.GROUPS">SOSANALY.ANALY-CLIENT-GROUP</a><br>
+<a Target="MainBody" href="SOSANALY.ANALY-CLIENT-GROUP-LINK.html" Title="If installed, this view will retrieve data from the SOS data warehouse, returning client group linking data derived from the table PUB.CLIGROUPS">SOSANALY.ANALY-CLIENT-GROUP-LINK</a><br>
+<a Target="MainBody" href="SOSANALY.ANALY-DEPT.html" Title="If installed, this view will retrieve data from the SOS data warehouse, returning stub department records derived from the table PUB.DEPARTMENT">SOSANALY.ANALY-DEPT</a><br>
+<a Target="MainBody" href="SOSANALY.ANALY-FE.html" Title="If installed, this view will retrieve data from the SOS data warehouse, returning stub fee earner records derived from the table PUB.FEETR">SOSANALY.ANALY-FE</a><br>
+<a Target="MainBody" href="SOSANALY.ANALY-FEES-BILLED.html" Title="If installed, this view will retrieve data from the SOS data warehouse, returning fees billed and original time value summary information">SOSANALY.ANALY-FEES-BILLED</a><br>
+<a Target="MainBody" href="SOSANALY.ANALY-LOCKUP.html" Title="If installed, this view will retrieve data from the SOS data warehouse, returning bills delivered, debtors, time recorded, WIP value, debtor lock up days and WIP lock up days at various summary levels">SOSANALY.ANALY-LOCKUP</a><br>
+<a Target="MainBody" href="SOSANALY.ANALY-LOG.html" Title="If installed, this view will retrieve data from the SOS data warehouse, returning a full detailed warehouse build log">SOSANALY.ANALY-LOG</a><br>
+<a Target="MainBody" href="SOSANALY.ANALY-MATTER.html" Title="If installed, this view will retrieve data from the SOS data warehouse, returning stub matter records derived from the table PUB.MATDB">SOSANALY.ANALY-MATTER</a><br>
+<a Target="MainBody" href="SOSANALY.ANALY-MT.html" Title="If installed, this view will retrieve data from the SOS data warehouse, returning stub matter type records derived from the table PUB.MAT-TYPE">SOSANALY.ANALY-MT</a><br>
+<a Target="MainBody" href="SOSANALY.ANALY-STATIC.html" Title="If installed, this view will retrieve data from the SOS data warehouse, returning the configured number of financial periods captured in the warehouse data">SOSANALY.ANALY-STATIC</a><br>
+<a Target="MainBody" href="SOSANALY.ANALY-STATUS.html" Title="If installed, this view will retrieve data from the SOS data warehouse, returning the summary status of the last warehouse build">SOSANALY.ANALY-STATUS</a><br>
+<a Target="MainBody" href="SOSANALY.ANALY-TIME.html" Title="If installed, this view will retrieve data from the SOS data warehouse, returning time posting summary information for all years and periods captured in the warehouse">SOSANALY.ANALY-TIME</a><br>

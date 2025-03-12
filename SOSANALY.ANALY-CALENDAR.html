@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: SOSANALY.ANALY-CALENDAR</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:SOSANALY.ANALY-CALENDAR</h1>
+<h2>Description: If installed, this view will retrieve data from the SOS data warehouse, returning historical financial accounting calendar information derived from the current financial calendar.  Each year, quarter and period entry in this calendar appears as a separate row.</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>DAYS-IN-PERIOD</nobr></td><td><nobr>decimal</nobr></td><td>The exact number of elapsed days in this year, quarter or period</td></tr>
+<tr><td><nobr>PERIOD-END</nobr></td><td><nobr>date</nobr></td><td>Period end date, i.e. the last day of the year, quarter or period</td></tr>
+<tr><td><nobr>PERIOD-LEVEL</nobr></td><td><nobr>character(2)</nobr></td><td>Indicates period type, "Y" for year, "Q" for quarter, or "P" for period.  Note that quarterly warehouse summary data is only available on client systems running a 12 period year.</td></tr>
+<tr><td><nobr>PERIOD-QTR</nobr></td><td><nobr>integer</nobr></td><td>The period number (1-13) or quarter number (1-4).  For year entries, this is always 1.</td></tr>
+<tr><td><nobr>PERIOD-START</nobr></td><td><nobr>date</nobr></td><td>Period start date, i.e. the first day of the year, quarter or period</td></tr>
+<tr><td><nobr>YEAR</nobr></td><td><nobr>character(8)</nobr></td><td>Financial year</td></tr>
+</Table>
+<br>
+<p><b>NOTE</b> that all data in the SOS warehouse is built periodically into the warehouse from the main SOS database, and as such the warehouse contains a snapshot of live data at the point the warehouse build was last run.
+ The warehouse does not show changes real-time as they posted into the main live SOS database.</p>
+<br />
+<br><br></body></html>

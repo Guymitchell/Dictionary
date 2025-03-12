@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: SOSANALY.ANALY-LOG</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:SOSANALY.ANALY-LOG</h1>
+<h2>Description: If installed, this view will retrieve data from the SOS data warehouse, returning a full detailed warehouse build log</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>DATE-TIME</nobr></td><td><nobr>datetime</nobr></td><td>Date-time of log entry</td></tr>
+<tr><td><nobr>LOG-ENTRY</nobr></td><td><nobr>character(200)</nobr></td><td>Warehouse build log details</td></tr>
+<tr><td><nobr>PROCESS-ID</nobr></td><td><nobr>character(40)</nobr></td><td>Process ID of the data warehouse build process</td></tr>
+<tr><td><nobr>SEQNO</nobr></td><td><nobr>integer</nobr></td><td>Log entry sequence number</td></tr>
+</Table>
+<br>
+<p><b>NOTE</b> that all data in the SOS warehouse is built periodically into the warehouse from the main SOS database, and as such the warehouse contains a snapshot of live data at the point the warehouse build was last run.
+ The warehouse does not show changes real-time as they posted into the main live SOS database.</p>
+<br />
+<br><br></body></html>

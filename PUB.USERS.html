@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.USERS</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.USERS</h1>
+<h2>Description: Holds the list of currently logged-in user sessions</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">No. Extents</td><td class="thead">Description</td></tr>
+<tr><td><nobr>USER-ID</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>User ID</td></tr>
+<tr><td><nobr>LOG-DATE</nobr></td><td><nobr>date</nobr></td><td></td><td>Login Date</td></tr>
+<tr><td><nobr>LOG-TIME</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Login Time</td></tr>
+<tr><td><nobr>LAST-ACT</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Mnemonic of last activity + time  (set by security check)</td></tr>
+<tr><td><nobr>REP-DETAIL</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Details of report in progress. Use as flag for Report user count.</td></tr>
+<tr><td><nobr>INACTIVITY</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Inactivity</td></tr>
+<tr><td><nobr>REMOTE-CONNECT-TIME</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Remote Connect Time</td></tr>
+<tr><td><nobr>SESSION-ID</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Session ID</td></tr>
+<tr><td><nobr>LOCALCONNECTION</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>PAP-SPARE</nobr></td><td><nobr>character(254)</nobr></td><td><center>10</Center></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>TIME-OUT-TIME</nobr></td><td><nobr>integer</nobr></td><td></td><td>HH:MM:SS where the session will time-out</td></tr>
+<tr><td><nobr>PAPSERVER</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>TIME-STAMP-LIST</nobr></td><td><nobr>character(447)</nobr></td><td></td><td>Time Stamp List</td></tr>
+<tr><td><nobr>TIME-STAMPS</nobr></td><td><nobr>character(423)</nobr></td><td></td><td>Time Stamps</td></tr>
+<tr><td><nobr>CONTACT-REF</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Contact Ref</td></tr>
+<tr><td><nobr>CALLING-APP</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Calling App</td></tr>
+<tr><td><nobr>PASSWORD</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Password</td></tr>
+<tr><td><nobr>IMPERSONATED-ID</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Impersonated User ID</td></tr>
+<tr><td><nobr>IMPERSONATED-PWD</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Impersonated Password</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>SESSION-INX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SESSION-ID
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+<tr><td>USER-INDEX</td><td><center>yes</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+USER-ID
+ + 
+LOG-DATE
+ + 
+LOG-TIME
+</Table>
+<br><br></body></html>

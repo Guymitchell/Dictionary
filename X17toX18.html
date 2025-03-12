@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+    <head>
+        <title>SOS Database Data Dictionary V4.17: Changes since V4.16</title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <link href="datadic.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Data Dictionary Changes Between Vx.17 and Vx.18</h1>
+        <p>This section contains details of all of the database structure changes between the x.17 and x.18 database structrure.<p>
+        <p>These changes are separated into the following sections:</p>
+        <a href="#DropTables">Tables in x.17 which have been deleted in x.18</a>
+        <br />
+        <a href="#TableNames">Tables in x.17 which have been renamed in x.18<a>
+        <br />
+        <a href="#NewTablesA">Tables which are new in x.18 specifically for partial credit note processing</a>
+        <br />
+        <a href="#NewTablesB">Tables which are new in x.18 for other purposes</a>
+        <br />
+        <a href="#FieldNames">Fields in x.17 which have been renamed in x.18</a>
+        <br />
+        <a href="#DropFields">Fields in x.17 which have never been used and which are deleted in x.18</a>
+        <br /><br /><br />
+        <h2 id="DropTables">Tables Removed In Vx.18</h2>
+	          <p>The following V4.17 / V5.17 database tables have been removed in the V4.18 / V5.18 database structure:</p>
+	          <ul>
+	              <li><b>CSB-SCHEME-STAGE</b><br>This table was originally intended to hold links between CSB scheme and CSB stage definitions.  These links have previously been held in the SUPPRELATIONS table in the x.17 schema.
+	              In this schema update the SUPPRELATIONS table has been renamed to CSB-STAGE-TO-SCHEME for clarity.  This means the CSB-SCHEME-STAGE table that was originally created to hold this data is no longer required.</li>
+	          </ul>
+	          <br /><br />
+	          <h2 id="TableNames">Tables Renamed between Vx.17 And Vx.18</h2>
+	          <p>The following V4.16 database tables have been renamed in V4.17:</p>
+	          <table>
+	              <tr><td class="thead">Vx.17 Table Name</td><td class="thead">Vx.18 Table Name</td><td class="thead">Usage</td></tr>
+	              <tr><td>DATA-SPARE01</td><td><a href="pub.bill-prepaid-disb.html">BILL-PREPAID-DISB</a></td><td>Holds the details of pre-paid disbursements allocated into bills</td></tr>
+	              <tr><td>DATA-SPARE02</td><td><a href="pub.eft-audit.html">EFT-AUDIT</a></td><td>Holds electronic payment audit log</td></tr>
+	              <tr><td>DATA-SPARE03</td><td><a href="pub.queue-request.html">QUEUE-REQUEST</a></td><td>Holds details of queued job requests, e.g. production of EFT remittances, one row per job, including when the job was scheduled, when it was completed and whether it completed successfully</td></tr>
+	              <tr><td>DATA-SPARE04</td><td><a href="pub.queue-data.html">QUEUE-DATA</a></td><td>Holds data associated with queued job requests, with one or more rows in this table per job request depending on the volume of data required for the request</td></tr>
+	              <tr><td>MAINT-SPARE01</td><td><a href="pub.user-role.html">USER-ROLE</a></td><td>The allocation of &quot;special user roles&quot; to individual users is held in this table</td></tr>
+	              <tr><td>MAINT-SPARE02</td><td><a href="pub.queue-type.html">QUEUE-TYPE</a></td><td>Holds the definitions for the different types of scheduled job requests that can be placed into the QUEUE-REQUEST table</td></tr>
+	              <tr><td>SUPPRELATIONS</td><td><a href="pub.csb-stage-to-scheme.html">CSB-STAGE-TO-SCHEME</a></td><td>Holds the defined links between CSB schemes and CSB stages</td></tr>
+	          </table>
+	          <br /><br />
+	          <h2 id="NewTablesA">New Tables In Vx.18 - Specifically for credit note processing</h2>
+	          <p>The following database tables have been added to support new credit note functionality:</p>
+	          <ul>
+	              <li><a href="pub.CREDIT-ANTITIME.html">CREDIT-ANTITIME</a> - Details of anticipated time that has been credit noted</li>
+	              <li><a href="pub.CREDIT-COSTALLOC.html">CREDIT-COSTALLOC</a> - Details of credited fee earner costs billed</li>
+	              <li><a href="pub.CREDIT-DISB.html">CREDIT-DISB</a> - Details of credit noted disbursements</li>
+	              <li><a href="pub.CREDIT-HEADER.html">CREDIT-HEADER</a> - Credit note header record, one row per credit note (partial or full)</li>
+	              <li><a href="pub.CREDIT-OLD-STYLE-ELEMENT.html">CREDIT-OLD-STYLE-ELEMENT</a> - Holds the details of old-style bill data that has been credit noted</li>
+	              <li><a href="pub.CREDIT-TIME.html">CREDIT-TIME</a> - Details of actual time postings that have been credit noted and set back to unbilled status</li>
+	          </ul>
+	          <br />
+	          <br />
+	          <h2 id="NewTablesB">New Tables In Vx.18 - Other tables</h2>
+	          <p>The following additional tables have been added to the x.18 database structure, some of which are reserver for future planned functionality which will be availble in future releases:</p>
+	          <ul>
+	  			<li><a href="pub.activation.html">ACTIVATION</a> - Holds activation and licence key information previously held in various tables including TYPEREC</li>
+	  			<li><a href="pub.company-structure.html">COMPANY-STRUCTURE</a> - Reserved for future use  - intended for future reporting features</li>
+	  			<li><a href="pub.company-structure-level.html">COMPANY-STRUCTURE-LEVEL</a> - Reserved for future use - intended for future reporting features</li>
+	  			<li><a href="pub.data-access-groups.html">DATA-ACCESS-GROUPS</a> - Reserved for future use - intended for future data security features</li>
+	  			<li><a href="pub.entity-access-groups.html">ENTITY-ACCESS-GROUPS</a> - Reserved for future use - intended for future data security features</li>
+	  			<li><a href="pub.la-accounts.html">LA-ACCOUNTS</a> - Reserved for future use - intended to hold LAA account information for legal aid reporting purposes</li>
+	  			<li><a href="pub.data-spare11.html">DATA-SPARE11</a> - Reserved for future use</li>
+				<li><a href="pub.data-spare12.html">DATA-SPARE12</a> - Reserved for future use</li>
+				<li><a href="pub.data-spare13.html">DATA-SPARE13</a> - Reserved for future use</li>
+	  			<li><a href="pub.data-spare14.html">DATA-SPARE14</a> - Reserved for future use</li>
+	  			<li><a href="pub.maint-spare11.html">MAINT-SPARE11</a> - Reserved for future use</li>
+	  			<li><a href="pub.maint-spare12.html">MAINT-SPARE12</a> - Reserved for future use</li>
+
+        </ul>
+        <br /><br />
+        <h2 id="FieldNames">Field Name Changes Between Vx.17 and Vx.18</h2>
+        <p>This section highlights the important changes in field names within existing tables.</p>
+        <table>
+        <tr><td class = "thead" width=15%>Table Name</td><td class = "thead" width=15%>Vx.17 Field Name</td><td class = "thead" width=20%>Vx.18 Field Name</td><td class  = "thead" width=50%>Notes</td></tr>
+             <tr><td><a href="pub.ACTIVITY.html">ACTIVITY</a></td><td>SPARE-CHAR03</td><td>FEE-CALC-BASIS</td><td>The fee calculation basis for the activity code definition, 1=Uplift on cost, 2=Uplift on charge, 3=Uplift on charge band</td></tr>
+		     <tr><td><a href="pub.BILL-COSTALLOC.html">BILL-COSTALLOC</a></td><td>COST</td><td>COST-VALUE</td><td>Fees billed cost value</td></tr>
+		     <tr><td><a href="pub.BILL-COSTALLOC.html">BILL-COSTALLOC</a></td><td>SPARE-DEC01</td><td>NV-CALCULATED-BILL-VAT-VALUE</td><td>For a Split Net / VAT bill this records calculated VAT value that would have been due on the net value had the bill not been split - Acts as a memo field</td></tr>
+		     <tr><td><a href="pub.BILL-COSTALLOC.html">BILL-COSTALLOC</a></td><td>SPARE-DEC02</td><td>NV-ACTUAL-BILL-VAT-VALUE</td><td>For a Split Net / VAT bill this records actual VAT value that would have been due on the net value had the bill not been split - Acts as a memo field</td></tr>
+		     <tr><td><a href="pub.BILL-COSTALLOC.html">BILL-COSTALLOC</a></td><td>BILL-FEES-POST-VALUE</td><td>ACC-BILL-FEES-POST-VALUE</td><td>Records the Net value to be posted on the accounts side by FE / VAT code combination as it may differ from the time side</td></tr>
+		     <tr><td><a href="pub.BILL-COSTALLOC.html">BILL-COSTALLOC</a></td><td>BILL-VAT-POST-VALUE</td><td>ACC-BILL-VAT-POST-VALUE</td><td>Records the VAT value to be posted on the accounts side by FE / VAT code combination as it may differ from the time side calculation</td></tr>
+		     <tr><td><a href="pub.BILL-DISB.html">BILL-DISB</a></td><td>SPARE-CHAR03</td><td>POST-TYPE</td><td>Posting type of the billed disbursement</td></tr>
+		     <tr><td><a href="pub.BILL-DISB.html">BILL-DISB</a></td><td>SPARE-DEC01</td><td>POD-NET-VALUE</td><td>Net value of paid-office-disbursement</td></tr>
+		     <tr><td><a href="pub.BILL-DISB.html">BILL-DISB</a></td><td>SPARE-DEC02</td><td>POD-VAT-VALUE</td><td>Vat value of paid-office-disbursement</td></tr>
+		     <tr><td><a href="pub.BILL-DISB.html">BILL-DISB</a></td><td>SPARE-LOG01</td><td>MILEAGE</td><td>Mileage yes/no flag</td></tr>
+		     <tr><td><a href="pub.BILL-FIXED-FEE.html">BILL-FIXED-FEE</a></td><td>SPARE-CHAR03</td><td>CLAIM-CODE</td><td>Legal Aid Fixed Fee Claim Code</td></tr>
+		     <tr><td><a href="pub.BILL-FIXED-FEE.html">BILL-FIXED-FEE</a></td><td>SPARE-CHAR04</td><td>TYPE</td><td>Legal Aid Fixed Fee Type (Capped Flag)</td></tr>
+		     <tr><td><a href="pub.BILL-FIXED-FEE.html">BILL-FIXED-FEE</a></td><td>SPARE-CHAR05</td><td>PROFIT-CODE</td><td>Legal Aid Profit Code indicator</td></tr>
+		     <tr><td><a href="pub.BILL-FIXED-FEE.html">BILL-FIXED-FEE</a></td><td>SPARE-CHAR06</td><td>FEE-CLAIM-TYPE</td><td>Legal Aid fee claim type (profit costs or fee)</td></tr>
+		     <tr><td><a href="pub.BILL-FIXED-FEE.html">BILL-FIXED-FEE</a></td><td>SPARE-DATE03</td><td>APPLIES-FROM</td><td>Applies from date</td></tr>
+		     <tr><td><a href="pub.BILL-HEADER.html">BILL-HEADER</a></td><td>SPARE-CHAR03</td><td>TP-BILL-TYPE</td><td>The third-party billing type (call type) when called by Case</td></tr>
+		     <tr><td><a href="pub.BILL-HEADER.html">BILL-HEADER</a></td><td>SPARE-DATE03</td><td>MEMO-BILL-PAYMENT-DATE</td><td>Memo bill payment date</td></tr>
+		     <tr><td><a href="pub.BILL-HEADER.html">BILL-HEADER</a></td><td>SPARE-DEC01</td><td>POD-NET-VALUE</td><td>Net value of paid-office-disbursement</td></tr>
+		     <tr><td><a href="pub.BILL-HEADER.html">BILL-HEADER</a></td><td>SPARE-DEC02</td><td>POD-VAT-VALUE</td><td>Vat value of paid-office-disbursement</td></tr>
+		     <tr><td><a href="pub.BILL-LA.html">BILL-LA</a></td><td>SPARE-CHAR04</td><td>STANDARD-FEE-CAT</td><td>Legal Aid Standard Fee Category</td></tr>
+		     <tr><td><a href="pub.BILL-LA.html">BILL-LA</a></td><td>SPARE-CHAR05</td><td>DSCC-NO</td><td>Legal aid DSCC number</td></tr>
+		     <tr><td><a href="pub.BILL-LA.html">BILL-LA</a></td><td>SPARE-CHAR06</td><td>MATT-NO</td><td>Legal aid MATT number</td></tr>
+		     <tr><td><a href="pub.BILL-LA.html">BILL-LA</a></td><td>SPARE-CHAR07</td><td>PRISON-LAW-NO</td><td>Legal aid prison law number</td></tr>
+		     <tr><td><a href="pub.BILL-LA.html">BILL-LA</a></td><td>SPARE-CHAR08</td><td>EXCEPTIONAL-CASE-REF</td><td>Legal aid exceptional case reference</td></tr>
+		     <tr><td><a href="pub.BILL-LA.html">BILL-LA</a></td><td>SPARE-CHAR09</td><td>EXEMPTION-CODE</td><td>Legal aid exemption code</td></tr>
+		     <tr><td><a href="pub.BILL-LA.html">BILL-LA</a></td><td>SPARE-CHAR10</td><td>FIXED-FEE-TYPE</td><td>Legal Aid Fixed Fee Type e.g. Police Station</td></tr>
+		     <tr><td><a href="pub.BILL-LA.html">BILL-LA</a></td><td>SPARE-DATE04</td><td>REPRESENTATION-ORDER</td><td>Legal Aid - Date of Representation Order</td></tr>
+		     <tr><td><a href="pub.BILL-LA.html">BILL-LA</a></td><td>SPARE-DEC01</td><td>STD-FEE</td><td>Legal Aid - Indicates if standard fee</td></tr>
+		     <tr><td><a href="pub.BILL-LA.html">BILL-LA</a></td><td>SPARE-INT03</td><td>CLA-REF-NO</td><td>Legal Aid CLA Reference Number</td></tr>
+		     <tr><td><a href="pub.BILL-LINES.html">BILL-LINES</a></td><td>SPARE-DEC01</td><td>BILL-PRINT-NET</td><td>Net value of bill line to print on bill</td></tr>
+		     <tr><td><a href="pub.BILL-LINES.html">BILL-LINES</a></td><td>SPARE-DEC02</td><td>BILL-PRINT-VAT</td><td>Vat value of bill line to print on bill</td></tr>
+		     <tr><td><a href="pub.BILL-MEMO-RECOUPMENT.html">BILL-MEMO-RECOUPMENT</a></td><td>SPARE-INT03</td><td>PAYMENT-TXNO</td><td>Recoupment payment transaction number</td></tr>
+		     <tr><td><a href="pub.BILL-PREPAID-DISB.html">BILL-PREPAID-DISB</a> <br />(was DATA-SPARE01)</td><td>ENTITY-REF</td><td>MT-CODE</td><td>Matter code</td></tr>
+		     <tr><td><a href="pub.BILL-PREPAID-DISB.html">BILL-PREPAID-DISB</a> <br />(was DATA-SPARE01)</td><td>OTHER-REF</td><td>BILL-ID</td><td>Bill ID</td></tr>
+		     <tr><td><a href="pub.BILL-PREPAID-DISB.html">BILL-PREPAID-DISB</a> <br />(was DATA-SPARE01)</td><td>SPARE-DEC01</td><td>NET-VALUE</td><td>Net value of pre-paid disbursement</td></tr>
+		     <tr><td><a href="pub.BILL-PREPAID-DISB.html">BILL-PREPAID-DISB</a> <br />(was DATA-SPARE01)</td><td>SPARE-DEC02</td><td>VAT-VALUE</td><td>Vat value of pre-paid disbursement</td></tr>
+		     <tr><td><a href="pub.BILL-PREPAID-DISB.html">BILL-PREPAID-DISB</a> <br />(was DATA-SPARE01)</td><td>SPARE-INT01</td><td>TRANS-NO</td><td>Transaction number</td></tr>
+		     <tr><td><a href="pub.BILL-PREPAID-DISB.html">BILL-PREPAID-DISB</a> <br />(was DATA-SPARE01)</td><td>SPARE-INT02</td><td>PAYMENT-TXNO</td><td>Payment transaction number</td></tr>
+		     <tr><td><a href="pub.BILL-RECIPIENT.html">BILL-RECIPIENT</a></td><td>SPARE-LOG01</td><td>BILL-NO-GENERATED</td><td>Bill number which was auto-generated for the bill element relating to each bill recipient</td></tr>
+		     <tr><td><a href="pub.BILLS.html">BILLS</a></td><td>SPARE-CHAR01</td><td>ANALY-STATUS</td><td>Used for data warehousing - will be blank if the data warehouse build process needs to process this record, set to "analyupd" if the warehouse has already processed this record</td></tr>
+		     <tr><td><a href="pub.BRANCH.html">BRANCH</a></td><td>SPARE7</td><td>ALLOW-CLI-POST-DISB-GROUPS</td><td>Allow disbursement groups to be allocated to client account postings - yes/no option at branch level</td></tr>
+		     <tr><td><a href="pub.BRANCH.html">BRANCH</a></td><td>SPARE3</td><td>SUPPRESS-CLIENT-OVERDRAW-MSGS</td><td>Suppress client account overdraw warnings -  yes/no option at branch level</td></tr>
+		     <tr><td><a href="pub.BRANCH.html">BRANCH</a></td><td>SPARE8</td><td>BRANCH-BILL-NO</td><td>Branch-level bill number</td></tr>
+		     <tr><td><a href="pub.CHARGEBANDS.html">CHARGEBANDS</a></td><td>SPARE-CHAR03</td><td>CALCULATION-TYPE</td><td>Indicates if a Chargeband uses a specific rate or calculates using a specified uplift / discount</td></tr>
+		     <tr><td><a href="pub.CHARGEBANDS.html">CHARGEBANDS</a></td><td>SPARE-DEC01</td><td>RATE</td><td>Chargeband rate or percetage uplift / discount</td></tr>
+		     <tr><td><a href="pub.CHEQUES.html">CHEQUES</a></td><td>SPARE-CHAR01</td><td>PAYMENT-TYPE</td><td>EFT payment type</td></tr>
+		     <tr><td><a href="pub.CHEQUES.html">CHEQUES</a></td><td>SPARE-CHAR02</td><td>EFT-DETAILS</td><td>Encrypted payee banking details for EFT payments</td></tr>
+		     <tr><td><a href="pub.CHEQUES.html">CHEQUES</a></td><td>SPARE-CHAR03</td><td>EFT-EXPORT-REF</td><td>EFT export reference</td></tr>
+		     <tr><td><a href="pub.CHEQUES.html">CHEQUES</a></td><td>SPARE-CHAR04</td><td>EFT-EMAIL-ADDR</td><td>EFT remittance email address</td></tr>
+		     <tr><td><a href="pub.CHEQUES.html">CHEQUES</a></td><td>SPARE-LOG01</td><td>EXPORTED</td><td>EFT payment exported yes/no</td></tr>
+		     <tr><td><a href="pub.CLIDB.html">CLIDB</a></td><td>SPARE-CHAR01</td><td>ANALY-STATUS</td><td>Used for data warehousing - will be blank if the data warehouse build process needs to process this record, set to "analyupd" if the warehouse has already processed this record</td></tr>
+		     <tr><td><a href="pub.CSB-STAGE-TO-SCHEME.html">CSB-STAGE-TO-SCHEME</a> <br />(was SUPPRELATIONS)</td><td>SUPPLIER-CODE</td><td>CSB-SCHEME</td><td>CSB scheme code</td></tr>
+		     <tr><td><a href="pub.CSB-STAGE-TO-SCHEME.html">CSB-STAGE-TO-SCHEME</a> <br />(was SUPPRELATIONS)</td><td>ROL-CODE</td><td>CSB-STAGE</td><td>CSB stage code</td></tr>
+		     <tr><td><a href="pub.DEPARTMENT.html">DEPARTMENT</a></td><td>SPARE-CHAR01</td><td>ANALY-STATUS</td><td>Used for data warehousing - will be blank if the data warehouse build process needs to process this record, set to "analyupd" if the warehouse has already processed this record</td></tr>
+		     <tr><td><a href="pub.EFT-AUDIT.html">EFT-AUDIT</a> <br />(was DATA-SPARE02)</td><td>ENTITY-TYPE</td><td>EXPORT-DATE</td><td>Export date of EFT payment</td></tr>
+		     <tr><td><a href="pub.EFT-AUDIT.html">EFT-AUDIT</a> <br />(was DATA-SPARE02)</td><td>ENTITY-REF</td><td>EXPORT-TIME</td><td>Export time of EFT payment (seconds after midnight)</td></tr>
+		     <tr><td><a href="pub.EFT-AUDIT.html">EFT-AUDIT</a> <br />(was DATA-SPARE02)</td><td>OTHER-REF</td><td>USER-ID</td><td>User ID who made the EFT export</td></tr>
+		     <tr><td><a href="pub.EFT-AUDIT.html">EFT-AUDIT</a> <br />(was DATA-SPARE02)</td><td>SPARE-CHAR01</td><td>EXPORT-REF</td><td>EFT export reference</td></tr>
+		     <tr><td><a href="pub.EFT-AUDIT.html">EFT-AUDIT</a> <br />(was DATA-SPARE02)</td><td>SPARE-CHAR03</td><td>EFT-DETAILS</td><td>Encrypted payee banking details for EFT payments</td></tr>
+		     <tr><td><a href="pub.EFT-AUDIT.html">EFT-AUDIT</a> <br />(was DATA-SPARE02)</td><td>SPARE-CHAR04</td><td>CONTRA-CODE</td><td>EFT bank nominal code e.g. "O001"</td></tr>
+		     <tr><td><a href="pub.EFT-AUDIT.html">EFT-AUDIT</a> <br />(was DATA-SPARE02)</td><td>SPARE-CHAR05</td><td>PAYEE-REF</td><td>EFT payee reference</td></tr>
+		     <tr><td><a href="pub.EFT-AUDIT.html">EFT-AUDIT</a> <br />(was DATA-SPARE02)</td><td>SPARE-CHAR06</td><td>MT-CODE</td><td>Matter code for EFT payment</td></tr>
+		     <tr><td><a href="pub.EFT-AUDIT.html">EFT-AUDIT</a> <br />(was DATA-SPARE02)</td><td>SPARE-DATE01</td><td>CREDIT-DATE</td><td>EFT credit date</td></tr>
+		     <tr><td><a href="pub.EFT-AUDIT.html">EFT-AUDIT</a> <br />(was DATA-SPARE02)</td><td>SPARE-INT01</td><td>TRANS-NO</td><td>EFT payment transaction number</td></tr>
+		     <tr><td><a href="pub.FEETR.html">FEETR</a></td><td>SPARE-CHAR01</td><td>ANALY-STATUS</td><td>Used for data warehousing - will be blank if the data warehouse build process needs to process this record, set to "analyupd" if the warehouse has already processed this record</td></tr>
+		     <tr><td><a href="pub.FELOG.html">FELOG</a></td><td>SPARE11</td><td>TAG</td><td>User-definable "tag" code, used on unassigned suspended time to hold a reference to prospect/contact/client name</td></tr>
+		     <tr><td><a href="pub.FELOG.html">FELOG</a></td><td>SPARE-CHAR05</td><td>UDF1</td><td>User definable time posting field 1 (used by SOS bill-of-costs implementation)</td></tr>
+		     <tr><td><a href="pub.FELOG.html">FELOG</a></td><td>SPARE-CHAR06</td><td>UDF2</td><td>User definable time posting field  (used by SOS bill-of-costs implementation)</td></tr>
+		     <tr><td><a href="pub.MATDB.html">MATDB</a></td><td>SPARE-CHAR01</td><td>ANALY-STATUS</td><td>Used for data warehousing - will be blank if the data warehouse build process needs to process this record, set to "analyupd" if the warehouse has already processed this record</td></tr>
+		     <tr><td><a href="pub.MATTR.html">MATTR</a></td><td>FIXED-FEE</td><td>FIXED-FEE-OLD</td><td>Old whole-number only fixed fee value - now redundant, superceded by new decimal FIXED-FEE field</td></tr>
+		     <tr><td><a href="pub.MATTR.html">MATTR</a></td><td>IB-WIPBAL</td><td>MIN-WIP</td><td>Minimum WIP value before matter will be included in client-level billing</td></tr>
+		     <tr><td><a href="pub.MATTR.html">MATTR</a></td><td>IB-DISBBAL</td><td>MIN-DISBS</td><td>Minimum unpaid disbursements value before matter will be included in client-level billing</td></tr>
+		     <tr><td><a href="pub.MATTR.html">MATTR</a></td><td>IB-BILLDISBS</td><td>BILL-DISBS</td><td>Indicates if disbs are to be included in client billing - Not implemented</td></tr>
+		     <tr><td><a href="pub.MATTR.html">MATTR</a></td><td>SPARE11</td><td>LA-TRANSFER-DATE</td><td>Date legal aid matter transferred to firm (if different from matter open date)</td></tr>
+		     <tr><td><a href="pub.MATTYPE.html">MATTYPE</a></td><td>SPARE-CHAR01</td><td>ANALY-STATUS</td><td>Used for data warehousing - will be blank if the data warehouse build process needs to process this record, set to "analyupd" if the warehouse has already processed this record</td></tr>
+		     <tr><td><a href="pub.NOMACCS.html">NOMACCS</a></td><td>SPARE1</td><td>OLD-CASHFLOW-FORECASTS</td><td>Cashflow forecasts stored in comma (by period) delimited list</td></tr>
+		     <tr><td><a href="pub.NOMTRANS.html">NOMTRANS</a></td><td>SPARE-CHAR03</td><td>PAYMENT-EXPORT-DETAILS</td><td>Encrypted payee banking details for EFT payments in simplified memo format for display in e.g. Nominal view / amend screen</td></tr>
+		     <tr><td><a href="pub.NOMTRANS.html">NOMTRANS</a></td><td>SPARE-CHAR04</td><td>EFT-DETAILS</td><td>Encrypted payee banking details for EFT payments</td></tr>
+		     <tr><td><a href="pub.NOMTRANS.html">NOMTRANS</a></td><td>SPARE-CHAR05</td><td>LAST-PAYMENT-PROCESS-MTHD</td><td>The last record process type for a payment instruction e.g. Chq for cheque of EFT for electronic payment</td></tr>
+		     <tr><td><a href="pub.NOMTRANS.html">NOMTRANS</a></td><td>SPARE-CHAR08</td><td>CONVERTED-ID</td><td>Reference back to transaction in source system when data is transferred to SOS</td></tr>
+		     <tr><td><a href="pub.NOMTRANS.html">NOMTRANS</a></td><td>SPARE-DEC01</td><td>POD-NET-VALUE</td><td>Prepaid disb Net value dependent on post type</td></tr>
+		     <tr><td><a href="pub.NOMTRANS.html">NOMTRANS</a></td><td>SPARE-DEC02</td><td>POD-VAT-VALUE</td><td>Prepaid disb VAT value dependent on post type</td></tr>
+		     <tr><td><a href="pub.NOMTRANS.html">NOMTRANS</a></td><td>SPARE-LOG01</td><td>POD-ALLOCATION</td><td>Indicates that the entry relates to a Prepaid disb allocation</td></tr>
+		     <tr><td><a href="pub.PAYMENTS.html">PAYMENTS</a></td><td>SPARE-CHAR01</td><td>UNALLOCATED-NET-VALUE</td><td>Stores the unallocated Net value for a payment where any portion of it has been unallocated</td></tr>
+		     <tr><td><a href="pub.PAYMENTS.html">PAYMENTS</a></td><td>SPARE-CHAR02</td><td>UNALLOCATED-VAT-VALUE</td><td>Stores the unallocated VAT value for a payment where any portion of it has been unallocated</td></tr>
+		     <tr><td><a href="pub.PAYMENTS.html">PAYMENTS</a></td><td>SPARE-CHAR03</td><td>PAYMENT-YEAR</td><td>Accounting year when payment posted</td></tr>
+		     <tr><td><a href="pub.PAYMENTS.html">PAYMENTS</a></td><td>SPARE-DEC01</td><td>POD-NET-VALUE-AVAIL</td><td>The Net value available for inclusion in a bill of a prepaid disb</td></tr>
+		     <tr><td><a href="pub.PAYMENTS.html">PAYMENTS</a></td><td>SPARE-DEC02</td><td>POD-VAT-VALUE-AVAIL</td><td>The VAT value available for inclusion in a bill of a prepaid disb</td></tr>
+		     <tr><td><a href="pub.PAYMENTS.html">PAYMENTS</a></td><td>SPARE-INT03</td><td>PAYMENT-PERIOD</td><td>Not currently used</td></tr>
+		     <tr><td><a href="pub.PREFERENCES.html">PREFERENCES</a></td><td>SPARE2</td><td>DEFAULT-WORD-EXT</td><td>Default Word document extension defined at Firm-level</td></tr>
+		     <tr><td><a href="pub.PURCHASES.html">PURCHASES</a></td><td>SPARE2</td><td>DEFERRED-VAT-PAYMENT</td><td>Flag to indicate that VAT is deferred until supplier is paid</td></tr>
+		     <tr><td><a href="pub.PURCHASES.html">PURCHASES</a></td><td>SPARE1</td><td>ON-HOLD-NOTES</td><td>On-hold notes for supplier purchase ledger item</td></tr>
+		     <tr><td><a href="pub.PURCHASES.html">PURCHASES</a></td><td>SPARE-CHAR01</td><td>ON-HOLD-CODE</td><td>On-hold reason code for supplier purchase ledger item</td></tr>
+		     <tr><td><a href="pub.QUEUE-DATA.html">QUEUE-DATA</a> <br />(was DATA-SPARE04)</td><td>SPARE-CHAR03</td><td>DATA</td><td>Queue data associated with each queue request</td></tr>
+		     <tr><td><a href="pub.QUEUE-DATA.html">QUEUE-DATA</a> <br />(was DATA-SPARE04)</td><td>SPARE-INT01</td><td>QUEUE-ENTRY-ID</td><td>Queue entry number (foreign key reference to QUEUE-REQUEST.QUEUE-ENTRY-ID)</td></tr>
+		     <tr><td><a href="pub.QUEUE-DATA.html">QUEUE-DATA</a> <br />(was DATA-SPARE04)</td><td>SPARE-INT02</td><td>QUEUE-ENTRY-SEQNO</td><td>Queue entry sequence number (each queue entry ID can have multiple sequence numbers to allow for large volumes ot queue data split across multiple rows)</td></tr>
+		     <tr><td><a href="pub.QUEUE-REQUEST.html">QUEUE-REQUEST</a> <br />(was DATA-SPARE03)</td><td>ENTITY-TYPE</td><td>QUEUE-TYPE</td><td>Queue type (foreign key to QUEUE-TYPE.QUEUE-TYPE)</td></tr>
+		     <tr><td><a href="pub.QUEUE-REQUEST.html">QUEUE-REQUEST</a> <br />(was DATA-SPARE03)</td><td>SPARE-CHAR03</td><td>RESULT-MSG</td><td>Result message set with queue entry is processed</td></tr>
+		     <tr><td><a href="pub.QUEUE-REQUEST.html">QUEUE-REQUEST</a> <br />(was DATA-SPARE03)</td><td>SPARE-DATE01</td><td>SCHEDULED-DATE-OLD</td><td>Date when queue entry was scheduled - now redundant, superceded by new combined date/time field SCHEDULED-DATE-TIME</td></tr>
+		     <tr><td><a href="pub.QUEUE-REQUEST.html">QUEUE-REQUEST</a> <br />(was DATA-SPARE03)</td><td>SPARE-DATE02</td><td>DATE-COMPLETED-OLD</td><td>Date when queue entry was completed - now redundant, superceded by new combined date/time field COMPLETED-DATE-TIME</td></tr>
+		     <tr><td><a href="pub.QUEUE-REQUEST.html">QUEUE-REQUEST</a> <br />(was DATA-SPARE03)</td><td>SPARE-INT01</td><td>QUEUE-ENTRY-ID</td><td>Unique queue entry number</td></tr>
+		     <tr><td><a href="pub.QUEUE-REQUEST.html">QUEUE-REQUEST</a> <br />(was DATA-SPARE03)</td><td>SPARE-INT02</td><td>SCHEDULED-TIME-OLD</td><td>Time when queue entry was scheduled - now redundant, superceded by new combined date/time field SCHEDULED-DATE-TIME</td></tr>
+		     <tr><td><a href="pub.QUEUE-REQUEST.html">QUEUE-REQUEST</a> <br />(was DATA-SPARE03)</td><td>SPARE-INT03</td><td>TIME-COMPLETED-OLD</td><td>Time when queue entry was completed - now redundant, superceded by new combined date/time field COMPLETED-DATE-TIME</td></tr>
+		     <tr><td><a href="pub.QUEUE-REQUEST.html">QUEUE-REQUEST</a> <br />(was DATA-SPARE03)</td><td>SPARE-LOG01</td><td>COMPLETED</td><td>Yes/no flag indicating whether the queued request has been processed</td></tr>
+		     <tr><td><a href="pub.QUEUE-REQUEST.html">QUEUE-REQUEST</a> <br />(was DATA-SPARE03)</td><td>SPARE-LOG02</td><td>COMPLETED-OK</td><td>Yes/no flag indicating whether the queued request has been processed successfully</td></tr>
+		     <tr><td><a href="pub.QUEUE-TYPE.html">QUEUE-TYPE</a> <br />(was MAINT-SPARE02)</td><td>CODE</td><td>QUEUE-TYPE</td><td>Queue type code</td></tr>
+		     <tr><td><a href="pub.ROLES.html">ROLES</a></td><td>SPARE-LOG01</td><td>SRCH-DRILLDOWN</td><td>Indicates that Connect search can search related entities where the relationship has this role</td></tr>
+		     <tr><td><a href="pub.ROLES.html">ROLES</a></td><td>SPARE-LOG02</td><td>SRCH-EXCL-NON-CLI-LINKS</td><td>Where Connect search can search related entities where the relationship has this role, indicates in client entities should be ignored</td></tr>
+		     <tr><td><a href="pub.SOLLEDGER.html">SOLLEDGER</a></td><td>SPARE4</td><td>CSB-STAGE</td><td>Case Stage Budgeting - stage code</td></tr>
+		     <tr><td><a href="pub.SPANTYPE.html">SPANTYPE</a></td><td>SPARE3</td><td>SPECIAL-CRITERIA</td><td>Special Criteria applied to Legal Aid Spantypes</td></tr>
+		     <tr><td><a href="pub.SUPP-PAYMENTS.html">SUPP-PAYMENTS</a></td><td>SPARE-CHAR03</td><td>PAYMENT-TYPE</td><td>Indicates how a supplier payment instruction was transacted e.g. Chq for cheque of EFT for electronic payment</td></tr>
+		     <tr><td><a href="pub.SUPPLIER.html">SUPPLIER</a></td><td>SPARE2</td><td>DEFERRED-VAT-PAYMENTS</td><td>Indiactes whether invoices from suppliers can have VAT paid deferred until supplier payment</td></tr>
+		     <tr><td><a href="pub.SUPPLIER.html">SUPPLIER</a></td><td>SPARE3</td><td>AD-IMPORT-DEF</td><td>Indicates the default file format for anticipated disb import for a given supplier</td></tr>
+		     <tr><td><a href="pub.SUPPLIER.html">SUPPLIER</a></td><td>SPARE-CHAR01</td><td>BANK-POST-CODE</td><td>The post code of the bank for the supplier</td></tr>
+		     <tr><td><a href="pub.SUPPLIER.html">SUPPLIER</a></td><td>SPARE-CHAR02</td><td>BANK-COUNTRY</td><td>The country of the bank for the supplier</td></tr>
+		     <tr><td><a href="pub.SUPPLIER.html">SUPPLIER</a></td><td>SPARE-CHAR03</td><td>DEFAULT-NOMINAL</td><td>Supplier default "pay-from" nominal code</td></tr>
+		     <tr><td><a href="pub.TPTRANS.html">TPTRANS</a></td><td>TR-CODE</td><td>EFT-EXPORT-REF</td><td>EFT export reference of electronic payment transaction (recorded against posted EFT posting slips when payment is sent by EFT)</td></tr>
+		     <tr><td><a href="pub.TPTRANS.html">TPTRANS</a></td><td>SPARE10</td><td>EFT-DETAILS</td><td>Encrypted payee banking details for EFT payments</td></tr>
+		     <tr><td><a href="pub.TPTRANS.html">TPTRANS</a></td><td>SPARE-CHAR01</td><td>PAYMENT-TYPE</td><td>The selected payment process for a posting slip e.g. Chq for cheque of EFT for electronic payment</td></tr>
+		     <tr><td><a href="pub.TPTRANS.html">TPTRANS</a></td><td>SPARE-CHAR03</td><td>EFT-EMAIL-ADDR</td><td>Recipient email address for remittance advice for a posting slip</td></tr>
+		     <tr><td><a href="pub.TRTRANS.html">TRTRANS</a></td><td>SPARE-CHAR01</td><td>ANALY-STATUS</td><td>Used for data warehousing - will be blank if the data warehouse build process needs to process this transaction, set to "analyupd" if the warehouse has already processed this transaction</td></tr>
+		     <tr><td><a href="pub.TRTRANS.html">TRTRANS</a></td><td>SPARE-CHAR03</td><td>UNDO-USER</td><td>User who undid the transaction</td></tr>
+		     <tr><td><a href="pub.TRTRANS.html">TRTRANS</a></td><td>SPARE-CHAR04</td><td>UNDO-YEAR</td><td>Accounting year when time posting undone</td></tr>
+		     <tr><td><a href="pub.TRTRANS.html">TRTRANS</a></td><td>SPARE-CHAR05</td><td>UDF1</td><td>User defined field 1 - used in Connect time posting scripts for "bill of costs" data capture</td></tr>
+		     <tr><td><a href="pub.TRTRANS.html">TRTRANS</a></td><td>SPARE-CHAR06</td><td>UDF2</td><td>User defined field 2 - used in Connect time posting scripts for "bill of costs" data capture</td></tr>
+		     <tr><td><a href="pub.TRTRANS.html">TRTRANS</a></td><td>SPARE-CHAR08</td><td>CONVERTED-ID</td><td>Reference back to transaction in source system when data is transferred to SOS</td></tr>
+		     <tr><td><a href="pub.TRTRANS.html">TRTRANS</a></td><td>SPARE-DATE03</td><td>UNDO-DATE</td><td>Date transaction undone</td></tr>
+		     <tr><td><a href="pub.TRTRANS.html">TRTRANS</a></td><td>SPARE-INT03</td><td>UNDO-PERIOD</td><td>Accounting period when time posting was undone</td></tr>
+		     <tr><td><a href="pub.TRTRANS.html">TRTRANS</a></td><td>SPARE-LOG01</td><td>CREDIT-NOTED</td><td>True if time posting has been credit noted, false otherwise</td></tr>
+		     <tr><td><a href="pub.UNDERTAKING.html">UNDERTAKING</a></td><td>SPARE3</td><td>GIVEN-TO</td><td>Undertaking "given to" (i.e. person's name)</td></tr>
+		     <tr><td><a href="pub.UNDERTAKING.html">UNDERTAKING</a></td><td>SPARE-DEC01</td><td>UNDERTAKING-VALUE</td><td>Undertaking value</td></tr>
+		     <tr><td><a href="pub.USER-ROLE.html">USER-ROLE</a> <br />(was MAINT-SPARE01)</td><td>SPARE-CHAR01</td><td>USER-ID</td><td>User ID of user being granted a a selected special role</td></tr>
+		     <tr><td><a href="pub.USERITEM.html">USERITEM</a></td><td>SPARE1</td><td>USER-DATA1</td><td>Used to store various forms of data relating to specific users such as timestamp information (normally paired with User-Data2)</td></tr>
+		     <tr><td><a href="pub.USERITEM.html">USERITEM</a></td><td>SPARE2</td><td>USER-DATA2</td><td>Used to store various forms of data relating to specific users such as timestamp information (normally paired with User-Data1)</td></tr>
+		     <tr><td><a href="pub.USERS.html">USERS</a></td><td>SPARE7</td><td>IMPERSONATED-ID</td><td>The user ID that this user session is currently impersonating, normally blank.  User impersonation is only available through the Connect API.</td></tr>
+		     <tr><td><a href="pub.USERS.html">USERS</a></td><td>SPARE8</td><td>IMPERSONATED-PWD</td><td>The encrypted password for the user account that this session is impersonating, normally blank.  User impersonation is only available throuth the Connect API.</td></tr>
+		     <tr><td><a href="pub.USR.html">USR</a></td><td>SPARE-CHAR01</td><td>SSO-USER-ID</td><td>Full domain user account name associated with each short user ID for single-sign on, e.g. for USER-ID this field may contain sosbath\f.bloggs</td></tr>
+		     <tr><td><a href="pub.USR.html">USR</a></td><td>SPARE-LOG01</td><td>REPORT-ONLY-USER</td><td>True if this user account is defined for external ODBC reporting access only, normally false</td></tr>
+		     <tr><td><a href="pub.USR.html">USR</a></td><td>SPARE-LOG02</td><td>HAS-USER-ROLES</td><td>Indiactes that a user has special roles assigned</td></tr>
+        </table>
+        <br /><br />
+        <h2 id="DropFields">Fields in Vx.17 which have been deleted in Vx.18</h2>
+        <p>The following fields have never been used for any specific purpose and have been completely removed in the x.18 database structure.  Most of these
+        deleted fields are redundant spare character fields which have been removed in favour of the 'new-style' spare field names for specific data types
+        which have included for future use.</p>
+		<table>
+        <tr><td class = "thead">Table Name</td><td class = "thead">Fields Deleted</td></tr>
+              <tr><td><a href="pub.ACTIONDEF.html">ACTIONDEF</a></td><td>SPARE1,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.ACTIONS.html">ACTIONS</a></td><td>SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.ACTIONTYPES.html">ACTIONTYPES</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.ACTIVITY.html">ACTIVITY</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.ADDDATA.html">ADDDATA</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.ADDRESS-TYPES.html">ADDRESS-TYPES</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.ADDRESSES.html">ADDRESSES</a></td><td>SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.APPLICATIONS.html">APPLICATIONS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.ARCHIVE.html">ARCHIVE</a></td><td>INTRO-CODE-OLD,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.ARCHIVE-UDF.html">ARCHIVE-UDF</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.ARCHNOTE.html">ARCHNOTE</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.ASSETS.html">ASSETS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.AUDIT.html">AUDIT</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.BANKHOLS.html">BANKHOLS</a></td><td>SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.BILL-LINES.html">BILL-LINES</a></td><td>SPARE5,SPARE6,SPARE7,SPARECH,SPAREDEC,SPAREDT</td></tr>
+	          <tr><td><a href="pub.BILLS.html">BILLS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.BRANCH.html">BRANCH</a></td><td>SPARE4</td></tr>
+	          <tr><td><a href="pub.CHARGEBANDS.html">CHARGEBANDS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.CHEQUES.html">CHEQUES</a></td><td>SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8,SPARE9</td></tr>
+	          <tr><td><a href="pub.CLIDB.html">CLIDB</a></td><td>SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.CLIERELATIONS.html">CLIERELATIONS</a></td><td>SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.CLIGROUPS.html">CLIGROUPS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.CLINOTE.html">CLINOTE</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.CONNOTES.html">CONNOTES</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.CONTACTS.html">CONTACTS</a></td><td>SPARE7,SPARE8,SPARE9</td></tr>
+	          <tr><td><a href="pub.CONTFUNC.html">CONTFUNC</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.CONTRELATIONS.html">CONTRELATIONS</a></td><td>SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.CONVHISTAC.html">CONVHISTAC</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.CONVHISTTR.html">CONVHISTTR</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.CRIM-CAT.html">CRIM-CAT</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.CSB-STAGE-TO-SCHEME.html">CSB-STAGE-TO-SCHEME</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.CURRENCY.html">CURRENCY</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.CURRENCYGAINLOSS.html">CURRENCYGAINLOSS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.CURRENCYHIST.html">CURRENCYHIST</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.CUSTOM-LINK.html">CUSTOM-LINK</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.CUSTOMIZATION.html">CUSTOMIZATION</a></td><td>SPARE1,SPARE2,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8,SPARE9</td></tr>
+	          <tr><td><a href="pub.CUSTOMIZATION-SELS.html">CUSTOMIZATION-SELS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.DBSCHED.html">DBSCHED</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.DEPARTMENT.html">DEPARTMENT</a></td><td>SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.DEPTDOCDEF.html">DEPTDOCDEF</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.DEXTRACT.html">DEXTRACT</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.DIARY.html">DIARY</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.DOCUMENT-DEFINITION.html">DOCUMENT-DEFINITION</a></td><td>SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.ENDCODES.html">ENDCODES</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.FACTDEFS.html">FACTDEFS</a></td><td>SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.FEBANDS.html">FEBANDS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.FEETR.html">FEETR</a></td><td>SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.FOLDER.html">FOLDER</a></td><td>SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.FOREIGNKEY.html">FOREIGNKEY</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.FUNCTIONS.html">FUNCTIONS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.GROUPS.html">GROUPS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.HISTORY.html">HISTORY</a></td><td>CLIENT-FILE-NAME,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.INT-LOG.html">INT-LOG</a></td><td>SPARE1,SPARE2,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.INTEREST.html">INTEREST</a></td><td>SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.INTMETHODS.html">INTMETHODS</a></td><td>SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.JOURNALS.html">JOURNALS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.LACAT.html">LACAT</a></td><td>SPARE5,SPARE6,SPARE7,SPARE8,SPARE9</td></tr>
+	          <tr><td><a href="pub.LARATES.html">LARATES</a></td><td>SPARE1,SPARE2,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.LASTATUS.html">LASTATUS</a></td><td>SPARE1,SPARE2,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.LOGHISTORY.html">LOGHISTORY</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.MAILCATEGORIES.html">MAILCATEGORIES</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.MAILINTDATA.html">MAILINTDATA</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.MAILSHOT.html">MAILSHOT</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.MARKET-ACTIVITY.html">MARKET-ACTIVITY</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.MARKET-PRO-MAIL.html">MARKET-PRO-MAIL</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.MARKETINTERESTS.html">MARKETINTERESTS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.MARKETPROFILES.html">MARKETPROFILES</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.MATAC.html">MATAC</a></td><td>SPARE1,SPARE10,SPARE2,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8,SPARE9</td></tr>
+	          <tr><td><a href="pub.MATANALYSIS.html">MATANALYSIS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.MATDB.html">MATDB</a></td><td>SPARE-FLAG,SPARE3</td></tr>
+	          <tr><td><a href="pub.MATNOTE.html">MATNOTE</a></td><td>SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.MATTR.html">MATTR</a></td><td>SPARE3,SPARE4</td></tr>
+	          <tr><td><a href="pub.MATTRELATIONS.html">MATTRELATIONS</a></td><td>SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.MATTYPE.html">MATTYPE</a></td><td>SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.MSG.html">MSG</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.NARRATIVES.html">NARRATIVES</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.NOMACCS.html">NOMACCS</a></td><td>SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.NOMCODES.html">NOMCODES</a></td><td>SPARE1,SPARE2,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.NOMTRANS.html">NOMTRANS</a></td><td>PHASE,POST-STATUS,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.NOTES.html">NOTES</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.OAINTEGRATION.html">OAINTEGRATION</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.OCCUPATIONS.html">OCCUPATIONS</a></td><td>SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.ORGAFUNC.html">ORGAFUNC</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.ORGANISATION.html">ORGANISATION</a></td><td>SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.ORGANOTES.html">ORGANOTES</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.ORGARELATIONS.html">ORGARELATIONS</a></td><td>SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.ORGATYPE.html">ORGATYPE</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.PAYMENTS.html">PAYMENTS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.PL-CHART.html">PL-CHART</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.PREFERENCES.html">PREFERENCES</a></td><td>SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.PURCHASES.html">PURCHASES</a></td><td>SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.RELATIONSHIP.html">RELATIONSHIP</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.REPORT-Q.html">REPORT-Q</a></td><td>SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.REPORT-SELS.html">REPORT-SELS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.ROLES.html">ROLES</a></td><td>SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.SCHEACTI.html">SCHEACTI</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.SCHEDULE.html">SCHEDULE</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.SECTORS.html">SECTORS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.SESSIONVARS.html">SESSIONVARS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.SOFTLOCK.html">SOFTLOCK</a></td><td>SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.SOLLEDGER.html">SOLLEDGER</a></td><td>SPARE5,SPARE6,SPARE7,SPARE8,SPARE9</td></tr>
+	          <tr><td><a href="pub.SPANTYPE.html">SPANTYPE</a></td><td>SPARE1,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.SUPP-PAYMENTS.html">SUPP-PAYMENTS</a></td><td>SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.SUPPLIER.html">SUPPLIER</a></td><td>SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.TABDATASET.html">TABDATASET</a></td><td>SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.TABDEFS.html">TABDEFS</a></td><td>SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.TABGROUPS.html">TABGROUPS</a></td><td>SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.TEAM.html">TEAM</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.TEAMUSRS.html">TEAMUSRS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.TELEPHONES.html">TELEPHONES</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.TEMPRELS.html">TEMPRELS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.TPTRANS.html">TPTRANS</a></td><td>SPARE3,SPARE4</td></tr>
+	          <tr><td><a href="pub.TRANALYSIS.html">TRANALYSIS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.TRTRANS.html">TRTRANS</a></td><td>SPARE1,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.UNDERTAKING.html">UNDERTAKING</a></td><td>SPARE4,SPARE5,SPARE6,SPARE7,SPARE8,SPARE9</td></tr>
+	          <tr><td><a href="pub.USER-ROLE.html">USER-ROLE</a></td><td>DESCRIP,SEQNO</td></tr>
+	          <tr><td><a href="pub.USERITEM.html">USERITEM</a></td><td>SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.USERS.html">USERS</a></td><td>SPARE9</td></tr>
+	          <tr><td><a href="pub.USR.html">USR</a></td><td>SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.USRCUSTOMACCESS.html">USRCUSTOMACCESS</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+	          <tr><td><a href="pub.VATRATE.html">VATRATE</a></td><td>SPARE1,SPARE2,SPARE3,SPARE4,SPARE5,SPARE6,SPARE7,SPARE8</td></tr>
+        <table>
+    </body>
+</html>
