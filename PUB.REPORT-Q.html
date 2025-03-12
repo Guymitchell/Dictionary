@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.REPORT-Q</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.REPORT-Q</h1>
+<h2>Description: Holds spooled reports information</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>ATTACH</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Flag to attach report output to distribution
+</td></tr>
+<tr><td><nobr>COMMENT</nobr></td><td><nobr>character(254)</nobr></td><td>User supplied info specific to this run of the report</td></tr>
+<tr><td><nobr>DATE-COMPLETED</nobr></td><td><nobr>date</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>DATE-REQUESTED</nobr></td><td><nobr>date</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>DATE-STARTED</nobr></td><td><nobr>date</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>ORDER-KEY</nobr></td><td><nobr>character(254)</nobr></td><td>Order Sort Key</td></tr>
+<tr><td><nobr>CUSTOM-FOLDER</nobr></td><td><nobr>character(254)</nobr></td><td>Custom folder</td></tr>
+<tr><td><nobr>MSG-TO</nobr></td><td><nobr>character(254)</nobr></td><td>Distribution List</td></tr>
+<tr><td><nobr>MAIL-TO</nobr></td><td><nobr>character(254)</nobr></td><td>Distribution List</td></tr>
+<tr><td><nobr>PRIORITY</nobr></td><td><nobr>integer</nobr></td><td>1 - HIGH  99999 - LOW</td></tr>
+<tr><td><nobr>RECUR-CODE</nobr></td><td><nobr>integer</nobr></td><td>Recurring - No, daily, weekly, monthly, etc</td></tr>
+<tr><td><nobr>REPORT-TITLE</nobr></td><td><nobr>character(254)</nobr></td><td>Title</td></tr>
+<tr><td><nobr>EXPORT-FILE</nobr></td><td><nobr>character(254)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>SELS-SEQNO</nobr></td><td><nobr>integer</nobr></td><td>Seqno of REPORT-SELS record</td></tr>
+<tr><td><nobr>NOTIFY-TEXT</nobr></td><td><nobr>character(254)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>OPTIONS</nobr></td><td><nobr>character(254)</nobr></td><td>Option List for Printing y/n, e-mailing y/n (+attachment y/n), etc
+</td></tr>
+<tr><td><nobr>REPORT-PRINTER</nobr></td><td><nobr>character(254)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>REPORT-STATUS</nobr></td><td><nobr>character(254)</nobr></td><td>eg Q - queued  A - Active  C - Completed
+</td></tr>
+<tr><td><nobr>SCHED-DATE</nobr></td><td><nobr>date</nobr></td><td>Scheduled Date</td></tr>
+<tr><td><nobr>SCHED-TIME</nobr></td><td><nobr>integer</nobr></td><td>Scheduled Time</td></tr>
+<tr><td><nobr>SEQNO</nobr></td><td><nobr>integer</nobr></td><td>Unique id within queue</td></tr>
+<tr><td><nobr>SET-POS</nobr></td><td><nobr>integer</nobr></td><td>Position within the report-set</td></tr>
+<tr><td><nobr>WEEK-DAY</nobr></td><td><nobr>character(254)</nobr></td><td>Week Day</td></tr>
+<tr><td><nobr>SAVE-FORMAT</nobr></td><td><nobr>character(254)</nobr></td><td>Format</td></tr>
+<tr><td><nobr>TIME-COMPLETED</nobr></td><td><nobr>integer</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>TIME-REQUESTED</nobr></td><td><nobr>integer</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>TIME-STARTED</nobr></td><td><nobr>integer</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>REPORT-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>USER-ID</nobr></td><td><nobr>character(254)</nobr></td><td>User id who posted this transaction</td></tr>
+<tr><td><nobr>FOL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>[Awaiting description]</td></tr>
+<tr><td><nobr>UPDATE-PROG</nobr></td><td><nobr>character(254)</nobr></td><td>Program to launch to update report parameters.</td></tr>
+<tr><td><nobr>SECUR-RUN</nobr></td><td><nobr>character(254)</nobr></td><td>Security setting for running report</td></tr>
+<tr><td><nobr>SECUR-UPDATE</nobr></td><td><nobr>character(254)</nobr></td><td>Security settings for modifying parameters of report</td></tr>
+<tr><td><nobr>SECUR-VIEW</nobr></td><td><nobr>character(254)</nobr></td><td>Security setting for viewing report</td></tr>
+<tr><td><nobr>REPORT-SUFFIXE</nobr></td><td><nobr>character(254)</nobr></td><td>Suffixe added to REPORT-TYPE to find the crystal report file.</td></tr>
+<tr><td><nobr>REPORT-TYPES</nobr></td><td><nobr>character(254)</nobr></td><td>Separated list of report var types</td></tr>
+<tr><td><nobr>SPOOL-MESSAGE</nobr></td><td><nobr>character(1328)</nobr></td><td>Message from the spool</td></tr>
+<tr><td><nobr>REPORT-NAMES</nobr></td><td><nobr>character(1064)</nobr></td><td>Separated list of parameters names
+</td></tr>
+<tr><td><nobr>REPORT-VALUES</nobr></td><td><nobr>character(7577)</nobr></td><td>Separated list of parameters Values
+</td></tr>
+<tr><td><nobr>SPOOL-ORDER</nobr></td><td><nobr>decimal</nobr></td><td>Scheduled ime + Priority
+Used to determine scheduled spool order</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ENTRY-NO</nobr></td><td><nobr>integer</nobr></td><td>Entry No</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>FOLDX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+FOL-CODE
+ + 
+REPORT-TYPE
+ + 
+SEQNO
+<tr><td>SCHEDULEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+REPORT-STATUS
+ + 
+SPOOL-ORDER
+<tr><td>SEQNO-ENTRY</td><td><center>yes</td><td><Center>yes</Center></td><td><Center>
+no</Center></td><td>
+SEQNO
+ + 
+ENTRY-NO
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+<tr><td>TYPEUSERX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+REPORT-TYPE
+ + 
+USER-ID
+ + 
+SEQNO
+</Table>
+<br><br></body></html>

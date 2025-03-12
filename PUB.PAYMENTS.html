@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.PAYMENTS</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.PAYMENTS</h1>
+<h2>Description: Cross-references "payable" nominal transactions and the transactions that "paid" or "settled" them</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>TRANS-NO</nobr></td><td><nobr>integer</nobr></td><td>Transaction number of the transaction being "paid"</td></tr>
+<tr><td><nobr>ENTRY-NO</nobr></td><td><nobr>integer</nobr></td><td>Entry number of the transaction being "paid"</td></tr>
+<tr><td><nobr>PAYMENT-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Posting type of the payment transaction</td></tr>
+<tr><td><nobr>PAYMENT-DATE</nobr></td><td><nobr>date</nobr></td><td>Date of the payment transaction</td></tr>
+<tr><td><nobr>PAYMENT-TXNO</nobr></td><td><nobr>integer</nobr></td><td>Transaction number of the payment transaction</td></tr>
+<tr><td><nobr>PAID-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Gross value of the payment transaction</td></tr>
+<tr><td><nobr>VAT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>VAT code applied to the payment transaction</td></tr>
+<tr><td><nobr>VAT-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>VAT amount in the payment transaction</td></tr>
+<tr><td><nobr>CURRENCY_VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>CURRENCY_VAT</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>UNALLOCATED-NET-VALUE</nobr></td><td><nobr>character(254)</nobr></td><td>Unallocated Net Value</td></tr>
+<tr><td><nobr>UNALLOCATED-VAT-VALUE</nobr></td><td><nobr>character(254)</nobr></td><td>Unallocated VAT Value</td></tr>
+<tr><td><nobr>PAYMENT-YEAR</nobr></td><td><nobr>character(254)</nobr></td><td>Payment Year</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>POD-NET-VALUE-AVAIL</nobr></td><td><nobr>decimal</nobr></td><td>POD Net Value Available</td></tr>
+<tr><td><nobr>POD-VAT-VALUE-AVAIL</nobr></td><td><nobr>decimal</nobr></td><td>POD VAT Value Available</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>PAYMENT-PERIOD</nobr></td><td><nobr>integer</nobr></td><td>Payment Period</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR11</nobr></td><td><nobr>character(40)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR12</nobr></td><td><nobr>character(40)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR13</nobr></td><td><nobr>character(40)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC04</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC05</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT04</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>PAID-INDEX</td><td><center>yes</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+TRANS-NO
+ + 
+ENTRY-NO
+<tr><td>PAY-YEAR-PERIOD</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+PAYMENT-YEAR
+ + 
+PAYMENT-PERIOD
+<tr><td>PAYMENT-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+PAYMENT-TXNO
+<tr><td>SPARE-CHAR04</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR04
+<tr><td>SPARE-CHAR05</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR05
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+<tr><td>UNALLOCATED-NET-VALUE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+UNALLOCATED-NET-VALUE
+<tr><td>UNALLOCATED-VAT-VALUE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+UNALLOCATED-VAT-VALUE
+</Table>
+<br>
+<h2>User Interface Notes</h2>
+<p>This table is updated as a by-product of a wide variety of transactions that credit the office side of a client matter ledger, and 
+is not directly editable by you.  As you will see below it is not confined to actual payments but embraces credit 
+notes, write-offs and allocations of existing office credits.</p>
+<p>It also includes the JTU posting type:  these are entries generated automatically by the software when you post the 
+Transfer Journal and represent the aggregate value of the individual postings that you set as Journal entries (rather than Execute) at 
+original posting time.</p>
+<br />
+<h2>Field Notes</h2>
+<p><b>TRANS-NO</b> and <b>ENTRY-NO</b> together identify a unique preceding entry in NOMTRANS such as part of a BC posting e.g. one 
+particular Fee Earner's share of profit costs.</p>
+<p><b>PAYMENTS-TXNO</b> will invariably be larger than TRANS-NO and identifies another and later entry in NOMTRANS which is paying off 
+the TRANS-NO transaction.  However, it does not pinpoint exactly which entry constitutes the payment.</p>
+<p><b>PAYMENTS.PAYMENT-TYPE</b></p>
+<p>The following is a sample list of posting types that might be referenced by the PAYMENTS.TRANS-NO:</p>
+<table>
+<tr><th>Originating Posting Type</th><th>PAYMENTS.PAYMENT-TYPE possible values</th></tr>
+<tr><td>AD/ADV/ADVU</td><td>WD</td></tr>
+<tr><td>BC</td><td>AC/CN/CO/OO/OR/WB</td></tr>
+<tr><td>CD/CO/DC/IC/OC</td><td>JTU</td></tr>
+<tr><td>GE/OC/OO/OP</td><td>AC/CO/OO/OR/TD/WD</td></tr>
+<tr><td>GEVU/OPVU</td><td>AC/CO/OO/OR/TDVU/WD</td></tr>
+</table>
+<p>Remember that TRANS-NO references the posting of the type in the left hand column while PAYMENTS-TXNO references the 
+posting of the type shown in the right hand column.</p>
+<br />
+<h2>Linking and Application</h2>
+<p><b>Bill Payments</b></p>
+<p>PAYMENTS is generally used to identify bills to clients and payments thereof  and for this purpose is usually linked to 
+NOMTRANS to identify both the bills and the payments. The method for this is to open NOMTRANS twice, and give each 
+instance of the table an appropriate alias name e.g. billingNOMTRANS and paymentNOMTRANS.</p>
+<p>The linkage would then be like this:</p>
+<p>billingNOMTRANS.TRANS-NO -> PAYMENTS.TRANS-NO<br />
+billingNOMTRANS.ENTRY-NO -> PAYMENTS.ENTRY-NO<br />
+PAYMENTS.PAYMENT-TXNO -> paymentNOMTRANS.TRANS-NO</p>
+<p>Your report's Record Selection Formula might include a condition such as: BillingNOMTRANS.POSTING-TYPE = "BC"</p>
+<p>Since  PAYMENTS has indexes for both originating and paying transaction numbers you can effectively make 
+either billingNOMTRANS or paymentNOMTRANS your "primary" table.</p>
+<br />
+<p><b>Client to Office Transfers</b></p>
+<p>Another use might be to list your Transfer Journal updates showing all the individual inter-ledger transfers 
+comprised in each. This could be useful to verify your office to client transfers,  for example.  In this example 
+giving your NOMTRANS the alias names transferNOMTRANS and jtuNOMTRANS:</p>
+<p>transferNOMTRANS.TRANS-NO -> PAYMENTS.TRANS-NO<br />
+transferNOMTRANS.ENTRY-NO -> PAYMENTS.ENTRY-NO<br />
+PAYMENTS.PAYMENT-TXNO -> jtuNOMTRANS.TRANS-NO</p>
+<p>Your report's Record Selection Formula might include a condition such as:</p>
+<p>(transferNOMTRANS.POSTING-TYPE="CO" or transferNOMTRANS.POSTING-TYPE = "OC") and<br />
+PAYMENTS.PAYMENT-TYPE = "JTU"</p>
+<br><br></body></html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.NOMCODES</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.NOMCODES</h1>
+<h2>Description: Stores the defined nominal account codes as set up in Practice Manager nominal codes maintenance screen</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Nominal code</td></tr>
+<tr><td><nobr>DESCRIPTION</nobr></td><td><nobr>character(254)</nobr></td><td>Nominal description</td></tr>
+<tr><td><nobr>DR-CR</nobr></td><td><nobr>character(254)</nobr></td><td>Debit/credit option - stored as &quot;D&quot; or &quot;C&quot; in this field</td></tr>
+<tr><td><nobr>BAL-PL</nobr></td><td><nobr>character(254)</nobr></td><td>&quot;B&quot; = Balance sheet, &quot;P&quot; = Profit & Loss, &quot;#&quot; (followed by bank type) = Bank account</td></tr>
+<tr><td><nobr>VAT</nobr></td><td><nobr>character(254)</nobr></td><td>Updated internally by Practice Manager</td></tr>
+<tr><td><nobr>P-LINE</nobr></td><td><nobr>integer</nobr></td><td>Printing order number set in Chart of Accounts program</td></tr>
+<tr><td><nobr>T-LINE</nobr></td><td><nobr>integer</nobr></td><td>Total line number set in Chart of Accounts program</td></tr>
+<tr><td><nobr>BALANCING-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Balancing nominal code</td></tr>
+<tr><td><nobr>CLEAR-TO</nobr></td><td><nobr>character(254)</nobr></td><td>&quot;Clear-to&quot; nominal code</td></tr>
+<tr><td><nobr>POST-DIRECT</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Direct posting option</td></tr>
+<tr><td><nobr>ANALYSE</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Analysis option</td></tr>
+<tr><td><nobr>PARENT-LIST</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>LINENO-LIST</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CHART-OF-ACCOUNT</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ID</nobr></td><td><nobr>character(254)</nobr></td><td>Protected - stored as &quot;X&quot; if Yes</td></tr>
+<tr><td><nobr>CURR</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Current yes/no flag</td></tr>
+<tr><td><nobr>CURRENCY-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Currency</td></tr>
+<tr><td><nobr>TYPE1</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>TYPE2</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>DAYS-TO-CLEAR</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>PETTY-CASH-FLAG</nobr></td><td><nobr>character(254)</nobr></td><td>Set to &quot;PC&quot; if the nominal is a bank account type and has the "petty cash" option enabled (blank otherwise)</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>CODE-INDEX</td><td><center>yes</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+CODE
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+<tr><td>TYPE-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+BAL-PL
+</Table>
+<br>
+<br />
+<h2>Practice Manager Interface</h2>
+<p>This table holds nominal code maintenance information as defined in Practice Manager nominal codes maintenance screen.</p>
+<br />
+<img src="pmnomcode.gif" title="Nominal code maintenance" />
+<br />
+<br />
+<img src="pmnomcode2.gif" title="Nominal code maintenance (bank)" />
+<br />
+<br />
+<h2>Field Notes</h2>
+<p><b>ANALYSE</b> is No by default for new nominal codes.  Some inbuilt control codes such as X08 and X20 are preset 
+to Yes by SOS on installation of Practice Manager.</p>
+<p><b>BALANCING-CODE</b> is an optional default cashbook for postings to this nominal analysis code and should 
+be ignored. Never assume the value in this field has been used for an actual transaction – look instead 
+at the NOMTRANS.CONTRA-CODE field for the code of the cashbook that was actually used.</p>
+<p><b>BAL-PL</b> cannot be # alone as this symbol demands a suffix to indicate the type of bank, i.e. "C", "D" or "O" to 
+signal "Client", "Deposit" or "Office".</p>
+<p><b>CLEAR-TO</b> is an alternative year-end clear down nominal code to the implied default of X40, so would be blank in most or all cases.</p>
+<p><b>DR-CR</b> simply defines whether a nominal is usually a debit or credit item.</p>
+<br /><br />
+<h2>Linking and Application</h2>
+<p>NOMCODES usually partners NOMACCS and other tables such as NOMTRANS so as to provide a description of an analysis 
+code or cashbook that featured in a transaction.</p>
+<br />
+<p><b>This example could provide a list of postings grouped and totalled by analysis code and/or cashbook:</b></p>
+<p><a href="pub.nomtrans.html">NOMTRANS</a>.NL-CODE -> NOMCODES.CODE</p>
+<br />
+<p><b>This example ignores  details and provides a summary of balances by analysis code and/or cashbook:</b></p>
+<p><a href="pub.nomaccs.html">NOMACCS</a>.NL-CODE -> NOMCODES.CODE</p>
+<br><br></body></html>

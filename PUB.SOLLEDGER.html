@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.SOLLEDGER</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.SOLLEDGER</h1>
+<h2>Description: Transaction-level anticipated disbursements information</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>REC-SEQ</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ACC-SEQ</nobr></td><td><nobr>integer</nobr></td><td>Transaction number (NOMTRANS.TRANS-NO) when posted</td></tr>
+<tr><td><nobr>ENTRY-NO</nobr></td><td><nobr>integer</nobr></td><td>Entry number (NOMTRANS.ENTRY-NO) when posted</td></tr>
+<tr><td><nobr>TR-STATUS</nobr></td><td><nobr>integer</nobr></td><td>Transaction status (1=Posted, 3=Pencilled)</td></tr>
+<tr><td><nobr>IMPLEMENTATION</nobr></td><td><nobr>character(254)</nobr></td><td>Posting branch</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter code</td></tr>
+<tr><td><nobr>FEE-EARNER</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>PERIOD</nobr></td><td><nobr>integer</nobr></td><td>Posting period</td></tr>
+<tr><td><nobr>TR-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Anticipated disbursement type (AD/ADV/ADVU)</td></tr>
+<tr><td><nobr>POSTED-DATE</nobr></td><td><nobr>date</nobr></td><td>Date posted</td></tr>
+<tr><td><nobr>NOM-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Nominal code</td></tr>
+<tr><td><nobr>CONTR-NOM-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Nominal contra-code (NOMTRANS.CONTRA-CODE)</td></tr>
+<tr><td><nobr>NARRATIVE</nobr></td><td><nobr>character(1216)</nobr></td><td>Narrative</td></tr>
+<tr><td><nobr>SUPPLIER-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Supplier code</td></tr>
+<tr><td><nobr>GROSS-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Gross value</td></tr>
+<tr><td><nobr>NET-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Net value</td></tr>
+<tr><td><nobr>VAT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>VAT code</td></tr>
+<tr><td><nobr>VAT-AMOUNT</nobr></td><td><nobr>decimal</nobr></td><td>VAT amount</td></tr>
+<tr><td><nobr>VAT-BILLED</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>REFERENCE</nobr></td><td><nobr>character(254)</nobr></td><td>Transaction reference</td></tr>
+<tr><td><nobr>USER-ID</nobr></td><td><nobr>character(254)</nobr></td><td>User ID of user</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Client code</td></tr>
+<tr><td><nobr>BILL-NO</nobr></td><td><nobr>character(254)</nobr></td><td>Always blank when TR-STATUS=3.  When TR-STATUS=1 this will be one of the following:<br>- blank if not billed<br>- a bill number if billed (NOMTRANS.BILL-NO)<br>- &quot;Cleared&quot; when cleared directly by office receipt<br>- &quot;W/Off&quot; when written-off</td></tr>
+<tr><td><nobr>OUTST-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Amount of original gross value remaining unpaid</td></tr>
+<tr><td><nobr>BILL-TRANSNO</nobr></td><td><nobr>integer</nobr></td><td>Transaction number of billing transaction when billed</td></tr>
+<tr><td><nobr>COUNSEL</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CURRENCY-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>CURRENCY_RATE</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>CURRENCY_NET</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>CURRENCY_VAT</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CURRENCY_OUTST</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>DISB-GRP</nobr></td><td><nobr>character(254)</nobr></td><td>Disbursement group</td></tr>
+<tr><td><nobr>PAY-FLAG</nobr></td><td><nobr>character(254)</nobr></td><td>Indicates if the anticipated disbursement can be paid to supplier (billed to the client and the bill has been paid)</td></tr>
+<tr><td><nobr>SUPPRESS-DISPLAY</nobr></td><td><nobr>character(254)</nobr></td><td>Set to TRUE if the anticipated disbursement is fully processed (posted, billed, paid by client and paid to supplier)</td></tr>
+<tr><td><nobr>CSB-STAGE</nobr></td><td><nobr>character(254)</nobr></td><td>CSB Stage</td></tr>
+<tr><td><nobr>INTERNALREF</nobr></td><td><nobr>character(254)</nobr></td><td>Internal unique reference</td></tr>
+<tr><td><nobr>SOL-TP-SPLNK</nobr></td><td><nobr>integer</nobr></td><td>Links to posting slip record (TPTRANS) for the supplier payment of this anticipated disbursement</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>ACC-SEQ-INDEX</td><td><center>yes</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+ACC-SEQ
+ + 
+ENTRY-NO
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>MT-CODE-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MT-CODE
+<tr><td>SOL-TP-SPLNK</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SOL-TP-SPLNK
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+</Table>
+<br>
+<h2>User Interface Notes</h2>
+<p>SOLLEDGER contains transaction details generated by Anticipated Disbursement postings.    So long as these disbursements 
+are merely "Pencilled" they will be in SOLLEDGER only, not in NOMTRANS, so fields marked above as being the same as a particular NOMTRANS 
+field will be blank or zero.  Once posted however, a NOMTRANS record will be created from the above and in turn certain NOMTRANS data such 
+as the transaction and entry numbers will be copied into the existing SOLLEDGER record.</p>
+<br />
+<h2>Linking And Application</h2>
+<p>Once an anticipated disbursement has been posted, all relevant details will be in the NOMTRANS and PURCHASES tables, so the 
+use of SOLLEDGER is probably best confined to listings or analysis of "pencilled" anticipated disbursements only.  MT-CODE and CL-CODE 
+provide the usual links to the MATDB and CLIDB tables respectively.</p>
+<br><br></body></html>

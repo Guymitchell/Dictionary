@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.MATTYPE</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.MATTYPE</h1>
+<h2>Description: Holds matter type definitions as set up in Practice Manager matter types maintenance screen</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>MT-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter type code</td></tr>
+<tr><td><nobr>DESCRIPTION</nobr></td><td><nobr>character(254)</nobr></td><td>Matter type description</td></tr>
+<tr><td><nobr>REVIEW-DAYS</nobr></td><td><nobr>integer</nobr></td><td>Review period (days)</td></tr>
+<tr><td><nobr>REVIEW-MESSAGE</nobr></td><td><nobr>character(254)</nobr></td><td>Message</td></tr>
+<tr><td><nobr>CURR</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Current yes/no</td></tr>
+<tr><td><nobr>DISB-LIMIT</nobr></td><td><nobr>decimal</nobr></td><td>Disbursement Limit</td></tr>
+<tr><td><nobr>TIME-LIMIT</nobr></td><td><nobr>decimal</nobr></td><td>Time Value Limit</td></tr>
+<tr><td><nobr>BANK-OFFICE</nobr></td><td><nobr>character(254)</nobr></td><td>Default office bank account code for matters created with this matter type</td></tr>
+<tr><td><nobr>BANK-CLIENT</nobr></td><td><nobr>character(254)</nobr></td><td>Default client bank account code for matters created with this matter type</td></tr>
+<tr><td><nobr>CASE-FLAG</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Set if this matter type is Case-linked (for SolCase link users only)</td></tr>
+<tr><td><nobr>DEPARTMENT</nobr></td><td><nobr>character(254)</nobr></td><td>Department code</td></tr>
+<tr><td><nobr>DESTRUCTION-DAYS</nobr></td><td><nobr>integer</nobr></td><td>Default destruction days</td></tr>
+<tr><td><nobr>DEPARTMENT-OLD-FIELD</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CONDITIONAL</nobr></td><td><nobr>character(254)</nobr></td><td>Set to "Conditional" if conditional option ticked, blank otherwise</td></tr>
+<tr><td><nobr>TYPE-FLAG</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CAT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Code behind Legal Aid Category field</td></tr>
+<tr><td><nobr>SPAN1</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPAN2</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CONTROLLED</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ICON</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>FIXED-FEE</nobr></td><td><nobr>character(254)</nobr></td><td>Fixed Fee</td></tr>
+<tr><td><nobr>OK-TO-ACT-EXCLUDE</nobr></td><td><nobr>character(254)</nobr></td><td>Indicates whether matter type is excluded from normal "Client not able to act" warnings</td></tr>
+<tr><td><nobr>EST-FACTOR</nobr></td><td><nobr>character(254)</nobr></td><td>Estimate warning level percentage</td></tr>
+<tr><td><nobr>ANALY-STATUS</nobr></td><td><nobr>character(254)</nobr></td><td>Analysis Status</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR11</nobr></td><td><nobr>character(40)</nobr></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>ANALY-STATUS</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+ANALY-STATUS
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>MT-TYPE-INDEX</td><td><center>yes</td><td><Center>yes</Center></td><td><Center>
+no</Center></td><td>
+MT-TYPE
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-CHAR03</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR03
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+</Table>
+<br>
+<br />
+<h2>Practice Manager Interface</h2>
+<p>This table holds matter type maintenance information as defined in Practice Manager matter type maintenance screen.</p>
+<br />
+<img src="pmmattype.gif" title="Matter type maintenance" />
+<br />
+<br />
+<h2>Field Notes</h2>
+<p><b>DESTRUCTION-DAYS</b> has a default value of 2200, i.e. the equivalent of 6 years rounded up.</p>
+<p><b>CAT-CODE</b> can be used to look up the category description in the table LACAT.  DEPARTMENT can be used to look 
+up the department name in the table DEPARTMENT.  These joins should be Left Outer joins because they may be blank in 
+your MATTYPE table, especially if data has recently been converted from another non-SOS Practice Manager database.</p>
+<p>You should note that any information entered in the <b>Archive Additional Tab Handling</b> panel of the Matter Type maintenance screen 
+is stored not in MATTYPE but in the TYPEREC table.  Each of the five fields if used will generate a distinct TYPEREC record with values as follows:</p>
+<br />
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Derived Values</td><td class="thead">Data Type</td></tr>
+<tr><td>TYPEREC.KRECTYPE</td><td>"ARCHMTTYPE"</td><td>character(254)</td></tr>
+<tr><td>TYPEREC.KCODE</td><td>MATTYPE.MT-TYPE</td><td>character(254)</td></tr>
+<tr><td>TYPEREC.KSEQ</td><td>Number in the range 0 to 4 as follows:
+<ul>
+<li>0 if selection made in Type box</li>
+<li>1 if "Allow Custom Tab Processing" box ticked</li>
+<li>2 if "Allow Actions Processing" box ticked</li>
+<li>3 if "Allow Relationship Tab Processing" box ticked</li>
+<li>4 if "Allow Documents Tab Processing" box ticked</li>
+</ul>
+</td><td>integer</td></tr>
+<tr><td>TYPEREC.SPARE1</td><td>Selected archive type</td><td>character(254)</td></tr>
+<tr><td>TYPEREC.SPARE2</td><td>"Y"</td><td>character(254)</td></tr>
+<tr><td>TYPEREC.DESCRIPTION</td><td>MATTYPE.DESCRIPTION</td><td>character(254)</td></tr>
+</table>
+<br /><br />
+<h2>Linking And Application</h2>
+<p><b>Simple example to provide a matter listing grouped by matter types and showing their descriptions:</b></p>
+<p><a href="pub.matdb.html">MATDB</a>.MT-TYPE -> MATTYPE.MT-TYPE</p>
+<br />
+<p><b>Two joins to provide a matter listing grouped by matter type within department:</b></p>
+<p><a href="pub.matdb.html">MATDB</a>.MT-TYPE -> MATTYPE.MT-TYPE</p>
+<p>MATTYPE.DEPARTMENT -> <a href="pub.department.html">DEPARTMENT</a>.DEPARTMENT-CODE</p>
+<br><br></body></html>

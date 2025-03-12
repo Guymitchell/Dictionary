@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.SUPP-PAYMENTS</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.SUPP-PAYMENTS</h1>
+<h2>Description: Stores transaction-level information regarding payments made to suppliers</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>TRANS-NO</nobr></td><td><nobr>integer</nobr></td><td>Transaction number (of PUB.NOMTRANS record)</td></tr>
+<tr><td><nobr>ENTRY-NO</nobr></td><td><nobr>integer</nobr></td><td>Entry number (of PUB.NOMTRANS record)</td></tr>
+<tr><td><nobr>PAYMENT-DATE</nobr></td><td><nobr>date</nobr></td><td>Payment date</td></tr>
+<tr><td><nobr>PAYMENT-TXNO</nobr></td><td><nobr>integer</nobr></td><td>Payment transaction number (of PUB.NOMTRANS record)</td></tr>
+<tr><td><nobr>PAID-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Paid Value</td></tr>
+<tr><td><nobr>VAT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>VAT code</td></tr>
+<tr><td><nobr>VAT-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>VAT value</td></tr>
+<tr><td><nobr>SUPP-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Not used</td></tr>
+<tr><td><nobr>CURRENCY_VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>PAY-YEAR</nobr></td><td><nobr>character(254)</nobr></td><td>Payment year</td></tr>
+<tr><td><nobr>PAYMENT-ENTRY-NO</nobr></td><td><nobr>integer</nobr></td><td>Payment entry number (of PUB.NOMTRANS record)</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td>Supplier code (from X.18.14 onward)</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>PAYMENT-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Payment Type</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Payment date (from X.18.14 onward)</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>PAY-PERIOD</nobr></td><td><nobr>integer</nobr></td><td>Payment period</td></tr>
+<tr><td><nobr>SPARE-CHAR11</nobr></td><td><nobr>character(40)</nobr></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>PAID-INDEX</td><td><center>yes</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+TRANS-NO
+<tr><td>PAYMENT-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+PAYMENT-TXNO
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+</Table>
+<br>
+<br />
+<h2>Interface Notes</h2>
+<p>This table is updated as a by-product of transactions paying off a supplier invoice, and is not directly editable.  It is very similar in design 
+to the PAYMENTS table but data values are much simpler.</p>
+<br />
+<h2>Field Notes</h2>
+<p>SUPP-PAYMEMNTS.TRANS-NO and ENTRY-NO together identify a unique preceding entry in NOMTRANS for a purchase ledger transaction 
+whether a CI on a nominal ledger account or an AD/ADV/ADVU on a client matter.</p>
+<p>SUPP-PAYMENTS.PAYMENT-TYPE can only have the value NP.</p>
+<p>SUPP-PAYMENTS.PAYMENT-TXNO will invariably be larger than TRANS-NO and identifies another and later  entry in NOMTRANS which is paying off the TRANS-NO transaction.  It is invariably a NP posting.</p>
+<br />
+<h2>Linking And Application</h2>
+<p><b>Bill Payments</b></p>
+<p>SUPP-PAYMENTS is used to identify purchase ledger invoices and payments thereof and for this purpose is usually linked to NOMTRANS to 
+identify both the bills and the payments. The method for this is to open NOMTRANS twice, and give each instance of the table an appropriate 
+alias name e.g. invoiceNOMTRANS and paymentNOMTRANS.</p>
+<p>The linkage would then be like this:</p>
+<p>invoiceNOMTRANS . TRANS-NO -> SUPP-PAYMENTS.TRANS-NO<br />
+invoiceNOMTRANS.ENTRY-NO -> SUPP-PAYMENTS.ENTRY-NO<br />
+SUPP-PAYMENTS.PAYMENT-TXNO -> paymentNOMTRANS.TRANS-NO</p>
+<p>Your report's Record Selection Formula might include a condition such as:</p>
+<p>invoiceNOMTRANS.POSTING-TYPE[1 to 2]="AD"</p>
+<p>to confine the report to entries on client matters, or:</p>
+<p>invoiceNOMTRANS.POSTING-TYPE = "CI"</p>
+<p>(for entries on nominal accounts only)</p>
+<br><br></body></html>

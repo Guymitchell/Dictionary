@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.ROLES</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.ROLES</h1>
+<h2>Description: Role code definitions and set up in Practice Manager roles maintenance screen</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>ROL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Role code (see notes)</td></tr>
+<tr><td><nobr>ROL-DESCRIPTION</nobr></td><td><nobr>character(254)</nobr></td><td>Description</td></tr>
+<tr><td><nobr>ROL-SALUTATION</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>ROL-REV-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Reciprocal Role but see Notes</td></tr>
+<tr><td><nobr>FUN-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Function Code</td></tr>
+<tr><td><nobr>ROL-MAY-BE</nobr></td><td><nobr>integer</nobr></td><td>Sum of bit-flags indicating entity types that are valid at the "from" end of relationships with this role code</td></tr>
+<tr><td><nobr>ROL-MAY-RELATE-TO</nobr></td><td><nobr>integer</nobr></td><td>Sum of bit-flags indicating entity types that are valid at the "to" end of relationships with this role code</td></tr>
+<tr><td><nobr>ROL-DEFAULT</nobr></td><td><nobr>character(254)</nobr></td><td>Varies with  Default Role for</td></tr>
+<tr><td><nobr>BILLING-CONTACT-ROLE</nobr></td><td><nobr>character(254)</nobr></td><td>Billing Contact Flag</td></tr>
+<tr><td><nobr>ROL-DEFAULT-TO</nobr></td><td><nobr>character(254)</nobr></td><td>See Notes:  Varies with  In Relation to</td></tr>
+<tr><td><nobr>ROL-AUTO-ADDRESS-UPDATE-SOURCE</nobr></td><td><nobr>logical (true/false)</nobr></td><td>TRUE if "Auto Address Update Source" option enabled, FALSE otherwise</td></tr>
+<tr><td><nobr>ROL-SC-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SRCH-DRILLDOWN</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Search Drill-Down</td></tr>
+<tr><td><nobr>SRCH-EXCL-NON-CLI-LINKS</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Search Non-Client Links</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG04</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG05</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>ROL-SC-INX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+ROL-SC-ID
+<tr><td>ROLCODE-INX</td><td><center>yes</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+ROL-CODE
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+</Table>
+<br>
+<h2>User Interface Notes</h2>
+<p>This table holds the role code definitions as set up in the Practice Manager Roles Maintenance screen:</p>
+<br />
+<img src="pmroles.gif" title="Roles maintenance screen" />
+<br />
+<h2>Field Notes</h2>
+<p><b>ROL-DEFAULT</b> and <b>ROL-DEFAULT-TO</b> may both take the following user-selected values:</p>
+<table>
+<tr><td>N</td><td>if Default Role for/In Relation to is None</td></tr>
+<tr><td>CO</td><td>if Default Role for/In Relation to is Contact</td></tr>
+<tr><td>OR</td><td>if Default Role for/In Relation to is Organisation</td></tr>
+<tr><td>CL</td><td>if Default Role for/In Relation to is Client</td></tr>
+<tr><td>MA</td><td>if Default Role for/In Relation to is Matter</td></tr>
+</table>
+<p>There are also several  predefined ROLES records preset by Practice Manager,  not user maintainable, where ROL-DEFAULT only 
+has these special values:</p>
+<p>C*&nbsp;&nbsp; (where ROL-CODE is also C*)</p>
+<p>L*&nbsp;&nbsp; (where ROL-CODE is also L*)</p>
+<p>M*&nbsp;&nbsp; (where ROL_CODE is also M*)</p>
+<br />
+<p><b>ROL-MAY-BE</b> and <b>ROL-MAY-RELATE-TO</b> each consist of a single number equal to the sum of the following "scores":</p>
+<p>1 (where "may be" or "may relate to" a contact)</p>
+<p>2 (where "may be" or "may relate to" an organisation)</p>
+<p>4 (where "may be" or "may relate to" a client)</p>
+<p>8 (where "may be" or "may relate to" a matter)</p>
+<br />
+<p><b>ROL-CODE</b> and <b>ROL-REV-CODE</b> are generally the user-selected Role and Reciprocal Role code,  but there are a 
+few predefined ROLES records preset by Practice Manager and Connect.  All these records are for implicit relationship types, such as Client 
+to Matter ledger or Marketing Details, or Contact to Client.</p>
+<p>Note that  C*, L* and M* cannot be deleted or amended by the user.</p>
+<p>In all  these cases both fields will have  these special values:</p>
+<table>
+<tr><th>Description</th><th>ROL-CODE</th><th>ROL-REV-CODE</th></tr>
+<tr><td>Accounts Details</td><td>C*</td><td>M*</td></tr>
+<tr><td>Accounts Details</td><td>L*</td><td>M*</td></tr>
+<tr><td>Client/Client</td><td>LL</td><td>LL</td></tr>
+<tr><td>Client/Contact</td><td>CC</td><td>CC</td></tr>
+<tr><td>Client/Contact</td><td>CL</td><td>CC</td></tr>
+<tr><td>Client/Organisation</td>CO<td></td><td>OC</td></tr>
+<tr><td>Contact/Client</td><td>CC</td><td>CL</td></tr>
+<tr><td>Contact/Contact</td><td>NN</td><td>NN</td></tr>
+<tr><td>Contact/Organisation</td><td>NO</td><td>ON</td></tr>
+<tr><td>Marketing Details</td><td>M*</td><td>C*</td></tr>
+<tr><td>Matter/Client</td><td>CM</td><td>CM</td></tr>
+<tr><td>Organisation/Client</td><td>OC</td><td>CO</td></tr>
+<tr><td>Organisation/Contact</td><td>ON</td><td>NO</td></tr>
+<tr><td>Organisation/Organisation</td><td>OO</td><td>OO</td></tr>
+</table>
+<br />
+<h2>Linking And Application</h2>
+<p><b>List of individual Contacts showing and/or grouped by their role description:</b></p>
+<p>ROLES.ROL-CODE -> CONTRELATIONS.ROL-CODE<br />
+CONTRELATIONS.REL-RECORD -> CONTACTS.REFERENCE-CHAR</p>
+<p>- with record selection filter of CONTRELATIONS.REL-FILE = "CO"</p>
+<p><b>List of Organisations showing and/or grouped by their role description:</b></p>
+<p>ROLES.ROL-CODE -> ORGARELATIONS.ROL-CODE<br />
+ORGARELATIONS.REL-RECORD -> ORGANISATION.REFERENCE-CHAR</p>
+<p>- with record selection filter of ORGARELATIONS.REL-FILE = "OR"</p>
+<br><br></body></html>

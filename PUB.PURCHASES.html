@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.PURCHASES</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.PURCHASES</h1>
+<h2>Description: Stores purchase ledger transactions</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>SUPPLIER-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Supplier code</td></tr>
+<tr><td><nobr>TRANS-NO</nobr></td><td><nobr>integer</nobr></td><td>Transaction number in NOMTRANS</td></tr>
+<tr><td><nobr>OUTST-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Amount remaining due to supplier</td></tr>
+<tr><td><nobr>INSTALLMENTS</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>INST-PERIOD</nobr></td><td><nobr>integer</nobr></td><td>Payment terms (days) - derived from SUPPLIER.PERIOD</td></tr>
+<tr><td><nobr>CURRENCY-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CURRENCY-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CURRENCY-RATE</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>DUE-DATE</nobr></td><td><nobr>date</nobr></td><td>Posting date plus INST-PERIOD</td></tr>
+<tr><td><nobr>CURRENCY_NET</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MEMO</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>CURRENCY_VAT</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>CURRENCY_OUTST</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>INTERNALREF</nobr></td><td><nobr>character(254)</nobr></td><td>Supplier invoice internal reference</td></tr>
+<tr><td><nobr>DEFERRED-VAT-PAYMENT</nobr></td><td><nobr>character(254)</nobr></td><td>Deferred VAT Payment</td></tr>
+<tr><td><nobr>ON-HOLD-NOTES</nobr></td><td><nobr>character(254)</nobr></td><td>On Hold Notes</td></tr>
+<tr><td><nobr>ON-HOLD-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>On Hold Code</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR11</nobr></td><td><nobr>character(40)</nobr></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>DUE-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+DUE-DATE
+<tr><td>ON-HOLD-CODE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+ON-HOLD-CODE
+<tr><td>OUTST-VALUE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+OUTST-VALUE
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-CHAR03</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR03
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+<tr><td>SUPPLIER-INDEX</td><td><center>yes</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SUPPLIER-CODE
+<tr><td>TRANS-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+TRANS-NO
+</Table>
+<br>
+<h2>User Interface Notes</h2>
+<p>This table is updated as a by-product of posting to your supplier ledger with either type CI or AD/ADV/ADVU transactions, i.e. certain transactions 
+on both nominal and client matter ledgers update this table simultaneously with their main full entry in NOMTRANS.</p>
+<br />
+<h2>Field Notes</h2>
+<p><b>DUE-DATE</b> is the NOMTRANS.POST-DATE plus however many days were specified in the Payment Period box of the 
+Create/Amend Supplier screen (ie the PERIOD field of the SUPPLIER table) at the time the posting was made.  Subsequent 
+amendments to the supplier record cannot alter DUE-DATE retrospectively.</p>
+<p><b>OUTST-VALUE</b> is the gross amount outstanding now,  including VAT where charged.  For the original invoice value and 
+other details you will have to look up NOMTRANS using the TRANS-NO field.   The OUTST-VALUE field is  subsequently updated 
+if or when payment has been made to the supplier.  It does not necessarily correspond to the OUTST-VALUE field of 
+the NOMTRANS transaction indexed by the TRANS-NO field.  For example an AD posting for £50 will have an OUTST-VALUE of 50.00 
+in both PURCHASES and  NOMTRANS at posting time, but as soon as it is billed to a client the NOMTRANS.OUTST-VALUE will fall to zero, 
+while PURCHASES.OUTST-VALUE will remain at 50.00 until the supplier has been paid.</p>
+<p><b>INTERNALREF</b> is the optional INTERNAL REFERENCE now available for Supplier and Anticipated Disbursement postings.   The 
+main REFERENCE field for both these types of posting is held elsewhere, in <b>NOMTRANS.REFERENCE</b>.</p>
+<br><br></body></html>

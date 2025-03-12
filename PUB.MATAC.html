@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.MATAC</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.MATAC</h1>
+<h2>Description: Holds financial balance summary information for each matter</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter code</td></tr>
+<tr><td><nobr>BANK-OFFICE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter default Office Bank Code</td></tr>
+<tr><td><nobr>BANK-CLIENT</nobr></td><td><nobr>character(254)</nobr></td><td>Matter default Client Bank Code </td></tr>
+<tr><td><nobr>BANK-DEPOSIT</nobr></td><td><nobr>character(254)</nobr></td><td>Matter default Deposit Bank Code</td></tr>
+<tr><td><nobr>BAL-UC</nobr></td><td><nobr>decimal</nobr></td><td>Unallocated credit balance</td></tr>
+<tr><td><nobr>BAL-UPB</nobr></td><td><nobr>decimal</nobr></td><td>Unpaid bills balance</td></tr>
+<tr><td><nobr>BAL-UBD</nobr></td><td><nobr>decimal</nobr></td><td>Unbilled disbursements balance</td></tr>
+<tr><td><nobr>BAL-CLI</nobr></td><td><nobr>decimal</nobr></td><td>Client balance (does not include deposit)</td></tr>
+<tr><td><nobr>BAL-DEP</nobr></td><td><nobr>decimal</nobr></td><td>Deposit balance (does not include client)</td></tr>
+<tr><td><nobr>BAL-UPC</nobr></td><td><nobr>decimal</nobr></td><td>Unpaid creditors balance</td></tr>
+<tr><td><nobr>D-LIMIT</nobr></td><td><nobr>integer</nobr></td><td>Disbursement limit</td></tr>
+<tr><td><nobr>DATE-LAST-POST</nobr></td><td><nobr>date</nobr></td><td>Date of last accounts posting</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter client code </td></tr>
+<tr><td><nobr>TOT-DISBS</nobr></td><td><nobr>decimal</nobr></td><td>Total disbursements to date (visible on PM matter summary </td></tr>
+<tr><td><nobr>TOT-BILLED</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CLEARED-RECEIPTS</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>CL-CODE-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+CL-CODE
+<tr><td>MT-CODE-INDEX</td><td><center>yes</td><td><Center>yes</Center></td><td><Center>
+no</Center></td><td>
+MT-CODE
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+</Table>
+<br>
+<h2>General Notes</h2>
+<p>This table holds one record exactly for each matter on your system, whether  the matter is open, closed or archived.  It is 
+created automatically when a matter is opened, along with one MATDB and one MATTR record.</p>
+<br />
+<h2>Field Notes</h2>
+<p>All 6 balance fields, both the total fields and the DATE-LAST-POST field are updated as a by-product of posting and cannot be updated directly
+by the user.  D-LIMIT and the three default bank code fields are editable when amending matter details.   MT-CODE is fixed, as is CL-CODE field 
+unless you move the matter to a different client.</p>
+<p>BAL-CLI, BAL-DEP, BAL-UC and BAL-UPC should always hold positive (unsigned) values.</p>
+<p>BAL-UBD and BAL-UPB should always hold negative values.</p>
+<br />
+<h2>Linking And Application</h2>
+<p>MATAC is usually linked to MATDB for any report where client matters and some or all their accounts balances are wanted, e.g.:</p>
+<p><a href="pub.clidb.html" title="Client details table">CLIDB</a>.CL-CODE -> MATAC.CL-CODE</p>
+<p>MATAC.MT-CODE -> <a href="pub.matdb.html" title="Matter details table">MATDB</a>.MT-CODE</p>
+<br><br></body></html>

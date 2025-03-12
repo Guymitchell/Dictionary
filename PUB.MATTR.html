@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.MATTR</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.MATTR</h1>
+<h2>Description: Holds time posting and legal aid summary information for each matter</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>MT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Matter code</td></tr>
+<tr><td><nobr>CL-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Client code</td></tr>
+<tr><td><nobr>MT-STATUS</nobr></td><td><nobr>character(254)</nobr></td><td>C if matter is closed for time, else blank</td></tr>
+<tr><td><nobr>TOT-TIME</nobr></td><td><nobr>integer</nobr></td><td>Total time spent in minutes</td></tr>
+<tr><td><nobr>TOT-COST</nobr></td><td><nobr>decimal</nobr></td><td>Total expense of time recorded</td></tr>
+<tr><td><nobr>TOT-VALUE</nobr></td><td><nobr>decimal</nobr></td><td>Total billable value of time recorded</td></tr>
+<tr><td><nobr>TOT-BILLED</nobr></td><td><nobr>decimal</nobr></td><td>Total costs billed for lifetime of matter</td></tr>
+<tr><td><nobr>TOT-WOFF</nobr></td><td><nobr>decimal</nobr></td><td>Total time written off</td></tr>
+<tr><td><nobr>WIPT</nobr></td><td><nobr>integer</nobr></td><td>Unbilled time (in minutes)</td></tr>
+<tr><td><nobr>WIP1</nobr></td><td><nobr>decimal</nobr></td><td>Value of unbilled time at expense of time rate</td></tr>
+<tr><td><nobr>WIP2</nobr></td><td><nobr>decimal</nobr></td><td>Value of unbilled time at charge out  rate</td></tr>
+<tr><td><nobr>PROFIT1</nobr></td><td><nobr>decimal</nobr></td><td>Profit on cost</td></tr>
+<tr><td><nobr>PROFIT2</nobr></td><td><nobr>decimal</nobr></td><td>Profit on value </td></tr>
+<tr><td><nobr>FIXED-FEE-OLD</nobr></td><td><nobr>integer</nobr></td><td>Fixed Fee Old</td></tr>
+<tr><td><nobr>LEGAL-AID</nobr></td><td><nobr>character(254)</nobr></td><td>Legal Aid </td></tr>
+<tr><td><nobr>BAND</nobr></td><td><nobr>character(254)</nobr></td><td>Charge Band</td></tr>
+<tr><td><nobr>CREDIT-LIMIT</nobr></td><td><nobr>integer</nobr></td><td>WIP limit</td></tr>
+<tr><td><nobr>DATE-LASTPOST</nobr></td><td><nobr>date</nobr></td><td>Date of last time posting</td></tr>
+<tr><td><nobr>CLIENT-BILLS</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Indicates that the matter should be included in a client bill as part of the client billing process</td></tr>
+<tr><td><nobr>DATE-LASTBILL</nobr></td><td><nobr>date</nobr></td><td>Date of last bill</td></tr>
+<tr><td><nobr>ANTICIPATED</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MIN-WIP</nobr></td><td><nobr>decimal</nobr></td><td>Threshold WIP value for inclusion in interim billing</td></tr>
+<tr><td><nobr>MIN-DISBS</nobr></td><td><nobr>decimal</nobr></td><td>Threshold Disb value for inclusion in interim billing</td></tr>
+<tr><td><nobr>BILL-DISBS</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Include disbs in interim bills</td></tr>
+<tr><td><nobr>CORE_BILLED</nobr></td><td><nobr>decimal</nobr></td><td>Value of billed core time</td></tr>
+<tr><td><nobr>CORE_WIP</nobr></td><td><nobr>decimal</nobr></td><td>Value of unbilled core time</td></tr>
+<tr><td><nobr>DUAL</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Allow Private Work field</td></tr>
+<tr><td><nobr>LA_CERTNO</nobr></td><td><nobr>character(254)</nobr></td><td>UFN/Legal Aid certificate no field</td></tr>
+<tr><td><nobr>SPAN-1</nobr></td><td><nobr>character(254)</nobr></td><td>SPAN 1 preset drop down list</td></tr>
+<tr><td><nobr>SPAN-2</nobr></td><td><nobr>character(254)</nobr></td><td>SPAN 2 preset drop down list</td></tr>
+<tr><td><nobr>BLOCK3</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>BLOCK4</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>DATE_GRANTED</nobr></td><td><nobr>date</nobr></td><td>Granted field</td></tr>
+<tr><td><nobr>DATE_DISCHARGED</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>DATE_COMPLETED</nobr></td><td><nobr>date</nobr></td><td>Critical dates: date completed</td></tr>
+<tr><td><nobr>LASTATUS_LOG</nobr></td><td><nobr>character(20000)</nobr></td><td>Status change memo box</td></tr>
+<tr><td><nobr>ESTIMATES_LOG</nobr></td><td><nobr>character(20000)</nobr></td><td>History of revisions made to matter estimates</td></tr>
+<tr><td><nobr>CRIM_CAT</nobr></td><td><nobr>integer</nobr></td><td>Crim Cat field</td></tr>
+<tr><td><nobr>SPECIAL_TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Notes/Conditional Fee amount prefixed by the software with the word "Conditional"</td></tr>
+<tr><td><nobr>CAT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Code of category chosen in Legal Aid tab</td></tr>
+<tr><td><nobr>CONTRACTNO</nobr></td><td><nobr>character(254)</nobr></td><td>Contract field ie firm’s account number</td></tr>
+<tr><td><nobr>CONTROLLED</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Controlled Matter field</td></tr>
+<tr><td><nobr>MEDIATION-FUNDING</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>APPLIES-FROM</nobr></td><td><nobr>character(254)</nobr></td><td>Legal Aid "Applies From" date for selections (span codes etc.)</td></tr>
+<tr><td><nobr>ENDPOINT1</nobr></td><td><nobr>character(254)</nobr></td><td>Endpoint 1 list for controlled matters</td></tr>
+<tr><td><nobr>ENDPOINT2</nobr></td><td><nobr>character(254)</nobr></td><td>Endpoint 2 list for controlled matters</td></tr>
+<tr><td><nobr>EXCL_COSTS_NARR</nobr></td><td><nobr>character(254)</nobr></td><td>Reason box</td></tr>
+<tr><td><nobr>EXCL_COSTS_FLAG</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Exclude from Average Case Costs</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>COURT-PS-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Legal aid fee earner attendance locations - court code, police station code and prison code</td></tr>
+<tr><td><nobr>EST-NOTE</nobr></td><td><nobr>character(2274)</nobr></td><td>Notes added by the user at the point at which an estimate is added / amended</td></tr>
+<tr><td><nobr>PROCUREMENT-AREA</nobr></td><td><nobr>character(254)</nobr></td><td>Legal aid procurement area code</td></tr>
+<tr><td><nobr>ACCESS-POINTS</nobr></td><td><nobr>character(254)</nobr></td><td>Legal aid access point code</td></tr>
+<tr><td><nobr>DSCC-MAAT-PLAN</nobr></td><td><nobr>character(254)</nobr></td><td>Legal aid DSCC number, MAAT Id, PLAN codes</td></tr>
+<tr><td><nobr>SCHEDULE-NO</nobr></td><td><nobr>character(254)</nobr></td><td>Legal aid schedule number</td></tr>
+<tr><td><nobr>LA-TRANSFER-DATE</nobr></td><td><nobr>character(254)</nobr></td><td>LA Transfer Date</td></tr>
+<tr><td><nobr>DSCC</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>MAAT</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>PLAN</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>COURT-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>POLICE-STN-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>PRISON-ID</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>BILL-INTERIM</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>FIXED-FEE</nobr></td><td><nobr>decimal</nobr></td><td>Fixed Fee </td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>CATX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+CAT-CODE
+ + 
+SPAN-1
+ + 
+SPAN-2
+<tr><td>CL-CODE-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+CL-CODE
+<tr><td>COMPLETED-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+DATE_COMPLETED
+<tr><td>CRIM_CAT_INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+CRIM_CAT
+<tr><td>LA-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+LEGAL-AID
+<tr><td>LACERT-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+LA_CERTNO
+<tr><td>LASTBILL-INDEX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+DATE-LASTBILL
+<tr><td>MT-CODE-INDEX</td><td><center>yes</td><td><Center>yes</Center></td><td><Center>
+no</Center></td><td>
+MT-CODE
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+</Table>
+<br>
+<br />
+<h2>Field Notes</h2>
+<p>MATTR has moved beyond its original primary purpose of storing time-recording data and has become 
+a wide-ranging extension to the main MATDB table, especially for storing legal aid related details at matter level (other matter-level details
+are held in MATDB and MATAC).</p>
+<br />
+<img src="pmlegalaid.gif" title="PM Legal Aid screen" />
+<br />
+<p>Note in particular MATTR.TOT-BILLED which is the only available matter-level measure of net costs billed per matter.  Its sum 
+would also be used in reporting the total of costs billed for the client.  There are no other fields in the database which keep a convenient 
+running total of matter costs billed at either matter or client level.</p>
+<p>CRIM_CAT is not validated against the CATEGORY field in the table CRIM-CAT so any integer number would be accepted, with a default 
+value of zero if nothing is done with it.  If you join CRIM-CAT to MATTR in order to say list your criminal legal aid matters by this category 
+you should therefore use an outer-join so that matters with a wrong or missing category can be exposed and dealt with.</p>
+<p>ESTIMATES_LOG is visible from the matter Legal Aid tab.  It contains one record per change made to a matter's costs 
+estimate.  There is no limit to the number of records possible.   It comprises 4 pieces of information separated by spaces:</p>
+<p>
+<ul>
+<li>Date of change</li>
+<li>Previous estimate</li>
+<li>Date of original estimate (from MATDB.DATE-ESTIMATE)</li>
+<li>User login of person making the change</li>
+</ul>
+</p>
+<br><br></body></html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.QUEUE-REQUEST</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.QUEUE-REQUEST</h1>
+<h2>Description: Holds the list of queued processing requests, one row per request.  Each entry in this table will have one or more related entries in the QUEUE-DATA table</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>QUEUE-TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Type</td></tr>
+<tr><td><nobr>ENTITY-REF</nobr></td><td><nobr>character(254)</nobr></td><td>Entity Reference</td></tr>
+<tr><td><nobr>OTHER-REF</nobr></td><td><nobr>character(254)</nobr></td><td>Other Reference</td></tr>
+<tr><td><nobr>NOTES</nobr></td><td><nobr>character(254)</nobr></td><td>Notes</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>RESULT-MSG</nobr></td><td><nobr>character(254)</nobr></td><td>Result Msg</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SCHEDULED-DATE-OLD</nobr></td><td><nobr>date</nobr></td><td>Scheduled Date</td></tr>
+<tr><td><nobr>DATE-COMPLETED-OLD</nobr></td><td><nobr>date</nobr></td><td>Date Completed</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>QUEUE-ENTRY-ID</nobr></td><td><nobr>integer</nobr></td><td>ID</td></tr>
+<tr><td><nobr>SCHEDULED-TIME-OLD</nobr></td><td><nobr>integer</nobr></td><td>Scheduled Time</td></tr>
+<tr><td><nobr>TIME-COMPLETED-OLD</nobr></td><td><nobr>integer</nobr></td><td>Time Completed</td></tr>
+<tr><td><nobr>COMPLETED</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Completed</td></tr>
+<tr><td><nobr>COMPLETED-OK</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Completed OK</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR11</nobr></td><td><nobr>character(40)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE06</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE07</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT04</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT05</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT06</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG04</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG05</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>COMPLETED-DATE-TIME</nobr></td><td><nobr>datetime</nobr></td><td>Completed Date / Time</td></tr>
+<tr><td><nobr>SCHEDULED-DATE-TIME</nobr></td><td><nobr>datetime</nobr></td><td>Scheduled Date / Time</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>COMPLETED-DATE-TIME</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+COMPLETED-DATE-TIME
+<tr><td>DATE-COMPLETED</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+DATE-COMPLETED-OLD
+<tr><td>NOTES</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+yes</Center></td><td>
+NOTES
+<tr><td>OTHER-REF</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+OTHER-REF
+<tr><td>QUEUE-ENTRY-ID</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+QUEUE-ENTRY-ID
+<tr><td>REF</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+ENTITY-REF
+<tr><td>SCHEDULED-DATE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SCHEDULED-DATE-OLD
+<tr><td>SCHEDULED-DATE-TIME</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SCHEDULED-DATE-TIME
+<tr><td>SCHEDULED-TIME</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SCHEDULED-TIME-OLD
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE03</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE03
+<tr><td>SPARE-DATE04</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE04
+<tr><td>SPARE-INT04</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT04
+<tr><td>SPARE-INT05</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT05
+<tr><td>TYPE-REF</td><td><center>yes</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+QUEUE-TYPE
+ + 
+ENTITY-REF
+</Table>
+<br><br></body></html>

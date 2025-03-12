@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.TELEPHONES</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.TELEPHONES</h1>
+<h2>Description: Holds additional telephone for clients, contacts and organisations</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Owner's record type ("CO" = individual contact, "OR" = organisation, "CL" = client)</td></tr>
+<tr><td><nobr>REFERENCE</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Reference of Client, Contact or Organisation the number belongs to</td></tr>
+<tr><td><nobr>TEL-NUMBER</nobr></td><td><nobr>character(254)</nobr></td><td>Telephone number (or email address)</td></tr>
+<tr><td><nobr>TEL-DESCRIPTION</nobr></td><td><nobr>character(254)</nobr></td><td>Description</td></tr>
+<tr><td><nobr>TEL-EXTENSION</nobr></td><td><nobr>character(254)</nobr></td><td>Extension number</td></tr>
+<tr><td><nobr>TEL-TYPE</nobr></td><td><nobr>integer</nobr></td><td>Corresponds to radio button choice of telephone number type (1=Telephone, 2=Fax, 3=Mobile, 4=Email)</td></tr>
+<tr><td><nobr>SEQNO</nobr></td><td><nobr>integer</nobr></td><td>Derived: Internal unique record reference</td></tr>
+<tr><td><nobr>NO-UNFORMATTED</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: TEL-NUMBER stripped of spaces (used for telephone number searching)</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>NO-REVERSED</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: TEL-NUMBER reversed (used for telephone number searching)</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>NO-SEQNO</nobr></td><td><nobr>integer</nobr></td><td>For client telephones/emails only - indicates primary (1), secondary (2) or neither (zero/blank)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>REVERSED</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+NO-REVERSED
+<tr><td>SEQNO</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SEQNO
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+<tr><td>TEL-NUMBER-INX</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+TEL-NUMBER
+<tr><td>TYPE-SEQUENCE</td><td><center>yes</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+TYPE
+ + 
+REFERENCE
+ + 
+TEL-TYPE
+ + 
+NO-SEQNO
+<tr><td>UNFORMATTED-NO</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+NO-UNFORMATTED
+</Table>
+<br>
+<h2>Practice Manager Interface</h2>
+<p>This table holds telephone numbers and email addresses for individuals, organisations and clients.</p>
+<br />
+<img src="telephones.gif" title="PM add/amend telephone screen" /><br />
+<br />
+<h2>Field Notes</h2>
+<p>The EXTENSION and NUMBER fields are not validated on entry so may in practice consist of any text or numbers in combination.</p>
+<p>If you are adding or editing a telephone record in the Client environment, then checking the CLIENT INFORM box will disable 
+the EXTENSION field.   The EXTENSION field will then contain only the software-generated text "CLIENT INF".</p>
+<p>TYPE corresponds to Client (CL),  individual Contact (CO)  or Organisation (OR).</p>
+<p>SEQNO is unique and is a sequential number in steps of 1 generated by the software. It has no linking or reporting purpose.</p>
+<p>TEL-TYPE corresponds to the radio button choice of Telephone (1), Fax (2), Mobile (3) or E-mail (4).</p>
+<p>All of a client's numbers are kept initially only in this TELEPHONE table - they are not present in the CLIDB table.  If 
+however you choose to designate a number as the Client's Primary number then it will be copied into 
+the CLIDB-TELEPHONE1 field.  If you designate a number as the Client’s Secondary number then that will be 
+copied into the CLIDB-TELEPHONE2 field. In both cases the numbers will remain in TELEPHONES as well.</p>
+<p>All telephone numbers for individual contacts and organisations are kept in this TELEPHONE table at all times - unlike address 
+information there are no phone number fields in either the CONTACTS or ORGANISATION tables.</p>
+<br />
+<h2>Linking And Application</h2>
+<p><b>For a list of private client names, with the names and telephone numbers of their individual contacts:</b></p>
+<p><a href="pub.clierelations.html">CLIERELATION</a>.CL-CODE -> <a href="pub.clidb.html">CLIDB</a>.CL-CODE</p>
+<p><a href="pub.clierelations.html">CLIERELATION</a>.REL-RECORD -> <a href="pub.contacts.html">CONTACTS</a>.REFERENCE-CHAR -> TELEPHONES.REFERENCE (where TELEPHONES.TYPE = "CO")</p>
+<br />
+<p><b>For a simple list of organisations and their telephone number(s):</b></p>
+<p>TELEPHONES.REFERENCE -> <a href="pub.organisation.html">ORGANISATION</a>.REFERENCE-CHAR (where TELEPHONES.TYPE ="OR")</p>
+<br><br></body></html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html><head><Title>SOS Database Data Dictionary V4.18: PUB.MAILINTDATA</Title>
+<meta http-equiv="cache-control" content="no-cache" />
+<link href="datadic.css" rel="stylesheet" Type="Text/css"></head>
+<body><h1>Table Name:PUB.MAILINTDATA</h1>
+<h2>Description: Stores the specific marketing interests, mailing categories and marketing fee earners associated with a particular organisation or individual</h2>
+<br><h2>Field List:</h2>
+<table>
+<tr><td class="thead">Field Name</td><td class="thead">Data Type</td><td class="thead">Description</td></tr>
+<tr><td><nobr>TYPE</nobr></td><td><nobr>character(254)</nobr></td><td>Entity type that the marketing interest record relates to, "CO" for contact, "OR" for organisation</td></tr>
+<tr><td><nobr>REFERENCE</nobr></td><td><nobr>character(254)</nobr></td><td>Depending on the value of TYPE, either an individual or organisation reference number (CONTACTS.REFERENCE-CHAR or ORGANISATION.REFERENCE-CHAR)</td></tr>
+<tr><td><nobr>CAT</nobr></td><td><nobr>character(254)</nobr></td><td>Contains letter "I" (Marketing Interest), "F" (Fee Earner) or "M" (Mailing Category)</td></tr>
+<tr><td><nobr>CAT-CODE</nobr></td><td><nobr>character(254)</nobr></td><td>Depending on the value of CAT above, this category code will match either MARKETINTERESTS.CODE, FEETR.FEE-EARNER or MAILCATEGORIES.CODE</td></tr>
+<tr><td><nobr>SALUTATION</nobr></td><td><nobr>character(254)</nobr></td><td>Salutation</td></tr>
+<tr><td><nobr>MOD-DATE</nobr></td><td><nobr>date</nobr></td><td>Derived: Last Modified Date</td></tr>
+<tr><td><nobr>MOD-TIME</nobr></td><td><nobr>integer</nobr></td><td>Derived: Last Modified Time (seconds past midnight)</td></tr>
+<tr><td><nobr>MOD-USER</nobr></td><td><nobr>character(254)</nobr></td><td>Derived: Last Modified User Id</td></tr>
+<tr><td><nobr>SPARE-CHAR01</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR02</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR03</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR04</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR05</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR06</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR07</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR08</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR09</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-CHAR10</nobr></td><td><nobr>character(254)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE01</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE02</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE03</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE04</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DATE05</nobr></td><td><nobr>date</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC01</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC02</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-DEC03</nobr></td><td><nobr>decimal</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT01</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT02</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-INT03</nobr></td><td><nobr>integer</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG01</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG02</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>SPARE-LOG03</nobr></td><td><nobr>logical (true/false)</nobr></td><td>Reserved for future use</td></tr>
+<tr><td><nobr>CONSENT-GIVEN</nobr></td><td><nobr>date</nobr></td><td>Consent Given</td></tr>
+<tr><td><nobr>CONSENT-NOTES</nobr></td><td><nobr>character(510)</nobr></td><td>Consent Notes</td></tr>
+</Table>
+<br><h2>Indexes:</h2>
+<table><tr><td class="thead">Index Name</td><td class="thead">Is Primary?</td><td class="thead">Is Unique?</td><td Class="thead">Word Indexed?</td><td class="thead">Database Fields</td></tr>
+<tr><td>AUDIT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+MOD-DATE
+ + 
+MOD-TIME
+<tr><td>CAT</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+CAT
+<tr><td>CODE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+CAT-CODE
+<tr><td>CONSENT-GIVEN</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+CONSENT-GIVEN
+<tr><td>REFERENCE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+REFERENCE
+<tr><td>SPARE-CHAR01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR01
+<tr><td>SPARE-CHAR02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-CHAR02
+<tr><td>SPARE-DATE01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE01
+<tr><td>SPARE-DATE02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-DATE02
+<tr><td>SPARE-INT01</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT01
+<tr><td>SPARE-INT02</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+SPARE-INT02
+<tr><td>TYPE</td><td><center>no</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+TYPE
+<tr><td>TYPE-REF</td><td><center>yes</td><td><Center>no</Center></td><td><Center>
+no</Center></td><td>
+TYPE
+ + 
+REFERENCE
+</Table>
+<br>
+<h2>Practice Manager Interface</h2>
+<p>This table holds the marketing interests, mailing categories and marketing fee earners associated with a particular organisation or contact.  These categories
+are assigned to contacts and organisations in the "Marketing" tab as shown below.</p>
+<br />
+<img src="contactmailcat.gif" title="PM legal aid status maintenance screen" /><br />
+<br />
+<h2>Field Notes</h2>
+<p>The MAILINTDATA table holds information related to three other tables: MAILCATEGORIES, MARKETINTERESTS and 
+FEETR (Fee Earner – standard PM table).</p>
+<p>
+<table>
+<tr><td class=thead>Field Name</td><td class=thead>Description</td></tr>
+<tr><td>TYPE</td><td>Will be set to either:<ul><li>"CO" for contacts</li><li>"OR" for organisations</li></ul></td></tr>
+<tr><td>REFERENCE</td><td>Holds either the contact or organisation reference code, validated against either:<ul><li>CONTACTS.REFERENCE-CHAR</li><li>ORGANISATION.REFERENCE-CHAR</li></ul></td></tr>
+<tr><td>CAT</td><td>Contains a single code letter with one of three possible values:
+<ul><li>"I" for market interest  (MARKETINTERESTS)</li><li>"F" for fee farners  (FEETR)</li><li>"M" for mailing category (MAILCATEGORIES)</li></ul></td></tr>
+<tr><td>CAT-CODE</td><td>Depending upon the code letter in CAT above, CAT-CODE will match either:
+<ul><li>When CAT = "I", CAT-CODE = MARKETINTERESTS.CODE</li>
+<li>When CAT = "F", CAT-CODE = FEETR.FEE-EARNER</li>
+<li>When CAT = "M", CAT-CODE = MAILCATEGORIES.CODE</li></ul></td></tr>
+</table></p>
+<br />
+<h2>Example Marketing Tab Screen Shot</h2>
+<p>The following is a screen shot of the contact "Marketing" tab (same presentation for organisations).</p>
+<img src="contactmailcat.gif" title="PM Marketing Tab" /><br />
+<br />
+<p>The following is a brief description of the tables and key fields used above for each of the Selections lists and the table used to record the selected items. Please note, the MAILINTDATA table is the linking table between the two sets of information.</p>
+<p><b>Mailing Categories Options and Mailing Categories Selected</b></p>
+<table>
+	<tr><td></td><td>Table</td><td>Key field</td><td></td></tr>
+	<tr><td>Options</td><td>MAILCATEGORIES</td><td></td><td>Selection list</td></tr>
+	<tr><td>Selected</td><td>MAILINTDATA</td><td>Cat = M</td><td>Items Selected</td></tr>
+</table>
+<p>Shown in two columns above, the left hand one of the two is the remaining list of Mailing categories, which can be selected 
+from, while the right hand column, is the categories already selected. The table MAILCATEGORIES contains the look up 
+list (left hand column) while MAILINTDATA holds the items selected for the Contact / Organisation (right hand column).</p>
+<p><b>Interests Options and Interests Selected</b></p>
+<table>
+	<tr><td></td><td>Table</td><td>Key field</td><td></td></tr>
+	<tr><td>Options</td><td>MARKETINTERESTS</td><td></td><td>Selection list</td></tr>
+	<tr><td>Selected</td><td>MAILINTDATA</td><td>Cat = I</td><td>Items Selected</td></tr>
+</table>
+<p>Shown in two columns above, the left hand one of the two is the remaining list of market interests, which can be 
+selected from, while the right hand column, is the interests already selected. The table MARKETINTERESTS contains 
+the look up list (left hand column) while MAILINTDATA holds the items selected for the Contact / Organisation (right hand column).</p>
+<p><b>F/E Mailing List Options and F/E Mailing List  Selected</b></p>
+<table>
+	<tr><td></td><td>Table</td><td>Key field</td><td></td></tr>
+	<tr><td>Options</td><td>FEETR</td><td></td><td>Selection list</td></tr>
+	<tr><td>Selected</td><td>MAILINTDATA</td><td>Cat = F</td><td>Items Selected</td></tr>
+</table>
+<p>Shown in two columns above, the left hand one of the two is the remaining list of Fee Earners, which can 
+be selected from, while the right hand column, is the Fee Earners already selected. The table FEETR contains the 
+look up list (left hand column) while MAILINTDATA holds the items selected for the Contact / Organisation (right hand column).</p>
+<p><b>Profiles and Mailing Category</b></p>
+<table>
+	<tr><td></td><td>Table</td><td>Key field</td><td></td></tr>
+	<tr><td>Full list</td><td>MARKETPROFILES</td><td></td><td>Selection list</td></tr>
+	<tr><td>Linked to</td><td>MARKET-PRO-MAIL</td><td></td><td>Group Items</td></tr>
+	<tr><td></td><td>MAILCATEGORIES</td><td></td><td>Highlighted items</td></tr>
+</table>
+<p>In this screen, when a Profile (MARKETPROFILES) is highlighted, the table MARKET-PRO-MAIL checks to 
+see if a "group" of Mailing Categories exists (the linking field is min-pro-code between MARKETPROFILES and 
+MARKET-PRO-MAIL). While the grouping function has a wide range of uses, its specific use on this screen is to highlight 
+which mailing categories are part of the group in order to assist the user in selecting all the grouped items in one selection operation.</p>
+<br />
+<br><br></body></html>
