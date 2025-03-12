@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+   <title>Extracting data from multiple-extent fields</title>
+   <link href="datadic.css" rel="stylesheet" type="Text/css" />
+	<meta http-equiv="cache-control" content="no-cache" />
+</head>
+<body>
+<h2>Extracting data from multiple-extent fields</h2>
+<p>Certain database fields are defined as "multiple-extent" fields.  This means that the field can hold multiple values of the 
+same data type.  A common example of this is where a field holds a set of financial balance values, one for each period from 1 to 13.</p>
+<p>Database views have been created for many of the more commonly used tables containing multiple-extent fields, with each entry of 
+a multiple-extent field separated out into its own column.  These have been created to make it easier to choose specific extents 
+from a multiple-extent field when building queries and reports.</p>
+<p>For example:</p>
+<table>
+<tr><td>Data table:</td><td>PUB.MATANALYSIS</td></tr>
+<tr><td>Field name:</td><td>BAL-UPB</td></tr>
+<tr><td>No. Extents:</td><td>13</td></tr>
+<tr><td>Purpose:</td><td>Each row is for a specific matter and year: this field holds the unpaid bills balance for the matter by period (1-13).</td></tr>
+</table>
+<br />
+<br />
+<table>
+<tr><td>Data view:</td><td>A.MATANALYSIS</td></tr>
+<tr valign="top"><td>Field names:</td><td>BAL-UPB@1 (unpaid bills balance for period 1)<br />
+BAL-UPB@2 (unpaid bills balance for period 2)<br />
+BAL-UPB@... etc.<br />
+BAL-UPB@13 (unpaid bills balance for period 13)<br /></td></tr>
+</table>
+<br />
+<p>However you are not restricted to using the database views in order to access the separate values of a multiple-extent field.  The 
+following SQL query syntax will extract the unpaid bills balances in year 2011 for periods 1 – 3 in separate columns*:</p>
+<code>Select "cl-code", "mt-code", "bal-upb"[1], "bal-upb"[2], "bal-upb"[3] from pub.matanalysis where "year" = '2010'</code>
+<p>Note that the referencing of extent numbers is done in square brackets [ ] after the field name, starts from 1 and can rise to 
+the maximum extent number as shown in the data dictionary.  Referencing an extent number out of this range will produce the following Progress ODBC driver error message:</p>
+<code>Invalid array element reference (12663)</code>
+<p>This method of referring to specific array elements returns data in the specified field format, which means that mathematical operations 
+can be performed directly on the values returned.  For example this query adds the unpaid bills balances for periods 1,2 and 3 together 
+and returns the result in a column called SUMQ1:</p>
+<code>Select "cl-code", "mt-code", "bal-upb"[1] + "bal-upb"[2] + "bal-upb"[3] as SumQ1 from pub.matanalysis</code>
+<p>You should find that this method of extracting individual values from multiple-extent fields is quicker than using the 
+data view (if there is one).  This is because the data view splits out all multiple-extent values on all fields when the view is accessed, whereas 
+in practice you may only be extracting a small number of extents from a small number of fields.</p>
+<br />
+<p><i>* This database structure and query syntax is not commonly used, but is not specific to Progress and is part of general SQL92 implementation standards.</i></p>
+</body>
+</html>
